@@ -1,0 +1,535 @@
+[
+  {
+    "article_number": 5,
+    "article_name": "Principles relating to processing of personal data",
+    "chapter_number": 2,
+    "obligation_id": "5.1.a.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.96,
+    "reason": "The policy explicitly states that personal data must be processed lawfully, fairly and transparently.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_12",
+        "text": "We process personal information lawfully, fairly and transparently.",
+        "page": 3,
+        "similarity": 0.94
+      }
+    ]
+  },
+  {
+    "article_number": 5,
+    "article_name": "Principles relating to processing of personal data",
+    "chapter_number": 2,
+    "obligation_id": "5.1.b.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.94,
+    "reason": "The policy describes the purposes for which personal data is collected and states that it will not be used for unrelated purposes.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_18",
+        "text": "Personal information is collected for specified business purposes and is not used for unrelated purposes without appropriate authorization.",
+        "page": 4,
+        "similarity": 0.91
+      }
+    ]
+  },
+  {
+    "article_number": 5,
+    "article_name": "Principles relating to processing of personal data",
+    "chapter_number": 2,
+    "obligation_id": "5.1.c.1",
+    "severity": "HIGH",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.91,
+    "reason": "The policy states that only necessary information is collected but does not clearly define how necessity is determined.",
+    "gap": "No objective criteria or documented process for determining data necessity are provided.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_24",
+        "text": "We collect only information that is necessary to provide our services.",
+        "page": 5,
+        "similarity": 0.89
+      }
+    ]
+  },
+  {
+    "article_number": 5,
+    "article_name": "Principles relating to processing of personal data",
+    "chapter_number": 2,
+    "obligation_id": "5.1.d.1",
+    "severity": "MEDIUM",
+    "verdict": "NOT_MET",
+    "confidence": 0.88,
+    "reason": "The policy does not describe any process for ensuring that inaccurate personal data is corrected or updated.",
+    "gap": "No mechanism for maintaining the accuracy of personal data is specified.",
+    "evidence": []
+  },
+  {
+    "article_number": 5,
+    "article_name": "Principles relating to processing of personal data",
+    "chapter_number": 2,
+    "obligation_id": "5.1.e.1",
+    "severity": "HIGH",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.91,
+    "reason": "The policy states that personal data is retained as necessary but does not specify a retention period or clear retention criteria.",
+    "gap": "A specific retention period or objective retention criteria are not provided.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_42",
+        "text": "Personal information is retained for as long as necessary to fulfill the purposes for which it was collected.",
+        "page": 8,
+        "similarity": 0.87
+      }
+    ]
+  },
+  {
+    "article_number": 5,
+    "article_name": "Principles relating to processing of personal data",
+    "chapter_number": 2,
+    "obligation_id": "5.1.f.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.95,
+    "reason": "The policy describes technical and organizational measures used to protect personal data against unauthorized access and other risks.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_51",
+        "text": "We implement appropriate technical and organizational safeguards to protect personal information.",
+        "page": 10,
+        "similarity": 0.92
+      }
+    ]
+  },
+  {
+    "article_number": 6,
+    "article_name": "Lawfulness of processing",
+    "chapter_number": 2,
+    "obligation_id": "6.1.a.1",
+    "severity": "CRITICAL",
+    "verdict": "FULLY_MET",
+    "confidence": 0.93,
+    "reason": "The policy identifies consent as one of the legal bases used for processing personal data.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_63",
+        "text": "Where required, we obtain consent before processing personal information.",
+        "page": 13,
+        "similarity": 0.93
+      }
+    ]
+  },
+  {
+    "article_number": 6,
+    "article_name": "Lawfulness of processing",
+    "chapter_number": 2,
+    "obligation_id": "6.1.b.1",
+    "severity": "CRITICAL",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.89,
+    "reason": "The policy refers to contractual necessity but does not clearly identify which processing activities rely on this legal basis.",
+    "gap": "The legal basis is mentioned but not mapped to specific processing activities.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_66",
+        "text": "Certain information may be processed when necessary to perform our contractual obligations.",
+        "page": 14,
+        "similarity": 0.86
+      }
+    ]
+  },
+  {
+    "article_number": 6,
+    "article_name": "Lawfulness of processing",
+    "chapter_number": 2,
+    "obligation_id": "6.1.c.1",
+    "severity": "HIGH",
+    "verdict": "NOT_MET",
+    "confidence": 0.86,
+    "reason": "The policy does not identify processing necessary for compliance with a legal obligation as a legal basis.",
+    "gap": "No provision addressing processing based on legal obligations was identified.",
+    "evidence": []
+  },
+  {
+    "article_number": 7,
+    "article_name": "Conditions for consent",
+    "chapter_number": 2,
+    "obligation_id": "7.1.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.97,
+    "reason": "The policy explains that consent is requested separately and that users may withdraw it.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_74",
+        "text": "Consent requests are presented separately from other terms and may be withdrawn at any time.",
+        "page": 16,
+        "similarity": 0.95
+      }
+    ]
+  },
+  {
+    "article_number": 7,
+    "article_name": "Conditions for consent",
+    "chapter_number": 2,
+    "obligation_id": "7.1.2",
+    "severity": "MEDIUM",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.9,
+    "reason": "The policy provides a withdrawal mechanism but does not clearly state that withdrawal must be as easy as giving consent.",
+    "gap": "The policy does not explicitly establish equivalent ease between giving and withdrawing consent.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_79",
+        "text": "Users may withdraw consent by contacting our privacy team.",
+        "page": 17,
+        "similarity": 0.88
+      }
+    ]
+  },
+  {
+    "article_number": 8,
+    "article_name": "Conditions applicable to child's consent",
+    "chapter_number": 2,
+    "obligation_id": "8.1.1",
+    "severity": "HIGH",
+    "verdict": "NOT_MET",
+    "confidence": 0.84,
+    "reason": "The policy does not describe age verification or parental authorization procedures for processing children's data.",
+    "gap": "No mechanism for obtaining or verifying parental authorization is specified.",
+    "evidence": []
+  },
+  {
+    "article_number": 9,
+    "article_name": "Processing of special categories of personal data",
+    "chapter_number": 2,
+    "obligation_id": "9.1.1",
+    "severity": "CRITICAL",
+    "verdict": "CONFLICTING",
+    "confidence": 0.87,
+    "reason": "The policy states that sensitive personal data is not collected but separately states that health and biometric information may be collected for certain services.",
+    "gap": "The policy contains contradictory statements regarding the collection of special categories of personal data.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_91",
+        "text": "We do not intentionally collect sensitive personal information.",
+        "page": 20,
+        "similarity": 0.9
+      },
+      {
+        "chunk_id": "policy_chunk_97",
+        "text": "For selected services, we may collect health or biometric information.",
+        "page": 22,
+        "similarity": 0.92
+      }
+    ]
+  },
+  {
+    "article_number": 12,
+    "article_name": "Transparent information, communication and modalities",
+    "chapter_number": 3,
+    "obligation_id": "12.1.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.95,
+    "reason": "The policy presents privacy information in a concise and understandable format.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_110",
+        "text": "This policy is written in clear and accessible language.",
+        "page": 27,
+        "similarity": 0.9
+      }
+    ]
+  },
+  {
+    "article_number": 13,
+    "article_name": "Information to be provided where personal data are collected from the data subject",
+    "chapter_number": 3,
+    "obligation_id": "13.1.a.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.96,
+    "reason": "The policy identifies the organization's identity and contact details.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_118",
+        "text": "ABC Ltd. is the controller responsible for your personal information. Our contact details are provided below.",
+        "page": 29,
+        "similarity": 0.94
+      }
+    ]
+  },
+  {
+    "article_number": 13,
+    "article_name": "Information to be provided where personal data are collected from the data subject",
+    "chapter_number": 3,
+    "obligation_id": "13.1.c.1",
+    "severity": "HIGH",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.92,
+    "reason": "The policy explains several purposes for processing but does not consistently associate each purpose with its applicable legal basis.",
+    "gap": "The legal basis is not clearly mapped to each processing purpose.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_121",
+        "text": "We use personal information to provide services, communicate with customers, and improve our products.",
+        "page": 30,
+        "similarity": 0.9
+      }
+    ]
+  },
+  {
+    "article_number": 14,
+    "article_name": "Information to be provided where personal data have not been obtained from the data subject",
+    "chapter_number": 3,
+    "obligation_id": "14.1.1",
+    "severity": "MEDIUM",
+    "verdict": "NOT_MET",
+    "confidence": 0.83,
+    "reason": "The policy does not explain what information is provided to individuals when personal data is obtained from third parties.",
+    "gap": "No third-party data notification process is described.",
+    "evidence": []
+  },
+  {
+    "article_number": 15,
+    "article_name": "Right of access by the data subject",
+    "chapter_number": 3,
+    "obligation_id": "15.1.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.94,
+    "reason": "The policy provides individuals with a mechanism to request access to their personal data.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_137",
+        "text": "You may request access to the personal information we hold about you by submitting a request to our privacy team.",
+        "page": 34,
+        "similarity": 0.93
+      }
+    ]
+  },
+  {
+    "article_number": 16,
+    "article_name": "Right to rectification",
+    "chapter_number": 3,
+    "obligation_id": "16.1.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.95,
+    "reason": "The policy explicitly allows individuals to request correction of inaccurate or incomplete personal data.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_145",
+        "text": "You may request correction of inaccurate or incomplete personal information.",
+        "page": 36,
+        "similarity": 0.94
+      }
+    ]
+  },
+  {
+    "article_number": 17,
+    "article_name": "Right to erasure",
+    "chapter_number": 3,
+    "obligation_id": "17.1.1",
+    "severity": "CRITICAL",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.93,
+    "reason": "The policy provides an account deletion mechanism but does not clearly explain all circumstances in which the right to erasure applies.",
+    "gap": "The policy does not clearly describe the applicable exceptions and conditions for erasure.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_152",
+        "text": "You may request deletion of your account and associated personal information.",
+        "page": 38,
+        "similarity": 0.92
+      }
+    ]
+  },
+  {
+    "article_number": 18,
+    "article_name": "Right to restriction of processing",
+    "chapter_number": 3,
+    "obligation_id": "18.1.1",
+    "severity": "HIGH",
+    "verdict": "NOT_MET",
+    "confidence": 0.89,
+    "reason": "No right to restriction of processing or corresponding request mechanism is described.",
+    "gap": "The policy does not address restriction of processing.",
+    "evidence": []
+  },
+  {
+    "article_number": 20,
+    "article_name": "Right to data portability",
+    "chapter_number": 3,
+    "obligation_id": "20.1.1",
+    "severity": "MEDIUM",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.88,
+    "reason": "The policy allows users to request a copy of their information but does not specify a structured, commonly used and machine-readable format.",
+    "gap": "Data portability format and transmission requirements are not specified.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_171",
+        "text": "Users may request a copy of the personal information associated with their account.",
+        "page": 43,
+        "similarity": 0.91
+      }
+    ]
+  },
+  {
+    "article_number": 21,
+    "article_name": "Right to object",
+    "chapter_number": 3,
+    "obligation_id": "21.1.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.93,
+    "reason": "The policy provides users with a mechanism to object to certain processing activities.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_181",
+        "text": "You may object to certain uses of your personal information by contacting our privacy team.",
+        "page": 46,
+        "similarity": 0.9
+      }
+    ]
+  },
+  {
+    "article_number": 22,
+    "article_name": "Automated individual decision-making",
+    "chapter_number": 4,
+    "obligation_id": "22.1.1",
+    "severity": "CRITICAL",
+    "verdict": "CONFLICTING",
+    "confidence": 0.86,
+    "reason": "One section states that automated decisions are not used, while another describes automated eligibility decisions.",
+    "gap": "The policy contains inconsistent statements regarding automated decision-making.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_195",
+        "text": "We do not make decisions about individuals solely through automated means.",
+        "page": 50,
+        "similarity": 0.89
+      },
+      {
+        "chunk_id": "policy_chunk_201",
+        "text": "Automated systems may determine eligibility for selected services.",
+        "page": 52,
+        "similarity": 0.93
+      }
+    ]
+  },
+  {
+    "article_number": 25,
+    "article_name": "Data protection by design and by default",
+    "chapter_number": 4,
+    "obligation_id": "25.1.1",
+    "severity": "HIGH",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.9,
+    "reason": "The policy refers to privacy safeguards during system development but does not establish a formal privacy-by-design process.",
+    "gap": "No documented process or controls for embedding data protection into system design are specified.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_214",
+        "text": "Privacy and security considerations are taken into account when developing new systems.",
+        "page": 55,
+        "similarity": 0.88
+      }
+    ]
+  },
+  {
+    "article_number": 30,
+    "article_name": "Records of processing activities",
+    "chapter_number": 4,
+    "obligation_id": "30.1.1",
+    "severity": "HIGH",
+    "verdict": "NOT_MET",
+    "confidence": 0.85,
+    "reason": "The policy does not provide evidence of maintaining records of processing activities.",
+    "gap": "No record-of-processing-activities process or documentation is described.",
+    "evidence": []
+  },
+  {
+    "article_number": 32,
+    "article_name": "Security of processing",
+    "chapter_number": 4,
+    "obligation_id": "32.1.1",
+    "severity": "CRITICAL",
+    "verdict": "FULLY_MET",
+    "confidence": 0.97,
+    "reason": "The policy describes encryption, access controls and security monitoring measures.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_236",
+        "text": "Personal information is protected using encryption, access controls, monitoring and other appropriate security measures.",
+        "page": 61,
+        "similarity": 0.96
+      }
+    ]
+  },
+  {
+    "article_number": 33,
+    "article_name": "Notification of a personal data breach to the supervisory authority",
+    "chapter_number": 4,
+    "obligation_id": "33.1.1",
+    "severity": "CRITICAL",
+    "verdict": "PARTIALLY_MET",
+    "confidence": 0.92,
+    "reason": "The policy requires reporting certain breaches internally but does not specify the supervisory authority notification timeline.",
+    "gap": "The policy does not explicitly state the applicable supervisory authority notification deadline.",
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_248",
+        "text": "Personal data breaches must be reported to the privacy team promptly for assessment and response.",
+        "page": 64,
+        "similarity": 0.9
+      }
+    ]
+  },
+  {
+    "article_number": 35,
+    "article_name": "Data protection impact assessment",
+    "chapter_number": 4,
+    "obligation_id": "35.1.1",
+    "severity": "HIGH",
+    "verdict": "FULLY_MET",
+    "confidence": 0.94,
+    "reason": "The policy establishes a process for assessing privacy risks before high-risk processing activities are implemented.",
+    "gap": null,
+    "evidence": [
+      {
+        "chunk_id": "policy_chunk_267",
+        "text": "High-risk processing activities undergo a privacy impact assessment before implementation.",
+        "page": 69,
+        "similarity": 0.92
+      }
+    ]
+  },
+  {
+    "article_number": 36,
+    "article_name": "Prior consultation",
+    "chapter_number": 4,
+    "obligation_id": "36.1.1",
+    "severity": "MEDIUM",
+    "verdict": "NOT_MET",
+    "confidence": 0.82,
+    "reason": "The policy does not describe circumstances requiring prior consultation with the supervisory authority.",
+    "gap": "No prior consultation procedure is specified.",
+    "evidence": []
+  }
+]
