@@ -2205,33 +2205,6 @@
 },
 
 {
-"article_number": 16,
-"article_name": "Right to rectification",
-"checkability": "direct",
-"contextual_reason": null,
-"sub_obligations": [
-{
-"id": "16.1.a",
-"parent_group_id": "16.1",
-"condition_logic": "SINGLE",
-"legal_text": "The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her.",
-"plain_summary": "A person can ask the organization to correct inaccurate personal information about them without unnecessary delay.",
-"applicability_condition": "Only when the person's personal information is inaccurate.",
-"evidence_prompt": "Does the policy provide a way for people to request correction of inaccurate personal information and state that corrections are made without undue delay?"
-},
-{
-"id": "16.1.b",
-"parent_group_id": "16.1",
-"condition_logic": "SINGLE",
-"legal_text": "Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement.",
-"plain_summary": "A person can ask the organization to complete missing personal information when it is needed for the purpose for which the information is used, including by adding a statement from the person.",
-"applicability_condition": "Only when the person's personal information is incomplete and completing it is relevant to the purposes for which it is used.",
-"evidence_prompt": "Does the policy provide a way for people to request completion of incomplete personal information, including by submitting additional information or a supplementary statement?"
-}
-]
-},
-
-{
 "article_number": 17,
 "article_name": "Right to erasure (‘right to be forgotten’)",
 "checkability": "direct",

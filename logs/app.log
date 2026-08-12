@@ -50,3 +50,35 @@
 2026-08-11 18:52:16 | SUCCESS | app.ingestion.embedder:__init__:22 | Embedding model initialized.
 2026-08-11 18:52:18 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
 2026-08-11 18:52:25 | SUCCESS | app.vectorstore.pinecone:add_documents:84 | Upserted 10 vectors to namespace 'company-policy'.
+2026-08-12 15:47:27 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 15:47:27 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 15:47:32 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 15:47:32 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-12 15:47:32 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='Does the policy state how long identifiable personal information is retained and link retention periods to the purposes '
+2026-08-12 15:47:34 | INFO | app.compliance.retriever:retrieve:150 | Retrieved 5 usable evidence chunks.
+2026-08-12 16:06:50 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 16:06:50 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 16:06:53 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 16:06:55 | SUCCESS | app.ingestion.extractors.mistral_extractor:__init__:56 | Mistral OCR initialized.
+2026-08-12 16:06:55 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 16:06:55 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 16:06:56 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 16:06:56 | INFO | app.ingestion.pipeline:ingest:32 | Starting ingestion of 1 file(s).
+2026-08-12 16:06:56 | INFO | app.ingestion.pipeline:ingest:40 | Processing 'SampleInput_CompanyPolicy.pdf'
+2026-08-12 16:06:56 | INFO | app.ingestion.loader:load:79 | Loading 'SampleInput_CompanyPolicy.pdf' using MistralExtractor
+2026-08-12 16:06:56 | INFO | app.ingestion.extractors.mistral_extractor:extract:126 | Uploading SampleInput_CompanyPolicy.pdf...
+2026-08-12 16:06:57 | INFO | app.ingestion.extractors.mistral_extractor:extract:130 | Generating signed URL...
+2026-08-12 16:06:58 | INFO | app.ingestion.extractors.mistral_extractor:extract:134 | Running OCR...
+2026-08-12 16:07:00 | INFO | app.ingestion.extractors.mistral_extractor:_persist_json:191 | Saved OCR JSON -> data\ocr_output\SampleInput_CompanyPolicy_20260812_160700.json
+2026-08-12 16:07:00 | SUCCESS | app.ingestion.loader:load:86 | Loaded 7 document(s) from 'SampleInput_CompanyPolicy.pdf'.
+2026-08-12 16:07:00 | INFO | app.ingestion.pipeline:ingest:64 | Assigned document_id=af61f936-5744-4623-abce-823273137c0d to 'SampleInput_CompanyPolicy.pdf'
+2026-08-12 16:07:00 | INFO | app.ingestion.splitter:split:55 | Splitting 7 document(s)...
+2026-08-12 16:07:00 | SUCCESS | app.ingestion.splitter:split:77 | Created 14 chunks from 7 document(s).
+2026-08-12 16:07:06 | SUCCESS | app.vectorstore.pinecone:add_documents:84 | Upserted 14 vectors to namespace 'company-policy'.
+2026-08-12 16:07:06 | SUCCESS | app.ingestion.pipeline:ingest:79 | Ingestion completed. Files=1 Documents=7 Chunks=14
+2026-08-12 16:07:22 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 16:07:22 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 16:07:24 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 16:07:24 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-12 16:07:24 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='Does the policy state how long identifiable personal information is retained and link retention periods to the purposes '
+2026-08-12 16:07:26 | INFO | app.compliance.retriever:retrieve:150 | Retrieved 5 usable evidence chunks.
