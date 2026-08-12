@@ -82,3 +82,223 @@
 2026-08-12 16:07:24 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
 2026-08-12 16:07:24 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='Does the policy state how long identifiable personal information is retained and link retention periods to the purposes '
 2026-08-12 16:07:26 | INFO | app.compliance.retriever:retrieve:150 | Retrieved 5 usable evidence chunks.
+2026-08-12 16:28:52 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 16:28:52 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 16:28:57 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 16:28:57 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-12 16:28:57 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='Does the policy state how long identifiable personal information is retained and link retention periods to the purposes '
+2026-08-12 16:28:59 | INFO | app.compliance.retriever:retrieve:150 | Retrieved 5 usable evidence chunks.
+2026-08-12 16:50:50 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 16:50:50 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 16:50:54 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 16:50:54 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 16:50:54 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='Does the policy state how long identifiable personal information is retained and link retention periods to the purposes '
+2026-08-12 16:50:56 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-12 17:31:28 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 17:31:28 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 17:31:33 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 17:31:33 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 17:31:33 | SUCCESS | app.compliance.group_retriever:__init__:96 | Compliance group retriever initialized.
+2026-08-12 17:31:33 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 17:31:33 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 17:31:33 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 17:31:33 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving group evidence | article=5 | group=5.1.f | obligations=4
+2026-08-12 17:31:33 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5, requirement group 5.1.f.
+Find company privacy policy evidence relevant to the following requirements:
+
+R'
+2026-08-12 17:31:35 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-12 17:31:35 | INFO | app.compliance.group_retriever:retrieve_group:274 | Group 5.1.f: retrieved 5 evidence chunks.
+2026-08-12 18:37:29 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:37:29 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:37:34 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 18:46:11 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:46:12 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:46:12 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:46:12 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:46:17 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 18:46:17 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 18:46:17 | SUCCESS | app.compliance.group_retriever:__init__:96 | Compliance group retriever initialized.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 6: found 6 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 7: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 8: found 3 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 9: found 12 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 10: found 1 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 12: found 8 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 13: found 10 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 14: found 14 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 15: found 6 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 16: found 1 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 17: found 3 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 18: found 3 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 19: found 1 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 20: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 21: found 6 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 22: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 24: found 3 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 25: found 3 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 26: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 28: found 8 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 30: found 5 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 32: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 33: found 5 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 34: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 35: found 8 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 37: found 7 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 38: found 6 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 39: found 4 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 44: found 1 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 45: found 1 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 46: found 3 compliance groups.
+2026-08-12 18:46:17 | INFO | app.compliance.group_retriever:get_groups:145 | Article 49: found 6 compliance groups.
+2026-08-12 18:46:17 | INFO | __main__:generate:174 | Generating embeddings for 165 GDPR groups...
+2026-08-12 18:49:32 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:49:32 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:49:32 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:49:32 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:49:35 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 18:49:35 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 18:49:35 | SUCCESS | app.compliance.group_retriever:__init__:96 | Compliance group retriever initialized.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 6: found 6 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 7: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 8: found 3 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 9: found 12 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 10: found 1 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 12: found 8 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 13: found 10 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 14: found 14 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 15: found 6 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 16: found 1 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 17: found 3 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 18: found 3 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 19: found 1 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 20: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 21: found 6 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 22: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 24: found 3 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 25: found 3 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 26: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 28: found 8 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 30: found 5 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 32: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 33: found 5 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 34: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 35: found 8 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 37: found 7 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 38: found 6 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 39: found 4 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 44: found 1 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 45: found 1 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 46: found 3 compliance groups.
+2026-08-12 18:49:35 | INFO | app.compliance.group_retriever:get_groups:145 | Article 49: found 6 compliance groups.
+2026-08-12 18:49:35 | INFO | __main__:generate:208 | Generating embeddings for 165 GDPR groups using batch_size=50...
+2026-08-12 18:49:35 | INFO | __main__:generate:246 | Embedding batch 1/4 | groups 1-50 of 165
+2026-08-12 18:49:39 | INFO | __main__:generate:246 | Embedding batch 2/4 | groups 51-100 of 165
+2026-08-12 18:49:43 | INFO | __main__:generate:246 | Embedding batch 3/4 | groups 101-150 of 165
+2026-08-12 18:58:24 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:58:24 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:58:24 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 18:58:24 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 18:58:27 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 18:58:27 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 18:58:27 | SUCCESS | app.compliance.group_retriever:__init__:96 | Compliance group retriever initialized.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 6: found 6 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 7: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 8: found 3 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 9: found 12 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 10: found 1 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 12: found 8 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 13: found 10 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 14: found 14 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 15: found 6 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 16: found 1 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 17: found 3 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 18: found 3 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 19: found 1 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 20: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 21: found 6 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 22: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 24: found 3 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 25: found 3 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 26: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 28: found 8 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 30: found 5 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 32: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 33: found 5 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 34: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 35: found 8 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 37: found 7 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 38: found 6 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 39: found 4 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 44: found 1 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 45: found 1 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 46: found 3 compliance groups.
+2026-08-12 18:58:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 49: found 6 compliance groups.
+2026-08-12 18:58:27 | INFO | __main__:generate:180 | Found 165 GDPR groups.
+2026-08-12 18:58:27 | INFO | __main__:generate:214 | Already cached: 0/165 groups.
+2026-08-12 18:58:27 | INFO | __main__:generate:243 | Remaining groups to embed: 165
+2026-08-12 18:58:27 | INFO | __main__:generate:281 | Embedding batch 1/4 | 50 groups
+2026-08-12 18:58:31 | SUCCESS | __main__:save:406 | GDPR embedding cache saved to H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
+2026-08-12 18:58:31 | SUCCESS | __main__:generate:361 | Saved batch 1/4. Progress: 50/165
+2026-08-12 18:58:31 | INFO | __main__:generate:281 | Embedding batch 2/4 | 50 groups
+2026-08-12 18:58:34 | SUCCESS | __main__:save:406 | GDPR embedding cache saved to H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
+2026-08-12 18:58:34 | SUCCESS | __main__:generate:361 | Saved batch 2/4. Progress: 100/165
+2026-08-12 18:58:34 | INFO | __main__:generate:281 | Embedding batch 3/4 | 50 groups
+2026-08-12 18:58:35 | ERROR | __main__:generate:295 | Embedding batch 3/4 failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-1.0\nPlease retry in 24.354463901s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}
+2026-08-12 18:58:35 | WARNING | __main__:generate:301 | Previously completed batches have already been saved and can be resumed later.
+2026-08-12 22:07:20 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 22:07:21 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 22:07:21 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 22:07:21 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 22:07:27 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 22:07:27 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 22:07:27 | SUCCESS | app.compliance.group_retriever:__init__:96 | Compliance group retriever initialized.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 5: found 7 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 6: found 6 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 7: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 8: found 3 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 9: found 12 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 10: found 1 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 12: found 8 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 13: found 10 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 14: found 14 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 15: found 6 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 16: found 1 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 17: found 3 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 18: found 3 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 19: found 1 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 20: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 21: found 6 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 22: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 24: found 3 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 25: found 3 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 26: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 28: found 8 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 30: found 5 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 32: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 33: found 5 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 34: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 35: found 8 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 37: found 7 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 38: found 6 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 39: found 4 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 44: found 1 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 45: found 1 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 46: found 3 compliance groups.
+2026-08-12 22:07:27 | INFO | app.compliance.group_retriever:get_groups:145 | Article 49: found 6 compliance groups.
+2026-08-12 22:07:27 | INFO | __main__:generate:180 | Found 165 GDPR groups.
+2026-08-12 22:07:27 | INFO | __main__:generate:190 | Existing GDPR embedding cache found: H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
+2026-08-12 22:07:27 | SUCCESS | __main__:load:439 | Loaded 100 GDPR group embeddings.
+2026-08-12 22:07:27 | INFO | __main__:generate:214 | Already cached: 100/165 groups.
+2026-08-12 22:07:27 | INFO | __main__:generate:243 | Remaining groups to embed: 65
+2026-08-12 22:07:27 | INFO | __main__:generate:281 | Embedding batch 1/2 | 50 groups
+2026-08-12 22:07:37 | SUCCESS | __main__:save:406 | GDPR embedding cache saved to H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
+2026-08-12 22:07:37 | SUCCESS | __main__:generate:361 | Saved batch 1/2. Progress: 150/165
+2026-08-12 22:07:37 | INFO | __main__:generate:281 | Embedding batch 2/2 | 15 groups
+2026-08-12 22:07:47 | SUCCESS | __main__:save:406 | GDPR embedding cache saved to H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
+2026-08-12 22:07:47 | SUCCESS | __main__:generate:361 | Saved batch 2/2. Progress: 165/165
+2026-08-12 22:07:49 | SUCCESS | __main__:save:406 | GDPR embedding cache saved to H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
+2026-08-12 22:07:49 | SUCCESS | __main__:generate:377 | GDPR embedding generation completed. Cached 165 groups.

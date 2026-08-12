@@ -1,5 +1,3 @@
-# app/compliance/retriever.py
-
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -73,7 +71,7 @@ class ComplianceRetriever:
         Returns
         -------
         list[RetrievedEvidence]
-            Normalized policy evidence.
+            Normalized policy evidence sorted by score.
         """
 
         if not query or not query.strip():
@@ -91,15 +89,27 @@ class ComplianceRetriever:
             f"top_k={top_k} | query='{query[:120]}'"
         )
 
+        # -----------------------------------------------------
+        # Query Pinecone
+        # -----------------------------------------------------
+
         response = self.vector_store.similarity_search(
             query=query,
             namespace=COMPANY_POLICY_NAMESPACE,
             top_k=top_k,
         )
 
+        # -----------------------------------------------------
+        # Extract matches
+        # -----------------------------------------------------
+
         matches = self._extract_matches(response)
 
         results: list[RetrievedEvidence] = []
+
+        # -----------------------------------------------------
+        # Normalize results
+        # -----------------------------------------------------
 
         for match in matches:
 
@@ -107,6 +117,7 @@ class ComplianceRetriever:
                 match.get("score", 0.0)
             )
 
+            # Optional similarity threshold
             if (
                 min_score is not None
                 and score < min_score
@@ -126,17 +137,29 @@ class ComplianceRetriever:
                 or ""
             )
 
+            # -------------------------------------------------
+            # Validate chunk ID
+            # -------------------------------------------------
+
             if not chunk_id:
                 logger.warning(
                     "Skipping retrieved match without chunk_id."
                 )
                 continue
 
+            # -------------------------------------------------
+            # Validate text
+            # -------------------------------------------------
+
             if not text.strip():
                 logger.warning(
                     f"Skipping empty retrieved chunk: {chunk_id}"
                 )
                 continue
+
+            # -------------------------------------------------
+            # Create normalized evidence object
+            # -------------------------------------------------
 
             results.append(
                 RetrievedEvidence(
@@ -147,18 +170,23 @@ class ComplianceRetriever:
                 )
             )
 
+        # -----------------------------------------------------
+        # Sort highest similarity first
+        # -----------------------------------------------------
+
+        results.sort(
+            key=lambda item: item.score,
+            reverse=True,
+        )
+
         logger.info(
             f"Retrieved {len(results)} usable evidence chunks."
         )
 
-        return results.sort(
-                key=lambda item: item.score,
-                reverse=True,
-            )
-
-        
-
-
+        # IMPORTANT:
+        # list.sort() returns None.
+        # Therefore sorting and returning must be separate.
+        return results
 
     @staticmethod
     def _extract_matches(
@@ -174,15 +202,26 @@ class ComplianceRetriever:
         if response is None:
             return []
 
+        # -----------------------------------------------------
         # Dictionary-style response
+        # -----------------------------------------------------
+
         if isinstance(response, dict):
-            matches = response.get("matches", [])
+
+            matches = response.get(
+                "matches",
+                [],
+            )
+
             return [
                 ComplianceRetriever._to_dict(match)
                 for match in matches
             ]
 
+        # -----------------------------------------------------
         # Pinecone SDK response object
+        # -----------------------------------------------------
+
         matches = getattr(
             response,
             "matches",
@@ -202,10 +241,15 @@ class ComplianceRetriever:
         Normalize a Pinecone match into a dictionary.
         """
 
+        # Already a dictionary
         if isinstance(match, dict):
             return match
 
         result: dict[str, Any] = {}
+
+        # -----------------------------------------------------
+        # Match ID
+        # -----------------------------------------------------
 
         match_id = getattr(
             match,
@@ -213,23 +257,31 @@ class ComplianceRetriever:
             None,
         )
 
+        if match_id is not None:
+            result["id"] = match_id
+
+        # -----------------------------------------------------
+        # Similarity score
+        # -----------------------------------------------------
+
         score = getattr(
             match,
             "score",
             None,
         )
 
+        if score is not None:
+            result["score"] = score
+
+        # -----------------------------------------------------
+        # Metadata
+        # -----------------------------------------------------
+
         metadata = getattr(
             match,
             "metadata",
             None,
         )
-
-        if match_id is not None:
-            result["id"] = match_id
-
-        if score is not None:
-            result["score"] = score
 
         if metadata is not None:
             result["metadata"] = dict(metadata)
