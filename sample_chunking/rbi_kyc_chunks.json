@@ -1,0 +1,851 @@
+{
+  "framework": "RBI KYC",
+  "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+  "source_version": "Updated as on August 14, 2025",
+  "chunking_strategy": "one semantic chunk per regulatory requirement",
+  "total_chunks": 30,
+  "chunks": [
+    {
+      "chunk_id": "RBI-KYC-001",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 4",
+      "control_domain": "KYC Governance",
+      "requirement": "Maintain a KYC policy duly approved by the Board of Directors or an authorized Board committee.",
+      "evidence_expected": [
+        "Board-approved KYC policy",
+        "Policy approval record",
+        "KYC governance document"
+      ],
+      "assessment_questions": [
+        "Is the KYC policy formally approved by the Board or authorized committee?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: KYC Governance\nRegulation: Chapter II, Paragraph 4\nRequirement: Maintain a KYC policy duly approved by the Board of Directors or an authorized Board committee.\nEvidence Expected: Board-approved KYC policy; Policy approval record; KYC governance document\nAssessment Questions: Is the KYC policy formally approved by the Board or authorized committee?"
+    },
+    {
+      "chunk_id": "RBI-KYC-002",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 5",
+      "control_domain": "KYC Policy Elements",
+      "requirement": "The KYC policy shall include Customer Acceptance Policy, Risk Management, Customer Identification Procedures (CIP), and Monitoring of Transactions.",
+      "evidence_expected": [
+        "KYC policy",
+        "Customer Acceptance Policy",
+        "Risk management policy",
+        "CIP procedure",
+        "Transaction monitoring procedure"
+      ],
+      "assessment_questions": [
+        "Does the KYC policy contain all four required key elements?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: KYC Policy Elements\nRegulation: Chapter II, Paragraph 5\nRequirement: The KYC policy shall include Customer Acceptance Policy, Risk Management, Customer Identification Procedures (CIP), and Monitoring of Transactions.\nEvidence Expected: KYC policy; Customer Acceptance Policy; Risk management policy; CIP procedure; Transaction monitoring procedure\nAssessment Questions: Does the KYC policy contain all four required key elements?"
+    },
+    {
+      "chunk_id": "RBI-KYC-003",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 5A",
+      "control_domain": "ML/TF Risk Assessment",
+      "requirement": "Periodically identify, assess and mitigate money laundering and terrorist financing risks across customers, countries/geographies, products, services, transactions and delivery channels.",
+      "evidence_expected": [
+        "ML/TF risk assessment",
+        "Risk register",
+        "Risk mitigation plan",
+        "Board review record"
+      ],
+      "assessment_questions": [
+        "Is a documented ML/TF risk assessment performed periodically?",
+        "Does it cover relevant customer, geographic, product, transaction and channel risks?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: ML/TF Risk Assessment\nRegulation: Chapter II, Paragraph 5A\nRequirement: Periodically identify, assess and mitigate money laundering and terrorist financing risks across customers, countries/geographies, products, services, transactions and delivery channels.\nEvidence Expected: ML/TF risk assessment; Risk register; Risk mitigation plan; Board review record\nAssessment Questions: Is a documented ML/TF risk assessment performed periodically? Does it cover relevant customer, geographic, product, transaction and channel risks?"
+    },
+    {
+      "chunk_id": "RBI-KYC-004",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 5B",
+      "control_domain": "Risk-Based Approach",
+      "requirement": "Apply a risk-based approach with Board-approved policies, controls and procedures and implement a CDD programme proportionate to ML/TF risk and business size.",
+      "evidence_expected": [
+        "Risk-based KYC policy",
+        "Customer risk methodology",
+        "CDD programme",
+        "Control monitoring records"
+      ],
+      "assessment_questions": [
+        "Are customer and transaction risks used to determine the level of KYC/CDD controls?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Risk-Based Approach\nRegulation: Chapter II, Paragraph 5B\nRequirement: Apply a risk-based approach with Board-approved policies, controls and procedures and implement a CDD programme proportionate to ML/TF risk and business size.\nEvidence Expected: Risk-based KYC policy; Customer risk methodology; CDD programme; Control monitoring records\nAssessment Questions: Are customer and transaction risks used to determine the level of KYC/CDD controls?"
+    },
+    {
+      "chunk_id": "RBI-KYC-005",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 6",
+      "control_domain": "Designated Director",
+      "requirement": "Nominate a Designated Director responsible for overall compliance with applicable PML Act and Rules obligations and communicate the required details to FIU-IND and RBI.",
+      "evidence_expected": [
+        "Board nomination",
+        "Designated Director details",
+        "FIU-IND communication",
+        "RBI communication"
+      ],
+      "assessment_questions": [
+        "Is a Designated Director formally nominated and are required details communicated?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Designated Director\nRegulation: Chapter II, Paragraph 6\nRequirement: Nominate a Designated Director responsible for overall compliance with applicable PML Act and Rules obligations and communicate the required details to FIU-IND and RBI.\nEvidence Expected: Board nomination; Designated Director details; FIU-IND communication; RBI communication\nAssessment Questions: Is a Designated Director formally nominated and are required details communicated?"
+    },
+    {
+      "chunk_id": "RBI-KYC-006",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 7",
+      "control_domain": "Principal Officer",
+      "requirement": "Appoint a Principal Officer responsible for compliance, transaction monitoring and required information sharing/reporting, with required details communicated to FIU-IND and RBI.",
+      "evidence_expected": [
+        "Principal Officer appointment",
+        "FIU-IND communication",
+        "RBI communication",
+        "Role description"
+      ],
+      "assessment_questions": [
+        "Is a Principal Officer assigned with documented KYC/AML responsibilities?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Principal Officer\nRegulation: Chapter II, Paragraph 7\nRequirement: Appoint a Principal Officer responsible for compliance, transaction monitoring and required information sharing/reporting, with required details communicated to FIU-IND and RBI.\nEvidence Expected: Principal Officer appointment; FIU-IND communication; RBI communication; Role description\nAssessment Questions: Is a Principal Officer assigned with documented KYC/AML responsibilities?"
+    },
+    {
+      "chunk_id": "RBI-KYC-007",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter II, Paragraph 8",
+      "control_domain": "KYC Compliance Oversight",
+      "requirement": "Define senior-management responsibility, allocate implementation responsibilities, independently evaluate compliance, conduct internal/concurrent audits and submit quarterly audit notes to the Audit Committee.",
+      "evidence_expected": [
+        "Responsibility matrix",
+        "Independent evaluation",
+        "Internal audit reports",
+        "Quarterly audit notes"
+      ],
+      "assessment_questions": [
+        "Are KYC compliance responsibilities and independent audit/evaluation mechanisms documented?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: KYC Compliance Oversight\nRegulation: Chapter II, Paragraph 8\nRequirement: Define senior-management responsibility, allocate implementation responsibilities, independently evaluate compliance, conduct internal/concurrent audits and submit quarterly audit notes to the Audit Committee.\nEvidence Expected: Responsibility matrix; Independent evaluation; Internal audit reports; Quarterly audit notes\nAssessment Questions: Are KYC compliance responsibilities and independent audit/evaluation mechanisms documented?"
+    },
+    {
+      "chunk_id": "RBI-KYC-008",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter III, Paragraphs 9-10",
+      "control_domain": "Customer Acceptance",
+      "requirement": "Maintain a Customer Acceptance Policy and do not open anonymous, fictitious or benami accounts or establish relationships without required CDD.",
+      "evidence_expected": [
+        "Customer Acceptance Policy",
+        "Account-opening controls",
+        "CDD workflow",
+        "Exception records"
+      ],
+      "assessment_questions": [
+        "Does onboarding prevent anonymous/fictitious/benami accounts?",
+        "Is CDD completed before establishing the relationship?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Customer Acceptance\nRegulation: Chapter III, Paragraphs 9-10\nRequirement: Maintain a Customer Acceptance Policy and do not open anonymous, fictitious or benami accounts or establish relationships without required CDD.\nEvidence Expected: Customer Acceptance Policy; Account-opening controls; CDD workflow; Exception records\nAssessment Questions: Does onboarding prevent anonymous/fictitious/benami accounts? Is CDD completed before establishing the relationship?"
+    },
+    {
+      "chunk_id": "RBI-KYC-009",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter III, Paragraph 10",
+      "control_domain": "Mandatory KYC Information",
+      "requirement": "Specify mandatory KYC information required at account opening and during periodic KYC updation; obtain additional information with explicit customer consent where applicable.",
+      "evidence_expected": [
+        "KYC data requirements",
+        "Account-opening forms",
+        "Consent records"
+      ],
+      "assessment_questions": [
+        "Are mandatory KYC fields defined?",
+        "Is explicit consent captured when additional information is requested?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Mandatory KYC Information\nRegulation: Chapter III, Paragraph 10\nRequirement: Specify mandatory KYC information required at account opening and during periodic KYC updation; obtain additional information with explicit customer consent where applicable.\nEvidence Expected: KYC data requirements; Account-opening forms; Consent records\nAssessment Questions: Are mandatory KYC fields defined? Is explicit consent captured when additional information is requested?"
+    },
+    {
+      "chunk_id": "RBI-KYC-010",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter III, Paragraph 10",
+      "control_domain": "Sanctions Screening",
+      "requirement": "Maintain a suitable system to ensure customer identity does not match applicable sanctions lists specified under the Direction.",
+      "evidence_expected": [
+        "Sanctions screening policy",
+        "Screening system",
+        "Screening logs",
+        "Match-resolution records"
+      ],
+      "assessment_questions": [
+        "Is customer screening performed against applicable sanctions lists?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Sanctions Screening\nRegulation: Chapter III, Paragraph 10\nRequirement: Maintain a suitable system to ensure customer identity does not match applicable sanctions lists specified under the Direction.\nEvidence Expected: Sanctions screening policy; Screening system; Screening logs; Match-resolution records\nAssessment Questions: Is customer screening performed against applicable sanctions lists?"
+    },
+    {
+      "chunk_id": "RBI-KYC-011",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter V, Paragraph 13",
+      "control_domain": "Customer Identification Procedure",
+      "requirement": "Perform customer identification at account-based onboarding and specified transaction, authenticity-doubt and structured-transaction scenarios.",
+      "evidence_expected": [
+        "CIP procedure",
+        "Identity verification records",
+        "Transaction-trigger rules"
+      ],
+      "assessment_questions": [
+        "Does the CIP process trigger in all applicable cases?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Customer Identification Procedure\nRegulation: Chapter V, Paragraph 13\nRequirement: Perform customer identification at account-based onboarding and specified transaction, authenticity-doubt and structured-transaction scenarios.\nEvidence Expected: CIP procedure; Identity verification records; Transaction-trigger rules\nAssessment Questions: Does the CIP process trigger in all applicable cases?"
+    },
+    {
+      "chunk_id": "RBI-KYC-012",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter V, Paragraph 14",
+      "control_domain": "Third-Party CDD",
+      "requirement": "Where reliance on third-party CDD is permitted, obtain CDD records promptly, ensure the third party is appropriately regulated and not based in a high-risk jurisdiction, while retaining ultimate CDD responsibility.",
+      "evidence_expected": [
+        "Third-party CDD agreement",
+        "Third-party due diligence",
+        "CDD records",
+        "Risk assessment"
+      ],
+      "assessment_questions": [
+        "If third-party CDD is used, are the required conditions satisfied and documented?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Third-Party CDD\nRegulation: Chapter V, Paragraph 14\nRequirement: Where reliance on third-party CDD is permitted, obtain CDD records promptly, ensure the third party is appropriately regulated and not based in a high-risk jurisdiction, while retaining ultimate CDD responsibility.\nEvidence Expected: Third-party CDD agreement; Third-party due diligence; CDD records; Risk assessment\nAssessment Questions: If third-party CDD is used, are the required conditions satisfied and documented?"
+    },
+    {
+      "chunk_id": "RBI-KYC-013",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 16",
+      "control_domain": "Individual CDD",
+      "requirement": "Obtain and verify prescribed identity/address information and other required information for individuals, beneficial owners, authorized signatories and power-of-attorney holders.",
+      "evidence_expected": [
+        "Identity documents",
+        "Address documents",
+        "PAN/Form 60",
+        "CDD records",
+        "Verification records"
+      ],
+      "assessment_questions": [
+        "Are prescribed identity and address documents obtained and verified for applicable individuals?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Individual CDD\nRegulation: Chapter VI, Paragraph 16\nRequirement: Obtain and verify prescribed identity/address information and other required information for individuals, beneficial owners, authorized signatories and power-of-attorney holders.\nEvidence Expected: Identity documents; Address documents; PAN/Form 60; CDD records; Verification records\nAssessment Questions: Are prescribed identity and address documents obtained and verified for applicable individuals?"
+    },
+    {
+      "chunk_id": "RBI-KYC-014",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 16 and Annex I",
+      "control_domain": "Aadhaar / Digital KYC",
+      "requirement": "Where applicable, perform Aadhaar authentication/offline verification or Digital KYC in accordance with the Direction and applicable law; redact Aadhaar where authentication is not required.",
+      "evidence_expected": [
+        "Digital KYC records",
+        "Authentication records",
+        "Redaction controls",
+        "Verification logs"
+      ],
+      "assessment_questions": [
+        "Are Aadhaar-related KYC processes performed only through permitted methods?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Aadhaar / Digital KYC\nRegulation: Chapter VI, Paragraph 16 and Annex I\nRequirement: Where applicable, perform Aadhaar authentication/offline verification or Digital KYC in accordance with the Direction and applicable law; redact Aadhaar where authentication is not required.\nEvidence Expected: Digital KYC records; Authentication records; Redaction controls; Verification logs\nAssessment Questions: Are Aadhaar-related KYC processes performed only through permitted methods?"
+    },
+    {
+      "chunk_id": "RBI-KYC-015",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 40",
+      "control_domain": "Non-Face-to-Face KYC",
+      "requirement": "Apply enhanced due diligence measures to eligible non-face-to-face onboarding, including required address, PAN, transaction and monitoring controls.",
+      "evidence_expected": [
+        "Non-face-to-face onboarding policy",
+        "EDD checklist",
+        "Address verification",
+        "Enhanced monitoring records"
+      ],
+      "assessment_questions": [
+        "Are enhanced due diligence controls applied to applicable non-face-to-face customers?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Non-Face-to-Face KYC\nRegulation: Chapter VI, Paragraph 40\nRequirement: Apply enhanced due diligence measures to eligible non-face-to-face onboarding, including required address, PAN, transaction and monitoring controls.\nEvidence Expected: Non-face-to-face onboarding policy; EDD checklist; Address verification; Enhanced monitoring records\nAssessment Questions: Are enhanced due diligence controls applied to applicable non-face-to-face customers?"
+    },
+    {
+      "chunk_id": "RBI-KYC-016",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 18",
+      "control_domain": "V-CIP",
+      "requirement": "Where V-CIP is used, maintain prescribed secure infrastructure, workflow, trained officials, encryption, auditability, liveness/spoof detection and testing controls.",
+      "evidence_expected": [
+        "V-CIP SOP",
+        "Encryption evidence",
+        "Audit trail",
+        "Liveness testing",
+        "VA/PT report",
+        "Security audit report"
+      ],
+      "assessment_questions": [
+        "Does the V-CIP implementation satisfy the prescribed security, audit and verification requirements?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: V-CIP\nRegulation: Chapter VI, Paragraph 18\nRequirement: Where V-CIP is used, maintain prescribed secure infrastructure, workflow, trained officials, encryption, auditability, liveness/spoof detection and testing controls.\nEvidence Expected: V-CIP SOP; Encryption evidence; Audit trail; Liveness testing; VA/PT report; Security audit report\nAssessment Questions: Does the V-CIP implementation satisfy the prescribed security, audit and verification requirements?"
+    },
+    {
+      "chunk_id": "RBI-KYC-017",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 18",
+      "control_domain": "V-CIP Data Handling",
+      "requirement": "For cloud-based V-CIP, ensure ownership of data remains with the RE and required data/video is transferred to RE-controlled infrastructure without retention by the cloud or assisting third-party provider.",
+      "evidence_expected": [
+        "Cloud architecture",
+        "Vendor contract",
+        "Data-flow diagram",
+        "Retention configuration"
+      ],
+      "assessment_questions": [
+        "Does the V-CIP cloud arrangement prevent unauthorized third-party retention of required V-CIP data?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: V-CIP Data Handling\nRegulation: Chapter VI, Paragraph 18\nRequirement: For cloud-based V-CIP, ensure ownership of data remains with the RE and required data/video is transferred to RE-controlled infrastructure without retention by the cloud or assisting third-party provider.\nEvidence Expected: Cloud architecture; Vendor contract; Data-flow diagram; Retention configuration\nAssessment Questions: Does the V-CIP cloud arrangement prevent unauthorized third-party retention of required V-CIP data?"
+    },
+    {
+      "chunk_id": "RBI-KYC-018",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter I definitions and Chapter VI",
+      "control_domain": "Beneficial Ownership",
+      "requirement": "Identify and verify beneficial owners according to the applicable customer/entity type and prescribed ownership or control criteria.",
+      "evidence_expected": [
+        "Beneficial ownership declaration",
+        "Ownership structure",
+        "BO verification documents",
+        "CDD records"
+      ],
+      "assessment_questions": [
+        "Are beneficial owners identified and verified for applicable legal entities and arrangements?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Beneficial Ownership\nRegulation: Chapter I definitions and Chapter VI\nRequirement: Identify and verify beneficial owners according to the applicable customer/entity type and prescribed ownership or control criteria.\nEvidence Expected: Beneficial ownership declaration; Ownership structure; BO verification documents; CDD records\nAssessment Questions: Are beneficial owners identified and verified for applicable legal entities and arrangements?"
+    },
+    {
+      "chunk_id": "RBI-KYC-019",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 37",
+      "control_domain": "Ongoing Due Diligence",
+      "requirement": "Perform ongoing due diligence and monitor transactions so they remain consistent with the RE's knowledge of the customer, business, risk profile and source of funds/wealth.",
+      "evidence_expected": [
+        "Transaction monitoring policy",
+        "Monitoring rules",
+        "Alerts",
+        "Investigation records"
+      ],
+      "assessment_questions": [
+        "Are customer transactions monitored against customer profile and risk?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Ongoing Due Diligence\nRegulation: Chapter VI, Paragraph 37\nRequirement: Perform ongoing due diligence and monitor transactions so they remain consistent with the RE's knowledge of the customer, business, risk profile and source of funds/wealth.\nEvidence Expected: Transaction monitoring policy; Monitoring rules; Alerts; Investigation records\nAssessment Questions: Are customer transactions monitored against customer profile and risk?"
+    },
+    {
+      "chunk_id": "RBI-KYC-020",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 37",
+      "control_domain": "Risk Review and Enhanced Monitoring",
+      "requirement": "Align monitoring intensity with customer risk and periodically review customer risk categorisation; high-risk accounts require intensified monitoring.",
+      "evidence_expected": [
+        "Risk review schedule",
+        "Customer risk ratings",
+        "Enhanced monitoring records"
+      ],
+      "assessment_questions": [
+        "Are customer risk categories reviewed at least as required and does monitoring intensity reflect risk?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Risk Review and Enhanced Monitoring\nRegulation: Chapter VI, Paragraph 37\nRequirement: Align monitoring intensity with customer risk and periodically review customer risk categorisation; high-risk accounts require intensified monitoring.\nEvidence Expected: Risk review schedule; Customer risk ratings; Enhanced monitoring records\nAssessment Questions: Are customer risk categories reviewed at least as required and does monitoring intensity reflect risk?"
+    },
+    {
+      "chunk_id": "RBI-KYC-021",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 38",
+      "control_domain": "Periodic KYC Updation",
+      "requirement": "Keep CDD information current using a risk-based periodic KYC updation process, with prescribed minimum periodicity for high-, medium- and low-risk customers.",
+      "evidence_expected": [
+        "KYC updation policy",
+        "KYC due-date tracker",
+        "Customer declarations",
+        "Address verification records"
+      ],
+      "assessment_questions": [
+        "Is KYC periodically updated according to customer risk category?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Periodic KYC Updation\nRegulation: Chapter VI, Paragraph 38\nRequirement: Keep CDD information current using a risk-based periodic KYC updation process, with prescribed minimum periodicity for high-, medium- and low-risk customers.\nEvidence Expected: KYC updation policy; KYC due-date tracker; Customer declarations; Address verification records\nAssessment Questions: Is KYC periodically updated according to customer risk category?"
+    },
+    {
+      "chunk_id": "RBI-KYC-022",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 56",
+      "control_domain": "CKYCR",
+      "requirement": "Use the KYC Identifier and retrieve/update KYC records through CKYCR as required, including handling of updated customer information.",
+      "evidence_expected": [
+        "CKYCR integration",
+        "KYC Identifier records",
+        "CKYCR retrieval logs",
+        "Update submission logs"
+      ],
+      "assessment_questions": [
+        "Does the RE use CKYCR/KYC Identifier processes as required?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: CKYCR\nRegulation: Chapter VI, Paragraph 56\nRequirement: Use the KYC Identifier and retrieve/update KYC records through CKYCR as required, including handling of updated customer information.\nEvidence Expected: CKYCR integration; KYC Identifier records; CKYCR retrieval logs; Update submission logs\nAssessment Questions: Does the RE use CKYCR/KYC Identifier processes as required?"
+    },
+    {
+      "chunk_id": "RBI-KYC-023",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VII, Paragraph 46",
+      "control_domain": "Record Management",
+      "requirement": "Maintain transaction records for at least five years from the date of transaction and customer identification/address records for at least five years after the business relationship ends.",
+      "evidence_expected": [
+        "Record-retention policy",
+        "Transaction records",
+        "KYC records",
+        "Retention configuration"
+      ],
+      "assessment_questions": [
+        "Are required KYC and transaction records retained for the prescribed periods?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Record Management\nRegulation: Chapter VII, Paragraph 46\nRequirement: Maintain transaction records for at least five years from the date of transaction and customer identification/address records for at least five years after the business relationship ends.\nEvidence Expected: Record-retention policy; Transaction records; KYC records; Retention configuration\nAssessment Questions: Are required KYC and transaction records retained for the prescribed periods?"
+    },
+    {
+      "chunk_id": "RBI-KYC-024",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VII, Paragraph 46",
+      "control_domain": "Transaction Reconstruction",
+      "requirement": "Maintain transaction information sufficient to reconstruct individual transactions, including nature, amount/currency, date and parties.",
+      "evidence_expected": [
+        "Transaction database",
+        "Audit trail",
+        "Transaction reports"
+      ],
+      "assessment_questions": [
+        "Can individual transactions be reconstructed from retained records?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Transaction Reconstruction\nRegulation: Chapter VII, Paragraph 46\nRequirement: Maintain transaction information sufficient to reconstruct individual transactions, including nature, amount/currency, date and parties.\nEvidence Expected: Transaction database; Audit trail; Transaction reports\nAssessment Questions: Can individual transactions be reconstructed from retained records?"
+    },
+    {
+      "chunk_id": "RBI-KYC-025",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VII, Paragraph 46",
+      "control_domain": "Regulatory Record Access",
+      "requirement": "Maintain records so identification and transaction data can be made available swiftly to competent authorities upon request.",
+      "evidence_expected": [
+        "Data retrieval procedure",
+        "Regulatory response logs",
+        "Record-access controls"
+      ],
+      "assessment_questions": [
+        "Can required KYC and transaction records be retrieved promptly for competent authorities?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Regulatory Record Access\nRegulation: Chapter VII, Paragraph 46\nRequirement: Maintain records so identification and transaction data can be made available swiftly to competent authorities upon request.\nEvidence Expected: Data retrieval procedure; Regulatory response logs; Record-access controls\nAssessment Questions: Can required KYC and transaction records be retrieved promptly for competent authorities?"
+    },
+    {
+      "chunk_id": "RBI-KYC-026",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VIII, Paragraphs 47-49",
+      "control_domain": "FIU-IND Reporting",
+      "requirement": "Furnish information required under the PML (Maintenance of Records) Rules to FIU-IND using prescribed reporting requirements and formats.",
+      "evidence_expected": [
+        "FIU-IND reporting procedure",
+        "CTR/STR submissions",
+        "Reporting logs",
+        "Principal Officer review"
+      ],
+      "assessment_questions": [
+        "Are applicable reports furnished to FIU-IND using prescribed processes?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: FIU-IND Reporting\nRegulation: Chapter VIII, Paragraphs 47-49\nRequirement: Furnish information required under the PML (Maintenance of Records) Rules to FIU-IND using prescribed reporting requirements and formats.\nEvidence Expected: FIU-IND reporting procedure; CTR/STR submissions; Reporting logs; Principal Officer review\nAssessment Questions: Are applicable reports furnished to FIU-IND using prescribed processes?"
+    },
+    {
+      "chunk_id": "RBI-KYC-027",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VIII, Paragraphs 48-50",
+      "control_domain": "CTR/STR Monitoring and Reporting",
+      "requirement": "Maintain suitable technological capability for extracting and reporting CTR/STR data and use robust software that generates alerts when transactions are inconsistent with customer risk categorisation and profile.",
+      "evidence_expected": [
+        "AML transaction monitoring system",
+        "Alert rules",
+        "CTR/STR workflow",
+        "Alert investigation records"
+      ],
+      "assessment_questions": [
+        "Does the AML system generate alerts for transactions inconsistent with customer risk/profile?",
+        "Can CTR/STR data be extracted and reported?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: CTR/STR Monitoring and Reporting\nRegulation: Chapter VIII, Paragraphs 48-50\nRequirement: Maintain suitable technological capability for extracting and reporting CTR/STR data and use robust software that generates alerts when transactions are inconsistent with customer risk categorisation and profile.\nEvidence Expected: AML transaction monitoring system; Alert rules; CTR/STR workflow; Alert investigation records\nAssessment Questions: Does the AML system generate alerts for transactions inconsistent with customer risk/profile? Can CTR/STR data be extracted and reported?"
+    },
+    {
+      "chunk_id": "RBI-KYC-028",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VIII, Paragraph 49",
+      "control_domain": "Reporting Confidentiality",
+      "requirement": "Maintain confidentiality regarding records and information furnished to FIU-IND, subject to permitted information sharing.",
+      "evidence_expected": [
+        "Confidentiality policy",
+        "Access controls",
+        "FIU reporting procedure",
+        "Employee training"
+      ],
+      "assessment_questions": [
+        "Is access to FIU reporting information restricted and confidential?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: Reporting Confidentiality\nRegulation: Chapter VIII, Paragraph 49\nRequirement: Maintain confidentiality regarding records and information furnished to FIU-IND, subject to permitted information sharing.\nEvidence Expected: Confidentiality policy; Access controls; FIU reporting procedure; Employee training\nAssessment Questions: Is access to FIU reporting information restricted and confidential?"
+    },
+    {
+      "chunk_id": "RBI-KYC-029",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 41",
+      "control_domain": "PEP Due Diligence",
+      "requirement": "For PEP relationships, apply prescribed risk management, source of funds/wealth checks, senior management approval and ongoing enhanced monitoring.",
+      "evidence_expected": [
+        "PEP screening",
+        "Source-of-funds records",
+        "Senior management approval",
+        "Enhanced monitoring"
+      ],
+      "assessment_questions": [
+        "Are applicable PEP relationships subject to enhanced due diligence and senior management approval?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: PEP Due Diligence\nRegulation: Chapter VI, Paragraph 41\nRequirement: For PEP relationships, apply prescribed risk management, source of funds/wealth checks, senior management approval and ongoing enhanced monitoring.\nEvidence Expected: PEP screening; Source-of-funds records; Senior management approval; Enhanced monitoring\nAssessment Questions: Are applicable PEP relationships subject to enhanced due diligence and senior management approval?"
+    },
+    {
+      "chunk_id": "RBI-KYC-030",
+      "framework": "RBI KYC",
+      "jurisdiction": "India",
+      "authority": "Reserve Bank of India",
+      "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+      "source_version": "Updated as on August 14, 2025",
+      "source_type": "Regulatory Master Direction",
+      "regulation": "Chapter VI, Paragraph 37",
+      "control_domain": "AI/ML Transaction Monitoring",
+      "requirement": "Appropriate AI and ML technologies may be used to support effective ongoing due diligence and monitoring.",
+      "evidence_expected": [
+        "AI/ML monitoring documentation",
+        "Model governance",
+        "Alert validation",
+        "Monitoring performance records"
+      ],
+      "assessment_questions": [
+        "If AI/ML is used for KYC monitoring, is it integrated into an effective documented monitoring process?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: RBI KYC\nJurisdiction: India\nControl Domain: AI/ML Transaction Monitoring\nRegulation: Chapter VI, Paragraph 37\nRequirement: Appropriate AI and ML technologies may be used to support effective ongoing due diligence and monitoring.\nEvidence Expected: AI/ML monitoring documentation; Model governance; Alert validation; Monitoring performance records\nAssessment Questions: If AI/ML is used for KYC monitoring, is it integrated into an effective documented monitoring process?"
+    }
+  ]
+}
