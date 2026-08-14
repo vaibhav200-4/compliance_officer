@@ -1,0 +1,600 @@
+{
+  "framework": "HIPAA",
+  "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+  "source_version": "February 2024",
+  "chunking_strategy": "one semantic chunk per regulatory/security requirement",
+  "total_chunks": 22,
+  "chunks": [
+    {
+      "chunk_id": "HIPAA-001",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Risk Analysis",
+      "regulation": "45 CFR §164.308(a)(1)",
+      "requirement": "Conduct a risk analysis to identify potential risks and vulnerabilities to ePHI.",
+      "evidence_expected": [
+        "Security risk assessment",
+        "risk register",
+        "ePHI asset inventory"
+      ],
+      "assessment_questions": [
+        "Is a documented security risk analysis performed?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Risk Analysis\nRegulation: 45 CFR §164.308(a)(1)\nRequirement: Conduct a risk analysis to identify potential risks and vulnerabilities to ePHI.\nEvidence Expected: Security risk assessment; risk register; ePHI asset inventory\nAssessment Questions: Is a documented security risk analysis performed?"
+    },
+    {
+      "chunk_id": "HIPAA-002",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Risk Management",
+      "regulation": "45 CFR §164.308(a)(1)",
+      "requirement": "Implement security measures sufficient to reduce identified risks and vulnerabilities to a reasonable and appropriate level.",
+      "evidence_expected": [
+        "Risk management plan",
+        "risk treatment records"
+      ],
+      "assessment_questions": [
+        "Are identified ePHI risks treated and documented?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Risk Management\nRegulation: 45 CFR §164.308(a)(1)\nRequirement: Implement security measures sufficient to reduce identified risks and vulnerabilities to a reasonable and appropriate level.\nEvidence Expected: Risk management plan; risk treatment records\nAssessment Questions: Are identified ePHI risks treated and documented?"
+    },
+    {
+      "chunk_id": "HIPAA-003",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Information System Activity Review",
+      "regulation": "45 CFR §164.308(a)(1)",
+      "requirement": "Regularly review information-system activity records such as audit logs, access reports, and security incident reports.",
+      "evidence_expected": [
+        "Audit logs",
+        "access reports",
+        "log-review procedure"
+      ],
+      "assessment_questions": [
+        "Are logs and access activity regularly reviewed?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Information System Activity Review\nRegulation: 45 CFR §164.308(a)(1)\nRequirement: Regularly review information-system activity records such as audit logs, access reports, and security incident reports.\nEvidence Expected: Audit logs; access reports; log-review procedure\nAssessment Questions: Are logs and access activity regularly reviewed?"
+    },
+    {
+      "chunk_id": "HIPAA-004",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Assigned Security Responsibility",
+      "regulation": "45 CFR §164.308(a)(2)",
+      "requirement": "Identify a security official responsible for developing and implementing security policies and procedures.",
+      "evidence_expected": [
+        "Security officer designation",
+        "responsibility document"
+      ],
+      "assessment_questions": [
+        "Is a responsible security official formally assigned?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Assigned Security Responsibility\nRegulation: 45 CFR §164.308(a)(2)\nRequirement: Identify a security official responsible for developing and implementing security policies and procedures.\nEvidence Expected: Security officer designation; responsibility document\nAssessment Questions: Is a responsible security official formally assigned?"
+    },
+    {
+      "chunk_id": "HIPAA-005",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Workforce Security",
+      "regulation": "45 CFR §164.308(a)(3)",
+      "requirement": "Implement policies and procedures to ensure workforce members have appropriate ePHI access and prevent unauthorized access.",
+      "evidence_expected": [
+        "Workforce security policy",
+        "onboarding/offboarding records"
+      ],
+      "assessment_questions": [
+        "Are workforce access rights authorized and changed when roles change?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Workforce Security\nRegulation: 45 CFR §164.308(a)(3)\nRequirement: Implement policies and procedures to ensure workforce members have appropriate ePHI access and prevent unauthorized access.\nEvidence Expected: Workforce security policy; onboarding/offboarding records\nAssessment Questions: Are workforce access rights authorized and changed when roles change?"
+    },
+    {
+      "chunk_id": "HIPAA-006",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Information Access Management",
+      "regulation": "45 CFR §164.308(a)(4)",
+      "requirement": "Implement policies and procedures for authorizing access to ePHI and systems containing ePHI.",
+      "evidence_expected": [
+        "Access-control policy",
+        "RBAC matrix",
+        "authorization records"
+      ],
+      "assessment_questions": [
+        "Is access to ePHI based on defined authorization?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Information Access Management\nRegulation: 45 CFR §164.308(a)(4)\nRequirement: Implement policies and procedures for authorizing access to ePHI and systems containing ePHI.\nEvidence Expected: Access-control policy; RBAC matrix; authorization records\nAssessment Questions: Is access to ePHI based on defined authorization?"
+    },
+    {
+      "chunk_id": "HIPAA-007",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Security Awareness and Training",
+      "regulation": "45 CFR §164.308(a)(5)",
+      "requirement": "Implement a security awareness and training program for workforce members.",
+      "evidence_expected": [
+        "Training policy",
+        "training records",
+        "training materials"
+      ],
+      "assessment_questions": [
+        "Do workforce members receive security training and is it recorded?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Security Awareness and Training\nRegulation: 45 CFR §164.308(a)(5)\nRequirement: Implement a security awareness and training program for workforce members.\nEvidence Expected: Training policy; training records; training materials\nAssessment Questions: Do workforce members receive security training and is it recorded?"
+    },
+    {
+      "chunk_id": "HIPAA-008",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Security Incident Procedures",
+      "regulation": "45 CFR §164.308(a)(6)",
+      "requirement": "Implement policies and procedures to address security incidents involving ePHI or systems containing ePHI.",
+      "evidence_expected": [
+        "Incident-response policy",
+        "incident tickets",
+        "investigation records"
+      ],
+      "assessment_questions": [
+        "Is there a documented process for handling ePHI security incidents?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Security Incident Procedures\nRegulation: 45 CFR §164.308(a)(6)\nRequirement: Implement policies and procedures to address security incidents involving ePHI or systems containing ePHI.\nEvidence Expected: Incident-response policy; incident tickets; investigation records\nAssessment Questions: Is there a documented process for handling ePHI security incidents?"
+    },
+    {
+      "chunk_id": "HIPAA-009",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Contingency Plan",
+      "regulation": "45 CFR §164.308(a)(7)",
+      "requirement": "Establish and implement procedures for emergencies or occurrences that damage systems containing ePHI.",
+      "evidence_expected": [
+        "Contingency plan",
+        "backups",
+        "disaster-recovery plan"
+      ],
+      "assessment_questions": [
+        "Are ePHI backup and disaster-recovery procedures documented and tested?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Contingency Plan\nRegulation: 45 CFR §164.308(a)(7)\nRequirement: Establish and implement procedures for emergencies or occurrences that damage systems containing ePHI.\nEvidence Expected: Contingency plan; backups; disaster-recovery plan\nAssessment Questions: Are ePHI backup and disaster-recovery procedures documented and tested?"
+    },
+    {
+      "chunk_id": "HIPAA-010",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Evaluation",
+      "regulation": "45 CFR §164.308(a)(8)",
+      "requirement": "Perform periodic technical and nontechnical evaluations of security policies and procedures.",
+      "evidence_expected": [
+        "Security evaluation reports",
+        "audit reports",
+        "remediation records"
+      ],
+      "assessment_questions": [
+        "Are security controls periodically evaluated and findings remediated?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Evaluation\nRegulation: 45 CFR §164.308(a)(8)\nRequirement: Perform periodic technical and nontechnical evaluations of security policies and procedures.\nEvidence Expected: Security evaluation reports; audit reports; remediation records\nAssessment Questions: Are security controls periodically evaluated and findings remediated?"
+    },
+    {
+      "chunk_id": "HIPAA-011",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Business Associate Contracts",
+      "regulation": "45 CFR §164.308(b)(1)",
+      "requirement": "Obtain satisfactory assurances that a business associate appropriately safeguards ePHI through the required contractual or other arrangement.",
+      "evidence_expected": [
+        "Executed BAA",
+        "vendor inventory",
+        "BAA assessment"
+      ],
+      "assessment_questions": [
+        "Are applicable business associates identified and covered by written BAAs?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Business Associate Contracts\nRegulation: 45 CFR §164.308(b)(1)\nRequirement: Obtain satisfactory assurances that a business associate appropriately safeguards ePHI through the required contractual or other arrangement.\nEvidence Expected: Executed BAA; vendor inventory; BAA assessment\nAssessment Questions: Are applicable business associates identified and covered by written BAAs?"
+    },
+    {
+      "chunk_id": "HIPAA-012",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Facility Access Controls",
+      "regulation": "45 CFR §164.310(a)",
+      "requirement": "Limit physical access to electronic information systems and facilities containing ePHI while allowing authorized access.",
+      "evidence_expected": [
+        "Physical-access policy",
+        "badge records",
+        "visitor logs"
+      ],
+      "assessment_questions": [
+        "Is physical access to ePHI systems controlled?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Facility Access Controls\nRegulation: 45 CFR §164.310(a)\nRequirement: Limit physical access to electronic information systems and facilities containing ePHI while allowing authorized access.\nEvidence Expected: Physical-access policy; badge records; visitor logs\nAssessment Questions: Is physical access to ePHI systems controlled?"
+    },
+    {
+      "chunk_id": "HIPAA-013",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Workstation Security",
+      "regulation": "45 CFR §164.310(c)",
+      "requirement": "Implement physical safeguards for workstations that access ePHI to restrict unauthorized access.",
+      "evidence_expected": [
+        "Workstation policy",
+        "endpoint configuration",
+        "device inventory"
+      ],
+      "assessment_questions": [
+        "Are workstations accessing ePHI physically protected?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Workstation Security\nRegulation: 45 CFR §164.310(c)\nRequirement: Implement physical safeguards for workstations that access ePHI to restrict unauthorized access.\nEvidence Expected: Workstation policy; endpoint configuration; device inventory\nAssessment Questions: Are workstations accessing ePHI physically protected?"
+    },
+    {
+      "chunk_id": "HIPAA-014",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Device and Media Controls",
+      "regulation": "45 CFR §164.310(d)",
+      "requirement": "Control receipt, removal, movement, reuse, and disposal of hardware and electronic media containing ePHI.",
+      "evidence_expected": [
+        "Device inventory",
+        "media policy",
+        "disposal records"
+      ],
+      "assessment_questions": [
+        "Are ePHI devices and media controlled through their lifecycle?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Device and Media Controls\nRegulation: 45 CFR §164.310(d)\nRequirement: Control receipt, removal, movement, reuse, and disposal of hardware and electronic media containing ePHI.\nEvidence Expected: Device inventory; media policy; disposal records\nAssessment Questions: Are ePHI devices and media controlled through their lifecycle?"
+    },
+    {
+      "chunk_id": "HIPAA-015",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Access Control",
+      "regulation": "45 CFR §164.312(a)",
+      "requirement": "Allow access to ePHI only to persons or software programs that have been granted access rights.",
+      "evidence_expected": [
+        "IAM policy",
+        "RBAC",
+        "MFA",
+        "access logs"
+      ],
+      "assessment_questions": [
+        "Is technical access to ePHI restricted to authorized users or processes?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Access Control\nRegulation: 45 CFR §164.312(a)\nRequirement: Allow access to ePHI only to persons or software programs that have been granted access rights.\nEvidence Expected: IAM policy; RBAC; MFA; access logs\nAssessment Questions: Is technical access to ePHI restricted to authorized users or processes?"
+    },
+    {
+      "chunk_id": "HIPAA-016",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Audit Controls",
+      "regulation": "45 CFR §164.312(b)",
+      "requirement": "Implement mechanisms that record and examine activity in information systems containing or using ePHI.",
+      "evidence_expected": [
+        "Application/system audit logs",
+        "SIEM",
+        "log-review reports"
+      ],
+      "assessment_questions": [
+        "Are ePHI-related activities recorded and regularly examined?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Audit Controls\nRegulation: 45 CFR §164.312(b)\nRequirement: Implement mechanisms that record and examine activity in information systems containing or using ePHI.\nEvidence Expected: Application/system audit logs; SIEM; log-review reports\nAssessment Questions: Are ePHI-related activities recorded and regularly examined?"
+    },
+    {
+      "chunk_id": "HIPAA-017",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Integrity",
+      "regulation": "45 CFR §164.312(c)",
+      "requirement": "Protect ePHI from improper alteration or destruction.",
+      "evidence_expected": [
+        "Integrity controls",
+        "change logs",
+        "file-integrity monitoring"
+      ],
+      "assessment_questions": [
+        "Are unauthorized alterations to ePHI prevented or detected?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Integrity\nRegulation: 45 CFR §164.312(c)\nRequirement: Protect ePHI from improper alteration or destruction.\nEvidence Expected: Integrity controls; change logs; file-integrity monitoring\nAssessment Questions: Are unauthorized alterations to ePHI prevented or detected?"
+    },
+    {
+      "chunk_id": "HIPAA-018",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Person or Entity Authentication",
+      "regulation": "45 CFR §164.312(d)",
+      "requirement": "Verify that a person or entity seeking access to ePHI is the one claimed.",
+      "evidence_expected": [
+        "Authentication policy",
+        "MFA",
+        "authentication logs"
+      ],
+      "assessment_questions": [
+        "Is identity verified before ePHI access?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Person or Entity Authentication\nRegulation: 45 CFR §164.312(d)\nRequirement: Verify that a person or entity seeking access to ePHI is the one claimed.\nEvidence Expected: Authentication policy; MFA; authentication logs\nAssessment Questions: Is identity verified before ePHI access?"
+    },
+    {
+      "chunk_id": "HIPAA-019",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Transmission Security",
+      "regulation": "45 CFR §164.312(e)",
+      "requirement": "Guard against unauthorized access to ePHI transmitted over electronic communications networks.",
+      "evidence_expected": [
+        "TLS/encryption configuration",
+        "network controls"
+      ],
+      "assessment_questions": [
+        "Is ePHI protected during electronic transmission?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Transmission Security\nRegulation: 45 CFR §164.312(e)\nRequirement: Guard against unauthorized access to ePHI transmitted over electronic communications networks.\nEvidence Expected: TLS/encryption configuration; network controls\nAssessment Questions: Is ePHI protected during electronic transmission?"
+    },
+    {
+      "chunk_id": "HIPAA-020",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Business Associate Safeguards",
+      "regulation": "45 CFR §164.314(a)",
+      "requirement": "Business associate arrangements must establish applicable obligations for safeguarding ePHI.",
+      "evidence_expected": [
+        "BAA templates",
+        "executed BAAs",
+        "subcontractor agreements"
+      ],
+      "assessment_questions": [
+        "Do applicable BAAs define required ePHI safeguards?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Business Associate Safeguards\nRegulation: 45 CFR §164.314(a)\nRequirement: Business associate arrangements must establish applicable obligations for safeguarding ePHI.\nEvidence Expected: BAA templates; executed BAAs; subcontractor agreements\nAssessment Questions: Do applicable BAAs define required ePHI safeguards?"
+    },
+    {
+      "chunk_id": "HIPAA-021",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Policies and Procedures",
+      "regulation": "45 CFR §164.316(a)",
+      "requirement": "Implement reasonable and appropriate policies and procedures to comply with the Security Rule.",
+      "evidence_expected": [
+        "HIPAA security policies",
+        "procedures",
+        "review records"
+      ],
+      "assessment_questions": [
+        "Are HIPAA Security Rule policies documented and maintained?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Policies and Procedures\nRegulation: 45 CFR §164.316(a)\nRequirement: Implement reasonable and appropriate policies and procedures to comply with the Security Rule.\nEvidence Expected: HIPAA security policies; procedures; review records\nAssessment Questions: Are HIPAA Security Rule policies documented and maintained?"
+    },
+    {
+      "chunk_id": "HIPAA-022",
+      "framework": "HIPAA",
+      "jurisdiction": "United States",
+      "source_document": "NIST SP 800-66r2 - Implementing the HIPAA Security Rule: A Cybersecurity Resource Guide",
+      "source_version": "February 2024",
+      "source_type": "NIST implementation guidance",
+      "scope": "HIPAA Security Rule",
+      "control_domain": "Documentation",
+      "regulation": "45 CFR §164.316(b)",
+      "requirement": "Maintain required policies, procedures, actions, activities, and assessments in written or electronic form and retain required documentation.",
+      "evidence_expected": [
+        "Documentation repository",
+        "assessment records",
+        "retention records"
+      ],
+      "assessment_questions": [
+        "Are required HIPAA security documents maintained and retained?"
+      ],
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ],
+      "text_for_embedding": "Framework: HIPAA\nJurisdiction: United States\nControl Domain: Documentation\nRegulation: 45 CFR §164.316(b)\nRequirement: Maintain required policies, procedures, actions, activities, and assessments in written or electronic form and retain required documentation.\nEvidence Expected: Documentation repository; assessment records; retention records\nAssessment Questions: Are required HIPAA security documents maintained and retained?"
+    }
+  ]
+}

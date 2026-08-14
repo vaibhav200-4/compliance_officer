@@ -1,0 +1,674 @@
+{
+  "framework": "RBI KYC",
+  "jurisdiction": "India",
+  "authority": "Reserve Bank of India",
+  "source_document": "Master Direction - Know Your Customer (KYC) Direction, 2016",
+  "source_identifier": "RBI/DBR/2015-16/18; Master Direction DBR.AML.BC.No.81/14.01.001/2015-16",
+  "source_version": "Updated as on August 14, 2025",
+  "source_type": "Regulatory Master Direction",
+  "scope": "KYC / AML / CFT compliance requirements relevant to the uploaded RBI KYC Direction",
+  "requirements": [
+    {
+      "requirement_id": "RBI-KYC-001",
+      "control_domain": "KYC Governance",
+      "regulation": "Chapter II, Paragraph 4",
+      "requirement": "Maintain a KYC policy duly approved by the Board of Directors or an authorized Board committee.",
+      "evidence_expected": [
+        "Board-approved KYC policy",
+        "Policy approval record",
+        "KYC governance document"
+      ],
+      "assessment_questions": [
+        "Is the KYC policy formally approved by the Board or authorized committee?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-002",
+      "control_domain": "KYC Policy Elements",
+      "regulation": "Chapter II, Paragraph 5",
+      "requirement": "The KYC policy shall include Customer Acceptance Policy, Risk Management, Customer Identification Procedures (CIP), and Monitoring of Transactions.",
+      "evidence_expected": [
+        "KYC policy",
+        "Customer Acceptance Policy",
+        "Risk management policy",
+        "CIP procedure",
+        "Transaction monitoring procedure"
+      ],
+      "assessment_questions": [
+        "Does the KYC policy contain all four required key elements?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-003",
+      "control_domain": "ML/TF Risk Assessment",
+      "regulation": "Chapter II, Paragraph 5A",
+      "requirement": "Periodically identify, assess and mitigate money laundering and terrorist financing risks across customers, countries/geographies, products, services, transactions and delivery channels.",
+      "evidence_expected": [
+        "ML/TF risk assessment",
+        "Risk register",
+        "Risk mitigation plan",
+        "Board review record"
+      ],
+      "assessment_questions": [
+        "Is a documented ML/TF risk assessment performed periodically?",
+        "Does it cover relevant customer, geographic, product, transaction and channel risks?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-004",
+      "control_domain": "Risk-Based Approach",
+      "regulation": "Chapter II, Paragraph 5B",
+      "requirement": "Apply a risk-based approach with Board-approved policies, controls and procedures and implement a CDD programme proportionate to ML/TF risk and business size.",
+      "evidence_expected": [
+        "Risk-based KYC policy",
+        "Customer risk methodology",
+        "CDD programme",
+        "Control monitoring records"
+      ],
+      "assessment_questions": [
+        "Are customer and transaction risks used to determine the level of KYC/CDD controls?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-005",
+      "control_domain": "Designated Director",
+      "regulation": "Chapter II, Paragraph 6",
+      "requirement": "Nominate a Designated Director responsible for overall compliance with applicable PML Act and Rules obligations and communicate the required details to FIU-IND and RBI.",
+      "evidence_expected": [
+        "Board nomination",
+        "Designated Director details",
+        "FIU-IND communication",
+        "RBI communication"
+      ],
+      "assessment_questions": [
+        "Is a Designated Director formally nominated and are required details communicated?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-006",
+      "control_domain": "Principal Officer",
+      "regulation": "Chapter II, Paragraph 7",
+      "requirement": "Appoint a Principal Officer responsible for compliance, transaction monitoring and required information sharing/reporting, with required details communicated to FIU-IND and RBI.",
+      "evidence_expected": [
+        "Principal Officer appointment",
+        "FIU-IND communication",
+        "RBI communication",
+        "Role description"
+      ],
+      "assessment_questions": [
+        "Is a Principal Officer assigned with documented KYC/AML responsibilities?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-007",
+      "control_domain": "KYC Compliance Oversight",
+      "regulation": "Chapter II, Paragraph 8",
+      "requirement": "Define senior-management responsibility, allocate implementation responsibilities, independently evaluate compliance, conduct internal/concurrent audits and submit quarterly audit notes to the Audit Committee.",
+      "evidence_expected": [
+        "Responsibility matrix",
+        "Independent evaluation",
+        "Internal audit reports",
+        "Quarterly audit notes"
+      ],
+      "assessment_questions": [
+        "Are KYC compliance responsibilities and independent audit/evaluation mechanisms documented?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-008",
+      "control_domain": "Customer Acceptance",
+      "regulation": "Chapter III, Paragraphs 9-10",
+      "requirement": "Maintain a Customer Acceptance Policy and do not open anonymous, fictitious or benami accounts or establish relationships without required CDD.",
+      "evidence_expected": [
+        "Customer Acceptance Policy",
+        "Account-opening controls",
+        "CDD workflow",
+        "Exception records"
+      ],
+      "assessment_questions": [
+        "Does onboarding prevent anonymous/fictitious/benami accounts?",
+        "Is CDD completed before establishing the relationship?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-009",
+      "control_domain": "Mandatory KYC Information",
+      "regulation": "Chapter III, Paragraph 10",
+      "requirement": "Specify mandatory KYC information required at account opening and during periodic KYC updation; obtain additional information with explicit customer consent where applicable.",
+      "evidence_expected": [
+        "KYC data requirements",
+        "Account-opening forms",
+        "Consent records"
+      ],
+      "assessment_questions": [
+        "Are mandatory KYC fields defined?",
+        "Is explicit consent captured when additional information is requested?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-010",
+      "control_domain": "Sanctions Screening",
+      "regulation": "Chapter III, Paragraph 10",
+      "requirement": "Maintain a suitable system to ensure customer identity does not match applicable sanctions lists specified under the Direction.",
+      "evidence_expected": [
+        "Sanctions screening policy",
+        "Screening system",
+        "Screening logs",
+        "Match-resolution records"
+      ],
+      "assessment_questions": [
+        "Is customer screening performed against applicable sanctions lists?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-011",
+      "control_domain": "Customer Identification Procedure",
+      "regulation": "Chapter V, Paragraph 13",
+      "requirement": "Perform customer identification at account-based onboarding and specified transaction, authenticity-doubt and structured-transaction scenarios.",
+      "evidence_expected": [
+        "CIP procedure",
+        "Identity verification records",
+        "Transaction-trigger rules"
+      ],
+      "assessment_questions": [
+        "Does the CIP process trigger in all applicable cases?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-012",
+      "control_domain": "Third-Party CDD",
+      "regulation": "Chapter V, Paragraph 14",
+      "requirement": "Where reliance on third-party CDD is permitted, obtain CDD records promptly, ensure the third party is appropriately regulated and not based in a high-risk jurisdiction, while retaining ultimate CDD responsibility.",
+      "evidence_expected": [
+        "Third-party CDD agreement",
+        "Third-party due diligence",
+        "CDD records",
+        "Risk assessment"
+      ],
+      "assessment_questions": [
+        "If third-party CDD is used, are the required conditions satisfied and documented?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-013",
+      "control_domain": "Individual CDD",
+      "regulation": "Chapter VI, Paragraph 16",
+      "requirement": "Obtain and verify prescribed identity/address information and other required information for individuals, beneficial owners, authorized signatories and power-of-attorney holders.",
+      "evidence_expected": [
+        "Identity documents",
+        "Address documents",
+        "PAN/Form 60",
+        "CDD records",
+        "Verification records"
+      ],
+      "assessment_questions": [
+        "Are prescribed identity and address documents obtained and verified for applicable individuals?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-014",
+      "control_domain": "Aadhaar / Digital KYC",
+      "regulation": "Chapter VI, Paragraph 16 and Annex I",
+      "requirement": "Where applicable, perform Aadhaar authentication/offline verification or Digital KYC in accordance with the Direction and applicable law; redact Aadhaar where authentication is not required.",
+      "evidence_expected": [
+        "Digital KYC records",
+        "Authentication records",
+        "Redaction controls",
+        "Verification logs"
+      ],
+      "assessment_questions": [
+        "Are Aadhaar-related KYC processes performed only through permitted methods?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-015",
+      "control_domain": "Non-Face-to-Face KYC",
+      "regulation": "Chapter VI, Paragraph 40",
+      "requirement": "Apply enhanced due diligence measures to eligible non-face-to-face onboarding, including required address, PAN, transaction and monitoring controls.",
+      "evidence_expected": [
+        "Non-face-to-face onboarding policy",
+        "EDD checklist",
+        "Address verification",
+        "Enhanced monitoring records"
+      ],
+      "assessment_questions": [
+        "Are enhanced due diligence controls applied to applicable non-face-to-face customers?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-016",
+      "control_domain": "V-CIP",
+      "regulation": "Chapter VI, Paragraph 18",
+      "requirement": "Where V-CIP is used, maintain prescribed secure infrastructure, workflow, trained officials, encryption, auditability, liveness/spoof detection and testing controls.",
+      "evidence_expected": [
+        "V-CIP SOP",
+        "Encryption evidence",
+        "Audit trail",
+        "Liveness testing",
+        "VA/PT report",
+        "Security audit report"
+      ],
+      "assessment_questions": [
+        "Does the V-CIP implementation satisfy the prescribed security, audit and verification requirements?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-017",
+      "control_domain": "V-CIP Data Handling",
+      "regulation": "Chapter VI, Paragraph 18",
+      "requirement": "For cloud-based V-CIP, ensure ownership of data remains with the RE and required data/video is transferred to RE-controlled infrastructure without retention by the cloud or assisting third-party provider.",
+      "evidence_expected": [
+        "Cloud architecture",
+        "Vendor contract",
+        "Data-flow diagram",
+        "Retention configuration"
+      ],
+      "assessment_questions": [
+        "Does the V-CIP cloud arrangement prevent unauthorized third-party retention of required V-CIP data?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-018",
+      "control_domain": "Beneficial Ownership",
+      "regulation": "Chapter I definitions and Chapter VI",
+      "requirement": "Identify and verify beneficial owners according to the applicable customer/entity type and prescribed ownership or control criteria.",
+      "evidence_expected": [
+        "Beneficial ownership declaration",
+        "Ownership structure",
+        "BO verification documents",
+        "CDD records"
+      ],
+      "assessment_questions": [
+        "Are beneficial owners identified and verified for applicable legal entities and arrangements?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-019",
+      "control_domain": "Ongoing Due Diligence",
+      "regulation": "Chapter VI, Paragraph 37",
+      "requirement": "Perform ongoing due diligence and monitor transactions so they remain consistent with the RE's knowledge of the customer, business, risk profile and source of funds/wealth.",
+      "evidence_expected": [
+        "Transaction monitoring policy",
+        "Monitoring rules",
+        "Alerts",
+        "Investigation records"
+      ],
+      "assessment_questions": [
+        "Are customer transactions monitored against customer profile and risk?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-020",
+      "control_domain": "Risk Review and Enhanced Monitoring",
+      "regulation": "Chapter VI, Paragraph 37",
+      "requirement": "Align monitoring intensity with customer risk and periodically review customer risk categorisation; high-risk accounts require intensified monitoring.",
+      "evidence_expected": [
+        "Risk review schedule",
+        "Customer risk ratings",
+        "Enhanced monitoring records"
+      ],
+      "assessment_questions": [
+        "Are customer risk categories reviewed at least as required and does monitoring intensity reflect risk?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-021",
+      "control_domain": "Periodic KYC Updation",
+      "regulation": "Chapter VI, Paragraph 38",
+      "requirement": "Keep CDD information current using a risk-based periodic KYC updation process, with prescribed minimum periodicity for high-, medium- and low-risk customers.",
+      "evidence_expected": [
+        "KYC updation policy",
+        "KYC due-date tracker",
+        "Customer declarations",
+        "Address verification records"
+      ],
+      "assessment_questions": [
+        "Is KYC periodically updated according to customer risk category?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-022",
+      "control_domain": "CKYCR",
+      "regulation": "Chapter VI, Paragraph 56",
+      "requirement": "Use the KYC Identifier and retrieve/update KYC records through CKYCR as required, including handling of updated customer information.",
+      "evidence_expected": [
+        "CKYCR integration",
+        "KYC Identifier records",
+        "CKYCR retrieval logs",
+        "Update submission logs"
+      ],
+      "assessment_questions": [
+        "Does the RE use CKYCR/KYC Identifier processes as required?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-023",
+      "control_domain": "Record Management",
+      "regulation": "Chapter VII, Paragraph 46",
+      "requirement": "Maintain transaction records for at least five years from the date of transaction and customer identification/address records for at least five years after the business relationship ends.",
+      "evidence_expected": [
+        "Record-retention policy",
+        "Transaction records",
+        "KYC records",
+        "Retention configuration"
+      ],
+      "assessment_questions": [
+        "Are required KYC and transaction records retained for the prescribed periods?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-024",
+      "control_domain": "Transaction Reconstruction",
+      "regulation": "Chapter VII, Paragraph 46",
+      "requirement": "Maintain transaction information sufficient to reconstruct individual transactions, including nature, amount/currency, date and parties.",
+      "evidence_expected": [
+        "Transaction database",
+        "Audit trail",
+        "Transaction reports"
+      ],
+      "assessment_questions": [
+        "Can individual transactions be reconstructed from retained records?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-025",
+      "control_domain": "Regulatory Record Access",
+      "regulation": "Chapter VII, Paragraph 46",
+      "requirement": "Maintain records so identification and transaction data can be made available swiftly to competent authorities upon request.",
+      "evidence_expected": [
+        "Data retrieval procedure",
+        "Regulatory response logs",
+        "Record-access controls"
+      ],
+      "assessment_questions": [
+        "Can required KYC and transaction records be retrieved promptly for competent authorities?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-026",
+      "control_domain": "FIU-IND Reporting",
+      "regulation": "Chapter VIII, Paragraphs 47-49",
+      "requirement": "Furnish information required under the PML (Maintenance of Records) Rules to FIU-IND using prescribed reporting requirements and formats.",
+      "evidence_expected": [
+        "FIU-IND reporting procedure",
+        "CTR/STR submissions",
+        "Reporting logs",
+        "Principal Officer review"
+      ],
+      "assessment_questions": [
+        "Are applicable reports furnished to FIU-IND using prescribed processes?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-027",
+      "control_domain": "CTR/STR Monitoring and Reporting",
+      "regulation": "Chapter VIII, Paragraphs 48-50",
+      "requirement": "Maintain suitable technological capability for extracting and reporting CTR/STR data and use robust software that generates alerts when transactions are inconsistent with customer risk categorisation and profile.",
+      "evidence_expected": [
+        "AML transaction monitoring system",
+        "Alert rules",
+        "CTR/STR workflow",
+        "Alert investigation records"
+      ],
+      "assessment_questions": [
+        "Does the AML system generate alerts for transactions inconsistent with customer risk/profile?",
+        "Can CTR/STR data be extracted and reported?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-028",
+      "control_domain": "Reporting Confidentiality",
+      "regulation": "Chapter VIII, Paragraph 49",
+      "requirement": "Maintain confidentiality regarding records and information furnished to FIU-IND, subject to permitted information sharing.",
+      "evidence_expected": [
+        "Confidentiality policy",
+        "Access controls",
+        "FIU reporting procedure",
+        "Employee training"
+      ],
+      "assessment_questions": [
+        "Is access to FIU reporting information restricted and confidential?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-029",
+      "control_domain": "PEP Due Diligence",
+      "regulation": "Chapter VI, Paragraph 41",
+      "requirement": "For PEP relationships, apply prescribed risk management, source of funds/wealth checks, senior management approval and ongoing enhanced monitoring.",
+      "evidence_expected": [
+        "PEP screening",
+        "Source-of-funds records",
+        "Senior management approval",
+        "Enhanced monitoring"
+      ],
+      "assessment_questions": [
+        "Are applicable PEP relationships subject to enhanced due diligence and senior management approval?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    },
+    {
+      "requirement_id": "RBI-KYC-030",
+      "control_domain": "AI/ML Transaction Monitoring",
+      "regulation": "Chapter VI, Paragraph 37",
+      "requirement": "Appropriate AI and ML technologies may be used to support effective ongoing due diligence and monitoring.",
+      "evidence_expected": [
+        "AI/ML monitoring documentation",
+        "Model governance",
+        "Alert validation",
+        "Monitoring performance records"
+      ],
+      "assessment_questions": [
+        "If AI/ML is used for KYC monitoring, is it integrated into an effective documented monitoring process?"
+      ],
+      "framework": "RBI KYC",
+      "compliance_status": [
+        "COMPLIANT",
+        "PARTIAL",
+        "NON_COMPLIANT",
+        "NOT_ASSESSED"
+      ]
+    }
+  ]
+}
