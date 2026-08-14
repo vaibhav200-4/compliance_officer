@@ -24,7 +24,7 @@ Output: list of dicts, har dict ek chunk hai with metadata.
 
 Usage:
     python chunk_policy.py --txt data/policy_clean.txt --company "TechStartup Pvt Ltd" \
-        --out data/chunks.json
+        --out data/policy_chunks.json
 """
 
 import argparse

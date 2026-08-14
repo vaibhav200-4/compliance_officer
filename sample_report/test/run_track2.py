@@ -58,9 +58,9 @@ def enrich_report(report_data):
 
 
 if __name__ == "__main__":
-    from sample_report.templated.aggregator_func2 import aggregate_results   # your existing function
+    from aggregator.aggregator_func import aggregate_results   # your existing function
 
-    with open("../templated/judge_input.json", "r", encoding="utf-8") as f:
+    with open("sample_report/judge/judge_input.json", "r", encoding="utf-8") as f:
         judge_results = json.load(f)
 
     aggregated_results = aggregate_results(judge_results)

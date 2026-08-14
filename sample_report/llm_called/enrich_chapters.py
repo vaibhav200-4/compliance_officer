@@ -8,9 +8,9 @@ skips chapters that are None/Not Assessed or already scoring well.
 
 from langchain_core.prompts import ChatPromptTemplate
 
-from models import ChapterScore
-from llm_schemas import ChapterNarrativeOutput
-from llm_client import get_llm
+from sample_report.templated.models import ChapterScore
+from sample_report.llm_called.llm_schemas import ChapterNarrativeOutput
+from sample_report.llm_called.llm_client import get_llm
 
 NARRATIVE_THRESHOLD = 70  # only narrate chapters scoring below this
 

@@ -35,11 +35,11 @@ from pinecone import Pinecone
 PINECONE_API_KEY = "pcsk_5VSGjr_9A67zH5nY6MRDFoWMuicMuBbBtcb5MgWiQ3cxTGH6DXnyz5aTtKjb6dUyg6piLy"
 INDEX_NAME = "generic-rag"
 COMPANY_NAME = "TechStartup Pvt Ltd"
-ARTICLE_EMBEDDINGS_PATH = "../sample_chunking/data/article_embeddings1.npy"
-ARTICLE_METADATA_PATH = "../sample_chunking/data/article_metadata1.json"
+ARTICLE_EMBEDDINGS_PATH = "../dataa/article_embeddings1.npy"
+ARTICLE_METADATA_PATH = "../dataa/article_metadata1.json"
 EMBEDDING_DIM = 1024
 TOP_K_EVIDENCE = 3
-OUTPUT_PATH = "../sample_chunking/evidence_for_obligations.json"
+OUTPUT_PATH = "../dataa/evidence_for_obligations.json"
 # -----------------------------
 
 

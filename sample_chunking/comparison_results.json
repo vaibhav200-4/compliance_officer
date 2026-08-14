@@ -1,0 +1,464 @@
+[
+  {
+    "policy_chunk": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_99_Article_99_1_",
+        "title": null,
+        "similarity_score": 0.5357
+      },
+      {
+        "article_id": "gdpr_article_99_Article_99_2_",
+        "title": null,
+        "similarity_score": 0.5319
+      },
+      {
+        "article_id": "gdpr_article_12_Article_12_3_",
+        "title": null,
+        "similarity_score": 0.4887
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 12 - Contact & Grievance Officer\nIf you have any questions, concerns, or complaints about this Privacy Policy or our data handling\npractices, please contact:\nName Rajesh Kumar\nDesignation Chief Technology Officer & Data Controller\nEmail privacy@techstartup.com\nAddress TechStartup Pvt Ltd, 4th Floor, Brigade Tech Park, Whitefield,\nBangalore - 560066, Karnataka, India\nPhone +91 80 4567 8900\nResponse Time Within 14 business days\nThis document was last reviewed by the Legal & Compliance team on 28 July 2025. Next scheduled\nreview: August 2026.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_77_Article_77_2_",
+        "title": null,
+        "similarity_score": 0.4108
+      },
+      {
+        "article_id": "gdpr_article_78_Article_78_2_",
+        "title": null,
+        "similarity_score": 0.4083
+      },
+      {
+        "article_id": "gdpr_article_77_Article_77_1_",
+        "title": null,
+        "similarity_score": 0.3896
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 1 - Introduction & Scope\nTechStartup Pvt Ltd ('we', 'our', 'us') is committed to protecting the privacy of our users. This Privacy Policy\napplies to all individuals who access or use our platform, mobile applications, APIs, and related services\n(collectively, the 'Services').\nThis policy is governed by applicable Indian data protection laws and, where relevant, the General Data\nProtection Regulation (GDPR) for users based in the European Economic Area (EEA). We operate under\nthe Information Technology Act, 2000 and IT (Amendment) Act, 2008.\nBy using our Services, you acknowledge that you have read and understood this Privacy Policy. If you do\nnot agree with any part of this policy, you must discontinue use of our Services.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_99_Article_99_2_",
+        "title": null,
+        "similarity_score": 0.4174
+      },
+      {
+        "article_id": "gdpr_article_2_Article_2_3_",
+        "title": null,
+        "similarity_score": 0.4073
+      },
+      {
+        "article_id": "gdpr_article_93_Article_93_3_",
+        "title": null,
+        "similarity_score": 0.3873
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 2.1 - Information You Provide Directly\n(cid:127) Full name and email address at account registration\n(cid:127) Phone number for OTP-based authentication\n(cid:127) Profile information including job title and company name\n(cid:127) Payment details processed via Razorpay (we do not store card numbers)\n(cid:127) Support tickets and chat transcripts when you contact us",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_13_Article_13_1_",
+        "title": null,
+        "similarity_score": 0.5516
+      },
+      {
+        "article_id": "gdpr_article_14_Article_14_1_",
+        "title": null,
+        "similarity_score": 0.5223
+      },
+      {
+        "article_id": "gdpr_article_36_Article_36_3_",
+        "title": null,
+        "similarity_score": 0.4863
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 2.2 - Information Collected Automatically\n(cid:127) IP address and approximate geographic location\n(cid:127) Browser type, operating system, and device identifiers\n(cid:127) Pages visited, time spent, and clickstream data via Mixpanel\n(cid:127) Cookies and similar tracking technologies (see Section 8)\n(cid:127) Error logs and crash reports for debugging purposes",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_13_Article_13_1_",
+        "title": null,
+        "similarity_score": 0.4063
+      },
+      {
+        "article_id": "gdpr_article_30_Article_30_1_",
+        "title": null,
+        "similarity_score": 0.3709
+      },
+      {
+        "article_id": "gdpr_article_4_Article_4_4_",
+        "title": null,
+        "similarity_score": 0.3667
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 2.3 - Information from Third Parties\n(cid:127) Google OAuth login data (name, email, profile picture) if you sign in with Google\n(cid:127) LinkedIn profile data if you use LinkedIn login\nWe do not purchase data from third-party data brokers or acquire data through any other means.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_4_Article_4_10_",
+        "title": null,
+        "similarity_score": 0.4668
+      },
+      {
+        "article_id": "gdpr_article_13_Article_13_1_",
+        "title": null,
+        "similarity_score": 0.4497
+      },
+      {
+        "article_id": "gdpr_article_9_Article_9_1_",
+        "title": null,
+        "similarity_score": 0.4389
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_6_Article_6_1_",
+        "title": null,
+        "similarity_score": 0.7047
+      },
+      {
+        "article_id": "gdpr_article_6_Article_6_3_",
+        "title": null,
+        "similarity_score": 0.6432
+      },
+      {
+        "article_id": "gdpr_article_21_Article_21_1_",
+        "title": null,
+        "similarity_score": 0.6348
+      }
+    ],
+    "flag": "potential_violation"
+  },
+  {
+    "policy_chunk": "Section 4.1 - Active Accounts\nData associated with active accounts is retained for the duration of the account's active status and for a\nperiod of 12 months after the account is closed, unless a longer retention period is required by law.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_30_Article_30_1_",
+        "title": null,
+        "similarity_score": 0.4211
+      },
+      {
+        "article_id": "gdpr_article_12_Article_12_3_",
+        "title": null,
+        "similarity_score": 0.4002
+      },
+      {
+        "article_id": "gdpr_article_30_Article_30_2_",
+        "title": null,
+        "similarity_score": 0.3649
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 4.2 - Inactive Accounts\nAccounts that have shown no login activity for a period of 36 consecutive months are considered inactive.\nWe will send a notification email 30 days before automatic deletion. Inactive accounts and all associated\ndata are permanently deleted after the 36-month inactivity period.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_33_Article_33_1_",
+        "title": null,
+        "similarity_score": 0.4179
+      },
+      {
+        "article_id": "gdpr_article_12_Article_12_4_",
+        "title": null,
+        "similarity_score": 0.3823
+      },
+      {
+        "article_id": "gdpr_article_66_Article_66_1_",
+        "title": null,
+        "similarity_score": 0.3619
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 4.3 - Financial Records\nTransaction records and invoices are retained for 7 years in compliance with Indian tax laws (Income Tax\nAct, 1961 and GST Act, 2017). These records may be anonymized after the active account period but\nmust be retained in some form for the legally mandated period.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_30_Article_30_2_",
+        "title": null,
+        "similarity_score": 0.4133
+      },
+      {
+        "article_id": "gdpr_article_30_Article_30_1_",
+        "title": null,
+        "similarity_score": 0.4091
+      },
+      {
+        "article_id": "gdpr_article_30_Article_30_3_",
+        "title": null,
+        "similarity_score": 0.3423
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 4.4 - Support Data\nSupport tickets and communication logs are retained for 24 months from the date of the last interaction to\nenable quality review and dispute resolution.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_65_Article_65_6_",
+        "title": null,
+        "similarity_score": 0.3867
+      },
+      {
+        "article_id": "gdpr_article_78_Article_78_2_",
+        "title": null,
+        "similarity_score": 0.3387
+      },
+      {
+        "article_id": "gdpr_article_12_Article_12_3_",
+        "title": null,
+        "similarity_score": 0.3384
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 4 - Data Retention\nWe retain personal data only for as long as necessary to fulfil the purposes outlined in this policy.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_5_Article_5_1_",
+        "title": null,
+        "similarity_score": 0.5635
+      },
+      {
+        "article_id": "gdpr_article_18_Article_18_2_",
+        "title": null,
+        "similarity_score": 0.5284
+      },
+      {
+        "article_id": "gdpr_article_25_Article_25_2_",
+        "title": null,
+        "similarity_score": 0.5097
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_15_Article_15_1_",
+        "title": null,
+        "similarity_score": 0.6623
+      },
+      {
+        "article_id": "gdpr_article_20_Article_20_1_",
+        "title": null,
+        "similarity_score": 0.6069
+      },
+      {
+        "article_id": "gdpr_article_79_Article_79_1_",
+        "title": null,
+        "similarity_score": 0.5655
+      }
+    ],
+    "flag": "potential_violation"
+  },
+  {
+    "policy_chunk": "Section 5.2 - Right to Correction\nIf any personal data we hold about you is inaccurate or incomplete, you may request that we correct or\nupdate it. You may also update basic profile information directly in your account settings.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_16_Article_16",
+        "title": null,
+        "similarity_score": 0.7282
+      },
+      {
+        "article_id": "gdpr_article_15_Article_15_1_",
+        "title": null,
+        "similarity_score": 0.5815
+      },
+      {
+        "article_id": "gdpr_article_79_Article_79_1_",
+        "title": null,
+        "similarity_score": 0.5534
+      }
+    ],
+    "flag": "potential_violation"
+  },
+  {
+    "policy_chunk": "Section 5.3 - Account Deletion\nUsers who wish to close their account may do so by sending an email to privacy@techstartup.com. Upon\nreceiving a valid deletion request, we will process the request and respond within 14 days. Please note\nthat some data may be retained as required by law (see Section 4.3).",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_17_Article_17_2_",
+        "title": null,
+        "similarity_score": 0.3535
+      },
+      {
+        "article_id": "gdpr_article_12_Article_12_4_",
+        "title": null,
+        "similarity_score": 0.338
+      },
+      {
+        "article_id": "gdpr_article_7_Article_7_3_",
+        "title": null,
+        "similarity_score": 0.3345
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 5.4 - Marketing Opt-Out\nYou may unsubscribe from marketing emails at any time by clicking the 'Unsubscribe' link in any marketing\nemail or by contacting privacy@techstartup.com.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_7_Article_7_3_",
+        "title": null,
+        "similarity_score": 0.4124
+      },
+      {
+        "article_id": "gdpr_article_21_Article_21_5_",
+        "title": null,
+        "similarity_score": 0.3747
+      },
+      {
+        "article_id": "gdpr_article_21_Article_21_2_",
+        "title": null,
+        "similarity_score": 0.367
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 5 - User Rights\nAs a user of our platform, you have the following rights regarding your personal data. To exercise any of\nthese rights, please contact privacy@techstartup.com with the subject line 'Data Rights Request'. We aim\nto respond to all requests within 14 business days.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_15_Article_15_1_",
+        "title": null,
+        "similarity_score": 0.5914
+      },
+      {
+        "article_id": "gdpr_article_79_Article_79_1_",
+        "title": null,
+        "similarity_score": 0.5383
+      },
+      {
+        "article_id": "gdpr_article_77_Article_77_1_",
+        "title": null,
+        "similarity_score": 0.5208
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 6 - Data Sharing & Third Parties\nWe do not sell your personal data to any third parties. We share data only in the following circumstances:\nThird Party Purpose Data Shared\nMixpanel Product analytics Usage data, events, device info\nRazorpay Payment processing Transaction amount, user ID\nGoogle (OAuth) Authentication Name, email, profile picture\nAWS Cloud infrastructure & hosting All data stored on AWS servers\nIntercom Customer support chat Name, email, support messages\nSentry Error monitoring Error logs, stack traces\nAll third-party processors are bound by data processing agreements that require them to handle data in\naccordance with applicable privacy laws. We conduct annual reviews of our third-party processors to\nensure continued compliance.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_4_Article_4_10_",
+        "title": null,
+        "similarity_score": 0.4551
+      },
+      {
+        "article_id": "gdpr_article_3_Article_3_2_",
+        "title": null,
+        "similarity_score": 0.447
+      },
+      {
+        "article_id": "gdpr_article_29_Article_29",
+        "title": null,
+        "similarity_score": 0.4329
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 7 - Data Security\nWe implement industry-standard technical and organisational measures to protect your personal data\nagainst unauthorised access, loss, destruction, or alteration.\n(cid:127) All data in transit is encrypted using TLS 1.3\n(cid:127) All data at rest is encrypted using AES-256\n(cid:127) Access to production systems is restricted to authorised personnel only via MFA\n(cid:127) We conduct quarterly internal security audits\n(cid:127) Penetration testing is conducted annually by a third-party security firm\nIn the event of a data breach that poses a risk to your rights and freedoms, we will notify affected users via\nemail within a reasonable timeframe. We also notify relevant regulatory authorities as required by\napplicable law.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_34_Article_34_2_",
+        "title": null,
+        "similarity_score": 0.4688
+      },
+      {
+        "article_id": "gdpr_article_30_Article_30_2_",
+        "title": null,
+        "similarity_score": 0.4591
+      },
+      {
+        "article_id": "gdpr_article_32_Article_32_1_",
+        "title": null,
+        "similarity_score": 0.4509
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 8 - Cookies\nWe use cookies and similar tracking technologies to improve user experience and analyse platform usage.\nYou can control cookie preferences through your browser settings.\nTypes of Cookies We Use\n(cid:127) Essential cookies — required for the platform to function (cannot be disabled)\n(cid:127) Analytics cookies — used by Mixpanel to understand how users interact with the platform\n(cid:127) Preference cookies — to remember your language and display settings\nWe do not use advertising or targeting cookies. You may disable non-essential cookies at any time\nthrough your browser settings without affecting core platform functionality.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_6_Article_6_4_",
+        "title": null,
+        "similarity_score": 0.3585
+      },
+      {
+        "article_id": "gdpr_article_14_Article_14_4_",
+        "title": null,
+        "similarity_score": 0.3532
+      },
+      {
+        "article_id": "gdpr_article_13_Article_13_2_",
+        "title": null,
+        "similarity_score": 0.3452
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 9 - International Transfers\nOur primary servers are located in AWS Mumbai (ap-south-1) region. Some of our third-party service\nproviders (such as Mixpanel and Sentry) may process data outside India, including in the United States\nand European Union.\nWhen transferring data internationally, we ensure appropriate safeguards are in place, including Standard\nContractual Clauses (SCCs) where required under GDPR for EEA user data.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_44_Article_44",
+        "title": null,
+        "similarity_score": 0.4464
+      },
+      {
+        "article_id": "gdpr_article_42_Article_42_2_",
+        "title": null,
+        "similarity_score": 0.4402
+      },
+      {
+        "article_id": "gdpr_article_46_Article_46_1_",
+        "title": null,
+        "similarity_score": 0.4348
+      }
+    ],
+    "flag": "ok"
+  },
+  {
+    "policy_chunk": "Section 10 - Children's Privacy\nOur Services are not directed at children under the age of 13. We do not knowingly collect personal data\nfrom children. If you believe we have inadvertently collected data from a child, please contact\nprivacy@techstartup.com immediately and we will delete it promptly.",
+    "matched_articles": [
+      {
+        "article_id": "gdpr_article_8_Article_8_1_",
+        "title": null,
+        "similarity_score": 0.6076
+      },
+      {
+        "article_id": "gdpr_article_9_Article_9_1_",
+        "title": null,
+        "similarity_score": 0.4048
+      },
+      {
+        "article_id": "gdpr_article_12_Article_12_1_",
+        "title": null,
+        "similarity_score": 0.3966
+      }
+    ],
+    "flag": "ok"
+  }
+]

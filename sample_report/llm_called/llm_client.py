@@ -5,7 +5,8 @@ from langchain_groq import ChatGroq
 
 load_dotenv()
 
-_MODEL_NAME = "llama-3.3-70b-versatile"
+#_MODEL_NAME = "llama-3.3-70b-versatile"
+_MODEL_NAME = "llama-3.1-8b-instant"
 
 
 def get_llm(temperature: float = 0.2):

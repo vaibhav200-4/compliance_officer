@@ -15,7 +15,7 @@ logger = get_logger()
 # ---------------------------------------------------------
 
 # Change this to your sample policy file
-SAMPLE_POLICY = Path("data/SampleInput_CompanyPolicy.pdf")
+SAMPLE_POLICY = Path("dataa/SampleInput_CompanyPolicy.pdf")
 
 
 def main():

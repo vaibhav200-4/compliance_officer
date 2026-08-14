@@ -6,7 +6,7 @@ End-to-end Track A run: judge_input.json -> aggregate_results() -> build_report_
 
 import json
 
-from sample_report.templated.aggregator_func2 import aggregate_results   # your existing function
+from aggregator.aggregator_func import aggregate_results   # your existing function
 from sample_report.templated.build_report_data import build_report_data
 from sample_report.templated.render_pdf import render_report_pdf
 

@@ -1,0 +1,69 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <list>
+          <option value="absl-py" />
+          <option value="astunparse" />
+          <option value="cachetools" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="contourpy" />
+          <option value="cycler" />
+          <option value="flatbuffers" />
+          <option value="fonttools" />
+          <option value="gast" />
+          <option value="google-auth" />
+          <option value="google-auth-oauthlib" />
+          <option value="google-pasta" />
+          <option value="grpcio" />
+          <option value="h5py" />
+          <option value="idna" />
+          <option value="joblib" />
+          <option value="keras" />
+          <option value="kiwisolver" />
+          <option value="libclang" />
+          <option value="Markdown" />
+          <option value="MarkupSafe" />
+          <option value="matplotlib" />
+          <option value="ml-dtypes" />
+          <option value="numpy" />
+          <option value="oauthlib" />
+          <option value="opencv-python" />
+          <option value="opt_einsum" />
+          <option value="packaging" />
+          <option value="pandas" />
+          <option value="pillow" />
+          <option value="protobuf" />
+          <option value="pyasn1" />
+          <option value="pyasn1_modules" />
+          <option value="pyparsing" />
+          <option value="python-dateutil" />
+          <option value="pytz" />
+          <option value="redis" />
+          <option value="requests" />
+          <option value="requests-oauthlib" />
+          <option value="rsa" />
+          <option value="scikit-learn" />
+          <option value="scipy" />
+          <option value="six" />
+          <option value="spotipy" />
+          <option value="tensorboard" />
+          <option value="tensorboard-data-server" />
+          <option value="tensorflow" />
+          <option value="tensorflow-estimator" />
+          <option value="tensorflow-intel" />
+          <option value="tensorflow-io-gcs-filesystem" />
+          <option value="termcolor" />
+          <option value="threadpoolctl" />
+          <option value="typing_extensions" />
+          <option value="tzdata" />
+          <option value="urllib3" />
+          <option value="Werkzeug" />
+          <option value="wrapt" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

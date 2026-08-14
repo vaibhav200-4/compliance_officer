@@ -9,14 +9,14 @@ report.executive_summary, and refine priority_actions[].action_required.
 
 from datetime import date
 
-from models import (
+from sample_report.templated.models import (
     ReportData, Meta, OverallSummary, ChapterScore, Requirement, Evidence,
 )
-from static_data import (
+from sample_report.templated.static_data import (
     CHAPTER_META, VERDICT_META, get_requirement_meta,
     confidence_label, chapter_status, overall_risk_level,
 )
-from priority_engine import build_priority_actions
+from sample_report.templated.priority_engine import build_priority_actions
 
 
 def _score_from_counts(fully: int, partial: int, total: int) -> float | None:
