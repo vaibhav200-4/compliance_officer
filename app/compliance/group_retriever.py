@@ -1,6 +1,7 @@
 # app/compliance/group_retriever
 from __future__ import annotations
 
+import threading
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
@@ -93,6 +94,13 @@ class ComplianceGroupRetriever:
         self.embedding_cache = (
             embedding_cache
         )
+
+        # Guards lazy construction of self.embedding_cache in
+        # _get_embedding_cache(). Without this, two threads
+        # calling it at the same time could each construct and
+        # assign their own GDPRGroupEmbeddingCache instance,
+        # silently discarding one of them and duplicating work.
+        self._embedding_cache_lock = threading.Lock()
 
         logger.success(
             "ComplianceGroupRetriever initialized."
@@ -435,17 +443,29 @@ class ComplianceGroupRetriever:
     def _get_embedding_cache(
         self,
     ):
+        """
+        Lazily construct the embedding cache.
+
+        Guarded by a lock with a double-checked read so that
+        concurrent callers (e.g. group workers running under
+        AnalyzerAgent's ThreadPoolExecutor) can't each construct
+        and assign their own cache instance.
+        """
 
         if self.embedding_cache is None:
 
-            from app.compliance.gdpr_embeddings import (
-                GDPRGroupEmbeddingCache,
-            )
+            with self._embedding_cache_lock:
 
-            self.embedding_cache = (
-                GDPRGroupEmbeddingCache(
-                    knowledge_base=self.knowledge_base,
-                )
-            )
+                if self.embedding_cache is None:
+
+                    from app.compliance.gdpr_embeddings import (
+                        GDPRGroupEmbeddingCache,
+                    )
+
+                    self.embedding_cache = (
+                        GDPRGroupEmbeddingCache(
+                            knowledge_base=self.knowledge_base,
+                        )
+                    )
 
         return self.embedding_cache

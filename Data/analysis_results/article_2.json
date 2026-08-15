@@ -1,0 +1,12 @@
+{
+  "article_number": 2,
+  "article_title": "Material scope",
+  "checkability": "not_applicable",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 0.0,
+  "groups": [],
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 2
+  }
+}

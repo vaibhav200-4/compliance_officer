@@ -627,3 +627,275 @@ Requirement: The controller is responsible for, and must'
 2026-08-15 15:54:42 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 7/7 | 5.2
 2026-08-15 15:55:02 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.2 | NOT_MET
 2026-08-15 15:55:02 | SUCCESS | app.agents.analyzer_agent:analyze_article:316 | Article 5 analysis completed | status=NOT_MET
+2026-08-15 16:49:13 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 16:49:14 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 16:49:18 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 16:49:18 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 16:49:18 | SUCCESS | app.compliance.group_retriever:__init__:97 | ComplianceGroupRetriever initialized.
+2026-08-15 16:49:18 | SUCCESS | app.agents.analyzer_agent:__init__:83 | AnalyzerAgent initialized.
+2026-08-15 16:49:18 | SUCCESS | app.agents.orchestrator:__init__:99 | ComplianceOrchestrator initialized.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:__init__:103 | Workers    : 3
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:__init__:107 | Top-K      : 5
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:__init__:111 | Output dir : Data\analysis_results
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:run:239 | Starting 5 articles with 3 workers.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_process_article:363 | [Article 1] Worker started.
+2026-08-15 16:49:18 | INFO | app.agents.analyzer_agent:analyze_article:96 | Starting Article 1 analysis.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_process_article:363 | [Article 2] Worker started.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_process_article:363 | [Article 3] Worker started.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 1: 0 requirement groups.
+2026-08-15 16:49:18 | INFO | app.agents.analyzer_agent:analyze_article:96 | Starting Article 2 analysis.
+2026-08-15 16:49:18 | INFO | app.agents.analyzer_agent:analyze_article:96 | Starting Article 3 analysis.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 2: 0 requirement groups.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_save_result:490 | Article 1 saved to Data\analysis_results\article_1.json
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 3: 0 requirement groups.
+2026-08-15 16:49:18 | SUCCESS | app.agents.orchestrator:_process_article:419 | [Article 1] Worker completed.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_save_result:490 | Article 2 saved to Data\analysis_results\article_2.json
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_process_article:363 | [Article 4] Worker started.
+2026-08-15 16:49:18 | SUCCESS | app.agents.orchestrator:_process_article:419 | [Article 2] Worker completed.
+2026-08-15 16:49:18 | INFO | app.agents.analyzer_agent:analyze_article:96 | Starting Article 4 analysis.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_save_result:490 | Article 3 saved to Data\analysis_results\article_3.json
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_process_article:363 | [Article 5] Worker started.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 4: 0 requirement groups.
+2026-08-15 16:49:18 | SUCCESS | app.agents.orchestrator:_process_article:419 | [Article 3] Worker completed.
+2026-08-15 16:49:18 | INFO | app.agents.analyzer_agent:analyze_article:96 | Starting Article 5 analysis.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:18 | INFO | app.agents.orchestrator:_save_result:490 | Article 4 saved to Data\analysis_results\article_4.json
+2026-08-15 16:49:18 | INFO | app.agents.analyzer_agent:analyze_article:132 | Article 5: 7 groups.
+2026-08-15 16:49:18 | SUCCESS | app.agents.orchestrator:_process_article:419 | [Article 4] Worker completed.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:18 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.a
+2026-08-15 16:49:18 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.a
+Principle: Lawfulness, fairness and transparency
+Requirement: Personal data must'
+2026-08-15 16:49:26 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:49:26 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:26 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.b
+2026-08-15 16:49:26 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.b
+Principle: Purpose limitation
+Requirement: Personal data must be collected for s'
+2026-08-15 16:49:29 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:49:29 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:29 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.c
+2026-08-15 16:49:29 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.c
+Principle: Data minimisation
+Requirement: Personal data must be adequate, releva'
+2026-08-15 16:49:44 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:49:44 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:44 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.d
+2026-08-15 16:49:44 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.d
+Principle: Accuracy
+Requirement: Personal data must be accurate and, where neces'
+2026-08-15 16:49:50 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:49:50 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:50 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.e
+2026-08-15 16:49:50 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.e
+Principle: Storage limitation
+Requirement: Personal data must be kept in identif'
+2026-08-15 16:49:54 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:49:54 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:54 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 16:49:54 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 16:49:57 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:49:57 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 16:49:57 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.2
+2026-08-15 16:49:57 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.2
+Principle: Accountability
+Requirement: The controller is responsible for, and must'
+2026-08-15 16:50:00 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 16:50:00 | SUCCESS | app.compliance.group_retriever:retrieve_article:313 | Article 5: retrieved evidence for 7 groups.
+2026-08-15 16:50:00 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 1/7 | 5.1.a
+2026-08-15 16:50:35 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.a | PARTIALLY_MET
+2026-08-15 16:50:35 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 2/7 | 5.1.b
+2026-08-15 16:50:57 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.b | PARTIALLY_MET
+2026-08-15 16:50:57 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 3/7 | 5.1.c
+2026-08-15 16:51:16 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.c | INSUFFICIENT_EVIDENCE
+2026-08-15 16:51:16 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 4/7 | 5.1.d
+2026-08-15 16:51:42 | ERROR | app.agents.analyzer_agent:analyze_article:253 | Article 5 | Group 5.1.d failed.
+Traceback (most recent call last):
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\threading.py", line 966, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000177E928B7F0>
+    └ <Thread(gdpr-worker_1, started 16512)>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x00000177E928B520>
+    └ <Thread(gdpr-worker_1, started 16512)>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(gdpr-worker_1, started 16512)>
+    │    │        │    └ (<weakref at 0x00000177EF02A160; to 'ThreadPoolExecutor' at 0x00000177EF01EE90>, <_queue.SimpleQueue object at 0x00000177EED3...
+    │    │        └ <Thread(gdpr-worker_1, started 16512)>
+    │    └ <function _worker at 0x00000177E9509870>
+    └ <Thread(gdpr-worker_1, started 16512)>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 77, in _worker
+    work_item.run()
+    │         └ <function _WorkItem.run at 0x00000177E9509990>
+    └ <concurrent.futures.thread._WorkItem object at 0x00000177EF01FC10>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │    │   │    │       │    └ {}
+             │    │   │    │       └ <concurrent.futures.thread._WorkItem object at 0x00000177EF01FC10>
+             │    │   │    └ (5,)
+             │    │   └ <concurrent.futures.thread._WorkItem object at 0x00000177EF01FC10>
+             │    └ <bound method ComplianceOrchestrator._process_article of <app.agents.orchestrator.ComplianceOrchestrator object at 0x00000177...
+             └ <concurrent.futures.thread._WorkItem object at 0x00000177EF01FC10>
+
+  File "H:\compliance_officer\app\agents\orchestrator.py", line 383, in _process_article
+    self.analyzer.analyze_article(
+    │    │        └ <function AnalyzerAgent.analyze_article at 0x00000177EEB6E830>
+    │    └ <app.agents.analyzer_agent.AnalyzerAgent object at 0x00000177EEC78D60>
+    └ <app.agents.orchestrator.ComplianceOrchestrator object at 0x00000177EEC78CD0>
+
+> File "H:\compliance_officer\app\agents\analyzer_agent.py", line 192, in analyze_article
+    self.judge.evaluate(
+    │    │     └ <function ComplianceJudge.evaluate at 0x00000177EEB6DCF0>
+    │    └ <app.compliance.judge.ComplianceJudge object at 0x00000177EED237F0>
+    └ <app.agents.analyzer_agent.AnalyzerAgent object at 0x00000177EEC78D60>
+
+  File "H:\compliance_officer\app\compliance\judge.py", line 97, in evaluate
+    return self._validate_and_convert(
+           │    └ <function ComplianceJudge._validate_and_convert at 0x00000177EEB6E560>
+           └ <app.compliance.judge.ComplianceJudge object at 0x00000177EED237F0>
+
+  File "H:\compliance_officer\app\compliance\judge.py", line 565, in _validate_and_convert
+    raise ValueError(
+
+ValueError: Judge referenced unknown chunk_id '0f613260-5e52-4192-99c6-5401b79f55b9:2' for 5.1.d.1.
+2026-08-15 16:51:42 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 5/7 | 5.1.e
+2026-08-15 16:52:41 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.e | PARTIALLY_MET
+2026-08-15 16:52:41 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 6/7 | 5.1.f
+2026-08-15 16:52:58 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.f | MET
+2026-08-15 16:52:58 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 7/7 | 5.2
+2026-08-15 16:53:25 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.2 | INSUFFICIENT_EVIDENCE
+2026-08-15 16:53:25 | SUCCESS | app.agents.analyzer_agent:analyze_article:316 | Article 5 analysis completed | status=PARTIALLY_MET
+2026-08-15 16:53:25 | INFO | app.agents.orchestrator:_save_result:490 | Article 5 saved to Data\analysis_results\article_5.json
+2026-08-15 16:53:25 | SUCCESS | app.agents.orchestrator:_process_article:419 | [Article 5] Worker completed.
+2026-08-15 18:34:03 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 18:34:03 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 18:34:07 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 18:34:07 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 18:34:07 | SUCCESS | app.compliance.group_retriever:__init__:97 | ComplianceGroupRetriever initialized.
+2026-08-15 18:34:07 | SUCCESS | app.agents.analyzer_agent:__init__:83 | AnalyzerAgent initialized.
+2026-08-15 18:34:07 | SUCCESS | app.agents.orchestrator:__init__:99 | ComplianceOrchestrator initialized.
+2026-08-15 18:34:07 | INFO | app.agents.orchestrator:__init__:103 | Workers    : 3
+2026-08-15 18:34:07 | INFO | app.agents.orchestrator:__init__:107 | Top-K      : 5
+2026-08-15 18:34:07 | INFO | app.agents.orchestrator:__init__:111 | Output dir : Data\analysis_results
+2026-08-15 18:34:07 | SUCCESS | app.agents.orchestrator:run:215 | All requested articles are already completed.
+2026-08-15 18:45:42 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 18:45:42 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 18:45:46 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 18:45:46 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 18:45:46 | SUCCESS | app.compliance.group_retriever:__init__:105 | ComplianceGroupRetriever initialized.
+2026-08-15 18:45:46 | SUCCESS | app.agents.analyzer_agent:__init__:99 | AnalyzerAgent initialized (max_group_workers=2).
+2026-08-15 18:45:46 | SUCCESS | app.agents.orchestrator:__init__:129 | ComplianceOrchestrator initialized.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:__init__:133 | Article workers : 3
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:__init__:137 | Group workers   : 2
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:__init__:141 | Top-K           : 5
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:__init__:145 | Output dir      : Data\analysis_results
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:run:273 | Starting 5 articles with 3 article workers x 2 group workers.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_process_article:399 | [Article 1] Worker started.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:analyze_article:113 | Starting Article 1 analysis.
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 1: 0 requirement groups.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_process_article:399 | [Article 2] Worker started.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:analyze_article:113 | Starting Article 2 analysis.
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 2: 0 requirement groups.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_save_result:525 | Article 1 saved to Data\analysis_results\article_1.json
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_process_article:399 | [Article 3] Worker started.
+2026-08-15 18:45:46 | SUCCESS | app.agents.orchestrator:_process_article:454 | [Article 1] Worker completed.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:analyze_article:113 | Starting Article 3 analysis.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_process_article:399 | [Article 4] Worker started.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:analyze_article:113 | Starting Article 4 analysis.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_save_result:525 | Article 2 saved to Data\analysis_results\article_2.json
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 4: 0 requirement groups.
+2026-08-15 18:45:46 | SUCCESS | app.agents.orchestrator:_process_article:454 | [Article 2] Worker completed.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_process_article:399 | [Article 5] Worker started.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:analyze_article:113 | Starting Article 5 analysis.
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 3: 0 requirement groups.
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_save_result:525 | Article 4 saved to Data\analysis_results\article_4.json
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:45:46 | SUCCESS | app.agents.orchestrator:_process_article:454 | [Article 4] Worker completed.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:analyze_article:149 | Article 5: 7 groups | max_group_workers=2
+2026-08-15 18:45:46 | INFO | app.agents.orchestrator:_save_result:525 | Article 3 saved to Data\analysis_results\article_3.json
+2026-08-15 18:45:46 | SUCCESS | app.agents.orchestrator:_process_article:454 | [Article 3] Worker completed.
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 1/7 | 5.1.a
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.1.a
+2026-08-15 18:45:46 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 2/7 | 5.1.b
+2026-08-15 18:45:46 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.a
+Principle: Lawfulness, fairness and transparency
+Requirement: Personal data must'
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:45:46 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.1.b
+2026-08-15 18:45:46 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.b
+Principle: Purpose limitation
+Requirement: Personal data must be collected for s'
+2026-08-15 18:45:49 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:45:49 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:46:11 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.1.b | PARTIALLY_MET
+2026-08-15 18:46:11 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 3/7 | 5.1.c
+2026-08-15 18:46:11 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:46:11 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.1.c
+2026-08-15 18:46:11 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.c
+Principle: Data minimisation
+Requirement: Personal data must be adequate, releva'
+2026-08-15 18:46:13 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:46:18 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.1.a | PARTIALLY_MET
+2026-08-15 18:46:18 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 4/7 | 5.1.d
+2026-08-15 18:46:18 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:46:18 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.1.d
+2026-08-15 18:46:18 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.d
+Principle: Accuracy
+Requirement: Personal data must be accurate and, where neces'
+2026-08-15 18:46:20 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:46:28 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.1.c | NOT_MET
+2026-08-15 18:46:28 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 5/7 | 5.1.e
+2026-08-15 18:46:28 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:46:28 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.1.e
+2026-08-15 18:46:28 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.e
+Principle: Storage limitation
+Requirement: Personal data must be kept in identif'
+2026-08-15 18:46:30 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:46:51 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.1.d | MET
+2026-08-15 18:46:51 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 6/7 | 5.1.f
+2026-08-15 18:46:51 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:46:51 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 18:46:51 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 18:46:52 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:47:08 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.1.f | MET
+2026-08-15 18:47:08 | INFO | app.agents.analyzer_agent:_process_group:318 | Article 5 | Group 7/7 | 5.2
+2026-08-15 18:47:08 | INFO | app.compliance.group_retriever:get_groups:143 | Article 5: 7 requirement groups.
+2026-08-15 18:47:08 | INFO | app.compliance.group_retriever:retrieve_group:269 | Retrieving evidence | Article=5 | Group=5.2
+2026-08-15 18:47:08 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.2
+Principle: Accountability
+Requirement: The controller is responsible for, and must'
+2026-08-15 18:47:10 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 18:47:30 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.2 | INSUFFICIENT_EVIDENCE
+2026-08-15 18:47:59 | SUCCESS | app.agents.analyzer_agent:_process_group:387 | Article 5 | Group 5.1.e | PARTIALLY_MET
+2026-08-15 18:47:59 | SUCCESS | app.agents.analyzer_agent:analyze_article:293 | Article 5 analysis completed | status=NOT_MET
+2026-08-15 18:47:59 | INFO | app.agents.orchestrator:_save_result:525 | Article 5 saved to Data\analysis_results\article_5.json
+2026-08-15 18:47:59 | SUCCESS | app.agents.orchestrator:_process_article:454 | [Article 5] Worker completed.

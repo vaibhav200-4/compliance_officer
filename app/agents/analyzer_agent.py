@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict, is_dataclass
 from typing import Any
 
@@ -35,6 +36,14 @@ class AnalyzerAgent:
         - make article-wide LLM calls
         - orchestrate multiple articles
         - generate reports
+
+    Concurrency:
+        Groups within one article are independent of each other
+        (each has its own retrieval query and its own Judge call),
+        so they can be processed concurrently up to
+        `max_group_workers`. This is bounded, not unbounded,
+        so that N article workers x max_group_workers doesn't
+        overwhelm the LLM provider.
     """
 
     VALID_STATUSES = {
@@ -54,11 +63,17 @@ class AnalyzerAgent:
         judge: ComplianceJudge | None = None,
         top_k: int = 5,
         min_score: float | None = None,
+        max_group_workers: int = 1,
     ) -> None:
 
         if top_k <= 0:
             raise ValueError(
                 "top_k must be greater than 0."
+            )
+
+        if max_group_workers <= 0:
+            raise ValueError(
+                "max_group_workers must be greater than 0."
             )
 
         self.knowledge_base = knowledge_base
@@ -79,9 +94,11 @@ class AnalyzerAgent:
 
         self.top_k = top_k
         self.min_score = min_score
+        self.max_group_workers = max_group_workers
 
         logger.success(
-            "AnalyzerAgent initialized."
+            f"AnalyzerAgent initialized "
+            f"(max_group_workers={self.max_group_workers})."
         )
 
     # ============================================================
@@ -131,154 +148,114 @@ class AnalyzerAgent:
 
         logger.info(
             f"Article {article_number}: "
-            f"{len(groups)} groups."
+            f"{len(groups)} groups | "
+            f"max_group_workers={self.max_group_workers}"
         )
 
         # --------------------------------------------------------
-        # 3. Retrieve evidence for the COMPLETE article
+        # 3 & 4. Retrieve + judge each group, bounded concurrency.
         #
-        # Existing GroupRetriever handles:
+        # Each group is an independent pipeline:
+        #     retrieve evidence -> judge -> aggregate group result
         #
-        # Article
-        #   -> groups
-        #   -> group query
-        #   -> ComplianceRetriever
-        #   -> Pinecone
+        # A single group's retrieval/LLM failure never aborts the
+        # article; _process_group() always returns a result dict,
+        # it never raises.
         # --------------------------------------------------------
 
-        evidence_results = (
-            self.group_retriever.retrieve_article(
-                article_number=article_number,
-                top_k=self.top_k,
-                min_score=self.min_score,
-            )
-        )
+        group_results_by_id: dict[str, dict[str, Any]] = {}
 
-        if len(evidence_results) != len(groups):
+        if self.max_group_workers <= 1 or len(groups) <= 1:
 
-            raise RuntimeError(
-                f"Group/evidence count mismatch for "
-                f"Article {article_number}: "
-                f"{len(groups)} groups vs "
-                f"{len(evidence_results)} evidence results."
-            )
+            # Sequential path. Used when concurrency is disabled
+            # (max_group_workers=1) or there's only one group,
+            # where a thread pool would just add overhead.
+            for index, group in enumerate(groups, start=1):
 
-        # --------------------------------------------------------
-        # 4. Judge each group
-        # --------------------------------------------------------
-
-        group_results = []
-
-        for index, (
-            group,
-            group_evidence,
-        ) in enumerate(
-            zip(
-                groups,
-                evidence_results,
-            ),
-            start=1,
-        ):
-
-            logger.info(
-                f"Article {article_number} | "
-                f"Group {index}/{len(groups)} | "
-                f"{group.group_id}"
-            )
-
-            try:
-
-                sub_verdicts = (
-                    self.judge.evaluate(
-                        group=group,
-                        group_evidence=group_evidence,
+                group_results_by_id[group.group_id] = (
+                    self._process_group(
+                        article_number,
+                        group,
+                        index,
+                        len(groups),
                     )
                 )
 
-                group_status = (
-                    self._aggregate_group_status(
-                        group.condition_logic,
-                        sub_verdicts,
-                    )
-                )
+        else:
 
-                group_confidence = (
-                    self._calculate_confidence(
-                        sub_verdicts
-                    )
-                )
+            with ThreadPoolExecutor(
+                max_workers=min(
+                    self.max_group_workers,
+                    len(groups),
+                ),
+                thread_name_prefix=(
+                    f"article-{article_number}-group"
+                ),
+            ) as executor:
 
-                group_result = {
-                    "group_id": group.group_id,
-                    "principle": group.principle,
-                    "condition_logic": (
-                        group.condition_logic
-                    ),
-                    "status": group_status,
-                    "confidence": group_confidence,
-                    "reason": (
-                        self._build_reason(
-                            sub_verdicts
-                        )
-                    ),
-                    "gap": (
-                        self._build_gap(
-                            group_status,
-                            sub_verdicts,
-                        )
-                    ),
-                    "evidence_count": (
-                        group_evidence.evidence_count
-                    ),
-                    "sub_obligations": [
-                        self._serialize(
-                            verdict
-                        )
-                        for verdict in sub_verdicts
-                    ],
+                future_to_group = {
+                    executor.submit(
+                        self._process_group,
+                        article_number,
+                        group,
+                        index,
+                        len(groups),
+                    ): group
+                    for index, group in enumerate(
+                        groups,
+                        start=1,
+                    )
                 }
 
-                group_results.append(
-                    group_result
-                )
+                for future in as_completed(
+                    future_to_group
+                ):
 
-                logger.success(
-                    f"Article {article_number} | "
-                    f"Group {group.group_id} | "
-                    f"{group_status}"
-                )
+                    group = future_to_group[future]
 
-            except Exception as exc:
+                    try:
+                        result = future.result()
 
-                logger.exception(
-                    f"Article {article_number} | "
-                    f"Group {group.group_id} failed."
-                )
+                    except Exception as exc:
 
-                # Don't let one group destroy
-                # the complete article result.
-                group_results.append(
-                    {
-                        "group_id": group.group_id,
-                        "principle": group.principle,
-                        "condition_logic": (
-                            group.condition_logic
-                        ),
-                        "status": (
-                            "INSUFFICIENT_EVIDENCE"
-                        ),
-                        "confidence": 0.0,
-                        "reason": (
-                            "Group analysis failed."
-                        ),
-                        "gap": str(exc),
-                        "evidence_count": (
-                            group_evidence.evidence_count
-                        ),
-                        "sub_obligations": [],
-                        "error": str(exc),
-                    }
-                )
+                        # _process_group() already catches its own
+                        # exceptions internally; this is a
+                        # last-resort guard against something
+                        # unexpected (e.g. the thread pool itself
+                        # misbehaving).
+                        logger.exception(
+                            f"Article {article_number} | "
+                            f"Group {group.group_id} crashed "
+                            f"unexpectedly."
+                        )
+
+                        result = {
+                            "group_id": group.group_id,
+                            "principle": group.principle,
+                            "condition_logic": (
+                                group.condition_logic
+                            ),
+                            "status": "INSUFFICIENT_EVIDENCE",
+                            "confidence": 0.0,
+                            "reason": "Group analysis crashed.",
+                            "gap": str(exc),
+                            "evidence_count": 0,
+                            "sub_obligations": [],
+                            "error": str(exc),
+                        }
+
+                    group_results_by_id[
+                        group.group_id
+                    ] = result
+
+        # Reorder to match the article's canonical group order.
+        # ThreadPoolExecutor completion order is nondeterministic,
+        # but downstream output (JSON files, reports) must be
+        # stable/reproducible run-to-run.
+        group_results = [
+            group_results_by_id[group.group_id]
+            for group in groups
+        ]
 
         # --------------------------------------------------------
         # 5. Article-level status
@@ -319,6 +296,135 @@ class AnalyzerAgent:
         )
 
         return result
+
+    # ============================================================
+    # SINGLE GROUP PIPELINE (retrieve -> judge -> aggregate)
+    #
+    # This runs either inline (sequential path) or inside a
+    # ThreadPoolExecutor worker (concurrent path). It must never
+    # raise -- all failure modes are converted into an
+    # INSUFFICIENT_EVIDENCE group result so one bad group/LLM
+    # response never destroys the whole article.
+    # ============================================================
+
+    def _process_group(
+        self,
+        article_number: int,
+        group: Any,
+        index: int,
+        total: int,
+    ) -> dict[str, Any]:
+
+        logger.info(
+            f"Article {article_number} | "
+            f"Group {index}/{total} | "
+            f"{group.group_id}"
+        )
+
+        group_evidence = None
+
+        try:
+
+            group_evidence = (
+                self.group_retriever.retrieve_group(
+                    article_number=article_number,
+                    group_id=group.group_id,
+                    top_k=self.top_k,
+                    min_score=self.min_score,
+                )
+            )
+
+            sub_verdicts = (
+                self.judge.evaluate(
+                    group=group,
+                    group_evidence=group_evidence,
+                )
+            )
+
+            group_status = (
+                self._aggregate_group_status(
+                    group.condition_logic,
+                    sub_verdicts,
+                )
+            )
+
+            group_confidence = (
+                self._calculate_confidence(
+                    sub_verdicts
+                )
+            )
+
+            group_result = {
+                "group_id": group.group_id,
+                "principle": group.principle,
+                "condition_logic": (
+                    group.condition_logic
+                ),
+                "status": group_status,
+                "confidence": group_confidence,
+                "reason": (
+                    self._build_reason(
+                        sub_verdicts
+                    )
+                ),
+                "gap": (
+                    self._build_gap(
+                        group_status,
+                        sub_verdicts,
+                    )
+                ),
+                "evidence_count": (
+                    group_evidence.evidence_count
+                ),
+                "sub_obligations": [
+                    self._serialize(
+                        verdict
+                    )
+                    for verdict in sub_verdicts
+                ],
+            }
+
+            logger.success(
+                f"Article {article_number} | "
+                f"Group {group.group_id} | "
+                f"{group_status}"
+            )
+
+            return group_result
+
+        except Exception as exc:
+
+            logger.exception(
+                f"Article {article_number} | "
+                f"Group {group.group_id} failed."
+            )
+
+            evidence_count = (
+                group_evidence.evidence_count
+                if group_evidence is not None
+                else 0
+            )
+
+            # Don't let one group destroy
+            # the complete article result.
+            return {
+                "group_id": group.group_id,
+                "principle": group.principle,
+                "condition_logic": (
+                    group.condition_logic
+                ),
+                "status": (
+                    "INSUFFICIENT_EVIDENCE"
+                ),
+                "confidence": 0.0,
+                "reason": (
+                    "Group analysis failed."
+                ),
+                "gap": str(exc),
+                "evidence_count": evidence_count,
+                "sub_obligations": [],
+                "error": str(exc),
+            }
 
     # ============================================================
     # GROUP VERDICT
