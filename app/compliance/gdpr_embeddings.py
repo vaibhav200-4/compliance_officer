@@ -4,47 +4,49 @@ import json
 from pathlib import Path
 from typing import Any
 
-from app.compliance.gdpr_kb import GDPRKnowledgeBase
-from app.compliance.group_retriever import ComplianceGroupRetriever
-from app.ingestion.embedder import Embedder
-from app.core.logger import get_logger
+from app.compliance.gdpr_kb import (
+    GDPRKnowledgeBase,
+)
+
+from app.compliance.group_retriever import (
+    ComplianceGroupRetriever,
+)
+
+from app.ingestion.embedder import (
+    Embedder,
+)
+
+from app.core.logger import (
+    get_logger,
+)
+
 
 logger = get_logger()
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(
+    __file__
+).resolve().parents[2]
+
+
+DEFAULT_KB_PATH = (
+    PROJECT_ROOT
+    / "Data"
+    / "new_json_gdpr.json"
+)
+
 
 DEFAULT_CACHE_PATH = (
     PROJECT_ROOT
-    / "data"
+    / "Data"
     / "gdpr"
     / "gdpr_group_embeddings.json"
 )
 
 
 class GDPRGroupEmbeddingCache:
-    """
-    Generates and stores one embedding for every GDPR parent group.
 
-    Example:
-
-        Article 5
-            5.1.a -> embedding
-            5.1.b -> embedding
-            5.1.c -> embedding
-            5.1.d -> embedding
-            5.1.e -> embedding
-            5.1.f -> embedding
-            5.2   -> embedding
-
-    These vectors are used as query vectors against the
-    company-policy Pinecone namespace.
-
-    The GDPR embeddings themselves are NOT stored in the
-    company-policy namespace.
-    """
-
-    CACHE_VERSION = 1
+    CACHE_VERSION = 2
 
     def __init__(
         self,
@@ -55,7 +57,9 @@ class GDPRGroupEmbeddingCache:
 
         self.knowledge_base = (
             knowledge_base
-            or GDPRKnowledgeBase()
+            or GDPRKnowledgeBase(
+                DEFAULT_KB_PATH
+            )
         )
 
         self.embedder = (
@@ -69,53 +73,68 @@ class GDPRGroupEmbeddingCache:
             )
         )
 
-        self.cache_path = Path(cache_path)
+        self.cache_path = Path(
+            cache_path
+        )
 
         if not self.cache_path.is_absolute():
-            self.cache_path = PROJECT_ROOT / self.cache_path
+
+            self.cache_path = (
+                PROJECT_ROOT
+                / self.cache_path
+            )
 
         self._cache: dict[str, Any] = {}
 
-    # ------------------------------------------------------------------
-    # Query key
-    # ------------------------------------------------------------------
+    # ============================================================
+    # KEY
+    # ============================================================
 
     @staticmethod
     def _group_key(
         article_number: int,
         group_id: str,
     ) -> str:
-        """
-        Create a unique key for a GDPR group.
-        """
 
-        return f"{article_number}:{group_id}"
+        return (
+            f"{article_number}:{group_id}"
+        )
 
-    # ------------------------------------------------------------------
-    # Build embedding records
-    # ------------------------------------------------------------------
+    # ============================================================
+    # BUILD RECORDS
+    # ============================================================
 
     def build_records(
         self,
     ) -> list[dict[str, Any]]:
-        """
-        Build embedding records for every GDPR parent group.
-        """
 
-        records: list[dict[str, Any]] = []
+        records = []
 
-        articles = self.knowledge_base.get_all_articles()
+        articles = (
+            self.knowledge_base
+            .get_all_articles()
+        )
 
         for article in articles:
 
-            groups = self.group_retriever.get_groups(
-                article.article_number
+            if (
+                article.checkability
+                == "not_applicable"
+            ):
+                continue
+
+            groups = (
+                self.group_retriever
+                .get_groups(
+                    article.article_number
+                )
             )
 
             for group in groups:
 
                 query = (
-                    self.group_retriever.build_group_query(
+                    self.group_retriever
+                    .build_group_query(
                         group
                     )
                 )
@@ -128,69 +147,57 @@ class GDPRGroupEmbeddingCache:
                 records.append(
                     {
                         "key": key,
-                        "article_number": article.article_number,
-                        "article_name": article.article_name,
-                        "group_id": group.group_id,
+                        "article_number": (
+                            article.article_number
+                        ),
+                        "article_name": (
+                            article.article_name
+                        ),
+                        "group_id": (
+                            group.group_id
+                        ),
                         "query": query,
                     }
                 )
 
         return records
 
-    # ------------------------------------------------------------------
-    # Generate embeddings
-    # ------------------------------------------------------------------
+    # ============================================================
+    # GENERATE
+    # ============================================================
 
     def generate(
-    self,
-    *,
-    force: bool = False,
-    batch_size: int = 50,
+        self,
+        *,
+        force: bool = False,
+        batch_size: int = 50,
     ) -> dict[str, Any]:
-        """
-        Generate GDPR group embeddings incrementally.
-
-        Successful batches are saved immediately so that a quota
-        failure or network failure does not destroy previous work.
-        """
 
         if batch_size <= 0:
             raise ValueError(
                 "batch_size must be greater than 0."
             )
 
-        if batch_size > 100:
-            raise ValueError(
-                "batch_size cannot exceed Google's maximum of 100."
-            )
-
-        # ---------------------------------------------------------
-        # Build all GDPR group records
-        # ---------------------------------------------------------
-
         records = self.build_records()
 
         if not records:
             raise ValueError(
-                "No GDPR group records were found."
+                "No GDPR requirement groups found."
             )
-
-        total_groups = len(records)
 
         logger.info(
-            f"Found {total_groups} GDPR groups."
+            f"Found {len(records)} GDPR "
+            f"requirement groups."
         )
 
-        # ---------------------------------------------------------
-        # Load existing cache if available
-        # ---------------------------------------------------------
+        # --------------------------------------------------------
+        # LOAD / RESET CACHE
+        # --------------------------------------------------------
 
-        if self.cache_path.exists() and not force:
-
-            logger.info(
-                f"Existing GDPR embedding cache found: "
-                f"{self.cache_path}"
-            )
+        if (
+            self.cache_path.exists()
+            and not force
+        ):
 
             self.load()
 
@@ -198,61 +205,59 @@ class GDPRGroupEmbeddingCache:
 
             self._cache = {
                 "version": self.CACHE_VERSION,
-                "embedding_model": (
-                    "configured-google-embedding-model"
+                "kb_path": str(
+                    self.knowledge_base.json_path
                 ),
                 "embedding_dimension": 0,
                 "group_count": 0,
                 "groups": {},
             }
 
-        cached_groups = self._cache.setdefault(
-            "groups",
-            {},
+        cached_groups = (
+            self._cache.setdefault(
+                "groups",
+                {},
+            )
         )
-
-        logger.info(
-            f"Already cached: "
-            f"{len(cached_groups)}/{total_groups} groups."
-        )
-
-        # ---------------------------------------------------------
-        # Determine groups still requiring embeddings
-        # ---------------------------------------------------------
 
         pending_records = [
             record
             for record in records
-            if record["key"] not in cached_groups
+            if record["key"]
+            not in cached_groups
         ]
+
+        logger.info(
+            f"Already cached: "
+            f"{len(cached_groups)}"
+        )
+
+        logger.info(
+            f"Remaining: "
+            f"{len(pending_records)}"
+        )
 
         if not pending_records:
 
             logger.success(
-                "All GDPR group embeddings are already cached."
+                "All GDPR group embeddings "
+                "already exist."
             )
-
-            self._cache["group_count"] = len(
-                cached_groups
-            )
-
-            self.save()
 
             return self._cache
 
-        logger.info(
-            f"Remaining groups to embed: "
-            f"{len(pending_records)}"
+        # --------------------------------------------------------
+        # BATCH
+        # --------------------------------------------------------
+
+        total_pending = len(
+            pending_records
         )
 
-        # ---------------------------------------------------------
-        # Process pending groups in batches
-        # ---------------------------------------------------------
-
-        total_pending = len(pending_records)
-
         total_batches = (
-            total_pending + batch_size - 1
+            total_pending
+            + batch_size
+            - 1
         ) // batch_size
 
         for batch_number, start in enumerate(
@@ -269,80 +274,76 @@ class GDPRGroupEmbeddingCache:
                 total_pending,
             )
 
-            batch_records = pending_records[
-                start:end
-            ]
+            batch_records = (
+                pending_records[
+                    start:end
+                ]
+            )
 
-            batch_queries = [
+            queries = [
                 record["query"]
                 for record in batch_records
             ]
 
             logger.info(
                 f"Embedding batch "
-                f"{batch_number}/{total_batches} | "
-                f"{len(batch_records)} groups"
+                f"{batch_number}/"
+                f"{total_batches} | "
+                f"{len(queries)} groups"
             )
 
-            try:
-
-                vectors = self.embedder.embed_documents(
-                    batch_queries
+            vectors = (
+                self.embedder
+                .embed_documents(
+                    queries
                 )
+            )
 
-            except Exception as exc:
-
-                logger.error(
-                    f"Embedding batch "
-                    f"{batch_number}/{total_batches} failed: "
-                    f"{exc}"
-                )
-
-                logger.warning(
-                    "Previously completed batches have already "
-                    "been saved and can be resumed later."
-                )
-
-                raise
-
-            # -----------------------------------------------------
-            # Validate response
-            # -----------------------------------------------------
-
-            if len(vectors) != len(batch_records):
+            if len(vectors) != len(
+                batch_records
+            ):
 
                 raise RuntimeError(
-                    f"Embedding response count mismatch. "
-                    f"Expected={len(batch_records)}, "
-                    f"Received={len(vectors)}."
+                    "Embedding response "
+                    "count mismatch. "
+                    f"Expected="
+                    f"{len(batch_records)}, "
+                    f"Received="
+                    f"{len(vectors)}"
                 )
 
-            # -----------------------------------------------------
-            # Add batch to cache
-            # -----------------------------------------------------
+            # ----------------------------------------------------
+            # SAVE VECTORS
+            # ----------------------------------------------------
 
             for record, vector in zip(
                 batch_records,
                 vectors,
             ):
 
-                cached_groups[record["key"]] = {
-                    "article_number": record[
-                        "article_number"
-                    ],
-                    "article_name": record[
-                        "article_name"
-                    ],
-                    "group_id": record[
-                        "group_id"
-                    ],
-                    "query": record["query"],
+                cached_groups[
+                    record["key"]
+                ] = {
+                    "article_number": (
+                        record[
+                            "article_number"
+                        ]
+                    ),
+                    "article_name": (
+                        record[
+                            "article_name"
+                        ]
+                    ),
+                    "group_id": (
+                        record[
+                            "group_id"
+                        ]
+                    ),
+                    "query": (
+                        record["query"]
+                    ),
                     "embedding": vector,
                 }
-
-            # -----------------------------------------------------
-            # Update metadata
-            # -----------------------------------------------------
 
             self._cache[
                 "embedding_dimension"
@@ -352,40 +353,25 @@ class GDPRGroupEmbeddingCache:
                 "group_count"
             ] = len(cached_groups)
 
-            # -----------------------------------------------------
-            # SAVE IMMEDIATELY
-            # -----------------------------------------------------
-
+            # Save after EVERY batch
             self.save()
 
             logger.success(
-                f"Saved batch {batch_number}/{total_batches}. "
-                f"Progress: "
-                f"{len(cached_groups)}/{total_groups}"
+                f"Saved batch "
+                f"{batch_number}/"
+                f"{total_batches} | "
+                f"Progress="
+                f"{len(cached_groups)}/"
+                f"{len(records)}"
             )
 
-        # ---------------------------------------------------------
-        # Finished
-        # ---------------------------------------------------------
-
-        self._cache[
-            "group_count"
-        ] = len(cached_groups)
-
-        self.save()
-
-        logger.success(
-            f"GDPR embedding generation completed. "
-            f"Cached {len(cached_groups)} groups."
-        )
-
         return self._cache
-    # ------------------------------------------------------------------
+
+    # ============================================================
+    # SAVE
+    # ============================================================
 
     def save(self) -> None:
-        """
-        Save the embedding cache to disk.
-        """
 
         self.cache_path.parent.mkdir(
             parents=True,
@@ -395,71 +381,55 @@ class GDPRGroupEmbeddingCache:
         with self.cache_path.open(
             "w",
             encoding="utf-8",
-        ) as file:
+        ) as f:
 
             json.dump(
                 self._cache,
-                file,
+                f,
                 indent=2,
+                ensure_ascii=False,
             )
 
-        logger.success(
-            f"GDPR embedding cache saved to "
-            f"{self.cache_path}"
-        )
+    # ============================================================
+    # LOAD
+    # ============================================================
 
-    # ------------------------------------------------------------------
-    # Load
-    # ------------------------------------------------------------------
-
-    def load(self) -> dict[str, Any]:
-        """
-        Load an existing embedding cache.
-        """
+    def load(
+        self,
+    ) -> dict[str, Any]:
 
         if not self.cache_path.exists():
+
             raise FileNotFoundError(
-                f"GDPR embedding cache not found: "
+                f"GDPR embedding cache "
+                f"not found:\n"
                 f"{self.cache_path}"
             )
 
         with self.cache_path.open(
             "r",
             encoding="utf-8",
-        ) as file:
+        ) as f:
 
-            self._cache = json.load(file)
+            self._cache = json.load(f)
 
         if "groups" not in self._cache:
-            raise ValueError(
-                "Invalid GDPR embedding cache: "
-                "'groups' field is missing."
-            )
 
-        logger.success(
-            f"Loaded "
-            f"{len(self._cache['groups'])} "
-            f"GDPR group embeddings."
-        )
+            raise ValueError(
+                "Invalid GDPR embedding cache."
+            )
 
         return self._cache
 
-    # ------------------------------------------------------------------
-    # Get one embedding
-    # ------------------------------------------------------------------
+    # ============================================================
+    # GET EMBEDDING
+    # ============================================================
 
     def get_embedding(
         self,
         article_number: int,
         group_id: str,
     ) -> list[float]:
-        """
-        Return the cached embedding for one GDPR group.
-
-        Example:
-
-            cache.get_embedding(5, "5.1.f")
-        """
 
         if not self._cache:
             self.load()
@@ -469,31 +439,31 @@ class GDPRGroupEmbeddingCache:
             group_id,
         )
 
-        group = self._cache["groups"].get(
-            key
+        group = (
+            self._cache[
+                "groups"
+            ].get(key)
         )
 
         if group is None:
+
             raise KeyError(
-                f"No cached embedding found for "
+                f"No embedding found for "
                 f"Article {article_number}, "
                 f"group {group_id}."
             )
 
         return group["embedding"]
 
-    # ------------------------------------------------------------------
-    # Get group record
-    # ------------------------------------------------------------------
+    # ============================================================
+    # GET RECORD
+    # ============================================================
 
     def get_group_record(
         self,
         article_number: int,
         group_id: str,
     ) -> dict[str, Any]:
-        """
-        Return complete cached information for a group.
-        """
 
         if not self._cache:
             self.load()
@@ -503,31 +473,28 @@ class GDPRGroupEmbeddingCache:
             group_id,
         )
 
-        group = self._cache["groups"].get(
-            key
+        group = (
+            self._cache[
+                "groups"
+            ].get(key)
         )
 
         if group is None:
+
             raise KeyError(
-                f"No cached GDPR group found for "
+                f"No group found for "
                 f"Article {article_number}, "
                 f"group {group_id}."
             )
 
         return group
 
-    # ------------------------------------------------------------------
-    # Statistics
-    # ------------------------------------------------------------------
+    # ============================================================
+    # STATS
+    # ============================================================
 
     @property
     def group_count(self) -> int:
-        """
-        Return number of cached GDPR groups.
-        """
-
-        if not self._cache:
-            return 0
 
         return len(
             self._cache.get(
@@ -537,56 +504,40 @@ class GDPRGroupEmbeddingCache:
         )
 
 
+# ================================================================
+# DIRECT TEST
+# ================================================================
 
 if __name__ == "__main__":
+
     print("=" * 70)
-    print("GDPR GROUP EMBEDDING GENERATOR")
+    print("GDPR GROUP EMBEDDING TEST")
     print("=" * 70)
 
-    print("\n[1] Initializing embedding cache...")
+    kb = GDPRKnowledgeBase()
 
-    cache = GDPRGroupEmbeddingCache()
+    print(
+        f"\nArticles     : "
+        f"{kb.article_count()}"
+    )
 
-    print("SUCCESS")
+    print(
+        f"Groups       : "
+        f"{kb.group_count()}"
+    )
 
-    print("\n[2] Generating GDPR group embeddings...")
-    print("-" * 70)
+    print(
+        f"Sub-obligations : "
+        f"{kb.obligation_count()}"
+    )
 
-    data = cache.generate(force=False)
+    print("\nArticle 5 groups:")
 
-    print("\n[3] Generation completed")
-    print("-" * 70)
-
-    print(f"Groups generated     : {data['group_count']}")
-    print(f"Embedding dimension  : {data['embedding_dimension']}")
-    print(f"Cache file           : {cache.cache_path}")
-
-    print("\n[4] Testing Article 5")
-    print("-" * 70)
-
-    article_5_groups = [
-        "5.1.a",
-        "5.1.b",
-        "5.1.c",
-        "5.1.d",
-        "5.1.e",
-        "5.1.f",
-        "5.2",
-    ]
-
-    for group_id in article_5_groups:
-
-        vector = cache.get_embedding(
-            article_number=5,
-            group_id=group_id,
-        )
+    for group in kb.get_groups(5):
 
         print(
-            f"{group_id:<10} "
-            f"dimension={len(vector)}"
+            f"  {group.group_id:<10} "
+            f"{group.principle}"
         )
 
-    print("\n" + "=" * 70)
-    print("GDPR EMBEDDING GENERATION SUCCESSFUL")
-    print("=" * 70)
-
+    print("\nSUCCESS")

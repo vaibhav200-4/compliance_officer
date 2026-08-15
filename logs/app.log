@@ -302,3 +302,328 @@ R'
 2026-08-12 22:07:47 | SUCCESS | __main__:generate:361 | Saved batch 2/2. Progress: 165/165
 2026-08-12 22:07:49 | SUCCESS | __main__:save:406 | GDPR embedding cache saved to H:\compliance_officer\data\gdpr\gdpr_group_embeddings.json
 2026-08-12 22:07:49 | SUCCESS | __main__:generate:377 | GDPR embedding generation completed. Cached 165 groups.
+2026-08-12 23:12:05 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 23:12:05 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 23:12:10 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 23:12:10 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 23:12:10 | SUCCESS | app.compliance.group_retriever:__init__:103 | Compliance group retriever initialized.
+2026-08-12 23:12:10 | INFO | app.compliance.group_retriever:get_groups:152 | Article 5: found 7 compliance groups.
+2026-08-12 23:12:10 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 23:12:10 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 23:12:10 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-12 23:12:10 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-12 23:12:12 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-12 23:12:12 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-12 23:12:12 | SUCCESS | app.compliance.group_retriever:__init__:103 | Compliance group retriever initialized.
+2026-08-12 23:12:12 | SUCCESS | app.compliance.gdpr_embeddings:load:439 | Loaded 165 GDPR group embeddings.
+2026-08-12 23:12:12 | INFO | app.compliance.group_retriever:retrieve_group_by_cached_embedding:326 | Retrieving group evidence from cached embedding | article=5 | group=5.1.f | obligations=4
+2026-08-12 23:12:12 | INFO | app.vectorstore.pinecone:similarity_search_by_vector:124 | Performing vector-based similarity search in namespace 'company-policy'.
+2026-08-12 23:12:16 | INFO | app.compliance.group_retriever:retrieve_group_by_cached_embedding:396 | Group 5.1.f: retrieved 0 cached-vector evidence chunks.
+2026-08-14 15:27:05 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-14 15:27:07 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-14 15:27:17 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-14 15:27:17 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-14 15:27:17 | SUCCESS | app.compliance.group_retriever:__init__:96 | ComplianceGroupRetriever initialized.
+2026-08-14 15:27:17 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:17 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.a
+2026-08-14 15:27:17 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.a
+Principle: Lawfulness, fairness and transparency
+Requirement: Personal data must'
+2026-08-14 15:27:22 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:27:22 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:22 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.b
+2026-08-14 15:27:22 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.b
+Principle: Purpose limitation
+Requirement: Personal data must be collected for s'
+2026-08-14 15:27:24 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:27:24 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:24 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.c
+2026-08-14 15:27:24 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.c
+Principle: Data minimisation
+Requirement: Personal data must be adequate, releva'
+2026-08-14 15:27:25 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:27:25 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:25 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.d
+2026-08-14 15:27:25 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.d
+Principle: Accuracy
+Requirement: Personal data must be accurate and, where neces'
+2026-08-14 15:27:27 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:27:27 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:27 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.e
+2026-08-14 15:27:27 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.e
+Principle: Storage limitation
+Requirement: Personal data must be kept in identif'
+2026-08-14 15:27:29 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:27:29 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:29 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-14 15:27:29 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-14 15:27:30 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:27:30 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-14 15:27:30 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.2
+2026-08-14 15:27:30 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.2
+Principle: Accountability
+Requirement: The controller is responsible for, and must'
+2026-08-14 15:27:31 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-14 15:49:27 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-14 15:49:27 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-14 15:49:32 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 11:40:31 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 11:40:31 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 11:40:36 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 11:58:14 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 11:58:14 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 11:58:17 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 12:03:42 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 12:03:43 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 12:03:45 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 12:03:45 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-15 12:03:45 | SUCCESS | app.compliance.group_retriever:__init__:96 | ComplianceGroupRetriever initialized.
+2026-08-15 12:03:45 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:45 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.a
+2026-08-15 12:03:45 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.a
+Principle: Lawfulness, fairness and transparency
+Requirement: Personal data must'
+2026-08-15 12:03:48 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:03:48 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:48 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.b
+2026-08-15 12:03:48 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.b
+Principle: Purpose limitation
+Requirement: Personal data must be collected for s'
+2026-08-15 12:03:49 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:03:49 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:49 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.c
+2026-08-15 12:03:49 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.c
+Principle: Data minimisation
+Requirement: Personal data must be adequate, releva'
+2026-08-15 12:03:50 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:03:50 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:50 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.d
+2026-08-15 12:03:50 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.d
+Principle: Accuracy
+Requirement: Personal data must be accurate and, where neces'
+2026-08-15 12:03:52 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:03:52 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:52 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.e
+2026-08-15 12:03:52 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.e
+Principle: Storage limitation
+Requirement: Personal data must be kept in identif'
+2026-08-15 12:03:53 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:03:53 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:53 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 12:03:53 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 12:03:54 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:03:54 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:03:54 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.2
+2026-08-15 12:03:54 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.2
+Principle: Accountability
+Requirement: The controller is responsible for, and must'
+2026-08-15 12:03:55 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 0 usable evidence chunks.
+2026-08-15 12:05:48 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 12:05:48 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 12:05:50 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 12:05:50 | SUCCESS | app.compliance.retriever:__init__:46 | Compliance retriever initialized.
+2026-08-15 12:05:50 | SUCCESS | app.compliance.group_retriever:__init__:96 | ComplianceGroupRetriever initialized.
+2026-08-15 12:05:50 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:50 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.a
+2026-08-15 12:05:50 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.a
+Principle: Lawfulness, fairness and transparency
+Requirement: Personal data must'
+2026-08-15 12:05:53 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 12:05:53 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:53 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.b
+2026-08-15 12:05:53 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.b
+Principle: Purpose limitation
+Requirement: Personal data must be collected for s'
+2026-08-15 12:05:54 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 12:05:54 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:54 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.c
+2026-08-15 12:05:54 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.c
+Principle: Data minimisation
+Requirement: Personal data must be adequate, releva'
+2026-08-15 12:05:55 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 12:05:55 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:55 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.d
+2026-08-15 12:05:55 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.d
+Principle: Accuracy
+Requirement: Personal data must be accurate and, where neces'
+2026-08-15 12:05:56 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 12:05:56 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:56 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.e
+2026-08-15 12:05:56 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.e
+Principle: Storage limitation
+Requirement: Personal data must be kept in identif'
+2026-08-15 12:05:58 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 12:05:58 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:58 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 12:05:58 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 12:05:59 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 12:05:59 | INFO | app.compliance.group_retriever:get_groups:134 | Article 5: 7 requirement groups.
+2026-08-15 12:05:59 | INFO | app.compliance.group_retriever:retrieve_group:260 | Retrieving evidence | Article=5 | Group=5.2
+2026-08-15 12:05:59 | INFO | app.compliance.retriever:retrieve:87 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.2
+Principle: Accountability
+Requirement: The controller is responsible for, and must'
+2026-08-15 12:06:00 | INFO | app.compliance.retriever:retrieve:182 | Retrieved 5 usable evidence chunks.
+2026-08-15 14:40:35 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 14:40:35 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 14:40:41 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 14:40:41 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 14:40:41 | SUCCESS | app.compliance.group_retriever:__init__:97 | ComplianceGroupRetriever initialized.
+2026-08-15 14:40:41 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 14:40:41 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 14:40:41 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 14:40:41 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 14:40:44 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 14:42:41 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 14:42:41 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 14:42:44 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 14:42:44 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 14:42:44 | SUCCESS | app.compliance.group_retriever:__init__:97 | ComplianceGroupRetriever initialized.
+2026-08-15 14:42:44 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 14:42:44 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 14:42:44 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 14:42:44 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 14:42:47 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 14:52:35 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 14:52:36 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 14:52:39 | SUCCESS | app.vectorstore.pinecone:__init__:37 | Connected to Pinecone index 'company-policy'.
+2026-08-15 14:52:39 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 14:52:39 | SUCCESS | app.compliance.group_retriever:__init__:97 | ComplianceGroupRetriever initialized.
+2026-08-15 14:52:39 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 14:52:39 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 14:52:39 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 14:52:39 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 14:52:44 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:17:13 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 15:17:13 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 15:17:17 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 15:21:27 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 15:21:28 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 15:21:36 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 15:21:41 | SUCCESS | app.ingestion.extractors.mistral_extractor:__init__:56 | Mistral OCR initialized.
+2026-08-15 15:21:41 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 15:21:41 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 15:21:45 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 15:21:45 | INFO | app.ingestion.pipeline:ingest:32 | Starting ingestion of 1 file(s).
+2026-08-15 15:21:45 | INFO | app.ingestion.pipeline:ingest:40 | Processing 'SampleInput_CompanyPolicy.pdf'
+2026-08-15 15:21:45 | INFO | app.ingestion.loader:load:79 | Loading 'SampleInput_CompanyPolicy.pdf' using MistralExtractor
+2026-08-15 15:21:45 | INFO | app.ingestion.extractors.mistral_extractor:extract:126 | Uploading SampleInput_CompanyPolicy.pdf...
+2026-08-15 15:21:49 | INFO | app.ingestion.extractors.mistral_extractor:extract:130 | Generating signed URL...
+2026-08-15 15:21:50 | INFO | app.ingestion.extractors.mistral_extractor:extract:134 | Running OCR...
+2026-08-15 15:21:53 | INFO | app.ingestion.extractors.mistral_extractor:_persist_json:191 | Saved OCR JSON -> data\ocr_output\SampleInput_CompanyPolicy_20260815_152153.json
+2026-08-15 15:21:53 | SUCCESS | app.ingestion.loader:load:86 | Loaded 7 document(s) from 'SampleInput_CompanyPolicy.pdf'.
+2026-08-15 15:21:53 | INFO | app.ingestion.pipeline:ingest:64 | Assigned document_id=0f613260-5e52-4192-99c6-5401b79f55b9 to 'SampleInput_CompanyPolicy.pdf'
+2026-08-15 15:21:53 | INFO | app.ingestion.splitter:split:55 | Splitting 7 document(s)...
+2026-08-15 15:21:53 | SUCCESS | app.ingestion.splitter:split:77 | Created 14 chunks from 7 document(s).
+2026-08-15 15:22:18 | SUCCESS | app.vectorstore.pinecone:add_documents:83 | Upserted 14 vectors to namespace 'company-policy'.
+2026-08-15 15:22:18 | SUCCESS | app.ingestion.pipeline:ingest:79 | Ingestion completed. Files=1 Documents=7 Chunks=14
+2026-08-15 15:51:11 | INFO | app.ingestion.embedder:__init__:16 | Initializing embedding model...
+2026-08-15 15:51:11 | SUCCESS | app.ingestion.embedder:__init__:23 | Embedding model initialized.
+2026-08-15 15:51:18 | SUCCESS | app.vectorstore.pinecone:__init__:36 | Connected to Pinecone index 'company-policy'.
+2026-08-15 15:51:18 | SUCCESS | app.compliance.retriever:__init__:48 | Compliance retriever initialized.
+2026-08-15 15:51:18 | SUCCESS | app.compliance.group_retriever:__init__:97 | ComplianceGroupRetriever initialized.
+2026-08-15 15:51:18 | SUCCESS | app.agents.analyzer_agent:__init__:83 | AnalyzerAgent initialized.
+2026-08-15 15:51:18 | INFO | app.agents.analyzer_agent:analyze_article:96 | Starting Article 5 analysis.
+2026-08-15 15:51:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:18 | INFO | app.agents.analyzer_agent:analyze_article:132 | Article 5: 7 groups.
+2026-08-15 15:51:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:18 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:18 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.a
+2026-08-15 15:51:18 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.a
+Principle: Lawfulness, fairness and transparency
+Requirement: Personal data must'
+2026-08-15 15:51:24 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:24 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:24 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.b
+2026-08-15 15:51:24 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.b
+Principle: Purpose limitation
+Requirement: Personal data must be collected for s'
+2026-08-15 15:51:27 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:27 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:27 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.c
+2026-08-15 15:51:27 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.c
+Principle: Data minimisation
+Requirement: Personal data must be adequate, releva'
+2026-08-15 15:51:28 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:28 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:28 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.d
+2026-08-15 15:51:28 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.d
+Principle: Accuracy
+Requirement: Personal data must be accurate and, where neces'
+2026-08-15 15:51:31 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:31 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:31 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.e
+2026-08-15 15:51:31 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.e
+Principle: Storage limitation
+Requirement: Personal data must be kept in identif'
+2026-08-15 15:51:33 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:33 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:33 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.1.f
+2026-08-15 15:51:33 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.1.f
+Principle: Integrity and confidentiality
+Requirement: Personal data must be proc'
+2026-08-15 15:51:35 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:35 | INFO | app.compliance.group_retriever:get_groups:135 | Article 5: 7 requirement groups.
+2026-08-15 15:51:35 | INFO | app.compliance.group_retriever:retrieve_group:261 | Retrieving evidence | Article=5 | Group=5.2
+2026-08-15 15:51:35 | INFO | app.compliance.retriever:retrieve:89 | Retrieving policy evidence | top_k=5 | query='GDPR Article 5
+Requirement Group: 5.2
+Principle: Accountability
+Requirement: The controller is responsible for, and must'
+2026-08-15 15:51:37 | INFO | app.compliance.retriever:retrieve:184 | Retrieved 5 usable evidence chunks.
+2026-08-15 15:51:37 | SUCCESS | app.compliance.group_retriever:retrieve_article:313 | Article 5: retrieved evidence for 7 groups.
+2026-08-15 15:51:37 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 1/7 | 5.1.a
+2026-08-15 15:52:10 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.a | PARTIALLY_MET
+2026-08-15 15:52:10 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 2/7 | 5.1.b
+2026-08-15 15:52:42 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.b | PARTIALLY_MET
+2026-08-15 15:52:42 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 3/7 | 5.1.c
+2026-08-15 15:53:11 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.c | INSUFFICIENT_EVIDENCE
+2026-08-15 15:53:11 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 4/7 | 5.1.d
+2026-08-15 15:53:36 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.d | MET
+2026-08-15 15:53:36 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 5/7 | 5.1.e
+2026-08-15 15:54:27 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.e | MET
+2026-08-15 15:54:27 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 6/7 | 5.1.f
+2026-08-15 15:54:42 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.1.f | MET
+2026-08-15 15:54:42 | INFO | app.agents.analyzer_agent:analyze_article:183 | Article 5 | Group 7/7 | 5.2
+2026-08-15 15:55:02 | SUCCESS | app.agents.analyzer_agent:analyze_article:245 | Article 5 | Group 5.2 | NOT_MET
+2026-08-15 15:55:02 | SUCCESS | app.agents.analyzer_agent:analyze_article:316 | Article 5 analysis completed | status=NOT_MET

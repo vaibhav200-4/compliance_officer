@@ -13,7 +13,6 @@ logger = get_logger()
 
 COMPANY_POLICY_NAMESPACE = "company-policy"
 
-
 class PineconeManager:
     """Store documents in Pinecone using the shared application Embedder."""
 
@@ -99,6 +98,31 @@ class PineconeManager:
         if namespace != COMPANY_POLICY_NAMESPACE:
             raise ValueError("Company-policy search must use namespace 'company-policy'.")
         vector = self.embedder.embed_query(query)
+        return self.index.query(
+            vector=vector,
+            top_k=top_k,
+            namespace=namespace,
+            include_metadata=True,
+        )
+
+    def similarity_search_by_vector(
+        self,
+        vector: list[float],
+        *,
+        namespace: str = COMPANY_POLICY_NAMESPACE,
+        top_k: int = 5,
+    ):
+        """Search only the company-policy namespace using a supplied vector."""
+        if namespace != COMPANY_POLICY_NAMESPACE:
+            raise ValueError("Company-policy search must use namespace 'company-policy'.")
+        if not vector:
+            raise ValueError("Search vector must not be empty.")
+        if top_k <= 0:
+            raise ValueError("top_k must be greater than 0.")
+
+        logger.info(
+            f"Performing vector-based similarity search in namespace '{namespace}'."
+        )
         return self.index.query(
             vector=vector,
             top_k=top_k,

@@ -15,7 +15,7 @@ logger = get_logger()
 # ---------------------------------------------------------
 
 # Change this to your sample policy file
-# SAMPLE_POLICY = Path("data/SampleInput_CompanyPolicy.pdf")
+SAMPLE_POLICY = Path("data/SampleInput_CompanyPolicy.pdf")
 
 
 def main():
@@ -27,15 +27,15 @@ def main():
     # 1. Check sample file
     # -----------------------------------------------------
 
-    # print("\n[1] Checking sample policy...")
+    print("\n[1] Checking sample policy...")
 
-    # if not SAMPLE_POLICY.exists():
-    #     raise FileNotFoundError(
-    #         f"Sample policy not found: {SAMPLE_POLICY.resolve()}"
-    #     )
+    if not SAMPLE_POLICY.exists():
+        raise FileNotFoundError(
+            f"Sample policy not found: {SAMPLE_POLICY.resolve()}"
+        )
 
-    # print(f"File: {SAMPLE_POLICY.resolve()}")
-    # print("SUCCESS")
+    print(f"File: {SAMPLE_POLICY.resolve()}")
+    print("SUCCESS")
 
     # -----------------------------------------------------
     # 2. Connect to Pinecone
@@ -64,12 +64,12 @@ def main():
     # 4. Clean company-policy namespace
     # -----------------------------------------------------
 
-    print("\n[4] Cleaning company-policy namespace...")
+    # print("\n[4] Cleaning company-policy namespace...")
 
-    vector_store.index.delete(
-        delete_all=True,
-        namespace=COMPANY_POLICY_NAMESPACE,
-    )
+    # vector_store.index.delete(
+    #     delete_all=True,
+    #     namespace=COMPANY_POLICY_NAMESPACE,
+    # )
 
     print("DELETE REQUEST SENT")
 
@@ -87,41 +87,41 @@ def main():
     # 6. Ingest sample policy
     # -----------------------------------------------------
 
-#     print("\n[6] Ingesting sample policy...")
+    print("\n[6] Ingesting sample policy...")
 
-#     pipeline = IngestionPipeline()
+    pipeline = IngestionPipeline()
 
-#     result = pipeline.ingest(
-#         SAMPLE_POLICY
-#     )
+    result = pipeline.ingest(
+        SAMPLE_POLICY
+    )
 
-#     print("\nINGESTION RESULT")
-#     print("-" * 70)
+    print("\nINGESTION RESULT")
+    print("-" * 70)
 
-#     print(f"Files       : {result['files']}")
-#     print(f"Documents   : {result['documents']}")
-#     print(f"Chunks      : {result['chunks']}")
-#     print(f"Namespace   : {result['namespace']}")
-#     print(f"Document IDs: {result['document_ids']}")
+    print(f"Files       : {result['files']}")
+    print(f"Documents   : {result['documents']}")
+    print(f"Chunks      : {result['chunks']}")
+    print(f"Namespace   : {result['namespace']}")
+    print(f"Document IDs: {result['document_ids']}")
 
 #     # -----------------------------------------------------
 #     # 7. Final Pinecone statistics
 #     # -----------------------------------------------------
 
-#     print("\n[7] Final vector store statistics...")
-#     print("-" * 70)
+    print("\n[7] Final vector store statistics...")
+    print("-" * 70)
 
-#     final_stats = vector_store.describe_index_stats()
+    final_stats = vector_store.describe_index_stats()
 
-#     print(final_stats)
+    print(final_stats)
 
 #     # -----------------------------------------------------
 #     # Final
 #     # -----------------------------------------------------
 
-#     print("\n" + "=" * 70)
-#     print("RESET + SAMPLE INGESTION COMPLETED")
-#     print("=" * 70)
+    print("\n" + "=" * 70)
+    print("RESET + SAMPLE INGESTION COMPLETED")
+    print("=" * 70)
 
 
 if __name__ == "__main__":

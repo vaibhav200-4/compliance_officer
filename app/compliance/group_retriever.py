@@ -1,31 +1,53 @@
-# app/compliance/group_retriever.py
+# app/compliance/group_retriever
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import TYPE_CHECKING
 
 from app.compliance.gdpr_kb import (
     GDPRKnowledgeBase,
+    RequirementGroup,
     SubObligation,
 )
+
 from app.compliance.retriever import (
     ComplianceRetriever,
     RetrievedEvidence,
 )
+
 from app.core.logger import get_logger
+
+from app.vectorstore.pinecone import (
+    COMPANY_POLICY_NAMESPACE,
+)
+
+
+if TYPE_CHECKING:
+    from app.compliance.gdpr_embeddings import (
+        GDPRGroupEmbeddingCache,
+    )
+
 
 logger = get_logger()
 
 
+# ================================================================
+# DATA CLASSES
+# ================================================================
+
 @dataclass(frozen=True)
 class ComplianceGroup:
-    """
-    Represents one GDPR parent group and its child obligations.
-    """
 
     article_number: int
     group_id: str
+    condition_logic: str
+    principle: str
+    requirement_summary: str
+    applicability_condition: str | None
     obligations: tuple[SubObligation, ...]
+    keywords: tuple[str, ...]
+    expected_evidence: tuple[str, ...]
+    assessment_rules: dict[str, str]
 
     @property
     def obligation_count(self) -> int:
@@ -34,9 +56,6 @@ class ComplianceGroup:
 
 @dataclass(frozen=True)
 class GroupEvidence:
-    """
-    Evidence retrieved for a complete GDPR obligation group.
-    """
 
     article_number: int
     group_id: str
@@ -48,39 +67,17 @@ class GroupEvidence:
         return len(self.evidence)
 
 
+# ================================================================
+# RETRIEVER
+# ================================================================
+
 class ComplianceGroupRetriever:
-    """
-    Retrieves shared policy evidence for a GDPR parent group.
-
-    Instead of performing one Pinecone search per atomic obligation,
-    this class creates one combined query from all child obligations.
-
-    Example:
-
-        5.1.f
-          ├── 5.1.f.1
-          ├── 5.1.f.2
-          ├── 5.1.f.3
-          └── 5.1.f.4
-
-    becomes:
-
-        5.1.f
-             ↓
-        one combined query
-             ↓
-        Pinecone
-             ↓
-        shared evidence
-
-    The individual obligations are still preserved and will be
-    evaluated separately by the compliance judge later.
-    """
 
     def __init__(
         self,
         knowledge_base: GDPRKnowledgeBase | None = None,
         retriever: ComplianceRetriever | None = None,
+        embedding_cache: "GDPRGroupEmbeddingCache | None" = None,
     ) -> None:
 
         self.knowledge_base = (
@@ -93,80 +90,68 @@ class ComplianceGroupRetriever:
             or ComplianceRetriever()
         )
 
-        logger.success(
-            "Compliance group retriever initialized."
+        self.embedding_cache = (
+            embedding_cache
         )
 
-    # ------------------------------------------------------------------
-    # Group discovery
-    # ------------------------------------------------------------------
+        logger.success(
+            "ComplianceGroupRetriever initialized."
+        )
+
+    # ============================================================
+    # GET GROUPS
+    # ============================================================
 
     def get_groups(
         self,
         article_number: int,
     ) -> list[ComplianceGroup]:
-        """
-        Get all parent groups for an article.
 
-        Example for Article 5:
-
-            5.1.a
-            5.1.b
-            5.1.c
-            5.1.d
-            5.1.e
-            5.1.f
-            5.2
-        """
-
-        obligations = self.knowledge_base.get_sub_obligations(
-            article_number
+        raw_groups = (
+            self.knowledge_base.get_groups(
+                article_number
+            )
         )
 
-        grouped: dict[str, list[SubObligation]] = {}
+        groups = []
 
-        for obligation in obligations:
+        for group in raw_groups:
 
-            grouped.setdefault(
-                obligation.parent_group_id,
-                [],
-            ).append(obligation)
-
-        groups = [
-            ComplianceGroup(
-                article_number=article_number,
-                group_id=group_id,
-                obligations=tuple(group_obligations),
+            groups.append(
+                ComplianceGroup(
+                    article_number=group.article_number,
+                    group_id=group.group_id,
+                    condition_logic=group.condition_logic,
+                    principle=group.principle,
+                    requirement_summary=group.requirement_summary,
+                    applicability_condition=group.applicability_condition,
+                    obligations=group.obligations,
+                    keywords=group.keywords,
+                    expected_evidence=group.expected_evidence,
+                    assessment_rules=group.assessment_rules,
+                )
             )
-            for group_id, group_obligations
-            in grouped.items()
-        ]
 
         logger.info(
             f"Article {article_number}: "
-            f"found {len(groups)} compliance groups."
+            f"{len(groups)} requirement groups."
         )
 
         return groups
 
-    # ------------------------------------------------------------------
-    # Group lookup
-    # ------------------------------------------------------------------
+    # ============================================================
+    # GET ONE GROUP
+    # ============================================================
 
     def get_group(
         self,
         article_number: int,
         group_id: str,
     ) -> ComplianceGroup:
-        """
-        Get one specific parent group.
 
-        Example:
-
-            get_group(5, "5.1.f")
-        """
-
-        groups = self.get_groups(article_number)
+        groups = self.get_groups(
+            article_number
+        )
 
         for group in groups:
 
@@ -174,47 +159,67 @@ class ComplianceGroupRetriever:
                 return group
 
         raise KeyError(
-            f"GDPR group '{group_id}' "
+            f"Group '{group_id}' "
             f"not found in Article {article_number}."
         )
 
-    # ------------------------------------------------------------------
-    # Query construction
-    # ------------------------------------------------------------------
+    # ============================================================
+    # BUILD RETRIEVAL QUERY
+    # ============================================================
 
     @staticmethod
     def build_group_query(
         group: ComplianceGroup,
     ) -> str:
-        """
-        Build one retrieval query from all child obligations.
 
-        We use both plain_summary and evidence_prompt because:
-
-            plain_summary → semantic description
-            evidence_prompt → what evidence we actually want
-        """
-
-        lines: list[str] = []
+        lines = []
 
         lines.append(
-            f"GDPR Article {group.article_number}, "
-            f"requirement group {group.group_id}."
+            f"GDPR Article {group.article_number}"
         )
 
         lines.append(
-            "Find company privacy policy evidence relevant "
-            "to the following requirements:"
+            f"Requirement Group: {group.group_id}"
+        )
+
+        lines.append(
+            f"Principle: {group.principle}"
+        )
+
+        lines.append(
+            f"Requirement: "
+            f"{group.requirement_summary}"
+        )
+
+        if group.applicability_condition:
+
+            lines.append(
+                f"Applicability: "
+                f"{group.applicability_condition}"
+            )
+
+        if group.keywords:
+
+            lines.append(
+                "Keywords: "
+                + ", ".join(
+                    group.keywords
+                )
+            )
+
+        lines.append(
+            "\nEvidence requirements:"
         )
 
         for obligation in group.obligations:
 
             lines.append(
-                f"\nRequirement {obligation.id}:"
+                f"\n{obligation.id}"
             )
 
             lines.append(
-                f"Summary: {obligation.plain_summary}"
+                f"Summary: "
+                f"{obligation.plain_summary}"
             )
 
             lines.append(
@@ -222,20 +227,18 @@ class ComplianceGroupRetriever:
                 f"{obligation.evidence_prompt}"
             )
 
-            # Conditional requirements should also contribute
-            # their condition to retrieval context.
             if obligation.applicability_condition:
 
                 lines.append(
-                    f"Applicability condition: "
+                    f"Applicability: "
                     f"{obligation.applicability_condition}"
                 )
 
         return "\n".join(lines)
 
-    # ------------------------------------------------------------------
-    # Group retrieval
-    # ------------------------------------------------------------------
+    # ============================================================
+    # RETRIEVE ONE GROUP
+    # ============================================================
 
     def retrieve_group(
         self,
@@ -245,9 +248,6 @@ class ComplianceGroupRetriever:
         top_k: int = 5,
         min_score: float | None = None,
     ) -> GroupEvidence:
-        """
-        Retrieve shared policy evidence for one GDPR group.
-        """
 
         group = self.get_group(
             article_number,
@@ -259,10 +259,9 @@ class ComplianceGroupRetriever:
         )
 
         logger.info(
-            f"Retrieving group evidence | "
-            f"article={article_number} | "
-            f"group={group_id} | "
-            f"obligations={group.obligation_count}"
+            f"Retrieving evidence | "
+            f"Article={article_number} | "
+            f"Group={group_id}"
         )
 
         evidence = self.retriever.retrieve(
@@ -271,21 +270,18 @@ class ComplianceGroupRetriever:
             min_score=min_score,
         )
 
-        logger.info(
-            f"Group {group_id}: "
-            f"retrieved {len(evidence)} evidence chunks."
-        )
-
         return GroupEvidence(
             article_number=article_number,
             group_id=group_id,
             query=query,
-            evidence=tuple(evidence),
+            evidence=tuple(
+                evidence
+            ),
         )
 
-    # ------------------------------------------------------------------
-    # Complete article retrieval
-    # ------------------------------------------------------------------
+    # ============================================================
+    # RETRIEVE COMPLETE ARTICLE
+    # ============================================================
 
     def retrieve_article(
         self,
@@ -294,26 +290,12 @@ class ComplianceGroupRetriever:
         top_k: int = 5,
         min_score: float | None = None,
     ) -> list[GroupEvidence]:
-        """
-        Retrieve shared evidence for every parent group
-        in an article.
-
-        This is the first level of article-wide analysis.
-
-        Example:
-
-            Article 5
-              ↓
-            7 groups
-              ↓
-            7 Pinecone searches
-        """
 
         groups = self.get_groups(
             article_number
         )
 
-        results: list[GroupEvidence] = []
+        results = []
 
         for group in groups:
 
@@ -324,7 +306,9 @@ class ComplianceGroupRetriever:
                 min_score=min_score,
             )
 
-            results.append(result)
+            results.append(
+                result
+            )
 
         logger.success(
             f"Article {article_number}: "
@@ -333,3 +317,135 @@ class ComplianceGroupRetriever:
         )
 
         return results
+
+    # ============================================================
+    # CACHED EMBEDDING RETRIEVAL
+    # ============================================================
+
+    def retrieve_group_by_cached_embedding(
+        self,
+        article_number: int,
+        group_id: str,
+        *,
+        top_k: int = 5,
+        min_score: float | None = None,
+    ) -> GroupEvidence:
+
+        group = self.get_group(
+            article_number,
+            group_id,
+        )
+
+        query = self.build_group_query(
+            group
+        )
+
+        cache = self._get_embedding_cache()
+
+        vector = cache.get_embedding(
+            article_number,
+            group_id,
+        )
+
+        response = (
+            self.retriever.vector_store
+            .similarity_search_by_vector(
+                vector,
+                namespace=COMPANY_POLICY_NAMESPACE,
+                top_k=top_k,
+            )
+        )
+
+        matches = (
+            self.retriever._extract_matches(
+                response
+            )
+        )
+
+        evidence = []
+
+        for match in matches:
+
+            score = float(
+                match.get(
+                    "score",
+                    0.0,
+                )
+            )
+
+            if (
+                min_score is not None
+                and score < min_score
+            ):
+                continue
+
+            metadata = (
+                match.get("metadata")
+                or {}
+            )
+
+            chunk_id = str(
+                match.get("id")
+                or metadata.get(
+                    "chunk_id"
+                )
+                or ""
+            )
+
+            text = str(
+                metadata.get(
+                    "text"
+                )
+                or ""
+            )
+
+            if not chunk_id:
+                continue
+
+            if not text.strip():
+                continue
+
+            evidence.append(
+                RetrievedEvidence(
+                    chunk_id=chunk_id,
+                    score=score,
+                    text=text,
+                    metadata=metadata,
+                )
+            )
+
+        evidence.sort(
+            key=lambda x: x.score,
+            reverse=True,
+        )
+
+        return GroupEvidence(
+            article_number=article_number,
+            group_id=group_id,
+            query=query,
+            evidence=tuple(
+                evidence[:top_k]
+            ),
+        )
+
+    # ============================================================
+    # EMBEDDING CACHE
+    # ============================================================
+
+    def _get_embedding_cache(
+        self,
+    ):
+
+        if self.embedding_cache is None:
+
+            from app.compliance.gdpr_embeddings import (
+                GDPRGroupEmbeddingCache,
+            )
+
+            self.embedding_cache = (
+                GDPRGroupEmbeddingCache(
+                    knowledge_base=self.knowledge_base,
+                )
+            )
+
+        return self.embedding_cache
