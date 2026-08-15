@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import json
-import os
 import re
+import time
 from typing import Any
 
 import requests
@@ -14,12 +14,16 @@ from app.compliance.group_retriever import (
     ComplianceGroup,
     GroupEvidence,
 )
+from app.core.llm_endpoint_pool import LLMEndpointPool
+from app.core.logger import get_logger
 from app.models.sub_obligation import (
     EvidenceReference,
     SubObligationVerdict,
 )
 
 load_dotenv()
+
+logger = get_logger()
 
 
 class ComplianceJudge:
@@ -38,36 +42,46 @@ class ComplianceJudge:
         - build embeddings
         - aggregate ALL/ANY/SINGLE
         - generate the final compliance table
+
+    Multi-provider endpoint handling:
+        A single ComplianceJudge instance is shared across all
+        article/group worker threads (see AnalyzerAgent /
+        ComplianceOrchestrator). Each outbound call pulls the
+        next endpoint from a thread-safe LLMEndpointPool, which
+        can mix multiple providers (e.g. OpenRouter + NVIDIA
+        NIM) and multiple keys per provider. Concurrent calls
+        spread across all configured (provider, key) pairs
+        instead of hammering a single key's rate limit.
+
+        Configure via (checked in this order):
+            1. `endpoint_pool` passed directly to __init__
+            2. LLMEndpointPool.from_env() -- reads
+               OPENROUTER_MODEL/OPENROUTER_API_KEYS and/or
+               NVIDIA_NIM_MODEL/NVIDIA_NIM_API_KEYS from the
+               environment (see llm_endpoint_pool.py for the
+               full list of supported variables)
     """
+
+    # Retry/backoff tuning for rate limits and transient errors.
+    MAX_RETRY_MULTIPLIER = 3  # attempts = pool.size * this, min 3
+    BASE_BACKOFF_SECONDS = 2
+    MAX_BACKOFF_SECONDS = 20
 
     def __init__(
         self,
-        model: str | None = None,
-        api_key: str | None = None,
+        endpoint_pool: LLMEndpointPool | None = None,
     ) -> None:
 
-        self.api_key = (
-            api_key
-            or os.getenv("OPENROUTER_API_KEY")
+        self.endpoint_pool = (
+            endpoint_pool
+            or LLMEndpointPool.from_env()
         )
 
-        self.model = (
-            model
-            or os.getenv("OPENROUTER_MODEL")
-        )
-
-        if not self.api_key:
-            raise ValueError(
-                "OPENROUTER_API_KEY is not configured."
-            )
-
-        if not self.model:
-            raise ValueError(
-                "OPENROUTER_MODEL is not configured."
-            )
-
-        self.url = (
-            "https://openrouter.ai/api/v1/chat/completions"
+        logger.success(
+            f"ComplianceJudge initialized with "
+            f"{self.endpoint_pool.size} endpoint(s) across "
+            f"provider(s): "
+            f"{', '.join(sorted(self.endpoint_pool.providers()))}."
         )
 
     # ============================================================
@@ -282,7 +296,7 @@ JSON only.
 """
 
     # ============================================================
-    # LLM CALL
+    # LLM CALL (with endpoint rotation + retry on rate limit)
     # ============================================================
 
     def _call_llm(
@@ -290,55 +304,139 @@ JSON only.
         prompt: str,
     ) -> str:
 
-        headers = {
-            "Authorization": (
-                f"Bearer {self.api_key}"
-            ),
-            "Content-Type": "application/json",
-        }
-
-        payload = {
-            "model": self.model,
-            "temperature": 0,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": (
-                        "You are a strict GDPR compliance "
-                        "evidence judge. "
-                        "Return valid JSON only."
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": prompt,
-                },
-            ],
-        }
-
-        response = requests.post(
-            self.url,
-            headers=headers,
-            json=payload,
-            timeout=120,
+        max_attempts = max(
+            self.endpoint_pool.size * self.MAX_RETRY_MULTIPLIER,
+            3,
         )
 
-        response.raise_for_status()
+        last_error: Exception | None = None
 
-        data = response.json()
+        for attempt in range(1, max_attempts + 1):
 
-        try:
-            return data["choices"][0]["message"]["content"]
+            endpoint = self.endpoint_pool.next_endpoint()
 
-        except (
-            KeyError,
-            IndexError,
-            TypeError,
-        ) as exc:
+            headers = {
+                "Authorization": (
+                    f"Bearer {endpoint.api_key}"
+                ),
+                "Content-Type": "application/json",
+            }
 
-            raise ValueError(
-                "Unexpected OpenRouter response format."
-            ) from exc
+            payload = {
+                "model": endpoint.model,
+                "temperature": 0,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a strict GDPR compliance "
+                            "evidence judge. "
+                            "Return valid JSON only."
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt,
+                    },
+                ],
+            }
+
+            try:
+
+                response = requests.post(
+                    endpoint.base_url,
+                    headers=headers,
+                    json=payload,
+                    timeout=120,
+                )
+
+                # ---------------------------------------------
+                # Rate limited on this endpoint: rotate to a
+                # different (provider, key) + backoff, don't
+                # fail the whole group over one busy endpoint.
+                # ---------------------------------------------
+
+                if response.status_code == 429:
+
+                    wait_seconds = self._backoff_seconds(
+                        attempt
+                    )
+
+                    logger.warning(
+                        f"Rate limited (429) on "
+                        f"{endpoint.provider} key "
+                        f"{LLMEndpointPool.mask(endpoint.api_key)} "
+                        f"| attempt {attempt}/{max_attempts} | "
+                        f"backing off {wait_seconds}s and "
+                        f"rotating endpoint."
+                    )
+
+                    last_error = RuntimeError(
+                        f"{endpoint.provider} rate limited "
+                        f"(429) on key "
+                        f"{LLMEndpointPool.mask(endpoint.api_key)}."
+                    )
+
+                    time.sleep(wait_seconds)
+                    continue
+
+                response.raise_for_status()
+
+                data = response.json()
+
+                try:
+                    return (
+                        data["choices"][0]
+                        ["message"]["content"]
+                    )
+
+                except (
+                    KeyError,
+                    IndexError,
+                    TypeError,
+                ) as exc:
+
+                    raise ValueError(
+                        f"Unexpected response format from "
+                        f"{endpoint.provider}."
+                    ) from exc
+
+            except requests.exceptions.RequestException as exc:
+
+                # Transient network / HTTP error. Retry with
+                # backoff on a rotated endpoint rather than
+                # failing immediately.
+                wait_seconds = self._backoff_seconds(
+                    attempt
+                )
+
+                logger.warning(
+                    f"LLM request error on {endpoint.provider} "
+                    f"key {LLMEndpointPool.mask(endpoint.api_key)} "
+                    f"| attempt {attempt}/{max_attempts} | "
+                    f"{exc} | retrying in {wait_seconds}s."
+                )
+
+                last_error = exc
+
+                time.sleep(wait_seconds)
+                continue
+
+        raise RuntimeError(
+            f"LLM call failed after {max_attempts} attempts "
+            f"across {self.endpoint_pool.size} endpoint(s)."
+        ) from last_error
+
+    @classmethod
+    def _backoff_seconds(
+        cls,
+        attempt: int,
+    ) -> float:
+
+        return min(
+            cls.BASE_BACKOFF_SECONDS * (2 ** (attempt - 1)),
+            cls.MAX_BACKOFF_SECONDS,
+        )
 
     # ============================================================
     # JSON PARSER

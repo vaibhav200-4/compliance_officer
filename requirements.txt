@@ -12,6 +12,7 @@ uvicorn[standard]>=0.34,<1.0
 pydantic>=2.10,<3.0
 pydantic-settings>=2.7,<3.0
 python-dotenv>=1.0,<2.0
+loguru>=0.7,<1.0
 
 # ==============================
 # LangGraph / LangChain
@@ -26,6 +27,7 @@ langchain-text-splitters>=1.0,<2.0
 # ==============================
 
 openai>=1.70,<2.0
+requests>=2.31,<3.0
 
 # ==============================
 # OCR - Mistral
