@@ -11,6 +11,7 @@ from app.compliance.group_retriever import (
     ComplianceGroupRetriever,
 )
 from app.compliance.judge import ComplianceJudge
+from app.core.config import get_settings
 from app.core.logger import get_logger
 
 
@@ -63,8 +64,13 @@ class AnalyzerAgent:
         judge: ComplianceJudge | None = None,
         top_k: int = 5,
         min_score: float | None = None,
-        max_group_workers: int = 1,
+        max_group_workers: int | None = None,
     ) -> None:
+
+        # Load default from settings if not provided
+        if max_group_workers is None:
+            settings = get_settings()
+            max_group_workers = settings.GROUP_WORKERS
 
         if top_k <= 0:
             raise ValueError(
@@ -109,6 +115,9 @@ class AnalyzerAgent:
         self,
         article_number: int,
     ) -> dict[str, Any]:
+
+        import time
+        start_art_time = time.perf_counter()
 
         logger.info(
             f"Starting Article {article_number} analysis."
@@ -274,8 +283,21 @@ class AnalyzerAgent:
         )
 
         # --------------------------------------------------------
-        # 6. Return complete article result
+        # 6. Return complete article result with performance metrics
         # --------------------------------------------------------
+
+        art_duration = time.perf_counter() - start_art_time
+
+        # Aggregate performance metrics from groups
+        total_retrieval = sum(g.get("performance", {}).get("retrieval_time", 0.0) for g in group_results)
+        total_llm = sum(g.get("performance", {}).get("llm_time", 0.0) for g in group_results)
+        total_val = sum(g.get("performance", {}).get("validation_time", 0.0) for g in group_results)
+        total_backoff = sum(g.get("performance", {}).get("backoff_time", 0.0) for g in group_results)
+        total_attempts = sum(g.get("performance", {}).get("attempts", 1) for g in group_results)
+        total_429 = sum(g.get("performance", {}).get("count_429", 0) for g in group_results)
+        total_5xx = sum(g.get("performance", {}).get("count_5xx", 0) for g in group_results)
+        total_malformed = sum(g.get("performance", {}).get("count_malformed_json", 0) for g in group_results)
+        total_val_failures = sum(g.get("performance", {}).get("count_validation_failures", 0) for g in group_results)
 
         result = {
             "article_number": article_number,
@@ -288,11 +310,24 @@ class AnalyzerAgent:
                 group_results
             ),
             "groups": group_results,
+            "performance": {
+                "wall_clock_time": round(art_duration, 4),
+                "total_retrieval_time": round(total_retrieval, 4),
+                "total_llm_time": round(total_llm, 4),
+                "total_validation_time": round(total_val, 4),
+                "total_backoff_time": round(total_backoff, 4),
+                "total_attempts": total_attempts,
+                "count_429": total_429,
+                "count_5xx": total_5xx,
+                "count_malformed_json": total_malformed,
+                "count_validation_failures": total_val_failures,
+            },
         }
 
         logger.success(
             f"Article {article_number} analysis completed | "
-            f"status={article_status}"
+            f"status={article_status} | "
+            f"time={art_duration:.2f}s (llm={total_llm:.2f}s, ret={total_retrieval:.2f}s)"
         )
 
         return result
@@ -315,6 +350,8 @@ class AnalyzerAgent:
         total: int,
     ) -> dict[str, Any]:
 
+        import time
+
         logger.info(
             f"Article {article_number} | "
             f"Group {index}/{total} | "
@@ -324,70 +361,74 @@ class AnalyzerAgent:
         group_evidence = None
 
         try:
+            t0 = time.perf_counter()
+            group_evidence = self.group_retriever.retrieve_group(
+                article_number=article_number,
+                group_id=group.group_id,
+                top_k=self.top_k,
+                min_score=self.min_score,
+            )
+            retrieval_dur = getattr(group_evidence, "retrieval_duration", time.perf_counter() - t0)
 
-            group_evidence = (
-                self.group_retriever.retrieve_group(
-                    article_number=article_number,
-                    group_id=group.group_id,
-                    top_k=self.top_k,
-                    min_score=self.min_score,
-                )
+            sub_verdicts = self.judge.evaluate(
+                group=group,
+                group_evidence=group_evidence,
             )
 
-            sub_verdicts = (
-                self.judge.evaluate(
-                    group=group,
-                    group_evidence=group_evidence,
-                )
+            group_status = self._aggregate_group_status(
+                group.condition_logic,
+                sub_verdicts,
             )
 
-            group_status = (
-                self._aggregate_group_status(
-                    group.condition_logic,
-                    sub_verdicts,
-                )
+            group_confidence = self._calculate_confidence(
+                sub_verdicts
             )
 
-            group_confidence = (
-                self._calculate_confidence(
-                    sub_verdicts
-                )
-            )
+            metrics = getattr(sub_verdicts, "metrics", None)
+
+            llm_sec = metrics.llm_time if metrics else 0.0
+            val_sec = metrics.validation_time if metrics else 0.0
+            attempt = metrics.attempts if metrics else 1
+            provider = metrics.provider if metrics else ""
+            masked_key = metrics.endpoint_masked_key if metrics else ""
 
             group_result = {
                 "group_id": group.group_id,
                 "principle": group.principle,
-                "condition_logic": (
-                    group.condition_logic
-                ),
+                "condition_logic": group.condition_logic,
                 "status": group_status,
                 "confidence": group_confidence,
-                "reason": (
-                    self._build_reason(
-                        sub_verdicts
-                    )
-                ),
-                "gap": (
-                    self._build_gap(
-                        group_status,
-                        sub_verdicts,
-                    )
-                ),
-                "evidence_count": (
-                    group_evidence.evidence_count
-                ),
+                "reason": self._build_reason(sub_verdicts),
+                "gap": self._build_gap(group_status, sub_verdicts),
+                "evidence_count": group_evidence.evidence_count,
                 "sub_obligations": [
-                    self._serialize(
-                        verdict
-                    )
+                    self._serialize(verdict)
                     for verdict in sub_verdicts
                 ],
+                "performance": {
+                    "retrieval_time": round(retrieval_dur, 4),
+                    "llm_time": round(llm_sec, 4),
+                    "validation_time": round(val_sec, 4),
+                    "backoff_time": round(metrics.backoff_time, 4) if metrics else 0.0,
+                    "attempts": attempt,
+                    "count_429": metrics.count_429 if metrics else 0,
+                    "count_5xx": metrics.count_5xx if metrics else 0,
+                    "count_malformed_json": metrics.count_malformed_json if metrics else 0,
+                    "count_validation_failures": metrics.count_validation_failures if metrics else 0,
+                    "provider": provider,
+                    "endpoint_key": masked_key,
+                },
             }
 
-            logger.success(
-                f"Article {article_number} | "
-                f"Group {group.group_id} | "
-                f"{group_status}"
+            logger.info(
+                f"Article {article_number} | Group {group.group_id} | "
+                f"obligations={len(group.obligations)} | "
+                f"retrieval={retrieval_dur:.2f}s | "
+                f"llm={llm_sec:.2f}s | "
+                f"validation={val_sec:.2f}s | "
+                f"attempt={attempt} | "
+                f"provider={provider} {masked_key} | "
+                f"status={group_status}"
             )
 
             return group_result
@@ -405,25 +446,25 @@ class AnalyzerAgent:
                 else 0
             )
 
-            # Don't let one group destroy
-            # the complete article result.
             return {
                 "group_id": group.group_id,
                 "principle": group.principle,
-                "condition_logic": (
-                    group.condition_logic
-                ),
-                "status": (
-                    "INSUFFICIENT_EVIDENCE"
-                ),
+                "condition_logic": group.condition_logic,
+                "status": "INSUFFICIENT_EVIDENCE",
                 "confidence": 0.0,
-                "reason": (
-                    "Group analysis failed."
-                ),
+                "reason": "Group analysis failed.",
                 "gap": str(exc),
                 "evidence_count": evidence_count,
                 "sub_obligations": [],
                 "error": str(exc),
+                "performance": {
+                    "retrieval_time": 0.0,
+                    "llm_time": 0.0,
+                    "validation_time": 0.0,
+                    "backoff_time": 0.0,
+                    "attempts": 1,
+                    "error": str(exc),
+                },
             }
 
     # ============================================================

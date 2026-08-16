@@ -62,6 +62,7 @@ class GroupEvidence:
     group_id: str
     query: str
     evidence: tuple[RetrievedEvidence, ...]
+    retrieval_duration: float = 0.0
 
     @property
     def evidence_count(self) -> int:
@@ -272,11 +273,14 @@ class ComplianceGroupRetriever:
             f"Group={group_id}"
         )
 
+        import time
+        t0 = time.perf_counter()
         evidence = self.retriever.retrieve(
             query=query,
             top_k=top_k,
             min_score=min_score,
         )
+        duration = time.perf_counter() - t0
 
         return GroupEvidence(
             article_number=article_number,
@@ -285,6 +289,7 @@ class ComplianceGroupRetriever:
             evidence=tuple(
                 evidence
             ),
+            retrieval_duration=duration,
         )
 
     # ============================================================
