@@ -120,7 +120,7 @@ class AnalyzerAgent:
         start_art_time = time.perf_counter()
 
         logger.info(
-            f"Starting Article {article_number} analysis."
+            f"ARTICLE_START | Article {article_number}"
         )
 
         # --------------------------------------------------------
@@ -325,7 +325,7 @@ class AnalyzerAgent:
         }
 
         logger.success(
-            f"Article {article_number} analysis completed | "
+            f"ARTICLE_COMPLETE | Article {article_number} | "
             f"status={article_status} | "
             f"time={art_duration:.2f}s (llm={total_llm:.2f}s, ret={total_retrieval:.2f}s)"
         )
@@ -352,15 +352,17 @@ class AnalyzerAgent:
 
         import time
 
-        logger.info(
-            f"Article {article_number} | "
-            f"Group {index}/{total} | "
-            f"{group.group_id}"
-        )
+        msg_grp_start = f"GROUP_START | Article {article_number} | Group {index}/{total} | {group.group_id}"
+        logger.info(msg_grp_start)
+        print(msg_grp_start, flush=True)
 
         group_evidence = None
 
         try:
+            msg_ret_start = f"RETRIEVAL_START | Article={article_number} | Group={group.group_id}"
+            logger.info(msg_ret_start)
+            print(msg_ret_start, flush=True)
+
             t0 = time.perf_counter()
             group_evidence = self.group_retriever.retrieve_group(
                 article_number=article_number,
@@ -370,10 +372,24 @@ class AnalyzerAgent:
             )
             retrieval_dur = getattr(group_evidence, "retrieval_duration", time.perf_counter() - t0)
 
+            msg_ret_comp = f"RETRIEVAL_COMPLETE | Article={article_number} | Group={group.group_id} | duration={retrieval_dur:.2f}s"
+            logger.info(msg_ret_comp)
+            print(msg_ret_comp, flush=True)
+
+            msg_judge_start = f"JUDGE_START | Article={article_number} | Group={group.group_id}"
+            logger.info(msg_judge_start)
+            print(msg_judge_start, flush=True)
+
+            t_j = time.perf_counter()
             sub_verdicts = self.judge.evaluate(
                 group=group,
                 group_evidence=group_evidence,
             )
+            judge_dur = time.perf_counter() - t_j
+
+            msg_judge_comp = f"JUDGE_COMPLETE | Article={article_number} | Group={group.group_id} | duration={judge_dur:.2f}s"
+            logger.info(msg_judge_comp)
+            print(msg_judge_comp, flush=True)
 
             group_status = self._aggregate_group_status(
                 group.condition_logic,
@@ -393,6 +409,7 @@ class AnalyzerAgent:
             masked_key = metrics.endpoint_masked_key if metrics else ""
 
             group_result = {
+                "article_number": article_number,
                 "group_id": group.group_id,
                 "principle": group.principle,
                 "condition_logic": group.condition_logic,
@@ -420,16 +437,15 @@ class AnalyzerAgent:
                 },
             }
 
-            logger.info(
-                f"Article {article_number} | Group {group.group_id} | "
+            msg_grp_comp = (
+                f"GROUP_COMPLETE | Article {article_number} | Group {group.group_id} | "
                 f"obligations={len(group.obligations)} | "
                 f"retrieval={retrieval_dur:.2f}s | "
                 f"llm={llm_sec:.2f}s | "
-                f"validation={val_sec:.2f}s | "
-                f"attempt={attempt} | "
-                f"provider={provider} {masked_key} | "
                 f"status={group_status}"
             )
+            logger.info(msg_grp_comp)
+            print(msg_grp_comp, flush=True)
 
             return group_result
 

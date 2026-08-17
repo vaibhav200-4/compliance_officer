@@ -62,19 +62,29 @@ class ComplianceReportGenerator:
         output_filename: str | None = None,
     ) -> Path:
         """
-        Generate a complete PDF report from structured analysis data.
+        Generate a complete PDF report from structured analysis data atomically.
         """
+        t_start = time.perf_counter()
+        logger.info(f"PDF_GENERATION_START | company={company_name}")
+
         if output_filename is None:
             safe_name = "".join(c for c in company_name if c.isalnum() or c in (" ", "_")).strip().replace(" ", "_")
             output_filename = f"GDPR_Compliance_Report_{safe_name}.pdf"
 
-        pdf_path = self.output_dir / output_filename
+        final_pdf_path = self.output_dir / output_filename
+        temp_pdf_path = final_pdf_path.with_suffix(".tmp.pdf")
+
+        if temp_pdf_path.exists():
+            try:
+                temp_pdf_path.unlink()
+            except Exception:
+                pass
 
         # Process and summarize data
         summary = self._compute_summary_data(analysis_data, company_name, policy_name)
 
         doc = SimpleDocTemplate(
-            str(pdf_path),
+            str(temp_pdf_path),
             pagesize=letter,
             rightMargin=36,
             leftMargin=36,
@@ -289,11 +299,12 @@ class ComplianceReportGenerator:
 
         for grp in summary["all_groups"]:
             status_color = self._get_status_color(grp["status"])
+            conf_val = grp.get("confidence", 1.0)
             grp_header = (
                 f"<b>Group {grp['group_id']} — {grp['principle']}</b> "
                 f"(Article {grp['article_number']}) | "
                 f"<font color='{status_color}'><b>{grp['status']}</b></font> "
-                f"(Confidence: {grp['confidence'] * 100:.0f}%)"
+                f"(Confidence: {conf_val * 100:.0f}%)"
             )
             story.append(Paragraph(grp_header, ParagraphStyle("GrpHead", parent=body_style, fontSize=11, leading=14)))
 
@@ -394,14 +405,65 @@ class ComplianceReportGenerator:
         )
         story.append(action_table)
 
-        # Build PDF Document
+        # Build PDF Document to temporary file
         doc.build(story)
-        logger.success(f"Generated PDF report: {pdf_path}")
-        return pdf_path
+        t_gen = time.perf_counter() - t_start
+        gen_size = temp_pdf_path.stat().st_size if temp_pdf_path.exists() else 0
+        logger.info(f"PDF_GENERATION_COMPLETE | path={temp_pdf_path} | size={gen_size} bytes | duration={t_gen:.2f}s")
+
+        # Validate temporary PDF file
+        logger.info(f"PDF_VALIDATION_START | path={temp_pdf_path}")
+        if not self._validate_pdf_file(temp_pdf_path):
+            if temp_pdf_path.exists():
+                try:
+                    temp_pdf_path.unlink()
+                except Exception:
+                    pass
+            raise ValueError(f"Generated PDF file failed validation checks: {temp_pdf_path}")
+
+        # Atomic replace to final path
+        temp_pdf_path.replace(final_pdf_path)
+        final_size = final_pdf_path.stat().st_size
+        logger.success(f"PDF_VALIDATION_COMPLETE | final_path={final_pdf_path} | size={final_size} bytes")
+        return final_pdf_path
 
     # =========================================================================
     # HELPERS
     # =========================================================================
+
+    @staticmethod
+    def _validate_pdf_file(pdf_path: str | Path) -> bool:
+        """
+        Validate PDF file header (%PDF-), non-empty size, and %%EOF trailer.
+        """
+        p = Path(pdf_path)
+        if not p.exists():
+            logger.error(f"PDF_VALIDATION_FAILED | File does not exist: {p}")
+            return False
+
+        size = p.stat().st_size
+        if size == 0:
+            logger.error(f"PDF_VALIDATION_FAILED | File is 0 bytes: {p}")
+            return False
+
+        try:
+            with p.open("rb") as f:
+                header = f.read(10)
+                if not header.startswith(b"%PDF-"):
+                    logger.error(f"PDF_VALIDATION_FAILED | Invalid header: {header}")
+                    return False
+
+                f.seek(max(0, size - 1024))
+                trailer = f.read()
+                if b"%%EOF" not in trailer:
+                    logger.error("PDF_VALIDATION_FAILED | Missing %%EOF marker in trailer")
+                    return False
+        except Exception as exc:
+            logger.error(f"PDF_VALIDATION_FAILED | File read error: {exc}")
+            return False
+
+        logger.info(f"PDF_VALIDATION_COMPLETE | path={p} | size={size} bytes")
+        return True
 
     @staticmethod
     def _compute_summary_data(analysis_data: dict[str, Any], company_name: str, policy_name: str) -> dict[str, Any]:

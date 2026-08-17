@@ -1,0 +1,194 @@
+{
+  "article_number": 7,
+  "article_title": "Conditions for consent",
+  "checkability": "direct",
+  "status": "PARTIALLY_MET",
+  "confidence": 0.9375,
+  "group_count": 4,
+  "completed_groups": 4,
+  "groups": [
+    {
+      "article_number": 7,
+      "group_id": "7.1",
+      "principle": "Ability to demonstrate consent",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+      "gap": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.1.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.9529,
+        "llm_time": 2.095,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.2",
+      "principle": "Clear presentation of consent requests",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language. The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+      "gap": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language. The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.2.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "7.2.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0935,
+        "llm_time": 2.4983,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.4",
+      "principle": "Freely given consent assessment",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.8,
+      "reason": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+      "gap": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.4.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+            }
+          ],
+          "confidence": 0.8
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1369,
+        "llm_time": 1.649,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.3",
+      "principle": "Right to withdraw consent",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.95,
+      "reason": "The policy confirms that users have the right to withdraw consent at any time. The policy explicitly states that withdrawal of consent does not affect the lawfulness of processing prior to withdrawal. The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent.",
+      "gap": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.3.1",
+          "status": "MET",
+          "reason": "The policy confirms that users have the right to withdraw consent at any time.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "Where we rely on consent, you have the right to withdraw it at any time by contacting us at privacy@techstartup.com."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "7.3.2",
+          "status": "MET",
+          "reason": "The policy explicitly states that withdrawal of consent does not affect the lawfulness of processing prior to withdrawal.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "Withdrawal of consent does not affect the lawfulness of processing that occurred before the withdrawal."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "7.3.3",
+          "status": "NOT_MET",
+          "reason": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "7.3.4",
+          "status": "NOT_MET",
+          "reason": "The policy does not state that withdrawing consent is as easy as giving consent.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0804,
+        "llm_time": 2.4999,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 8.7355
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 7,
+    "execution_mode": "global_group_queue"
+  }
+}

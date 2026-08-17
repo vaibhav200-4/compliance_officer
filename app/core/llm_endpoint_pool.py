@@ -99,20 +99,23 @@ class LLMEndpointPool:
     ) -> None:
         """
         Record a non-429 failure on an endpoint.
-        If consecutive 5xx errors reach threshold, trigger temporary cooldown.
+        If a timeout or 5xx error occurs, immediately put the endpoint into cooldown
+        (e.g., 60 seconds) so that subsequent calls fail over to active endpoints.
         """
         import time
 
         identity = (endpoint.provider, endpoint.api_key.strip())
         with self._lock:
             if is_5xx:
+                # Put endpoint into immediate cooldown to allow round-robin failover to OpenRouter
+                self._cooldown_until[identity] = time.time() + 60.0
+                self._consecutive_failures[identity] = 0
+            else:
                 count = self._consecutive_failures.get(identity, 0) + 1
                 self._consecutive_failures[identity] = count
-                if count >= 3:
-                    self._cooldown_until[identity] = time.time() + 15.0
+                if count >= 2:
+                    self._cooldown_until[identity] = time.time() + 60.0
                     self._consecutive_failures[identity] = 0
-            else:
-                self._consecutive_failures[identity] = 0
 
     def record_success(self, endpoint: LLMEndpoint) -> None:
         """Clear consecutive failure counter on success."""
@@ -152,6 +155,33 @@ class LLMEndpointPool:
             self._index = (best_idx + 1) % n
             return best_ep
 
+    def endpoints_by_provider(self) -> dict[str, list[LLMEndpoint]]:
+        """Group configured endpoints by provider name."""
+        result: dict[str, list[LLMEndpoint]] = {}
+        for ep in self._endpoints:
+            result.setdefault(ep.provider, []).append(ep)
+        return result
+
+    def next_endpoint_for_provider(self, provider_name: str) -> LLMEndpoint | None:
+        """
+        Return next available endpoint for a specific provider, skipping endpoints in cooldown.
+        """
+        import time
+        now = time.time()
+        with self._lock:
+            prov_eps = [ep for ep in self._endpoints if ep.provider == provider_name]
+            if not prov_eps:
+                return None
+            for ep in prov_eps:
+                identity = (ep.provider, ep.api_key.strip())
+                cooldown_time = self._cooldown_until.get(identity, 0.0)
+                if now >= cooldown_time:
+                    return ep
+            return min(
+                prov_eps,
+                key=lambda ep: self._cooldown_until.get((ep.provider, ep.api_key.strip()), 0.0),
+            )
+
     @property
     def size(self) -> int:
         return len(self._endpoints)
@@ -175,90 +205,83 @@ class LLMEndpointPool:
     @classmethod
     def from_env(cls) -> "LLMEndpointPool":
         """
-        Build a pool from environment variables, combining every
-        provider that has both a model and at least one key set.
-
-        Supported:
-
-            OPENROUTER_MODEL
-            OPENROUTER_API_KEYS   (comma-separated, preferred)
-            OPENROUTER_API_KEY    (single key, fallback)
-
-            NVIDIA_NIM_MODEL
-            NVIDIA_NIM_API_KEYS   (comma-separated)
-            NVIDIA_NIM_BASE_URL   (optional, defaults to NVIDIA's
-                                    hosted endpoint)
-
-            LLM_PROVIDER  (optional, filters to a single provider:
-                           "nvidia" or "openrouter". If not set,
-                           all configured providers are included.)
-
-        Add more providers by following the same pattern -- any
-        OpenAI-compatible chat-completions endpoint works.
+        Build a pool from environment variables in explicit priority order:
+        PRIMARY: Gemini -> FALLBACK 1: OpenRouter -> FALLBACK 2: NVIDIA.
         """
+        from app.core.logger import get_logger
+        logger = get_logger()
 
         endpoints: list[LLMEndpoint] = []
-
-        # Get optional provider filter
         llm_provider_filter = os.getenv("LLM_PROVIDER", "").strip().lower()
 
         # --------------------------------------------------------
-        # OpenRouter
+        # 1. Gemini (PRIMARY)
         # --------------------------------------------------------
+        gemini_keys = (
+            os.getenv("GEMINI_API_KEY")
+            or os.getenv("Gemini_API_KEY")
+        )
+        gemini_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+        gemini_configured = bool(gemini_keys and gemini_keys.strip())
 
-        openrouter_model = os.getenv("OPENROUTER_MODEL")
+        logger.info("LLM_PROVIDER_PRIORITY | Gemini > OpenRouter > NVIDIA")
+        logger.info(f"GEMINI_CONFIGURED | {gemini_configured}")
 
+        if gemini_configured:
+            if not llm_provider_filter or llm_provider_filter == "gemini":
+                for raw_key in gemini_keys.split(","):
+                    key = raw_key.strip()
+                    if not key:
+                        continue
+                    endpoints.append(
+                        LLMEndpoint(
+                            provider="gemini",
+                            base_url="https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+                            api_key=key,
+                            model=gemini_model,
+                        )
+                    )
+
+        # --------------------------------------------------------
+        # 2. OpenRouter (FALLBACK 1)
+        # --------------------------------------------------------
+        openrouter_model = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
         openrouter_keys = (
             os.getenv("OPENROUTER_API_KEYS")
             or os.getenv("OPENROUTER_API_KEY")
         )
 
-        # Include OpenRouter if configured and not filtered out
-        if openrouter_model and openrouter_keys:
+        if openrouter_keys:
             if not llm_provider_filter or llm_provider_filter == "openrouter":
-
                 for raw_key in openrouter_keys.split(","):
-
                     key = raw_key.strip()
-
                     if not key:
                         continue
-
                     endpoints.append(
                         LLMEndpoint(
                             provider="openrouter",
-                            base_url=(
-                                "https://openrouter.ai/api/v1"
-                                "/chat/completions"
-                            ),
+                            base_url="https://openrouter.ai/api/v1/chat/completions",
                             api_key=key,
                             model=openrouter_model,
                         )
                     )
 
         # --------------------------------------------------------
-        # NVIDIA NIM
+        # 3. NVIDIA NIM (FALLBACK 2)
         # --------------------------------------------------------
-
         nim_model = os.getenv("NVIDIA_NIM_MODEL")
         nim_keys = os.getenv("NVIDIA_NIM_API_KEYS")
-
         nim_base_url = os.getenv(
             "NVIDIA_NIM_BASE_URL",
             "https://integrate.api.nvidia.com/v1/chat/completions",
         )
 
-        # Include NVIDIA if configured and not filtered out
         if nim_model and nim_keys:
             if not llm_provider_filter or llm_provider_filter == "nvidia":
-
                 for raw_key in nim_keys.split(","):
-
                     key = raw_key.strip()
-
                     if not key:
                         continue
-
                     endpoints.append(
                         LLMEndpoint(
                             provider="nvidia",
@@ -271,10 +294,8 @@ class LLMEndpointPool:
         if not endpoints:
             raise ValueError(
                 "No LLM endpoints configured. Set at least one "
-                "of: OPENROUTER_MODEL + OPENROUTER_API_KEYS, or "
-                "NVIDIA_NIM_MODEL + NVIDIA_NIM_API_KEYS. "
-                "If LLM_PROVIDER is set, ensure the corresponding "
-                "model and keys are configured."
+                "of: GEMINI_API_KEY / Gemini_API_KEY, OPENROUTER_API_KEY, "
+                "or NVIDIA_NIM_API_KEYS."
             )
 
         return cls(endpoints)

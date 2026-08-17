@@ -1,0 +1,107 @@
+{
+  "article_number": 8,
+  "article_title": "Conditions applicable to child's consent in relation to information society services",
+  "checkability": "direct",
+  "status": "NOT_APPLICABLE",
+  "confidence": 1.0,
+  "group_count": 2,
+  "completed_groups": 2,
+  "groups": [
+    {
+      "article_number": 8,
+      "group_id": "8.1",
+      "principle": "Age threshold for a child's valid consent",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy states that services are not directed at children under 13 and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met. The policy states that services are not directed at children and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "8.1.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy states that services are not directed at children under 13 and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "8.1.2",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy states that services are not directed at children and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0971,
+        "llm_time": 2.8507,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 8,
+      "group_id": "8.2",
+      "principle": "Reasonable efforts to verify parental consent",
+      "condition_logic": "SINGLE",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy states that services are not directed at children under the age of 13 and that they do not knowingly collect personal data from children. Therefore, parental consent is not relied upon.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "8.2.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy states that services are not directed at children under the age of 13 and that they do not knowingly collect personal data from children. Therefore, parental consent is not relied upon.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.093,
+        "llm_time": 1.4591,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 10.405
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 8,
+    "execution_mode": "global_group_queue"
+  }
+}

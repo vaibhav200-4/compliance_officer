@@ -1,0 +1,80 @@
+{
+  "company_name": "Test Co",
+  "policy_name": "Test Policy",
+  "timestamp": "2026-08-17T12:40:38.826493",
+  "status": "COMPLETED",
+  "overall_status": "NOT_MET",
+  "overall_score": 50.0,
+  "risk_level": "HIGH RISK",
+  "articles_analyzed": [
+    14
+  ],
+  "total_groups": 2,
+  "total_obligations": 0,
+  "statistics": {
+    "MET": 1,
+    "PARTIALLY_MET": 0,
+    "NOT_MET": 1,
+    "CONFLICTING": 0,
+    "INSUFFICIENT_EVIDENCE": 0,
+    "NOT_APPLICABLE": 0
+  },
+  "executive_summary": "GDPR Compliance Audit for 'Test Co' evaluating document 'Test Policy'. The evaluation analyzed 1 article(s) spanning 2 requirement group(s) and 0 sub-obligation(s). The overall compliance score is 50.0% with an overall status of 'NOT_MET' and a risk posture of 'HIGH RISK'.",
+  "key_gaps": [
+    {
+      "group_id": "14.2",
+      "article_number": 14,
+      "principle": "Purpose of processing",
+      "status": "NOT_MET",
+      "gap": "Missing or incomplete policy evidence."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "group_id": "14.2",
+      "article_number": 14,
+      "action": "Update policy to fulfill requirements for Group 14.2 (Purpose of processing): Missing or incomplete policy evidence."
+    }
+  ],
+  "article_results": {
+    "14": {
+      "article_number": 14,
+      "article_title": "Information to be provided where personal data have not been obtained from data subject",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.75,
+      "groups": [
+        {
+          "article_number": 14,
+          "group_id": "14.1",
+          "principle": "Controller identification",
+          "status": "MET",
+          "sub_obligations": []
+        },
+        {
+          "article_number": 14,
+          "group_id": "14.2",
+          "principle": "Purpose of processing",
+          "status": "NOT_MET",
+          "sub_obligations": []
+        }
+      ]
+    }
+  },
+  "all_groups": [
+    {
+      "article_number": 14,
+      "group_id": "14.1",
+      "principle": "Controller identification",
+      "status": "MET",
+      "sub_obligations": []
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.2",
+      "principle": "Purpose of processing",
+      "status": "NOT_MET",
+      "sub_obligations": []
+    }
+  ]
+}

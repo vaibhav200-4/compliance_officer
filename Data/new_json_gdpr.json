@@ -48,331 +48,247 @@
     "source": { "name": "EUR-Lex", "document": "Regulation (EU) 2016/679", "article": "Article 4" }
   },
   {
-    "regulation": "GDPR",
-    "chapter": { "number": "Chapter II", "name": "Principles" },
-    "article": {
-      "number": "Article 5",
-      "title": "Principles relating to processing of personal data",
-      "checkability": "direct",
-      "contextual_reason": null
-    },
-    "requirement_groups": [
-      {
-        "group_id": "5.1.a",
-        "condition_logic": "ALL",
-        "principle": "Lawfulness, fairness and transparency",
-        "requirement_summary": "Personal data must be processed lawfully, fairly, and in a transparent manner in relation to the data subject.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.1.a.1",
-            "legal_text": "processed lawfully",
-            "plain_summary": "Personal information must be handled on a valid legal basis.",
-            "evidence_prompt": "Does the policy explain that personal information is processed only when there is a valid legal basis?"
-          },
-          {
-            "id": "5.1.a.2",
-            "legal_text": "fairly",
-            "plain_summary": "Personal information must be handled in a fair way that does not unfairly disadvantage or mislead people.",
-            "evidence_prompt": "Does the policy describe practices intended to ensure fair, non-misleading handling?"
-          },
-          {
-            "id": "5.1.a.3",
-            "legal_text": "in a transparent manner in relation to the data subject",
-            "plain_summary": "People must be given clear information about how their personal information is handled.",
-            "evidence_prompt": "Does the policy clearly explain how personal information is collected, used, and otherwise handled?"
-          }
-        ],
-        "keywords": ["lawfulness", "fairness", "transparency", "lawful basis"],
-        "expected_evidence": ["Privacy policy", "Lawful basis documentation", "Transparency notices"],
-        "assessment_rules": {
-          "met_when": "The policy provides evidence satisfying ALL sub-obligations in this group — a valid legal basis, fair handling, and transparent disclosure to data subjects.",
-          "partially_met_when": "The policy satisfies some but not all sub-obligations (e.g., states a legal basis but lacks transparency about data use).",
-          "not_met_when": "The policy does not address lawfulness, fairness, or transparency at all.",
-          "conflicting_when": "The policy explicitly permits unlawful, unfair, or deliberately non-transparent processing.",
-          "insufficient_evidence_when": "The policy does not contain enough information to assess any of the three sub-obligations."
+  "regulation": "GDPR",
+  "chapter": {
+    "number": "Chapter II",
+    "name": "Principles"
+  },
+  "article": {
+    "number": "Article 5",
+    "title": "Principles relating to processing of personal data",
+    "checkability": "direct",
+    "contextual_reason": null
+  },
+  "requirement_groups": [
+    {
+      "group_id": "5.1.handling",
+      "condition_logic": "SINGLE",
+      "principle": "Lawfulness, fairness, transparency, purpose limitation and minimisation",
+      "requirement_summary": "Data must be processed lawfully, fairly, and transparently; collected for specified, legitimate purposes and not reused incompatibly; and limited to what is necessary.",
+      "applicability_condition": null,
+      "sub_obligations": [
+        {
+          "id": "5.1.handling.1",
+          "legal_text": "processed lawfully, fairly and in a transparent manner in relation to the data subject; collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes; adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed",
+          "plain_summary": "Data must be processed on a lawful basis, fairly, and transparently; collected only for specific legitimate purposes without incompatible reuse; and limited to what is necessary for those purposes.",
+          "evidence_prompt": "Does the policy establish a lawful basis, fair and transparent handling, specific purposes with compatible-only reuse, and necessity-limited collection?"
         }
-      },
-      {
-        "group_id": "5.1.b",
-        "condition_logic": "ALL",
-        "principle": "Purpose limitation",
-        "requirement_summary": "Personal data must be collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes, though further processing for archiving, research, or statistical purposes is deemed compatible.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.1.b.1",
-            "legal_text": "collected for specified, explicit and legitimate purposes",
-            "plain_summary": "Data must be collected only for clearly stated, legitimate reasons.",
-            "evidence_prompt": "Does the policy specify explicit, legitimate purposes for which personal data is collected?"
-          },
-          {
-            "id": "5.1.b.2",
-            "legal_text": "not further processed in a manner that is incompatible with those purposes",
-            "plain_summary": "Data must not later be used in ways that don't fit with why it was originally collected, except for permitted archiving/research/statistical uses.",
-            "evidence_prompt": "Does the policy commit to not using data for purposes incompatible with the original collection purpose, other than permitted archiving/research/statistical processing?"
-          }
-        ],
-        "keywords": ["purpose limitation", "specified purposes", "compatible further processing"],
-        "expected_evidence": ["Purpose statements in privacy policy", "Further-processing compatibility statements"],
-        "assessment_rules": {
-          "met_when": "The policy satisfies ALL sub-obligations: purposes are specific and legitimate, and further processing is limited to compatible purposes (with the archiving/research/statistics exception).",
-          "partially_met_when": "Purposes are stated but the policy is silent or vague on limiting further processing to compatible purposes.",
-          "not_met_when": "The policy does not specify purposes for collection at all.",
-          "conflicting_when": "The policy reserves the right to use data for any purpose without regard to compatibility.",
-          "insufficient_evidence_when": "The policy's purpose statements are too vague to determine whether further processing would be compatible."
-        }
-      },
-      {
-        "group_id": "5.1.c",
-        "condition_logic": "SINGLE",
-        "principle": "Data minimisation",
-        "requirement_summary": "Personal data must be adequate, relevant, and limited to what is necessary for the purposes of processing.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.1.c.1",
-            "legal_text": "adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed",
-            "plain_summary": "Only the data actually needed for the stated purpose should be collected.",
-            "evidence_prompt": "Does the policy commit to collecting only data that is adequate, relevant, and limited to what is necessary for its stated purposes?"
-          }
-        ],
-        "keywords": ["data minimisation", "necessity"],
-        "expected_evidence": ["Data collection scope statements"],
-        "assessment_rules": {
-          "met_when": "The policy commits to limiting data collection to what is adequate, relevant, and necessary for its stated purposes.",
-          "partially_met_when": "The policy mentions minimisation as an aspiration without describing how it is applied.",
-          "not_met_when": "The policy describes collecting broad or unrelated data with no stated necessity link.",
-          "conflicting_when": "The policy explicitly collects data unrelated to its stated purposes as standard practice.",
-          "insufficient_evidence_when": "The policy does not address the scope or necessity of data collected relative to its purposes."
-        }
-      },
-      {
-        "group_id": "5.1.d",
-        "condition_logic": "ALL",
-        "principle": "Accuracy",
-        "requirement_summary": "Personal data must be accurate and, where necessary, kept up to date, with reasonable steps taken to erase or rectify inaccurate data without delay.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.1.d.1",
-            "legal_text": "accurate and, where necessary, kept up to date",
-            "plain_summary": "Data held must be correct and updated when needed.",
-            "evidence_prompt": "Does the policy commit to keeping personal data accurate and up to date where necessary?"
-          },
-          {
-            "id": "5.1.d.2",
-            "legal_text": "every reasonable step must be taken to ensure that personal data that are inaccurate...are erased or rectified without delay",
-            "plain_summary": "Inaccurate data must be corrected or deleted promptly.",
-            "evidence_prompt": "Does the policy describe reasonable steps to erase or rectify inaccurate data without delay?"
-          }
-        ],
-        "keywords": ["accuracy", "data quality", "rectification"],
-        "expected_evidence": ["Data accuracy/quality assurance statements", "Rectification procedures"],
-        "assessment_rules": {
-          "met_when": "The policy satisfies ALL sub-obligations: it commits to accuracy/currency of data and to prompt correction or erasure of inaccuracies.",
-          "partially_met_when": "The policy commits to accuracy generally but does not describe steps to correct or erase inaccurate data.",
-          "not_met_when": "The policy does not address data accuracy at all.",
-          "conflicting_when": "The policy states inaccurate data will not be corrected or removed upon discovery.",
-          "insufficient_evidence_when": "The policy's accuracy commitments are too vague to assess (e.g., no mention of correction process)."
-        }
-      },
-      {
-        "group_id": "5.1.e",
-        "condition_logic": "ALL",
-        "principle": "Storage limitation",
-        "requirement_summary": "Personal data must be kept in identifiable form no longer than necessary for its purposes, except where retained longer for archiving, research, or statistical purposes subject to appropriate safeguards.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.1.e.1",
-            "legal_text": "kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed",
-            "plain_summary": "Data that identifies people should only be kept as long as needed for its purpose.",
-            "evidence_prompt": "Does the policy commit to retaining identifiable data only as long as necessary for its stated purposes?"
-          },
-          {
-            "id": "5.1.e.2",
-            "legal_text": "personal data may be stored for longer periods insofar as the personal data will be processed solely for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes...subject to implementation of the appropriate technical and organisational measures",
-            "plain_summary": "Data can be kept longer for archiving, research, or statistics, but only with appropriate safeguards in place.",
-            "evidence_prompt": "Where data is retained longer for archiving/research/statistical purposes, does the policy describe appropriate technical and organisational safeguards?"
-          }
-        ],
-        "keywords": ["storage limitation", "retention period", "archiving safeguards"],
-        "expected_evidence": ["Data retention schedule", "Archiving/research retention safeguards"],
-        "assessment_rules": {
-          "met_when": "The policy satisfies ALL applicable sub-obligations: a necessity-based retention limit is stated, and where extended retention for archiving/research/statistics occurs, appropriate safeguards are described.",
-          "partially_met_when": "A general retention limit is stated but extended-retention safeguards are not addressed despite such retention occurring.",
-          "not_met_when": "The policy does not state any basis for limiting how long identifiable data is kept.",
-          "conflicting_when": "The policy states data is retained indefinitely with no purpose-based limit or safeguard.",
-          "insufficient_evidence_when": "The policy's retention statements are too vague to determine whether the limitation principle is followed."
-        }
-      },
-      {
-        "group_id": "5.1.f",
-        "condition_logic": "SINGLE",
-        "principle": "Integrity and confidentiality",
-        "requirement_summary": "Personal data must be processed with appropriate security, including protection against unauthorised or unlawful processing and against accidental loss, destruction, or damage, using appropriate technical or organisational measures.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.1.f.1",
-            "legal_text": "processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures",
-            "plain_summary": "The company must use appropriate security measures to protect data from unauthorized access, loss, or damage.",
-            "evidence_prompt": "Does the policy describe appropriate technical or organisational security measures protecting personal data?"
-          }
-        ],
-        "keywords": ["security", "integrity", "confidentiality", "technical and organisational measures"],
-        "expected_evidence": ["Security section of privacy policy", "Technical/organisational safeguards description"],
-        "assessment_rules": {
-          "met_when": "The policy describes appropriate technical or organisational measures protecting personal data against unauthorised/unlawful processing and accidental loss, destruction, or damage.",
-          "partially_met_when": "General security assurances are given without describing specific measures.",
-          "not_met_when": "The policy does not address data security at all.",
-          "conflicting_when": "The policy explicitly disclaims responsibility for securing personal data.",
-          "insufficient_evidence_when": "The policy's security statements are too generic to assess adequacy."
-        }
-      },
-      {
-        "group_id": "5.2",
-        "condition_logic": "SINGLE",
-        "principle": "Accountability",
-        "requirement_summary": "The controller is responsible for, and must be able to demonstrate, compliance with the Article 5(1) principles.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "5.2.1",
-            "legal_text": "The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability').",
-            "plain_summary": "The company must be able to prove it follows the data protection principles, not just claim to.",
-            "evidence_prompt": "Does the policy indicate the company maintains records or evidence demonstrating compliance with the data protection principles?"
-          }
-        ],
-        "keywords": ["accountability", "demonstrable compliance"],
-        "expected_evidence": ["Accountability statements", "References to compliance records, audits, or documentation"],
-        "assessment_rules": {
-          "met_when": "The policy indicates the company maintains evidence or documentation demonstrating compliance with the Article 5(1) principles.",
-          "partially_met_when": "The policy asserts compliance generally without indicating any means of demonstrating it.",
-          "not_met_when": "The policy makes no accountability statement at all.",
-          "conflicting_when": "The policy disclaims any obligation to demonstrate compliance.",
-          "insufficient_evidence_when": "The policy does not address how compliance would be demonstrated or documented."
-        }
+      ],
+      "keywords": [
+        "lawful basis",
+        "purpose limitation",
+        "minimisation"
+      ],
+      "expected_evidence": [
+        "Privacy policy",
+        "Purpose and scope statements"
+      ],
+      "assessment_rules": {
+        "met_when": "Lawful basis, fairness, transparency, purpose specificity, compatible reuse, and minimisation are all addressed.",
+        "partially_met_when": "Some but not all of these elements are addressed.",
+        "not_met_when": "None are addressed.",
+        "conflicting_when": "Policy permits unlawful, unfair, opaque, purpose-unbound, or unnecessary data practices.",
+        "insufficient_evidence_when": "Not enough info to assess these elements."
       }
-    ],
-    "source": { "name": "EUR-Lex", "document": "Regulation (EU) 2016/679", "article": "Article 5" }
+    },
+    {
+      "group_id": "5.1.quality_retention",
+      "condition_logic": "SINGLE",
+      "principle": "Accuracy and storage limitation",
+      "requirement_summary": "Data must be accurate and kept up to date, with prompt correction/erasure of inaccuracies, and retained no longer than necessary (with safeguards for extended archiving/research/statistical retention).",
+      "applicability_condition": null,
+      "sub_obligations": [
+        {
+          "id": "5.1.quality_retention.1",
+          "legal_text": "accurate and, where necessary, kept up to date, with every reasonable step taken to erase or rectify inaccurate data without delay; kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed, except insofar as processed solely for archiving, research, or statistical purposes subject to appropriate technical and organisational measures",
+          "plain_summary": "Data must be accurate and promptly corrected/erased when wrong, and identifiable data kept only as long as necessary, with safeguards for any longer archival/research retention.",
+          "evidence_prompt": "Does the policy commit to accuracy with prompt correction/erasure, and to necessity-based retention with safeguards for any extended retention?"
+        }
+      ],
+      "keywords": [
+        "accuracy",
+        "retention limit"
+      ],
+      "expected_evidence": [
+        "Accuracy/rectification statements",
+        "Retention schedule"
+      ],
+      "assessment_rules": {
+        "met_when": "Accuracy/correction commitment and necessity-based retention (with safeguards where extended) are both addressed.",
+        "partially_met_when": "One of the two (accuracy or retention) is addressed but not the other.",
+        "not_met_when": "Neither is addressed.",
+        "conflicting_when": "Policy states inaccurate data won't be corrected, or data is retained indefinitely with no safeguard.",
+        "insufficient_evidence_when": "Statements too vague to assess accuracy or retention practices."
+      }
+    },
+    {
+      "group_id": "5.1.f",
+      "condition_logic": "SINGLE",
+      "principle": "Integrity and confidentiality",
+      "requirement_summary": "Appropriate security against unauthorised/unlawful processing and accidental loss/damage.",
+      "applicability_condition": null,
+      "sub_obligations": [
+        {
+          "id": "5.1.f.1",
+          "legal_text": "processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures",
+          "plain_summary": "Appropriate security measures must protect data from unauthorized access, loss, or damage.",
+          "evidence_prompt": "Does the policy describe appropriate technical/organisational security measures?"
+        }
+      ],
+      "keywords": [
+        "security",
+        "technical and organisational measures"
+      ],
+      "expected_evidence": [
+        "Security section of policy"
+      ],
+      "assessment_rules": {
+        "met_when": "Specific technical/organisational security measures are described.",
+        "partially_met_when": "General security assurance given without specifics.",
+        "not_met_when": "Security not addressed.",
+        "conflicting_when": "Policy disclaims security responsibility.",
+        "insufficient_evidence_when": "Security statements too generic to assess."
+      }
+    },
+    {
+      "group_id": "5.2",
+      "condition_logic": "SINGLE",
+      "principle": "Accountability",
+      "requirement_summary": "Controller must be able to demonstrate compliance with Art. 5(1).",
+      "applicability_condition": null,
+      "sub_obligations": [
+        {
+          "id": "5.2.1",
+          "legal_text": "The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability').",
+          "plain_summary": "The company must be able to prove, not just claim, compliance.",
+          "evidence_prompt": "Does the policy indicate records/evidence demonstrating compliance?"
+        }
+      ],
+      "keywords": [
+        "accountability",
+        "demonstrable compliance"
+      ],
+      "expected_evidence": [
+        "Compliance records/audits reference"
+      ],
+      "assessment_rules": {
+        "met_when": "Policy indicates evidence/documentation demonstrating compliance.",
+        "partially_met_when": "Compliance asserted generally with no means of demonstration.",
+        "not_met_when": "No accountability statement.",
+        "conflicting_when": "Policy disclaims any duty to demonstrate compliance.",
+        "insufficient_evidence_when": "How compliance is demonstrated is unaddressed."
+      }
+    }
+  ],
+  "source": {
+    "name": "EUR-Lex",
+    "document": "Regulation (EU) 2016/679",
+    "article": "Article 5"
+   }
   },
   {
-    "regulation": "GDPR",
-    "chapter": { "number": "Chapter II", "name": "Principles" },
-    "article": {
-      "number": "Article 6",
-      "title": "Lawfulness of processing",
-      "checkability": "direct",
-      "contextual_reason": null
-    },
-    "requirement_groups": [
-      {
-        "group_id": "6.1",
-        "condition_logic": "ANY",
-        "principle": "Lawful basis for processing",
-        "requirement_summary": "Processing is lawful only if at least ONE of the six legal bases in Article 6(1) applies.",
-        "applicability_condition": null,
-        "sub_obligations": [
-          {
-            "id": "6.1.a",
-            "legal_text": "the data subject has given consent to the processing of his or her personal data for one or more specific purposes",
-            "plain_summary": "Processing based on the person's consent for specific purposes.",
-            "evidence_prompt": "Does the policy identify consent as a lawful basis for processing?"
-          },
-          {
-            "id": "6.1.b",
-            "legal_text": "processing is necessary for the performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract",
-            "plain_summary": "Processing needed to perform a contract with the person or to take pre-contractual steps at their request.",
-            "evidence_prompt": "Does the policy identify contract performance or pre-contractual steps as a lawful basis for processing?"
-          },
-          {
-            "id": "6.1.c",
-            "legal_text": "processing is necessary for compliance with a legal obligation to which the controller is subject",
-            "plain_summary": "Processing needed to comply with a legal requirement.",
-            "evidence_prompt": "Does the policy identify legal-obligation compliance as a lawful basis?"
-          },
-          {
-            "id": "6.1.d",
-            "legal_text": "processing is necessary in order to protect the vital interests of the data subject or of another natural person",
-            "plain_summary": "Processing needed to protect someone's life or vital interests.",
-            "evidence_prompt": "Does the policy identify protection of vital interests as a lawful basis for processing, where applicable?"
-          },
-          {
-            "id": "6.1.e",
-            "legal_text": "processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller",
-            "plain_summary": "Processing needed to carry out a public-interest task or official authority.",
-            "evidence_prompt": "Does the policy identify public-interest or official-authority tasks as a lawful basis, where applicable?"
-          },
-          {
-            "id": "6.1.f",
-            "legal_text": "processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject",
-            "plain_summary": "Processing based on the company's or a third party's legitimate interests, balanced against the person's rights.",
-            "evidence_prompt": "Does the policy identify legitimate interests as a lawful basis and describe how those interests are balanced against the data subject's rights?"
-          }
-        ],
-        "keywords": ["lawful basis", "consent", "contract necessity", "legal obligation", "vital interests", "public task", "legitimate interests"],
-        "expected_evidence": ["Privacy policy", "Lawful basis register"],
-        "assessment_rules": {
-          "met_when": "The policy documents at least ONE valid, clearly applicable lawful basis for each relevant processing activity.",
-          "partially_met_when": "A lawful basis is referenced but is vague or inconsistently applied.",
-          "not_met_when": "No lawful basis is identified for relevant processing.",
-          "conflicting_when": "The policy processes data without any identifiable lawful basis, or relies on legitimate interests for processing carried out by a public authority in performance of its tasks.",
-          "insufficient_evidence_when": "The policy does not provide enough information to determine which lawful basis applies."
-        }
-      },
-      {
-        "group_id": "6.3",
-        "condition_logic": "SINGLE",
-        "principle": "Legal-basis grounding for legal-obligation and public-task processing",
-        "requirement_summary": "Where processing relies on the legal-obligation or public-task grounds, the basis for that processing must be laid down by Union or Member State law meeting an objective of public interest and proportionate to the aim pursued.",
-        "applicability_condition": "Applies only where the controller relies on Article 6(1)(c) (legal obligation) or 6(1)(e) (public task) as its lawful basis.",
-        "sub_obligations": [
-          {
-            "id": "6.3.1",
-            "legal_text": "The basis for the processing referred to in point (c) and (e) of paragraph 1 shall be laid down by Union law; or Member State law to which the controller is subject.",
-            "plain_summary": "If relying on legal obligation or public task as the basis, that basis must come from an actual Union or Member State law.",
-            "evidence_prompt": "Where legal-obligation or public-task grounds are relied on, does the policy identify the specific law establishing that basis?"
-          }
-        ],
-        "keywords": ["legal basis", "legal obligation", "public task", "statutory grounding"],
-        "expected_evidence": ["Reference to specific statutes underpinning legal-obligation or public-task processing"],
-        "assessment_rules": {
-          "met_when": "Where legal-obligation or public-task grounds are relied on, the policy identifies the specific applicable law establishing that basis.",
-          "partially_met_when": "The ground is stated generically (e.g., 'as required by law') without identifying the specific law.",
-          "not_met_when": "The ground is relied on with no reference to any underlying law.",
-          "conflicting_when": "The policy cites a law that does not plausibly establish the processing described.",
-          "insufficient_evidence_when": "It cannot be determined whether legal-obligation or public-task grounds are relied on."
-        }
-      },
-      {
-        "group_id": "6.4",
-        "condition_logic": "ALL",
-        "principle": "Compatibility assessment for further processing on a new purpose",
-        "requirement_summary": "Where further processing for a new purpose is not based on consent or a law safeguarding Article 23(1) objectives, the controller must consider specified factors (link to original purpose, collection context, nature of data, consequences for data subjects, and safeguards) to assess compatibility with the original purpose.",
-        "applicability_condition": "Applies only where the controller further processes data for a new purpose without relying on consent or an Article 23(1)-compliant law.",
-        "sub_obligations": [
-          {
-            "id": "6.4.1",
-            "legal_text": "take into account, inter alia: any link between the purposes...the context in which the personal data have been collected...the nature of the personal data...the possible consequences of the intended further processing...the existence of appropriate safeguards",
-            "plain_summary": "Before reusing data for a new purpose without consent or a qualifying law, the company must weigh factors like the link to the original purpose, context of collection, sensitivity of the data, likely consequences, and any safeguards in place.",
-            "evidence_prompt": "Where further processing occurs without consent or a qualifying law, does the policy describe a compatibility assessment considering these factors?"
-          }
-        ],
-        "keywords": ["compatibility assessment", "further processing", "purpose change factors"],
-        "expected_evidence": ["Compatibility assessment methodology or documentation"],
-        "assessment_rules": {
-          "met_when": "Where applicable, the policy describes a compatibility assessment addressing ALL the listed factors before further processing for a new purpose.",
-          "partially_met_when": "A compatibility assessment is mentioned but does not address most of the listed factors.",
-          "not_met_when": "The policy allows repurposing of data with no compatibility assessment described.",
-          "conflicting_when": "The policy states data will be repurposed regardless of compatibility with original purposes.",
-          "insufficient_evidence_when": "It cannot be determined whether the controller repurposes data outside of consent or a qualifying law."
-        }
-      }
-    ],
-    "source": { "name": "EUR-Lex", "document": "Regulation (EU) 2016/679", "article": "Article 6" }
+  "regulation": "GDPR",
+  "chapter": { "number": "Chapter II", "name": "Principles" },
+  "article": {
+    "number": "Article 6",
+    "title": "Lawfulness of processing",
+    "checkability": "direct",
+    "contextual_reason": null
   },
+  "requirement_groups": [
+    {
+      "group_id": "6.1",
+      "condition_logic": "ANY",
+      "principle": "Lawful basis for processing",
+      "requirement_summary": "Processing is lawful only if at least ONE of the legal bases in Article 6(1) applies.",
+      "applicability_condition": null,
+      "sub_obligations": [
+        {
+          "id": "6.1.a",
+          "legal_text": "the data subject has given consent to the processing of his or her personal data for one or more specific purposes",
+          "plain_summary": "Processing based on the person's consent for specific purposes.",
+          "evidence_prompt": "Does the policy identify consent as a lawful basis for processing?"
+        },
+        {
+          "id": "6.1.b",
+          "legal_text": "processing is necessary for the performance of a contract to which the data subject is party, or in order to take steps at the request of the data subject prior to entering into a contract; or processing is necessary for compliance with a legal obligation to which the controller is subject",
+          "plain_summary": "Processing needed to perform (or enter into) a contract with the person, or to comply with a legal requirement.",
+          "evidence_prompt": "Does the policy identify contract performance/pre-contractual steps or legal-obligation compliance as a lawful basis for processing?"
+        },
+        {
+          "id": "6.1.c",
+          "legal_text": "processing is necessary in order to protect the vital interests of the data subject or of another natural person; or processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller",
+          "plain_summary": "Processing needed to protect someone's life/vital interests, or to carry out a public-interest task or official authority, where applicable.",
+          "evidence_prompt": "Does the policy identify vital-interest protection or public-interest/official-authority tasks as a lawful basis, where applicable?"
+        },
+        {
+          "id": "6.1.d",
+          "legal_text": "processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject",
+          "plain_summary": "Processing based on the company's or a third party's legitimate interests, balanced against the person's rights.",
+          "evidence_prompt": "Does the policy identify legitimate interests as a lawful basis and describe how those interests are balanced against the data subject's rights?"
+        }
+      ],
+      "keywords": ["lawful basis", "consent", "contract necessity", "legal obligation", "vital interests", "public task", "legitimate interests"],
+      "expected_evidence": ["Privacy policy", "Lawful basis register"],
+      "assessment_rules": {
+        "met_when": "The policy documents at least ONE valid, clearly applicable lawful basis for each relevant processing activity.",
+        "partially_met_when": "A lawful basis is referenced but is vague or inconsistently applied.",
+        "not_met_when": "No lawful basis is identified for relevant processing.",
+        "conflicting_when": "The policy processes data without any identifiable lawful basis, or relies on legitimate interests for processing carried out by a public authority in performance of its tasks.",
+        "insufficient_evidence_when": "The policy does not provide enough information to determine which lawful basis applies."
+      }
+    },
+    {
+      "group_id": "6.3",
+      "condition_logic": "SINGLE",
+      "principle": "Legal-basis grounding for legal-obligation and public-task processing",
+      "requirement_summary": "Where processing relies on the legal-obligation or public-task grounds, the basis for that processing must be laid down by Union or Member State law meeting an objective of public interest and proportionate to the aim pursued.",
+      "applicability_condition": "Applies only where the controller relies on Article 6(1)(c) (legal obligation) or 6(1)(e) (public task) as its lawful basis.",
+      "sub_obligations": [
+        {
+          "id": "6.3.1",
+          "legal_text": "The basis for the processing referred to in point (c) and (e) of paragraph 1 shall be laid down by Union law; or Member State law to which the controller is subject.",
+          "plain_summary": "If relying on legal obligation or public task as the basis, that basis must come from an actual Union or Member State law.",
+          "evidence_prompt": "Where legal-obligation or public-task grounds are relied on, does the policy identify the specific law establishing that basis?"
+        }
+      ],
+      "keywords": ["legal basis", "legal obligation", "public task", "statutory grounding"],
+      "expected_evidence": ["Reference to specific statutes underpinning legal-obligation or public-task processing"],
+      "assessment_rules": {
+        "met_when": "Where legal-obligation or public-task grounds are relied on, the policy identifies the specific applicable law establishing that basis.",
+        "partially_met_when": "The ground is stated generically (e.g., 'as required by law') without identifying the specific law.",
+        "not_met_when": "The ground is relied on with no reference to any underlying law.",
+        "conflicting_when": "The policy cites a law that does not plausibly establish the processing described.",
+        "insufficient_evidence_when": "It cannot be determined whether legal-obligation or public-task grounds are relied on."
+      }
+    },
+    {
+      "group_id": "6.4",
+      "condition_logic": "ALL",
+      "principle": "Compatibility assessment for further processing on a new purpose",
+      "requirement_summary": "Where further processing for a new purpose is not based on consent or a law safeguarding Article 23(1) objectives, the controller must consider specified factors (link to original purpose, collection context, nature of data, consequences for data subjects, and safeguards) to assess compatibility with the original purpose.",
+      "applicability_condition": "Applies only where the controller further processes data for a new purpose without relying on consent or an Article 23(1)-compliant law.",
+      "sub_obligations": [
+        {
+          "id": "6.4.1",
+          "legal_text": "take into account, inter alia: any link between the purposes...the context in which the personal data have been collected...the nature of the personal data...the possible consequences of the intended further processing...the existence of appropriate safeguards",
+          "plain_summary": "Before reusing data for a new purpose without consent or a qualifying law, the company must weigh factors like the link to the original purpose, context of collection, sensitivity of the data, likely consequences, and any safeguards in place.",
+          "evidence_prompt": "Where further processing occurs without consent or a qualifying law, does the policy describe a compatibility assessment considering these factors?"
+        }
+      ],
+      "keywords": ["compatibility assessment", "further processing", "purpose change factors"],
+      "expected_evidence": ["Compatibility assessment methodology or documentation"],
+      "assessment_rules": {
+        "met_when": "Where applicable, the policy describes a compatibility assessment addressing ALL the listed factors before further processing for a new purpose.",
+        "partially_met_when": "A compatibility assessment is mentioned but does not address most of the listed factors.",
+        "not_met_when": "The policy allows repurposing of data with no compatibility assessment described.",
+        "conflicting_when": "The policy states data will be repurposed regardless of compatibility with original purposes.",
+        "insufficient_evidence_when": "It cannot be determined whether the controller repurposes data outside of consent or a qualifying law."
+      }
+    }
+  ],
+  "source": { "name": "EUR-Lex", "document": "Regulation (EU) 2016/679", "article": "Article 6" }
+},
   {
     "regulation": "GDPR",
     "chapter": { "number": "Chapter II", "name": "Principles" },

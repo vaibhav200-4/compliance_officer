@@ -1,0 +1,181 @@
+{
+  "article_number": 9,
+  "article_title": "Processing of special categories of personal data",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 1.0,
+  "group_count": 3,
+  "completed_groups": 3,
+  "groups": [
+    {
+      "article_number": 9,
+      "group_id": "9.1",
+      "principle": "Prohibition on processing special category data",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The supplied policy evidence makes no mention of special category data or its default prohibition under Article 9.",
+      "gap": "The supplied policy evidence makes no mention of special category data or its default prohibition under Article 9.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "9.1.1",
+          "status": "NOT_MET",
+          "reason": "The supplied policy evidence makes no mention of special category data or its default prohibition under Article 9.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.027,
+        "llm_time": 1.2433,
+        "validation_time": 0.0001,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 9,
+      "group_id": "9.3",
+      "principle": "Professional secrecy safeguard for health/social care processing",
+      "condition_logic": "SINGLE",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The applicability condition requires that the controller relies on Article 9(2)(h) (health/social care purposes). The company policy evidence does not indicate any processing of health-related data or reliance on Article 9(2)(h); the legal bases listed are contractual necessity, legitimate interests, legal obligation, and consent.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "9.3.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The applicability condition requires that the controller relies on Article 9(2)(h) (health/social care purposes). The company policy evidence does not indicate any processing of health-related data or reliance on Article 9(2)(h); the legal bases listed are contractual necessity, legitimate interests, legal obligation, and consent.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0768,
+        "llm_time": 1.4016,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 9,
+      "group_id": "9.2",
+      "principle": "Exceptions permitting special category data processing",
+      "condition_logic": "ANY",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The controller does not process special category data as evidenced by the scope of data collected under Section 2. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data. The controller does not process special category data.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "9.2.a",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data as evidenced by the scope of data collected under Section 2.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.b",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.c",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.d",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.e",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.f",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.g",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.h",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.i",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "9.2.j",
+          "status": "NOT_APPLICABLE",
+          "reason": "The controller does not process special category data.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1003,
+        "llm_time": 3.0509,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 13.0062
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 9,
+    "execution_mode": "global_group_queue"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "article_number": 6,
+  "article_title": "Lawfulness of processing",
+  "checkability": "direct",
+  "status": "PARTIALLY_MET",
+  "confidence": 0.9333,
+  "group_count": 3,
+  "completed_groups": 3,
+  "groups": [
+    {
+      "article_number": 6,
+      "group_id": "6.4",
+      "principle": "Compatibility assessment for further processing on a new purpose",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+      "gap": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "6.4.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.6073,
+        "llm_time": 1.5503,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 6,
+      "group_id": "6.3",
+      "principle": "Legal-basis grounding for legal-obligation and public-task processing",
+      "condition_logic": "SINGLE",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.85,
+      "reason": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+      "gap": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "6.3.1",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Legal obligation — to comply with applicable laws and regulations"
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "Transaction records and invoices are retained for 7 years in compliance with Indian tax laws (Income Tax Act, 1961 and GST Act, 2017)."
+            }
+          ],
+          "confidence": 0.85
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.7355,
+        "llm_time": 2.436,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 6,
+      "group_id": "6.1",
+      "principle": "Lawful basis for processing",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 0.95,
+      "reason": "The policy explicitly identifies consent as a lawful basis for processing. The policy identifies contractual necessity and legal obligation as valid legal bases for processing. The provided policy evidence does not mention vital interests or public interest/official authority as lawful bases for processing. The policy identifies legitimate interests as a lawful basis, but does not explicitly describe how those interests are balanced against the data subject's fundamental rights and freedoms.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "6.1.a",
+          "status": "MET",
+          "reason": "The policy explicitly identifies consent as a lawful basis for processing.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "6.1.b",
+          "status": "MET",
+          "reason": "The policy identifies contractual necessity and legal obligation as valid legal bases for processing.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Contractual necessity — to provide the Services you have signed up for\n- Legal obligation — to comply with applicable laws and regulations"
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "6.1.c",
+          "status": "NOT_MET",
+          "reason": "The provided policy evidence does not mention vital interests or public interest/official authority as lawful bases for processing.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "6.1.d",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy identifies legitimate interests as a lawful basis, but does not explicitly describe how those interests are balanced against the data subject's fundamental rights and freedoms.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Legitimate interests — for fraud prevention, security, and product improvement"
+            }
+          ],
+          "confidence": 0.8
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.8017,
+        "llm_time": 2.6947,
+        "validation_time": 0.0019,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 5.5638
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 6,
+    "execution_mode": "global_group_queue"
+  }
+}

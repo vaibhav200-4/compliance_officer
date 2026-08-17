@@ -1,0 +1,1276 @@
+{
+  "company_name": "Acme Corporation",
+  "policy_name": "Global Privacy Policy",
+  "timestamp": "2026-08-17T15:41:03.402163",
+  "status": "COMPLETED",
+  "overall_status": "PARTIALLY_MET",
+  "overall_score": 45.5,
+  "risk_level": "CRITICAL RISK",
+  "articles_analyzed": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "total_groups": 13,
+  "total_obligations": 21,
+  "statistics": {
+    "MET": 3,
+    "PARTIALLY_MET": 4,
+    "NOT_MET": 0,
+    "CONFLICTING": 0,
+    "INSUFFICIENT_EVIDENCE": 4,
+    "NOT_APPLICABLE": 2
+  },
+  "executive_summary": "GDPR Compliance Audit for 'Acme Corporation' evaluating document 'Global Privacy Policy'. The evaluation analyzed 4 article(s) spanning 13 requirement group(s) and 21 sub-obligation(s). The overall compliance score is 45.5% with an overall status of 'PARTIALLY_MET' and a risk posture of 'CRITICAL RISK'.",
+  "key_gaps": [
+    {
+      "group_id": "5.1.quality_retention",
+      "article_number": 5,
+      "principle": "Accuracy and storage limitation",
+      "status": "PARTIALLY_MET",
+      "gap": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated."
+    },
+    {
+      "group_id": "5.2",
+      "article_number": 5,
+      "principle": "Accountability",
+      "status": "PARTIALLY_MET",
+      "gap": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1)."
+    },
+    {
+      "group_id": "6.3",
+      "article_number": 6,
+      "principle": "Legal-basis grounding for legal-obligation and public-task processing",
+      "status": "PARTIALLY_MET",
+      "gap": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records."
+    },
+    {
+      "group_id": "7.3",
+      "article_number": 7,
+      "principle": "Right to withdraw consent",
+      "status": "PARTIALLY_MET",
+      "gap": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "group_id": "5.1.quality_retention",
+      "article_number": 5,
+      "action": "Update policy to fulfill requirements for Group 5.1.quality_retention (Accuracy and storage limitation): Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated."
+    },
+    {
+      "priority": "HIGH",
+      "group_id": "5.2",
+      "article_number": 5,
+      "action": "Update policy to fulfill requirements for Group 5.2 (Accountability): Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1)."
+    },
+    {
+      "priority": "HIGH",
+      "group_id": "6.3",
+      "article_number": 6,
+      "action": "Update policy to fulfill requirements for Group 6.3 (Legal-basis grounding for legal-obligation and public-task processing): The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records."
+    },
+    {
+      "priority": "HIGH",
+      "group_id": "7.3",
+      "article_number": 7,
+      "action": "Update policy to fulfill requirements for Group 7.3 (Right to withdraw consent): The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent."
+    }
+  ],
+  "article_results": {
+    "5": {
+      "article_number": 5,
+      "article_title": "Principles relating to processing of personal data",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.8175,
+      "groups": [
+        {
+          "article_number": 5,
+          "group_id": "5.1.f",
+          "principle": "Integrity and confidentiality",
+          "condition_logic": "SINGLE",
+          "status": "MET",
+          "confidence": 0.95,
+          "reason": "Policy explicitly states implementation of industry-standard technical measures (TLS 1.3 encryption in transit, AES-256 encryption at rest) and organizational measures (MFA access control, quarterly audits, annual penetration testing) to protect against unauthorized access, loss, or damage.",
+          "gap": null,
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "5.1.f.1",
+              "status": "MET",
+              "reason": "Policy explicitly states implementation of industry-standard technical measures (TLS 1.3 encryption in transit, AES-256 encryption at rest) and organizational measures (MFA access control, quarterly audits, annual penetration testing) to protect against unauthorized access, loss, or damage.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:9",
+                  "quote": "We implement industry-standard technical and organisational measures to protect your personal data against unauthorised access, loss, destruction, or alteration.\n- All data in transit is encrypted using TLS 1.3\n- All data at rest is encrypted using AES-256\n- Access to production systems is restricted to authorised personnel only via MFA\n- We conduct quarterly internal security audits\n- Penetration testing is conducted annually by a third-party security firm"
+                }
+              ],
+              "confidence": 0.95
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.6176,
+            "llm_time": 12.6104,
+            "validation_time": 0.0011,
+            "backoff_time": 0.0,
+            "attempts": 2,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "openrouter",
+            "endpoint_key": "...3904"
+          }
+        },
+        {
+          "article_number": 5,
+          "group_id": "5.1.quality_retention",
+          "principle": "Accuracy and storage limitation",
+          "condition_logic": "SINGLE",
+          "status": "PARTIALLY_MET",
+          "confidence": 0.75,
+          "reason": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated.",
+          "gap": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "5.1.quality_retention.1",
+              "status": "PARTIALLY_MET",
+              "reason": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:6",
+                  "quote": "If any personal data we hold about you is inaccurate or incomplete, you may request that we correct or update it."
+                },
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+                  "quote": "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy."
+                }
+              ],
+              "confidence": 0.75
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.6424,
+            "llm_time": 19.1242,
+            "validation_time": 0.0007,
+            "backoff_time": 0.0,
+            "attempts": 2,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "openrouter",
+            "endpoint_key": "...3904"
+          }
+        },
+        {
+          "article_number": 5,
+          "group_id": "5.1.handling",
+          "principle": "Lawfulness, fairness, transparency, purpose limitation and minimisation",
+          "condition_logic": "SINGLE",
+          "status": "MET",
+          "confidence": 0.92,
+          "reason": "Policy explicitly states lawful bases (contractual, legitimate interests, legal obligation, consent), transparent handling (consent withdrawal rights), specific purposes (fraud prevention, security, product improvement), and compatibility of processing. Data minimization is addressed through retention policies.",
+          "gap": null,
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "5.1.handling.1",
+              "status": "MET",
+              "reason": "Policy explicitly states lawful bases (contractual, legitimate interests, legal obligation, consent), transparent handling (consent withdrawal rights), specific purposes (fraud prevention, security, product improvement), and compatibility of processing. Data minimization is addressed through retention policies.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "We process personal data only when we have a valid legal basis to do so. The legal bases we rely on are: Contractual necessity, Legitimate interests, Legal obligation, Consent."
+                },
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+                },
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "We do not further process in a manner incompatible with those purposes"
+                },
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+                  "quote": "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy"
+                }
+              ],
+              "confidence": 0.92
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.5495,
+            "llm_time": 23.3265,
+            "validation_time": 0.0009,
+            "backoff_time": 0.0,
+            "attempts": 2,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "openrouter",
+            "endpoint_key": "...3904"
+          }
+        },
+        {
+          "article_number": 5,
+          "group_id": "5.2",
+          "principle": "Accountability",
+          "condition_logic": "SINGLE",
+          "status": "PARTIALLY_MET",
+          "confidence": 0.65,
+          "reason": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1).",
+          "gap": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1).",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "5.2.1",
+              "status": "PARTIALLY_MET",
+              "reason": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1).",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+                  "quote": "Transaction records and invoices are retained for 7 years in compliance with Indian tax laws..."
+                },
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+                  "quote": "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy."
+                }
+              ],
+              "confidence": 0.65
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.4115,
+            "llm_time": 31.6265,
+            "validation_time": 0.0004,
+            "backoff_time": 0.0,
+            "attempts": 2,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "openrouter",
+            "endpoint_key": "...3904"
+          }
+        }
+      ]
+    },
+    "6": {
+      "article_number": 6,
+      "article_title": "Lawfulness of processing",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9333,
+      "groups": [
+        {
+          "article_number": 6,
+          "group_id": "6.4",
+          "principle": "Compatibility assessment for further processing on a new purpose",
+          "condition_logic": "ALL",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "confidence": 1.0,
+          "reason": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+          "gap": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "6.4.1",
+              "status": "INSUFFICIENT_EVIDENCE",
+              "reason": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+              "evidence": [],
+              "confidence": 1.0
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.6073,
+            "llm_time": 1.5503,
+            "validation_time": 0.0004,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        },
+        {
+          "article_number": 6,
+          "group_id": "6.3",
+          "principle": "Legal-basis grounding for legal-obligation and public-task processing",
+          "condition_logic": "SINGLE",
+          "status": "PARTIALLY_MET",
+          "confidence": 0.85,
+          "reason": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+          "gap": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "6.3.1",
+              "status": "PARTIALLY_MET",
+              "reason": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "Legal obligation — to comply with applicable laws and regulations"
+                },
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+                  "quote": "Transaction records and invoices are retained for 7 years in compliance with Indian tax laws (Income Tax Act, 1961 and GST Act, 2017)."
+                }
+              ],
+              "confidence": 0.85
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.7355,
+            "llm_time": 2.436,
+            "validation_time": 0.0007,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        },
+        {
+          "article_number": 6,
+          "group_id": "6.1",
+          "principle": "Lawful basis for processing",
+          "condition_logic": "ANY",
+          "status": "MET",
+          "confidence": 0.95,
+          "reason": "The policy explicitly identifies consent as a lawful basis for processing. The policy identifies contractual necessity and legal obligation as valid legal bases for processing. The provided policy evidence does not mention vital interests or public interest/official authority as lawful bases for processing. The policy identifies legitimate interests as a lawful basis, but does not explicitly describe how those interests are balanced against the data subject's fundamental rights and freedoms.",
+          "gap": null,
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "6.1.a",
+              "status": "MET",
+              "reason": "The policy explicitly identifies consent as a lawful basis for processing.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+                }
+              ],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "6.1.b",
+              "status": "MET",
+              "reason": "The policy identifies contractual necessity and legal obligation as valid legal bases for processing.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "Contractual necessity — to provide the Services you have signed up for\n- Legal obligation — to comply with applicable laws and regulations"
+                }
+              ],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "6.1.c",
+              "status": "NOT_MET",
+              "reason": "The provided policy evidence does not mention vital interests or public interest/official authority as lawful bases for processing.",
+              "evidence": [],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "6.1.d",
+              "status": "PARTIALLY_MET",
+              "reason": "The policy identifies legitimate interests as a lawful basis, but does not explicitly describe how those interests are balanced against the data subject's fundamental rights and freedoms.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "Legitimate interests — for fraud prevention, security, and product improvement"
+                }
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.8017,
+            "llm_time": 2.6947,
+            "validation_time": 0.0019,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        }
+      ]
+    },
+    "7": {
+      "article_number": 7,
+      "article_title": "Conditions for consent",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9375,
+      "groups": [
+        {
+          "article_number": 7,
+          "group_id": "7.1",
+          "principle": "Ability to demonstrate consent",
+          "condition_logic": "SINGLE",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "confidence": 1.0,
+          "reason": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+          "gap": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "7.1.1",
+              "status": "INSUFFICIENT_EVIDENCE",
+              "reason": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+              "evidence": [],
+              "confidence": 1.0
+            }
+          ],
+          "performance": {
+            "retrieval_time": 2.9529,
+            "llm_time": 2.095,
+            "validation_time": 0.0002,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        },
+        {
+          "article_number": 7,
+          "group_id": "7.2",
+          "principle": "Clear presentation of consent requests",
+          "condition_logic": "ALL",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "confidence": 1.0,
+          "reason": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language. The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+          "gap": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language. The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "7.2.1",
+              "status": "INSUFFICIENT_EVIDENCE",
+              "reason": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language.",
+              "evidence": [],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "7.2.2",
+              "status": "INSUFFICIENT_EVIDENCE",
+              "reason": "The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+              "evidence": [],
+              "confidence": 1.0
+            }
+          ],
+          "performance": {
+            "retrieval_time": 1.0935,
+            "llm_time": 2.4983,
+            "validation_time": 0.0003,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        },
+        {
+          "article_number": 7,
+          "group_id": "7.4",
+          "principle": "Freely given consent assessment",
+          "condition_logic": "SINGLE",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "confidence": 0.8,
+          "reason": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+          "gap": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "7.4.1",
+              "status": "INSUFFICIENT_EVIDENCE",
+              "reason": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+                  "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+                }
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "performance": {
+            "retrieval_time": 1.1369,
+            "llm_time": 1.649,
+            "validation_time": 0.0006,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        },
+        {
+          "article_number": 7,
+          "group_id": "7.3",
+          "principle": "Right to withdraw consent",
+          "condition_logic": "ALL",
+          "status": "PARTIALLY_MET",
+          "confidence": 0.95,
+          "reason": "The policy confirms that users have the right to withdraw consent at any time. The policy explicitly states that withdrawal of consent does not affect the lawfulness of processing prior to withdrawal. The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent.",
+          "gap": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent.",
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "7.3.1",
+              "status": "MET",
+              "reason": "The policy confirms that users have the right to withdraw consent at any time.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+                  "quote": "Where we rely on consent, you have the right to withdraw it at any time by contacting us at privacy@techstartup.com."
+                }
+              ],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "7.3.2",
+              "status": "MET",
+              "reason": "The policy explicitly states that withdrawal of consent does not affect the lawfulness of processing prior to withdrawal.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+                  "quote": "Withdrawal of consent does not affect the lawfulness of processing that occurred before the withdrawal."
+                }
+              ],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "7.3.3",
+              "status": "NOT_MET",
+              "reason": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent.",
+              "evidence": [],
+              "confidence": 0.9
+            },
+            {
+              "obligation_id": "7.3.4",
+              "status": "NOT_MET",
+              "reason": "The policy does not state that withdrawing consent is as easy as giving consent.",
+              "evidence": [],
+              "confidence": 0.9
+            }
+          ],
+          "performance": {
+            "retrieval_time": 1.0804,
+            "llm_time": 2.4999,
+            "validation_time": 0.0006,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        }
+      ]
+    },
+    "8": {
+      "article_number": 8,
+      "article_title": "Conditions applicable to child's consent in relation to information society services",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "groups": [
+        {
+          "article_number": 8,
+          "group_id": "8.1",
+          "principle": "Age threshold for a child's valid consent",
+          "condition_logic": "ALL",
+          "status": "NOT_APPLICABLE",
+          "confidence": 1.0,
+          "reason": "The policy states that services are not directed at children under 13 and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met. The policy states that services are not directed at children and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+          "gap": null,
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "8.1.1",
+              "status": "NOT_APPLICABLE",
+              "reason": "The policy states that services are not directed at children under 13 and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+                  "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+                }
+              ],
+              "confidence": 1.0
+            },
+            {
+              "obligation_id": "8.1.2",
+              "status": "NOT_APPLICABLE",
+              "reason": "The policy states that services are not directed at children and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+                  "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+                }
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "performance": {
+            "retrieval_time": 1.0971,
+            "llm_time": 2.8507,
+            "validation_time": 0.0005,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        },
+        {
+          "article_number": 8,
+          "group_id": "8.2",
+          "principle": "Reasonable efforts to verify parental consent",
+          "condition_logic": "SINGLE",
+          "status": "NOT_APPLICABLE",
+          "confidence": 1.0,
+          "reason": "The policy states that services are not directed at children under the age of 13 and that they do not knowingly collect personal data from children. Therefore, parental consent is not relied upon.",
+          "gap": null,
+          "evidence_count": 5,
+          "sub_obligations": [
+            {
+              "obligation_id": "8.2.1",
+              "status": "NOT_APPLICABLE",
+              "reason": "The policy states that services are not directed at children under the age of 13 and that they do not knowingly collect personal data from children. Therefore, parental consent is not relied upon.",
+              "evidence": [
+                {
+                  "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+                  "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+                }
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "performance": {
+            "retrieval_time": 1.093,
+            "llm_time": 1.4591,
+            "validation_time": 0.0002,
+            "backoff_time": 0.0,
+            "attempts": 1,
+            "count_429": 0,
+            "count_5xx": 0,
+            "count_malformed_json": 0,
+            "count_validation_failures": 0,
+            "provider": "gemini",
+            "endpoint_key": "...Mgkw"
+          }
+        }
+      ]
+    }
+  },
+  "all_groups": [
+    {
+      "article_number": 5,
+      "group_id": "5.1.f",
+      "principle": "Integrity and confidentiality",
+      "condition_logic": "SINGLE",
+      "status": "MET",
+      "confidence": 0.95,
+      "reason": "Policy explicitly states implementation of industry-standard technical measures (TLS 1.3 encryption in transit, AES-256 encryption at rest) and organizational measures (MFA access control, quarterly audits, annual penetration testing) to protect against unauthorized access, loss, or damage.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "5.1.f.1",
+          "status": "MET",
+          "reason": "Policy explicitly states implementation of industry-standard technical measures (TLS 1.3 encryption in transit, AES-256 encryption at rest) and organizational measures (MFA access control, quarterly audits, annual penetration testing) to protect against unauthorized access, loss, or damage.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:9",
+              "quote": "We implement industry-standard technical and organisational measures to protect your personal data against unauthorised access, loss, destruction, or alteration.\n- All data in transit is encrypted using TLS 1.3\n- All data at rest is encrypted using AES-256\n- Access to production systems is restricted to authorised personnel only via MFA\n- We conduct quarterly internal security audits\n- Penetration testing is conducted annually by a third-party security firm"
+            }
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.6176,
+        "llm_time": 12.6104,
+        "validation_time": 0.0011,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 5,
+      "group_id": "5.1.quality_retention",
+      "principle": "Accuracy and storage limitation",
+      "condition_logic": "SINGLE",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.75,
+      "reason": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated.",
+      "gap": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "5.1.quality_retention.1",
+          "status": "PARTIALLY_MET",
+          "reason": "Policy provides right to correction but lacks explicit 'prompt' timeframe. Retention periods are defined with legal exceptions but safeguards for extended retention are not explicitly stated.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:6",
+              "quote": "If any personal data we hold about you is inaccurate or incomplete, you may request that we correct or update it."
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy."
+            }
+          ],
+          "confidence": 0.75
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.6424,
+        "llm_time": 19.1242,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 5,
+      "group_id": "5.1.handling",
+      "principle": "Lawfulness, fairness, transparency, purpose limitation and minimisation",
+      "condition_logic": "SINGLE",
+      "status": "MET",
+      "confidence": 0.92,
+      "reason": "Policy explicitly states lawful bases (contractual, legitimate interests, legal obligation, consent), transparent handling (consent withdrawal rights), specific purposes (fraud prevention, security, product improvement), and compatibility of processing. Data minimization is addressed through retention policies.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "5.1.handling.1",
+          "status": "MET",
+          "reason": "Policy explicitly states lawful bases (contractual, legitimate interests, legal obligation, consent), transparent handling (consent withdrawal rights), specific purposes (fraud prevention, security, product improvement), and compatibility of processing. Data minimization is addressed through retention policies.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "We process personal data only when we have a valid legal basis to do so. The legal bases we rely on are: Contractual necessity, Legitimate interests, Legal obligation, Consent."
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "We do not further process in a manner incompatible with those purposes"
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy"
+            }
+          ],
+          "confidence": 0.92
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.5495,
+        "llm_time": 23.3265,
+        "validation_time": 0.0009,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 5,
+      "group_id": "5.2",
+      "principle": "Accountability",
+      "condition_logic": "SINGLE",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.65,
+      "reason": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1).",
+      "gap": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1).",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "5.2.1",
+          "status": "PARTIALLY_MET",
+          "reason": "Policy mentions data retention periods and legal bases for processing, which support accountability. However, there is no explicit evidence of records or documentation demonstrating compliance with Art. 5(1).",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "Transaction records and invoices are retained for 7 years in compliance with Indian tax laws..."
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "We retain personal data only for as long as necessary to fulfil the purposes outlined in this policy."
+            }
+          ],
+          "confidence": 0.65
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.4115,
+        "llm_time": 31.6265,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 6,
+      "group_id": "6.4",
+      "principle": "Compatibility assessment for further processing on a new purpose",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+      "gap": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "6.4.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy documents do not mention or describe a compatibility assessment process considering factors like the link to the original purpose, collection context, data nature, consequences, or safeguards when further processing data for a new purpose without consent or a qualifying law.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.6073,
+        "llm_time": 1.5503,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 6,
+      "group_id": "6.3",
+      "principle": "Legal-basis grounding for legal-obligation and public-task processing",
+      "condition_logic": "SINGLE",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.85,
+      "reason": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+      "gap": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "6.3.1",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy lists 'Legal obligation — to comply with applicable laws and regulations' as a legal basis, but it does not specifically identify the particular laws establishing the legal basis for processing other than mentioning Indian tax laws (Income Tax Act, 1961 and GST Act, 2017) in the context of retaining financial records.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Legal obligation — to comply with applicable laws and regulations"
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "Transaction records and invoices are retained for 7 years in compliance with Indian tax laws (Income Tax Act, 1961 and GST Act, 2017)."
+            }
+          ],
+          "confidence": 0.85
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.7355,
+        "llm_time": 2.436,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 6,
+      "group_id": "6.1",
+      "principle": "Lawful basis for processing",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 0.95,
+      "reason": "The policy explicitly identifies consent as a lawful basis for processing. The policy identifies contractual necessity and legal obligation as valid legal bases for processing. The provided policy evidence does not mention vital interests or public interest/official authority as lawful bases for processing. The policy identifies legitimate interests as a lawful basis, but does not explicitly describe how those interests are balanced against the data subject's fundamental rights and freedoms.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "6.1.a",
+          "status": "MET",
+          "reason": "The policy explicitly identifies consent as a lawful basis for processing.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "6.1.b",
+          "status": "MET",
+          "reason": "The policy identifies contractual necessity and legal obligation as valid legal bases for processing.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Contractual necessity — to provide the Services you have signed up for\n- Legal obligation — to comply with applicable laws and regulations"
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "6.1.c",
+          "status": "NOT_MET",
+          "reason": "The provided policy evidence does not mention vital interests or public interest/official authority as lawful bases for processing.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "6.1.d",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy identifies legitimate interests as a lawful basis, but does not explicitly describe how those interests are balanced against the data subject's fundamental rights and freedoms.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Legitimate interests — for fraud prevention, security, and product improvement"
+            }
+          ],
+          "confidence": 0.8
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.8017,
+        "llm_time": 2.6947,
+        "validation_time": 0.0019,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.1",
+      "principle": "Ability to demonstrate consent",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+      "gap": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.1.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy states that consent is relied on for marketing communications and optional analytics, but it does not describe how consent is recorded, tracked, or evidenced by the controller.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.9529,
+        "llm_time": 2.095,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.2",
+      "principle": "Clear presentation of consent requests",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language. The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+      "gap": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language. The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.2.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence mentions consent as a legal basis for processing marketing communications and optional analytics, but contains no text addressing whether bundled consent requests are presented distinguishably, intelligibly, and in plain language.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "7.2.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence contains no mention of whether consent obtained through non-compliant bundled declarations is non-binding.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0935,
+        "llm_time": 2.4983,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.4",
+      "principle": "Freely given consent assessment",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.8,
+      "reason": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+      "gap": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.4.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions that consent is used for marketing communications and optional analytics, but it lacks specific statements addressing whether the performance of a contract or service provision is conditioned on consent to processing that is not necessary for the contract.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Consent — for marketing communications and optional analytics (you can withdraw at any time)"
+            }
+          ],
+          "confidence": 0.8
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1369,
+        "llm_time": 1.649,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 7,
+      "group_id": "7.3",
+      "principle": "Right to withdraw consent",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.95,
+      "reason": "The policy confirms that users have the right to withdraw consent at any time. The policy explicitly states that withdrawal of consent does not affect the lawfulness of processing prior to withdrawal. The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent.",
+      "gap": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent. The policy does not state that withdrawing consent is as easy as giving consent.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "7.3.1",
+          "status": "MET",
+          "reason": "The policy confirms that users have the right to withdraw consent at any time.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "Where we rely on consent, you have the right to withdraw it at any time by contacting us at privacy@techstartup.com."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "7.3.2",
+          "status": "MET",
+          "reason": "The policy explicitly states that withdrawal of consent does not affect the lawfulness of processing prior to withdrawal.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "Withdrawal of consent does not affect the lawfulness of processing that occurred before the withdrawal."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "7.3.3",
+          "status": "NOT_MET",
+          "reason": "The policy mentions the right to withdraw consent, but contains no commitment or statement confirming that data subjects will be informed of this right prior to giving consent.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "7.3.4",
+          "status": "NOT_MET",
+          "reason": "The policy does not state that withdrawing consent is as easy as giving consent.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0804,
+        "llm_time": 2.4999,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 8,
+      "group_id": "8.1",
+      "principle": "Age threshold for a child's valid consent",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy states that services are not directed at children under 13 and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met. The policy states that services are not directed at children and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "8.1.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy states that services are not directed at children under 13 and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "8.1.2",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy states that services are not directed at children and they do not knowingly collect personal data from children, meaning the applicability condition regarding offering information society services directly to children and relying on consent is not met.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0971,
+        "llm_time": 2.8507,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 8,
+      "group_id": "8.2",
+      "principle": "Reasonable efforts to verify parental consent",
+      "condition_logic": "SINGLE",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy states that services are not directed at children under the age of 13 and that they do not knowingly collect personal data from children. Therefore, parental consent is not relied upon.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "8.2.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy states that services are not directed at children under the age of 13 and that they do not knowingly collect personal data from children. Therefore, parental consent is not relied upon.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "Our Services are not directed at children under the age of 13. We do not knowingly collect personal data from children."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.093,
+        "llm_time": 1.4591,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ]
+}

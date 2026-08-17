@@ -1,0 +1,413 @@
+{
+  "article_number": 12,
+  "article_title": "Transparent information, communication and modalities for the exercise of the rights of the data subject",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.9525,
+  "group_count": 9,
+  "completed_groups": 9,
+  "groups": [
+    {
+      "article_number": 12,
+      "group_id": "12.1.b",
+      "principle": "Modality of providing information",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 1.0,
+      "reason": "The policy states that copies of personal data will be provided in a commonly used electronic format, fulfilling the requirement to provide information in writing or by electronic means. The provided policy evidence does not mention whether information can be provided orally upon request or the requirement for identity verification in such cases.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.1.b.1",
+          "status": "MET",
+          "reason": "The policy states that copies of personal data will be provided in a commonly used electronic format, fulfilling the requirement to provide information in writing or by electronic means.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:6",
+              "quote": "We will provide this in a commonly used electronic format."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.1.b.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence does not mention whether information can be provided orally upon request or the requirement for identity verification in such cases.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.091,
+        "llm_time": 2.1714,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.2",
+      "principle": "Facilitating exercise of data subject rights",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.925,
+      "reason": "The policy provides clear mechanisms for individuals to exercise their rights by contacting privacy@techstartup.com with a specific subject line or via account settings. The provided policy evidence does not mention the specific limitation regarding refusing to act on requests unless the data subject cannot be identified under Article 11(2) situations.",
+      "gap": "The provided policy evidence does not mention the specific limitation regarding refusing to act on requests unless the data subject cannot be identified under Article 11(2) situations.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.2.1",
+          "status": "MET",
+          "reason": "The policy provides clear mechanisms for individuals to exercise their rights by contacting privacy@techstartup.com with a specific subject line or via account settings.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "To exercise any of these rights, please contact privacy@techstartup.com with the subject line 'Data Rights Request'."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "12.2.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence does not mention the specific limitation regarding refusing to act on requests unless the data subject cannot be identified under Article 11(2) situations.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0227,
+        "llm_time": 1.8062,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.3",
+      "principle": "Timeframe and format for responding to rights requests",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9625,
+      "reason": "The policy commits to responding to requests within 14 business days, which is within the one-month requirement. The policy does not contain any provisions regarding extending the response timeframe by two further months for complex or numerous requests. The policy does not mention notifying data subjects of any extension and its reasons within the first month. The policy states that access requests will be provided in a commonly used electronic format, but does not explicitly address that all electronic requests are answered electronically unless otherwise requested.",
+      "gap": "The policy does not contain any provisions regarding extending the response timeframe by two further months for complex or numerous requests. The policy does not mention notifying data subjects of any extension and its reasons within the first month. The policy states that access requests will be provided in a commonly used electronic format, but does not explicitly address that all electronic requests are answered electronically unless otherwise requested.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.3.1",
+          "status": "MET",
+          "reason": "The policy commits to responding to requests within 14 business days, which is within the one-month requirement.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "We aim to respond to all requests within 14 business days."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.3.2",
+          "status": "NOT_MET",
+          "reason": "The policy does not contain any provisions regarding extending the response timeframe by two further months for complex or numerous requests.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.3.3",
+          "status": "NOT_MET",
+          "reason": "The policy does not mention notifying data subjects of any extension and its reasons within the first month.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.3.4",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy states that access requests will be provided in a commonly used electronic format, but does not explicitly address that all electronic requests are answered electronically unless otherwise requested.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:6",
+              "quote": "We will provide this in a commonly used electronic format."
+            }
+          ],
+          "confidence": 0.85
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0536,
+        "llm_time": 2.3446,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.4",
+      "principle": "Notification when controller does not act on a request",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy contains no provisions regarding the procedure or commitment to inform data subjects within one month with reasons when a request will not be actioned. The policy does not inform data subjects of their right to lodge a complaint with a supervisory authority or seek a judicial remedy in the event of a refused request.",
+      "gap": "The policy contains no provisions regarding the procedure or commitment to inform data subjects within one month with reasons when a request will not be actioned. The policy does not inform data subjects of their right to lodge a complaint with a supervisory authority or seek a judicial remedy in the event of a refused request.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.4.1",
+          "status": "NOT_MET",
+          "reason": "The policy contains no provisions regarding the procedure or commitment to inform data subjects within one month with reasons when a request will not be actioned.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.4.2",
+          "status": "NOT_MET",
+          "reason": "The policy does not inform data subjects of their right to lodge a complaint with a supervisory authority or seek a judicial remedy in the event of a refused request.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0427,
+        "llm_time": 1.5236,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.5.a",
+      "principle": "Free-of-charge provision of information",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The supplied policy evidence outlines user rights regarding access, correction, and account deletion, but does not state whether data subject requests and related disclosures are provided free of charge.",
+      "gap": "The supplied policy evidence outlines user rights regarding access, correction, and account deletion, but does not state whether data subject requests and related disclosures are provided free of charge.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.5.a.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence outlines user rights regarding access, correction, and account deletion, but does not state whether data subject requests and related disclosures are provided free of charge.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0043,
+        "llm_time": 1.4381,
+        "validation_time": 0.0001,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.6",
+      "principle": "Additional identity verification",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The company policy does not mention or describe a process for requesting additional information to confirm the identity of a data subject when there is reasonable doubt about their identity.",
+      "gap": "The company policy does not mention or describe a process for requesting additional information to confirm the identity of a data subject when there is reasonable doubt about their identity.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.6.1",
+          "status": "NOT_MET",
+          "reason": "The company policy does not mention or describe a process for requesting additional information to confirm the identity of a data subject when there is reasonable doubt about their identity.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0322,
+        "llm_time": 1.7447,
+        "validation_time": 0.0001,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.5.b",
+      "principle": "Fee or refusal for manifestly unfounded or excessive requests",
+      "condition_logic": "ANY",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The provided policy evidence contains no mention of charging a reasonable administrative fee for manifestly unfounded or excessive requests. The provided policy evidence contains no mention of the option to refuse to act on manifestly unfounded or excessive requests.",
+      "gap": "The provided policy evidence contains no mention of charging a reasonable administrative fee for manifestly unfounded or excessive requests. The provided policy evidence contains no mention of the option to refuse to act on manifestly unfounded or excessive requests.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.5.b.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mention of charging a reasonable administrative fee for manifestly unfounded or excessive requests.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.5.b.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mention of the option to refuse to act on manifestly unfounded or excessive requests.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.531,
+        "llm_time": 1.6438,
+        "validation_time": 0.0001,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.7",
+      "principle": "Use of standardised icons",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy does not mention or use standardised icons to summarise processing information, and since the applicability condition states this applies only if the controller chooses to use them, this is not applicable. The policy does not use standardised icons, so the requirement for electronic icons to be machine-readable is not applicable.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.7.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy does not mention or use standardised icons to summarise processing information, and since the applicability condition states this applies only if the controller chooses to use them, this is not applicable.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "12.7.2",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy does not use standardised icons, so the requirement for electronic icons to be machine-readable is not applicable.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0971,
+        "llm_time": 1.5942,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 12,
+      "group_id": "12.1.a",
+      "principle": "Clear and accessible form of information",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.685,
+      "reason": "The policy clearly presents user rights (e.g., access, correction, deletion) in concise, plain language through sections like 'Right to Access' and 'Account Deletion'. Examples include 'You may request a copy... in a commonly used electronic format' and 'Users may close their account by email...'. The policy does not contain any sections specifically addressed to children. While it states 'Our Services are not directed at children under 13', this is a general disclaimer rather than information provided to children. No child-appropriate language or simplified content is present for child-directed information.",
+      "gap": "The policy does not contain any sections specifically addressed to children. While it states 'Our Services are not directed at children under 13', this is a general disclaimer rather than information provided to children. No child-appropriate language or simplified content is present for child-directed information.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "12.1.a.1",
+          "status": "MET",
+          "reason": "The policy clearly presents user rights (e.g., access, correction, deletion) in concise, plain language through sections like 'Right to Access' and 'Account Deletion'. Examples include 'You may request a copy... in a commonly used electronic format' and 'Users may close their account by email...'.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:6",
+              "quote": "You may request a copy of the personal data we hold about you. We will provide this in a commonly used electronic format."
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "We do not purchase data from third-party data brokers or acquire data through any other means.\n\n## 3 Legal Basis for Processing\n\nWe process personal d..."
+            }
+          ],
+          "confidence": 0.92
+        },
+        {
+          "obligation_id": "12.1.a.2",
+          "status": "NOT_MET",
+          "reason": "The policy does not contain any sections specifically addressed to children. While it states 'Our Services are not directed at children under 13', this is a general disclaimer rather than information provided to children. No child-appropriate language or simplified content is present for child-directed information.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:10",
+              "quote": "We use cookies and similar tracking technologies to improve user experience and analyse platform usage. You can control cookie preferences through you..."
+            }
+          ],
+          "confidence": 0.45
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0167,
+        "llm_time": 46.3497,
+        "validation_time": 0.0021,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 60.9893
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 12,
+    "execution_mode": "global_group_queue"
+  }
+}

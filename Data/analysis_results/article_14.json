@@ -1,0 +1,472 @@
+{
+  "article_number": 14,
+  "article_title": "Information to be provided where personal data have not been obtained from the data subject",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.8341,
+  "group_count": 8,
+  "completed_groups": 8,
+  "groups": [
+    {
+      "article_number": 14,
+      "group_id": "14.1.cdef",
+      "principle": "Purpose, legal basis, data categories, recipients and transfers",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9625,
+      "reason": "The policy outlines the legal bases for processing personal data, including contractual necessity, legitimate interests, legal obligation, and consent. The policy details categories of personal data collected directly, automatically, and from third parties. The policy clearly discloses the categories of third parties and specific third-party recipients with whom personal data is shared. The policy discloses international transfers and mentions appropriate safeguards such as Standard Contractual Clauses (SCCs), but does not state the means to obtain a copy of them.",
+      "gap": "The policy discloses international transfers and mentions appropriate safeguards such as Standard Contractual Clauses (SCCs), but does not state the means to obtain a copy of them.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.1.c",
+          "status": "MET",
+          "reason": "The policy outlines the legal bases for processing personal data, including contractual necessity, legitimate interests, legal obligation, and consent.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "We do not purchase data from third-party data brokers or acquire data through any other means.\n\n## 3 Legal Basis for Processing\n\nWe process personal d..."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "14.1.d",
+          "status": "MET",
+          "reason": "The policy details categories of personal data collected directly, automatically, and from third parties.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:2",
+              "quote": "## 2 Data We Collect\n\n### 2.1 Information You Provide Directly\n\n- Full name and email address at account registration\n- Phone number for OTP-based aut..."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "14.1.e",
+          "status": "MET",
+          "reason": "The policy clearly discloses the categories of third parties and specific third-party recipients with whom personal data is shared.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:8",
+              "quote": "TechStartup Pvt Ltd\n\nPrivacy Policy v2.1 — August 2025\n\n## 6 Data Sharing & Third Parties\n\nWe do not sell your personal data to any third parties. We ..."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "14.1.f",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy discloses international transfers and mentions appropriate safeguards such as Standard Contractual Clauses (SCCs), but does not state the means to obtain a copy of them.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:11",
+              "quote": "TechStartup Pvt Ltd\n\nPrivacy Policy v2.1 — August 2025\n\nWe do not use advertising or targeting cookies. You may disable non-essential cookies at any t..."
+            }
+          ],
+          "confidence": 0.85
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0159,
+        "llm_time": 2.9891,
+        "validation_time": 0.0009,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.2.ab",
+      "principle": "Storage period and legitimate interests",
+      "condition_logic": "ALL",
+      "status": "MET",
+      "confidence": 0.935,
+      "reason": "Policy explicitly states retention periods (12 months post-account closure for active accounts, 36 months for inactive accounts) and criteria (legal requirements for financial records). Policy specifies legitimate interests as 'fraud prevention, security, and product improvement' when processing under Article 6(1)(f).",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.2.a",
+          "status": "MET",
+          "reason": "Policy explicitly states retention periods (12 months post-account closure for active accounts, 36 months for inactive accounts) and criteria (legal requirements for financial records).",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "Data associated with active accounts is retained for the duration of the account's active status and for a period of 12 months after the account is closed, unless a longer retention period is required by law."
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "Transaction records and invoices are retained for 7 years in compliance with Indian tax laws."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "14.2.b",
+          "status": "MET",
+          "reason": "Policy specifies legitimate interests as 'fraud prevention, security, and product improvement' when processing under Article 6(1)(f).",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "Legitimate interests — for fraud prevention, security, and product improvement"
+            }
+          ],
+          "confidence": 0.92
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0128,
+        "llm_time": 24.0436,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.2.fg",
+      "principle": "Source of data and automated decision-making",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.925,
+      "reason": "The policy identifies the specific sources of personal data, including information provided directly, collected automatically, and obtained from third parties such as Google OAuth and LinkedIn, while clarifying that they do not purchase data from third-party data brokers. There is no mention of automated decision-making or profiling producing legal or similarly significant effects in the provided policy evidence.",
+      "gap": "The available policy evidence does not fully demonstrate compliance.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.2.f",
+          "status": "MET",
+          "reason": "The policy identifies the specific sources of personal data, including information provided directly, collected automatically, and obtained from third parties such as Google OAuth and LinkedIn, while clarifying that they do not purchase data from third-party data brokers.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:2",
+              "quote": "## 2 Data We Collect\n\n### 2.1 Information You Provide Directly\n\n- Full name and email address at account registration\n- Phone number for OTP-based aut..."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "14.2.g",
+          "status": "NOT_APPLICABLE",
+          "reason": "There is no mention of automated decision-making or profiling producing legal or similarly significant effects in the provided policy evidence.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0995,
+        "llm_time": 2.1859,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.1.ab",
+      "principle": "Controller and DPO identification",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.975,
+      "reason": "The policy explicitly identifies Rajesh Kumar as the Data Controller with full contact details (email, address, phone) in Section 12. The policy does not mention a Data Protection Officer (DPO) or their appointment, making this obligation inapplicable.",
+      "gap": "The available policy evidence does not fully demonstrate compliance.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.1.a",
+          "status": "MET",
+          "reason": "The policy explicitly identifies Rajesh Kumar as the Data Controller with full contact details (email, address, phone) in Section 12.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:12",
+              "quote": "Name: Rajesh Kumar | Designation: Chief Technology Officer & Data Controller | Email: privacy@techstartup.com | Address: TechStartup Pvt Ltd, 4th Floor, Brigade Tech Park, Whitefield, Bangalore - 560066, Karnataka, India | Phone: +91 80 4567 8900"
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "14.1.b",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy does not mention a Data Protection Officer (DPO) or their appointment, making this obligation inapplicable.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0409,
+        "llm_time": 29.9098,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.2.cde",
+      "principle": "Core rights, consent withdrawal, and complaint rights",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.85,
+      "reason": "Policy mentions access, correction, and deletion rights but omits restriction, objection, and data portability rights. Explicitly states the right to withdraw consent at any time without affecting prior lawful processing. Provides contact details for lodging complaints with the Data Controller.",
+      "gap": "Policy mentions access, correction, and deletion rights but omits restriction, objection, and data portability rights.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.2.c",
+          "status": "PARTIALLY_MET",
+          "reason": "Policy mentions access, correction, and deletion rights but omits restriction, objection, and data portability rights.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:6",
+              "quote": "You may request a copy of the personal data we hold about you... You may also update basic profile information directly in your account settings."
+            },
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "TechStartup Pvt Ltd\n\nPrivacy Policy v2.1 — August 2025\n\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at pr..."
+            }
+          ],
+          "confidence": 0.7
+        },
+        {
+          "obligation_id": "14.2.d",
+          "status": "MET",
+          "reason": "Explicitly states the right to withdraw consent at any time without affecting prior lawful processing.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:4",
+              "quote": "Where we rely on consent, you have the right to withdraw it at any time by contacting us at privacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that occurred before the withdrawal."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "14.2.e",
+          "status": "MET",
+          "reason": "Provides contact details for lodging complaints with the Data Controller.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:12",
+              "quote": "If you have any questions, concerns, or complaints... please contact: privacy@techstartup.com"
+            }
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1058,
+        "llm_time": 26.8248,
+        "validation_time": 0.0018,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.4",
+      "principle": "Notice of further processing for a new purpose",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 0.85,
+      "reason": "The company policy does not explicitly state that data subjects will be notified prior to processing for a new purpose. While consent is mentioned for marketing, there is no commitment to provide prior information about new processing purposes as required by Article 14(2).",
+      "gap": "The company policy does not explicitly state that data subjects will be notified prior to processing for a new purpose. While consent is mentioned for marketing, there is no commitment to provide prior information about new processing purposes as required by Article 14(2).",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.4.1",
+          "status": "NOT_MET",
+          "reason": "The company policy does not explicitly state that data subjects will be notified prior to processing for a new purpose. While consent is mentioned for marketing, there is no commitment to provide prior information about new processing purposes as required by Article 14(2).",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "We process personal data only when we have a valid legal basis to do so... Consent — for marketing communications and optional analytics"
+            }
+          ],
+          "confidence": 0.85
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0847,
+        "llm_time": 15.3226,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.5",
+      "principle": "Exemptions from the Article 14 information obligation",
+      "condition_logic": "ANY",
+      "status": "NOT_APPLICABLE",
+      "confidence": 0.375,
+      "reason": "Policy does not state that data subjects already possess the required information. It only describes processes for data access/correction upon request. No evidence of situations where providing information is impossible/disproportionate. Policy focuses on standard data handling processes. Mentions legal obligation as a processing basis but does not specify laws with built-in protections that exempt Article 14 obligations. References confidentiality but does not cite statutory professional secrecy obligations that would exempt notice requirements.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.5.a",
+          "status": "NOT_APPLICABLE",
+          "reason": "Policy does not state that data subjects already possess the required information. It only describes processes for data access/correction upon request.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "We process personal data only when we have a valid legal basis to do so."
+            }
+          ],
+          "confidence": 0.4
+        },
+        {
+          "obligation_id": "14.5.b",
+          "status": "NOT_APPLICABLE",
+          "reason": "No evidence of situations where providing information is impossible/disproportionate. Policy focuses on standard data handling processes.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:2",
+              "quote": "We do not purchase data from third-party data brokers or acquire data through any other means."
+            }
+          ],
+          "confidence": 0.35
+        },
+        {
+          "obligation_id": "14.5.c",
+          "status": "NOT_APPLICABLE",
+          "reason": "Mentions legal obligation as a processing basis but does not specify laws with built-in protections that exempt Article 14 obligations.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:3",
+              "quote": "The legal bases we rely on are: ... Legal obligation — to comply with applicable laws and regulations"
+            }
+          ],
+          "confidence": 0.45
+        },
+        {
+          "obligation_id": "14.5.d",
+          "status": "NOT_APPLICABLE",
+          "reason": "References confidentiality but does not cite statutory professional secrecy obligations that would exempt notice requirements.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:12",
+              "quote": "CONFIDENTIAL · Internal Document"
+            }
+          ],
+          "confidence": 0.3
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.076,
+        "llm_time": 22.8084,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 14,
+      "group_id": "14.3",
+      "principle": "Timing of providing information",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.8,
+      "reason": "Policy explicitly states a 14 business day response time, which is within the one-month requirement. Policy does not commit to providing information at the time of first communication with the data subject, only responding to requests within 14 days. No evidence in the policy addresses disclosure to another recipient or timing of information provision in such cases.",
+      "gap": "Policy does not commit to providing information at the time of first communication with the data subject, only responding to requests within 14 days. No evidence in the policy addresses disclosure to another recipient or timing of information provision in such cases.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "14.3.a",
+          "status": "MET",
+          "reason": "Policy explicitly states a 14 business day response time, which is within the one-month requirement.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:13",
+              "quote": "Within 14 business days"
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "14.3.b",
+          "status": "NOT_MET",
+          "reason": "Policy does not commit to providing information at the time of first communication with the data subject, only responding to requests within 14 days.",
+          "evidence": [
+            {
+              "chunk_id": "ed72641b-757e-4b5e-89b9-54815846ce37:5",
+              "quote": "We aim to respond to all requests within 14 business days"
+            }
+          ],
+          "confidence": 0.85
+        },
+        {
+          "obligation_id": "14.3.c",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "No evidence in the policy addresses disclosure to another recipient or timing of information provision in such cases.",
+          "evidence": [],
+          "confidence": 0.6
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0101,
+        "llm_time": 31.4832,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 92.4345
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 14,
+    "execution_mode": "global_group_queue"
+  }
+}
