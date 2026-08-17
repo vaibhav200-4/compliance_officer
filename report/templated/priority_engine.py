@@ -6,7 +6,7 @@ Runs on Track A data only (verdict + gap). Track B later can overwrite
 priority BUCKET itself stays rule-based (keeps risk ranking trustworthy/audit-safe).
 """
 
-from sample_report.templated.models import Requirement, PriorityAction
+from report.templated.models import Requirement, PriorityAction
 
 # Chapters covering core, most-scrutinized obligations get extra weight.
 # (II Principles, III Data Subject Rights, IV Controller/Processor duties)

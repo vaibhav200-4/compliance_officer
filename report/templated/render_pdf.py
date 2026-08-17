@@ -17,7 +17,7 @@ import os
 from jinja2 import Environment, FileSystemLoader
 from playwright.sync_api import sync_playwright
 
-from sample_report.templated.models import ReportData
+from report.templated.models import ReportData
 
 TEMPLATE_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "templates")

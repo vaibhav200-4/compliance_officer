@@ -1,0 +1,628 @@
+{
+  "meta": {
+    "company": "ABC",
+    "policy_analyzed": "Privacy Policy v1.0",
+    "standard": "GDPR — All 99 Articles, 11 Chapters",
+    "analysis_date": "17 August 2026",
+    "generated_by": "ComplianceIQ Engine v1.0 — onetab.ai",
+    "analyzed_by": "Agentic RAG Pipeline (4-Agent System)"
+  },
+  "overall": {
+    "score": 26.05,
+    "total": 428,
+    "fully_met": 59,
+    "partially_met": 105,
+    "not_met": 264,
+    "conflicting": 0,
+    "not_applicable": 0,
+    "risk_level": "HIGH RISK — Immediate action required",
+    "max_fine_exposure": "€20M or 4% annual revenue"
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "name": "General Provisions",
+      "article_range": "Art. 1–4",
+      "score": 52.78,
+      "status": "Needs Improvement",
+      "total": 36,
+      "fully_met": 15,
+      "partially_met": 8,
+      "not_met": 13,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the fundamental principles and definitions of the GDPR, which are essential for ensuring compliance with the regulation. Regulators scrutinize these provisions closely, and any shortcomings in this area can have far-reaching implications for an organization's overall GDPR compliance."
+    },
+    {
+      "chapter": 2,
+      "name": "Principles",
+      "article_range": "Art. 5–11",
+      "score": 54.35,
+      "status": "Needs Improvement",
+      "total": 23,
+      "fully_met": 9,
+      "partially_met": 7,
+      "not_met": 7,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the fundamental principles of data processing, including lawfulness, fairness, and transparency, which are heavily scrutinized by regulators to ensure organizations are handling personal data in a lawful and ethical manner. Failure to fully meet these principles can lead to significant compliance risks and reputational damage."
+    },
+    {
+      "chapter": 3,
+      "name": "Rights of the Data Subject",
+      "article_range": "Art. 12–23",
+      "score": 40.68,
+      "status": "High Risk",
+      "total": 59,
+      "fully_met": 10,
+      "partially_met": 28,
+      "not_met": 21,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the rights of data subjects, including access, rectification, and erasure, which are heavily scrutinized by regulators to ensure compliance with GDPR principles. Failure to fully implement these rights can lead to significant regulatory penalties and reputational damage."
+    },
+    {
+      "chapter": 4,
+      "name": "Controller and Processor",
+      "article_range": "Art. 24–43",
+      "score": 25.69,
+      "status": "High Risk",
+      "total": 109,
+      "fully_met": 14,
+      "partially_met": 28,
+      "not_met": 67,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the responsibilities of controllers and processors, which is a key aspect of GDPR compliance that regulators scrutinize closely, and the low score indicates a significant need for improvement in this area to mitigate potential risks and ensure adherence to the regulation."
+    },
+    {
+      "chapter": 5,
+      "name": "Third Country Transfers",
+      "article_range": "Art. 44–49",
+      "score": 26.92,
+      "status": "High Risk",
+      "total": 26,
+      "fully_met": 2,
+      "partially_met": 10,
+      "not_met": 14,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the transfer of personal data to third countries, which is heavily scrutinized by regulators to ensure compliance with GDPR standards, and the current score indicates significant room for improvement in meeting these requirements."
+    },
+    {
+      "chapter": 6,
+      "name": "Supervisory Authorities",
+      "article_range": "Art. 51–59",
+      "score": 15.28,
+      "status": "High Risk",
+      "total": 36,
+      "fully_met": 3,
+      "partially_met": 5,
+      "not_met": 28,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the roles and responsibilities of supervisory authorities, which are heavily scrutinized by regulators to ensure effective enforcement of GDPR provisions, and the current state of partial or non-compliance poses significant risks. Regulators closely examine the independence, tasks, and powers of these authorities, making it essential to address the identified gaps and ensure full compliance."
+    },
+    {
+      "chapter": 7,
+      "name": "Cooperation & Consistency",
+      "article_range": "Art. 60–76",
+      "score": 8.55,
+      "status": "High Risk",
+      "total": 76,
+      "fully_met": 0,
+      "partially_met": 13,
+      "not_met": 63,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the essential principles of cooperation and consistency among supervisory authorities, which are heavily scrutinized by regulators to ensure seamless enforcement of GDPR across member states. The significant number of unmet requirements in this chapter poses a substantial risk to compliance, highlighting the need for urgent attention and remediation."
+    },
+    {
+      "chapter": 8,
+      "name": "Remedies, Liability & Penalties",
+      "article_range": "Art. 77–84",
+      "score": 13.33,
+      "status": "High Risk",
+      "total": 30,
+      "fully_met": 2,
+      "partially_met": 4,
+      "not_met": 24,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the essential aspects of remedies, liability, and penalties under the GDPR, which are heavily scrutinized by regulators to ensure organizations are held accountable for non-compliance. Effective implementation of these measures is crucial to mitigate potential risks and fines, making this chapter a high-priority area for improvement."
+    },
+    {
+      "chapter": 9,
+      "name": "Special Situations",
+      "article_range": "Art. 85–91",
+      "score": 11.9,
+      "status": "High Risk",
+      "total": 21,
+      "fully_met": 2,
+      "partially_met": 1,
+      "not_met": 18,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers special situations such as processing for journalistic purposes and academic expression, which are frequently scrutinized by regulators to ensure compliance with GDPR provisions, and the low score indicates a significant need for improvement in these areas."
+    },
+    {
+      "chapter": 10,
+      "name": "Delegated Acts",
+      "article_range": "Art. 92–93",
+      "score": null,
+      "status": "Not Assessed",
+      "total": 0,
+      "fully_met": 0,
+      "partially_met": 0,
+      "not_met": 0,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": ""
+    },
+    {
+      "chapter": 11,
+      "name": "Final Provisions",
+      "article_range": "Art. 94–99",
+      "score": 20.83,
+      "status": "High Risk",
+      "total": 12,
+      "fully_met": 2,
+      "partially_met": 1,
+      "not_met": 9,
+      "conflicting": 0,
+      "not_applicable": 0,
+      "narrative": "This chapter is a critical gap area as it covers the final provisions of the GDPR, including the relationship between the regulation and existing EU law, which is closely scrutinized by regulators to ensure compliance. The high number of unmet requirements in this chapter poses a significant risk of non-compliance, highlighting the need for urgent attention and remediation."
+    }
+  ],
+  "requirements": [
+    {
+      "sub_id": "gdpr_article_97_Article_97_1_",
+      "chapter": 11,
+      "article_ref": "Art. gdpr_article_97_Article_97_1_",
+      "verdict": "NOT_MET",
+      "verdict_label": "Not Met",
+      "verdict_icon": "cross",
+      "confidence": 1.0,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec11_chunk0",
+          "text": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+          "page": null,
+          "similarity": 0.467
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_97_Article_97_1_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+      "gap": "The policy does not mention anything about the Commission's reports or evaluations.",
+      "analysis": "",
+      "fix_required": ""
+    },
+    {
+      "sub_id": "gdpr_article_97_Article_97_3_",
+      "chapter": 11,
+      "article_ref": "Art. gdpr_article_97_Article_97_3_",
+      "verdict": "NOT_MET",
+      "verdict_label": "Not Met",
+      "verdict_icon": "cross",
+      "confidence": 1.0,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.1_chunk0",
+          "text": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+          "page": null,
+          "similarity": 0.3159
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_97_Article_97_3_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+      "gap": "The policy does not mention anything about the Commission requesting information from Member States or supervisory authorities.",
+      "analysis": "",
+      "fix_required": ""
+    },
+    {
+      "sub_id": "gdpr_article_97_Article_97_5_",
+      "chapter": 11,
+      "article_ref": "Art. gdpr_article_97_Article_97_5_",
+      "verdict": "NOT_MET",
+      "verdict_label": "Not Met",
+      "verdict_icon": "cross",
+      "confidence": 1.0,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec11_chunk0",
+          "text": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+          "page": null,
+          "similarity": 0.4566
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.2_chunk0",
+          "text": "Section 5.2 - Right to Correction\nIf any personal data we hold about you is inaccurate or incomplete, you may request that we correct or\nupdate it. You may also update basic profile information directly in your account settings.",
+          "page": null,
+          "similarity": 0.3907
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec3_chunk0",
+          "text": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+          "page": null,
+          "similarity": 0.3477
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_97_Article_97_5_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+      "gap": "The policy does not mention anything about the Commission submitting proposals to amend the GDPR.",
+      "analysis": "",
+      "fix_required": ""
+    },
+    {
+      "sub_id": "gdpr_article_98_Article_98",
+      "chapter": 11,
+      "article_ref": "Art. gdpr_article_98_Article_98",
+      "verdict": "NOT_MET",
+      "verdict_label": "Not Met",
+      "verdict_icon": "cross",
+      "confidence": 1.0,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.1_chunk0",
+          "text": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+          "page": null,
+          "similarity": 0.4306
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.2_chunk0",
+          "text": "Section 5.2 - Right to Correction\nIf any personal data we hold about you is inaccurate or incomplete, you may request that we correct or\nupdate it. You may also update basic profile information directly in your account settings.",
+          "page": null,
+          "similarity": 0.4092
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec3_chunk0",
+          "text": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+          "page": null,
+          "similarity": 0.3592
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_98_Article_98 — full requirement text pending in master checklist.",
+      "your_policy": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+      "gap": "The policy does not mention anything about the Commission submitting legislative proposals to amend other Union legal acts.",
+      "analysis": "",
+      "fix_required": ""
+    },
+    {
+      "sub_id": "gdpr_article_99_Article_99_1_",
+      "chapter": 11,
+      "article_ref": "Art. gdpr_article_99_Article_99_1_",
+      "verdict": "NOT_MET",
+      "verdict_label": "Not Met",
+      "verdict_icon": "cross",
+      "confidence": 1.0,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec11_chunk0",
+          "text": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+          "page": null,
+          "similarity": 0.5357
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec1_chunk0",
+          "text": "Section 1 - Introduction & Scope\nTechStartup Pvt Ltd ('we', 'our', 'us') is committed to protecting the privacy of our users. This Privacy Policy\napplies to all individuals who access or use our platform, mobile applications, APIs, and related services\n(collectively, the 'Services').\nThis policy is governed by applicable Indian data protection laws and, where relevant, the General Data\nProtection Regulation (GDPR) for users based in the European Economic Area (EEA). We operate under\nthe Information Technology Act, 2000 and IT (Amendment) Act, 2008.\nBy using our Services, you acknowledge that you have read and understood this Privacy Policy. If you do\nnot agree with any part of this policy, you must discontinue use of our Services.",
+          "page": null,
+          "similarity": 0.3378
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_99_Article_99_1_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 11 - Changes to This Policy\nWe may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.\nWhen we make significant changes, we will notify users via email and display a prominent notice on the\nplatform at least 14 days before the changes take effect.\nThe 'Effective Date' at the top of this document indicates when the policy was last updated. Continued use\nof our Services after the effective date constitutes acceptance of the updated policy.",
+      "gap": "The policy does not mention anything about the entry into force of the GDPR.",
+      "analysis": "",
+      "fix_required": ""
+    },
+    {
+      "sub_id": "gdpr_article_4_Article_4_17_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_4_Article_4_17_",
+      "verdict": "NOT_MET",
+      "verdict_label": "Not Met",
+      "verdict_icon": "cross",
+      "confidence": 0.95,
+      "confidence_label": "High",
+      "evidence": [],
+      "gdpr_requires": "See GDPR Article gdpr_article_4_Article_4_17_ — full requirement text pending in master checklist.",
+      "your_policy": "No matching evidence found in policy.",
+      "gap": "No matching provision found in the policy.",
+      "analysis": "The policy does not meet the requirement as there is no matching provision found. The noted gap indicates a lack of relevant information in the policy. This gap needs to be addressed to ensure compliance.",
+      "fix_required": "Add a section documenting the implementation of Article 4(17) of the GDPR, including clear definitions and procedures."
+    },
+    {
+      "sub_id": "gdpr_article_24_Article_24_1_",
+      "chapter": 4,
+      "article_ref": "Art. gdpr_article_24_Article_24_1_",
+      "verdict": "PARTIALLY_MET",
+      "verdict_label": "Partially Met",
+      "verdict_icon": "partial",
+      "confidence": 0.9,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec3_chunk0",
+          "text": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+          "page": null,
+          "similarity": 0.4918
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec7_chunk0",
+          "text": "Section 7 - Data Security\nWe implement industry-standard technical and organisational measures to protect your personal data\nagainst unauthorised access, loss, destruction, or alteration.\n(cid:127) All data in transit is encrypted using TLS 1.3\n(cid:127) All data at rest is encrypted using AES-256\n(cid:127) Access to production systems is restricted to authorised personnel only via MFA\n(cid:127) We conduct quarterly internal security audits\n(cid:127) Penetration testing is conducted annually by a third-party security firm\nIn the event of a data breach that poses a risk to your rights and freedoms, we will notify affected users via\nemail within a reasonable timeframe. We also notify relevant regulatory authorities as required by\napplicable law.",
+          "page": null,
+          "similarity": 0.3752
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.2_chunk0",
+          "text": "Section 5.2 - Right to Correction\nIf any personal data we hold about you is inaccurate or incomplete, you may request that we correct or\nupdate it. You may also update basic profile information directly in your account settings.",
+          "page": null,
+          "similarity": 0.3751
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_24_Article_24_1_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+      "gap": "Lack of demonstration of compliance with the Regulation",
+      "analysis": "",
+      "fix_required": ""
+    },
+    {
+      "sub_id": "gdpr_article_7_Article_7_2_",
+      "chapter": 2,
+      "article_ref": "Art. gdpr_article_7_Article_7_2_",
+      "verdict": "PARTIALLY_MET",
+      "verdict_label": "Partially Met",
+      "verdict_icon": "partial",
+      "confidence": 0.8,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec3_chunk0",
+          "text": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+          "page": null,
+          "similarity": 0.3803
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec2.1_chunk0",
+          "text": "Section 2.1 - Information You Provide Directly\n(cid:127) Full name and email address at account registration\n(cid:127) Phone number for OTP-based authentication\n(cid:127) Profile information including job title and company name\n(cid:127) Payment details processed via Razorpay (we do not store card numbers)\n(cid:127) Support tickets and chat transcripts when you contact us",
+          "page": null,
+          "similarity": 0.3774
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.1_chunk0",
+          "text": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+          "page": null,
+          "similarity": 0.3381
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_7_Article_7_2_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+      "gap": "clearly distinguishable, intelligible and easily accessible language not explicitly mentioned",
+      "analysis": "The policy partially meets the requirement, but it lacks explicit mention of using clearly distinguishable, intelligible, and easily accessible language. This omission may lead to confusion among data subjects.",
+      "fix_required": "Revise Section 3 to explicitly state that the legal basis for processing is explained in a clearly distinguishable, intelligible, and easily accessible manner."
+    },
+    {
+      "sub_id": "gdpr_article_14_Article_14_2_",
+      "chapter": 3,
+      "article_ref": "Art. gdpr_article_14_Article_14_2_",
+      "verdict": "PARTIALLY_MET",
+      "verdict_label": "Partially Met",
+      "verdict_icon": "partial",
+      "confidence": 0.8,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec3_chunk0",
+          "text": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+          "page": null,
+          "similarity": 0.5404
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.1_chunk0",
+          "text": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+          "page": null,
+          "similarity": 0.5169
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.2_chunk0",
+          "text": "Section 5.2 - Right to Correction\nIf any personal data we hold about you is inaccurate or incomplete, you may request that we correct or\nupdate it. You may also update basic profile information directly in your account settings.",
+          "page": null,
+          "similarity": 0.4954
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_14_Article_14_2_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+      "gap": "withdrawal of consent, source of personal data",
+      "analysis": "The policy evidence partially meets the requirement as it provides some information on the legal basis for processing, but it does not fully address the withdrawal of consent and the source of personal data. The noted gap suggests that the policy may not fully satisfy the GDPR's requirements.",
+      "fix_required": "Update the 'Legal Basis for Processing' section to include information on the withdrawal of consent and the source of personal data, and provide a clear explanation of the implications of withdrawal."
+    },
+    {
+      "sub_id": "gdpr_article_14_Article_14_5_",
+      "chapter": 3,
+      "article_ref": "Art. gdpr_article_14_Article_14_5_",
+      "verdict": "PARTIALLY_MET",
+      "verdict_label": "Partially Met",
+      "verdict_icon": "partial",
+      "confidence": 0.8,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec2.1_chunk0",
+          "text": "Section 2.1 - Information You Provide Directly\n(cid:127) Full name and email address at account registration\n(cid:127) Phone number for OTP-based authentication\n(cid:127) Profile information including job title and company name\n(cid:127) Payment details processed via Razorpay (we do not store card numbers)\n(cid:127) Support tickets and chat transcripts when you contact us",
+          "page": null,
+          "similarity": 0.4245
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec5.1_chunk0",
+          "text": "Section 5.1 - Right to Access\nYou may request a copy of the personal data we hold about you. We will provide this in a commonly used\nelectronic format.",
+          "page": null,
+          "similarity": 0.4212
+        },
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec3_chunk0",
+          "text": "Section 3 - Legal Basis for Processing\nWe process personal data only when we have a valid legal basis to do so. The legal bases we rely on are:\n(cid:127) Contractual necessity — to provide the Services you have signed up for\n(cid:127) Legitimate interests — for fraud prevention, security, and product improvement\n(cid:127) Legal obligation — to comply with applicable laws and regulations\n(cid:127) Consent — for marketing communications and optional analytics (you can withdraw at any time)\nWhere we rely on consent, you have the right to withdraw it at any time by contacting us at\nprivacy@techstartup.com. Withdrawal of consent does not affect the lawfulness of processing that\noccurred before the withdrawal.",
+          "page": null,
+          "similarity": 0.3985
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_14_Article_14_5_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 2.1 - Information You Provide Directly\n(cid:127) Full name and email address at account registration\n(cid:127) Phone number for OTP-based authentication\n(cid:127) Profile information including job title and company name\n(cid:127) Payment details processed via Razorpay (we do not store card numbers)\n(cid:127) Support tickets and chat transcripts when you contact us",
+      "gap": "circumstances where providing information is impossible",
+      "analysis": "The policy evidence partially meets the requirement as it provides some information on the categories of personal data, but it does not fully address the circumstances where providing information is impossible. The noted gap suggests that the policy may not fully satisfy the GDPR's requirements.",
+      "fix_required": "Update the 'Information You Provide Directly' section to include a clear explanation of the circumstances under which it may be impossible to provide information, such as cases where the data subject is unable to provide consent."
+    },
+    {
+      "sub_id": "gdpr_article_4_Article_4_23_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_4_Article_4_23_",
+      "verdict": "FULLY_MET",
+      "verdict_label": "Fully Met",
+      "verdict_icon": "check",
+      "confidence": 1.0,
+      "confidence_label": "High",
+      "evidence": [
+        {
+          "chunk_id": "techstartup_pvt_ltd_sec9_chunk0",
+          "text": "Section 9 - International Transfers\nOur primary servers are located in AWS Mumbai (ap-south-1) region. Some of our third-party service\nproviders (such as Mixpanel and Sentry) may process data outside India, including in the United States\nand European Union.\nWhen transferring data internationally, we ensure appropriate safeguards are in place, including Standard\nContractual Clauses (SCCs) where required under GDPR for EEA user data.",
+          "page": null,
+          "similarity": 0.3522
+        }
+      ],
+      "gdpr_requires": "See GDPR Article gdpr_article_4_Article_4_23_ — full requirement text pending in master checklist.",
+      "your_policy": "Section 9 - International Transfers\nOur primary servers are located in AWS Mumbai (ap-south-1) region. Some of our third-party service\nproviders (such as Mixpanel and Sentry) may process data outside India, including in the United States\nand European Union.\nWhen transferring data internationally, we ensure appropriate safeguards are in place, including Standard\nContractual Clauses (SCCs) where required under GDPR for EEA user data.",
+      "gap": null,
+      "analysis": "",
+      "fix_required": ""
+    }
+  ],
+  "priority_actions": [
+    {
+      "priority": "P1",
+      "sub_id": "gdpr_article_10_Article_10",
+      "chapter": 2,
+      "article_ref": "Art. gdpr_article_10_Article_10",
+      "action_required": "Create a section dedicated to the processing of personal data related to criminal convictions and offences, outlining the legal bases, conditions, and safeguards applicable to such processing.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P1",
+      "sub_id": "gdpr_article_5_Article_5_2_",
+      "chapter": 2,
+      "article_ref": "Art. gdpr_article_5_Article_5_2_",
+      "action_required": "Add a section documenting the principle of lawfulness, fairness, and transparency, as per Article 5(2) of the GDPR.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P1",
+      "sub_id": "gdpr_article_6_Article_6_2_",
+      "chapter": 2,
+      "article_ref": "Art. gdpr_article_6_Article_6_2_",
+      "action_required": "Add a provision outlining the specific conditions for processing based on Article 6(1)(c) or (e), including the carrying out of a task in the public interest or in the exercise of official authority vested in the controller.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P1",
+      "sub_id": "gdpr_article_8_Article_8_3_",
+      "chapter": 2,
+      "article_ref": "Art. gdpr_article_8_Article_8_3_",
+      "action_required": "Include a provision outlining the conditions for child's consent in relation to information society services, as per Article 8(3) of the GDPR.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P1",
+      "sub_id": "gdpr_article_9_Article_9_1_",
+      "chapter": 2,
+      "article_ref": "Art. gdpr_article_9_Article_9_1_",
+      "action_required": "Add a provision to Section 3, explicitly stating the prohibition of processing special categories of personal data, as per Article 9(1) of the GDPR.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P2",
+      "sub_id": "gdpr_article_2_Article_2_2_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_2_Article_2_2_",
+      "action_required": "Add a section detailing exceptions to the application of the Regulation, including specific scenarios where the Regulation does not apply and the rationale behind these exceptions.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P2",
+      "sub_id": "gdpr_article_3_Article_3_2_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_3_Article_3_2_",
+      "action_required": "Develop and document a clear procedure for ensuring compliance with GDPR Article 3(2), including any necessary measures for international data transfers.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P2",
+      "sub_id": "gdpr_article_4_Article_4_13_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_4_Article_4_13_",
+      "action_required": "Add a section addressing the requirement, including relevant details and information as specified in the GDPR Article.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P2",
+      "sub_id": "gdpr_article_4_Article_4_14_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_4_Article_4_14_",
+      "action_required": "Add a section addressing the requirement, including relevant details and information as specified in the GDPR Article.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P2",
+      "sub_id": "gdpr_article_4_Article_4_15_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_4_Article_4_15_",
+      "action_required": "Add a section addressing the requirement, including relevant details and information as specified in the GDPR Article.",
+      "current_status": "Not Met"
+    },
+    {
+      "priority": "P3",
+      "sub_id": "gdpr_article_1_Article_1_2_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_1_Article_1_2_",
+      "action_required": "Add an explicit statement on the protection of fundamental rights and freedoms, including a commitment to respecting and promoting these rights in personal data processing.",
+      "current_status": "Partially Met"
+    },
+    {
+      "priority": "P3",
+      "sub_id": "gdpr_article_1_Article_1_3_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_1_Article_1_3_",
+      "action_required": "Add an explicit statement on the free movement of personal data, including a commitment to facilitating the transfer of personal data across borders while ensuring adequate safeguards.",
+      "current_status": "Partially Met"
+    },
+    {
+      "priority": "P3",
+      "sub_id": "gdpr_article_3_Article_3_1_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_3_Article_3_1_",
+      "action_required": "Add a statement explicitly addressing extraterritorial jurisdiction and how the company will handle personal data processing in accordance with GDPR Article 3(1).",
+      "current_status": "Partially Met"
+    },
+    {
+      "priority": "P3",
+      "sub_id": "gdpr_article_3_Article_3_3_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_3_Article_3_3_",
+      "action_required": "Provide additional information on extraterritorial jurisdiction, including how the company will handle personal data processing in accordance with GDPR Article 3(3) and any relevant international data transfer agreements.",
+      "current_status": "Partially Met"
+    },
+    {
+      "priority": "P3",
+      "sub_id": "gdpr_article_4_Article_4_16_",
+      "chapter": 1,
+      "article_ref": "Art. gdpr_article_4_Article_4_16_",
+      "action_required": "Add a specific definition of 'main establishment', including criteria for determining the main establishment and its implications for international transfers.",
+      "current_status": "Partially Met"
+    }
+  ],
+  "executive_summary": "Company ABC's overall GDPR compliance posture is at a HIGH RISK level, with an overall score of 26.05%, indicating a significant need for immediate action. The strongest areas of compliance are found in Chapters 1 and 2, which pertain to General Provisions and Principles, scoring 52.78% and 54.35%, respectively. However, critical gaps are identified in various chapters, particularly in Chapters 3, 4, 6, 7, 8, and 9, which concern the Rights of the Data Subject, Controller and Processor, Supervisory Authorities, Cooperation & Consistency, Remedies, Liability & Penalties, and Special Situations. The most critical gaps are related to specific articles, including the processing of personal data related to criminal convictions and offences, the principle of lawfulness, fairness, and transparency, conditions for processing based on Article 6(1)(c) or (e), child's consent in relation to information society services, and the prohibition of processing special categories of personal data. These gaps matter legally as they directly impact the company's ability to comply with the GDPR, and their remediation is urgent due to the HIGH RISK level, requiring immediate action to mitigate potential legal and reputational consequences.",
+  "score_ring_offset": 250.9,
+  "score_ring_circumference": 339.29
+}

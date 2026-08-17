@@ -3,7 +3,7 @@ from aggregator.aggregator_func import aggregate_results
 
 
 # Load sample Judge outputs
-with open("../../dataa/judge_input.json", "r", encoding="utf-8") as f:
+with open("../dataa/judge_input.json", "r", encoding="utf-8") as f:
     judge_results = json.load(f)
 
 

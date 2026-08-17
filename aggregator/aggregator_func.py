@@ -66,7 +66,7 @@ def validate_judge_result(result):
 
     verdict = result["verdict"]
 
-    if verdict not in VERDICT_SCORE:
+    if verdict not in VERDICT_SCORE and verdict != "NOT_APPLICABLE":
         raise ValueError(
             f"Invalid verdict '{verdict}' "
             f"for obligation {result['obligation_id']}"
@@ -94,10 +94,21 @@ def transform_requirement(result):
 
 def aggregate_chapter(chapter_number, chapter_results):
 
-    total = len(chapter_results)
+    # -----------------------------------------------------
+    # Split out NOT_APPLICABLE -- shown in report, never scored
+    # -----------------------------------------------------
+    applicable_results = [
+        r for r in chapter_results if r["verdict"] != "NOT_APPLICABLE"
+    ]
+    not_applicable_results = [
+        r for r in chapter_results if r["verdict"] == "NOT_APPLICABLE"
+    ]
+
+    total = len(applicable_results)
 
     # -----------------------------------------------------
-    # No obligations for this chapter
+    # No SCORABLE obligations for this chapter
+    # (either truly empty, or everything was not_applicable)
     # -----------------------------------------------------
 
     if total == 0:
@@ -110,27 +121,30 @@ def aggregate_chapter(chapter_number, chapter_results):
                 "fully_met": 0,
                 "partially_met": 0,
                 "not_met": 0,
-                "conflicting": 0
+                "conflicting": 0,
+                "not_applicable": len(not_applicable_results),
             },
 
             "chapter_scores": [
                 {
                     "chapter": chapter_number,
                     "score": None,
-                    "status": "Not Assessed"
+                    "status": "Not Assessed",
                 }
             ],
 
-            "requirements": []
+            "requirements": [
+                transform_requirement(r) for r in not_applicable_results
+            ],
         }
 
     # -----------------------------------------------------
-    # Count verdicts
+    # Count verdicts (scorable only)
     # -----------------------------------------------------
 
     verdict_counts = Counter(
         result["verdict"]
-        for result in chapter_results
+        for result in applicable_results
     )
 
     fully_met = verdict_counts.get("FULLY_MET", 0)
@@ -139,12 +153,12 @@ def aggregate_chapter(chapter_number, chapter_results):
     conflicting = verdict_counts.get("CONFLICTING", 0)
 
     # -----------------------------------------------------
-    # Calculate score
+    # Calculate score (denominator excludes not_applicable)
     # -----------------------------------------------------
 
     total_points = sum(
         VERDICT_SCORE[result["verdict"]]
-        for result in chapter_results
+        for result in applicable_results
     )
 
     score = round(
@@ -159,7 +173,8 @@ def aggregate_chapter(chapter_number, chapter_results):
     status = get_status(score)
 
     # -----------------------------------------------------
-    # Requirement-level output
+    # Requirement-level output -- includes not_applicable too,
+    # so the report can still list them (for audit transparency)
     # -----------------------------------------------------
 
     requirements = [
@@ -179,21 +194,20 @@ def aggregate_chapter(chapter_number, chapter_results):
             "fully_met": fully_met,
             "partially_met": partially_met,
             "not_met": not_met,
-            "conflicting": conflicting
+            "conflicting": conflicting,
+            "not_applicable": len(not_applicable_results),
         },
 
         "chapter_scores": [
             {
                 "chapter": chapter_number,
                 "score": score,
-                "status": status
+                "status": status,
             }
         ],
 
-        "requirements": requirements
+        "requirements": requirements,
     }
-
-
 # =========================================================
 # AGGREGATE ALL 11 CHAPTERS
 # =========================================================

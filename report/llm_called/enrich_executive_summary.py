@@ -7,9 +7,9 @@ to write a coherent summary — not the raw aggregator JSON.
 
 from langchain_core.prompts import ChatPromptTemplate
 
-from sample_report.templated.models import ReportData
-from sample_report.llm_called.llm_schemas import ExecutiveSummaryOutput
-from sample_report.llm_called.llm_client import get_llm
+from report.templated.models import ReportData
+from report.llm_called.llm_schemas import ExecutiveSummaryOutput
+from report.llm_called.llm_client import get_llm
 
 SYSTEM_PROMPT = """You are a GDPR compliance analyst writing the Executive Summary section
 of a formal gap-analysis report for company leadership. Write ONE professional paragraph

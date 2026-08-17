@@ -99,6 +99,7 @@ VERDICT_META = {
     "PARTIALLY_MET": {"label": "Partially Met", "icon": "partial", "css": "verdict-partial"},
     "NOT_MET":       {"label": "Not Met",       "icon": "cross",   "css": "verdict-notmet"},
     "CONFLICTING":   {"label": "Conflicting",   "icon": "conflict","css": "verdict-conflict"},
+"NOT_APPLICABLE": {"label": "Not Applicable", "icon": "info", "css": "verdict-na"},
 }
 
 

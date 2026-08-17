@@ -11,12 +11,12 @@ directly, it rebuilds Track A first then enriches.
 
 import json
 
-from sample_report.templated.build_report_data import build_report_data
-from sample_report.llm_called.enrich_requirements import enrich_requirements_for_chapter
-from sample_report.llm_called.enrich_chapters import needs_narrative, enrich_chapter_narrative
-from sample_report.llm_called.enrich_executive_summary import generate_executive_summary
-from sample_report.templated.priority_engine import refine_priority_actions_with_fixes
-from sample_report.templated.render_pdf import render_report_pdf   # swap to render_pdf_playwright if needed
+from report.templated.build_report_data import build_report_data
+from report.llm_called.enrich_requirements import enrich_requirements_for_chapter
+from report.llm_called.enrich_chapters import needs_narrative, enrich_chapter_narrative
+from report.llm_called.enrich_executive_summary import generate_executive_summary
+from report.templated.priority_engine import refine_priority_actions_with_fixes
+from report.templated.render_pdf import render_report_pdf   # swap to render_pdf_playwright if needed
 
 
 def enrich_report(report_data):
@@ -60,7 +60,7 @@ def enrich_report(report_data):
 if __name__ == "__main__":
     from aggregator.aggregator_func import aggregate_results   # your existing function
 
-    with open("sample_report/judge/judge_input.json", "r", encoding="utf-8") as f:
+    with open("report/judge/judge_input.json", "r", encoding="utf-8") as f:
         judge_results = json.load(f)
 
     aggregated_results = aggregate_results(judge_results)

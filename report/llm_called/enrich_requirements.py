@@ -1,8 +1,13 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-from sample_report.templated.models import Requirement
-from sample_report.llm_called.llm_schemas import ChapterEnrichmentBatch
-from sample_report.llm_called.llm_client import get_llm
+from report.templated.models import Requirement
+from report.llm_called.llm_schemas import ChapterEnrichmentBatch
+from report.llm_called.llm_client import get_llm, MODEL_CHAIN
+
+import time
+from groq import RateLimitError as GroqRateLimitError
+
+_exhausted_models: set[str] = set()
 
 SYSTEM_PROMPT = """You are a GDPR compliance analyst writing entries for a formal gap-analysis report.
 For EACH requirement given, produce:
@@ -22,6 +27,9 @@ Requirements needing analysis:
 # Max requirements sent to the LLM in a single call. Tune down if you're on a
 # smaller-context model (e.g. llama-3.1-8b-instant); tune up on 70B-class models.
 BATCH_SIZE = 8
+
+MAX_RETRIES = 2
+INITIAL_BACKOFF = 3
 
 
 def _format_requirement(req: Requirement) -> str:
@@ -44,25 +52,52 @@ def _enrich_batch(
     article_range: str,
     batch: list[Requirement],
 ) -> dict[str, dict]:
-    """Runs a single LLM call for one batch of requirements (<= BATCH_SIZE)."""
-    llm = get_llm().with_structured_output(ChapterEnrichmentBatch)
+    """Runs a single LLM call for one batch of requirements (<= BATCH_SIZE).
+    Tries each model in MODEL_CHAIN in order, falling through to the next
+    model when the current one hits a quota/rate-limit error or otherwise fails.
+    """
     prompt = ChatPromptTemplate.from_messages([
         ("system", SYSTEM_PROMPT),
         ("user", USER_TEMPLATE),
     ])
-
     requirements_block = "\n".join(_format_requirement(r) for r in batch)
-    chain = prompt | llm
-    result: ChapterEnrichmentBatch = chain.invoke({
-        "chapter_name": chapter_name,
-        "article_range": article_range,
-        "requirements_block": requirements_block,
-    })
+    last_exc = None
 
-    return {
-        item.sub_id: {"analysis": item.analysis, "fix_required": item.fix_required}
-        for item in result.items
-    }
+    for model_name in MODEL_CHAIN:
+        if model_name in _exhausted_models:
+            continue
+
+        llm = get_llm(model=model_name).with_structured_output(ChapterEnrichmentBatch)
+        chain = prompt | llm
+        backoff = INITIAL_BACKOFF
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                result: ChapterEnrichmentBatch = chain.invoke({
+                    "chapter_name": chapter_name,
+                    "article_range": article_range,
+                    "requirements_block": requirements_block,
+                })
+                return {
+                    item.sub_id: {"analysis": item.analysis, "fix_required": item.fix_required}
+                    for item in result.items
+                }
+            except GroqRateLimitError as e:
+                print(f"    {model_name} quota/rate limit hit -- marking exhausted, trying next model in chain...")
+                _exhausted_models.add(model_name)
+                last_exc = e
+                break
+            except Exception as e:
+                last_exc = e
+                if attempt == MAX_RETRIES:
+                    print(f"    {model_name} failed after {MAX_RETRIES} attempts: {e}")
+                    break
+                print(
+                    f"    retry {attempt}/{MAX_RETRIES} on {model_name} ({e.__class__.__name__}), waiting {backoff}s...")
+                time.sleep(backoff)
+                backoff *= 2
+
+    print(f"    All models in chain exhausted for this batch ({len(batch)} reqs will have empty analysis/fix_required): {last_exc}")
+    return {}
 
 
 def enrich_requirements_for_chapter(
@@ -89,5 +124,9 @@ def enrich_requirements_for_chapter(
             print(f"    Sub-batch {i + 1}/{len(batches)} ({len(batch)} requirements)...")
         batch_results = _enrich_batch(chapter_name, article_range, batch)
         merged.update(batch_results)
+
+    failed_ids = [r.sub_id for r in requirements if r.sub_id not in merged]
+    if failed_ids:
+        print(f"    WARNING: {len(failed_ids)} requirement(s) in {chapter_name} have NO enrichment: {failed_ids}")
 
     return merged

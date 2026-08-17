@@ -1,18 +1,3 @@
-"""
-upload_to_pinecone.py
-------------------------
-Step 4: Embedded chunks ko Pinecone index mein upsert karta hai.
-
-IMPORTANT: API keys .env se load ho rahi hain, hardcode NAHI karni
-(jaisa maine KisanSaathi mein bhi suggest kiya tha).
-
-Input : chunks_embedded.json (from generate_embeddings.py)
-Output: chunks Pinecone index mein upload ho jaate hain
-
-Usage:
-    python upload_to_pinecone.py --chunks data/chunks_embedded.json --dim 384
-"""
-
 import argparse
 import json
 import os
@@ -47,15 +32,15 @@ def get_or_create_index(pc: Pinecone, index_name: str, dimension: int):
     return pc.Index(index_name)
 
 
-def upsert_chunks(index, chunks: list):
+def upsert_chunks(index, chunks: list, namespace: str):
     vectors = [
         {"id": c["id"], "values": c["values"], "metadata": c["metadata"]}
         for c in chunks
     ]
 
-    for i in tqdm(range(0, len(vectors), BATCH_SIZE), desc="Upserting to Pinecone"):
+    for i in tqdm(range(0, len(vectors), BATCH_SIZE), desc=f"Upserting to '{namespace}'"):
         batch = vectors[i:i + BATCH_SIZE]
-        index.upsert(vectors=batch)
+        index.upsert(vectors=batch, namespace=namespace)
 
 
 def main():
@@ -63,6 +48,8 @@ def main():
     parser.add_argument("--chunks", required=True, help="Path to chunks_embedded.json")
     parser.add_argument("--dim", type=int, required=True,
                          help="Embedding dimension (printed by generate_embeddings.py)")
+    parser.add_argument("--namespace", required=True,
+                         help="Pinecone namespace to upsert into, e.g. 'policies' or 'gdpr_articles'")
     args = parser.parse_args()
 
     if not PINECONE_API_KEY:
@@ -74,10 +61,12 @@ def main():
 
     pc = Pinecone(api_key=PINECONE_API_KEY)
     index = get_or_create_index(pc, INDEX_NAME, args.dim)
-    upsert_chunks(index, chunks)
+    upsert_chunks(index, chunks, namespace=args.namespace)
 
     stats = index.describe_index_stats()
-    print(f"Done. Index '{INDEX_NAME}' now has {stats['total_vector_count']} total vectors.")
+    ns_count = stats["namespaces"].get(args.namespace, {}).get("vector_count", 0)
+    print(f"Done. Namespace '{args.namespace}' now has {ns_count} vectors "
+          f"(index total: {stats['total_vector_count']}).")
 
 
 if __name__ == "__main__":

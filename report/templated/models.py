@@ -37,8 +37,8 @@ class Requirement(BaseModel):
 
 class ChapterScore(BaseModel):
     chapter: int
-    name: str                              # Track A (static lookup)
-    article_range: str                     # Track A (static lookup)
+    name: str
+    article_range: str
     score: Optional[float] = None
     status: str = "Not Assessed"
     total: int = 0
@@ -46,10 +46,10 @@ class ChapterScore(BaseModel):
     partially_met: int = 0
     not_met: int = 0
     conflicting: int = 0
+    not_applicable: int = 0        # <-- ADD THIS LINE
 
     # ---- LLM (Track B) ----
-    narrative: str = ""                    # 1-2 line callout, only for weak chapters
-
+    narrative: str = ""
 
 class OverallSummary(BaseModel):
     score: Optional[float] = None
@@ -58,9 +58,9 @@ class OverallSummary(BaseModel):
     partially_met: int = 0
     not_met: int = 0
     conflicting: int = 0
-    risk_level: str = "Not Assessed"       # Track A (threshold rule)
-    max_fine_exposure: str = "€20M or 4% annual revenue"  # static, GDPR fixed text
-
+    not_applicable: int = 0        # <-- ADD THIS LINE
+    risk_level: str = "Not Assessed"
+    max_fine_exposure: str = "€20M or 4% annual revenue"
 
 class Meta(BaseModel):
     company: str

@@ -26,13 +26,16 @@ Output: evidence_for_obligations.json
     ...
   ]
 """
-
+import os
 import json
 import numpy as np
 from pinecone import Pinecone
+from dotenv import load_dotenv
 
+load_dotenv()
+api_key = os.getenv("GROQ_API_KEY")
 # ---------- CONFIG ----------
-PINECONE_API_KEY = "pcsk_5VSGjr_9A67zH5nY6MRDFoWMuicMuBbBtcb5MgWiQ3cxTGH6DXnyz5aTtKjb6dUyg6piLy"
+PINECONE_API_KEY = "api_key"
 INDEX_NAME = "generic-rag"
 COMPANY_NAME = "TechStartup Pvt Ltd"
 ARTICLE_EMBEDDINGS_PATH = "../dataa/article_embeddings1.npy"

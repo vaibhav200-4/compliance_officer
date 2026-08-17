@@ -28,12 +28,13 @@ import threading
 from collections import deque
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from sample_report.llm_called.llm_client import get_llm
-from sample_report.llm_called.llm_schemas import JudgeVerdictBatchOutput
-
+from report.llm_called.llm_client import get_llm
+from report.llm_called.llm_schemas import JudgeVerdictBatchOutput
+from applicability.company_profile import extract_company_profile
+from applicability.filter_obligations import filter_applicable
 # ---------- CONFIG ----------
-EVIDENCE_INPUT_PATH = "sample_chunking/evidence_for_obligations.json"
-OUTPUT_PATH = "sample_report/judge/judge_input.json"
+EVIDENCE_INPUT_PATH = "dataa/evidence_for_obligations.json"
+OUTPUT_PATH = "dataa/judge_input.json"
 
 MIN_SIMILARITY_FOR_EVIDENCE = 0.3     # evidence below this isn't shown to the LLM at all
           # obligations whose BEST similarity is below this -> auto NOT_MET, skip LLM entirely
@@ -45,6 +46,12 @@ MAX_REQUESTS_PER_MINUTE = 25   # apna actual Groq limit confirm karke set karna
 MAX_RETRIES = 5
 INITIAL_BACKOFF_SECONDS = 2
 # -----------------------------
+
+# ---------- APPLICABILITY CONFIG ----------
+TAGGED_METADATA_PATH = "dataa/article_metadata1_tagged.json"
+POLICY_CHUNKS_PATH = "chunking/policy_chunks.json"
+COMPANY_PROFILE_CACHE_PATH = "dataa/company_profile.json"
+# --------------------------------------------
 
 SYSTEM_PROMPT = """You are a GDPR compliance judge. You will be given MULTIPLE GDPR obligations,
 each with its own retrieved policy evidence excerpts. Judge EACH ONE independently.
@@ -96,10 +103,56 @@ def make_auto_not_met(obligation):
         "verdict": "NOT_MET",
         "confidence": 0.95,
         "reason": "No sufficiently relevant policy text was found for this obligation (below similarity threshold).",
-        "gap": "No matching provision found in the policy.",
+        "gap": f"Not applicable — this obligation only applies when: {', '.join(obligation.get('applicability_conditions', []))}.",
         "evidence": [],
     }
 
+def make_not_applicable(obligation):
+    """Not applicable to this company's processing activities -- no LLM call, no penalty."""
+    return {
+        "article_number": obligation["article_number"],
+        "article_name": obligation["article_name"],
+        "chapter_number": obligation["chapter_number"],
+        "obligation_id": obligation["id"],
+        "severity": obligation.get("severity", "MEDIUM"),
+        "verdict": "NOT_APPLICABLE",
+        "confidence": 1.0,
+        "reason": f"Not applicable -- requires: {', '.join(obligation.get('applicability_conditions', []))}",
+        "gap": f"Not applicable — this obligation only applies when: {', '.join(obligation.get('applicability_conditions', []))}.",
+        "evidence": [],
+    }
+
+
+def load_tagged_conditions():
+    """id -> applicability_conditions lookup from the tagged metadata file."""
+    try:
+        with open(TAGGED_METADATA_PATH, "r", encoding="utf-8") as f:
+            tagged = json.load(f)
+        return {o["id"]: o.get("applicability_conditions", []) for o in tagged}
+    except FileNotFoundError:
+        print(f"  WARNING: {TAGGED_METADATA_PATH} not found -- treating ALL obligations as universal (no filtering).")
+        return {}
+
+
+def get_or_extract_company_profile():
+    """Cache the profile so a resumed/checkpointed run doesn't re-extract it."""
+    try:
+        with open(COMPANY_PROFILE_CACHE_PATH, "r", encoding="utf-8") as f:
+            cached = json.load(f)
+        print("  Using cached company profile.")
+        return cached
+    except FileNotFoundError:
+        pass
+
+    with open(POLICY_CHUNKS_PATH, "r", encoding="utf-8") as f:
+        chunks = json.load(f)
+    full_text = "\n".join(c["text"] for c in chunks)
+
+    profile = extract_company_profile(full_text)
+    profile_dict = profile.dict() if hasattr(profile, "dict") else profile
+    with open(COMPANY_PROFILE_CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(profile_dict, f, indent=2)
+    return profile_dict
 
 def build_batch_prompt(batch):
     blocks = []
@@ -201,7 +254,6 @@ def save_checkpoint(results):
 def main():
     with open(EVIDENCE_INPUT_PATH, "r", encoding="utf-8") as f:
         all_obligations = json.load(f)
-
     results, done_ids = load_checkpoint()
     remaining = [o for o in all_obligations if o["id"] not in done_ids]
     print(f"{len(remaining)} obligations left to process (of {len(all_obligations)} total).")
@@ -209,6 +261,34 @@ def main():
     if not remaining:
         print("Nothing to do -- all obligations already judged.")
         return
+
+    # ---- Step 0: applicability filter ----
+    conditions_lookup = load_tagged_conditions()
+
+    if conditions_lookup:
+        for o in remaining:
+            o["applicability_conditions"] = conditions_lookup.get(o["id"], [])
+        company_profile = get_or_extract_company_profile()
+        applicable, not_applicable = filter_applicable(remaining, company_profile)
+    else:
+        # tagged metadata missing -- fall back to old behavior, nothing skipped
+        applicable, not_applicable = remaining, []
+
+    print(f"Applicability filter: {len(not_applicable)} NOT_APPLICABLE (skipped entirely), "
+          f"{len(applicable)} require evaluation.")
+
+    for o in not_applicable:
+        results.append(make_not_applicable(o))
+
+    save_checkpoint(results)  # save the free applicability wins immediately
+
+    remaining = applicable  # everything below only sees applicable obligations
+
+    if not remaining:
+        print(f"Done. {len(results)}/{len(all_obligations)} obligations judged -> {OUTPUT_PATH}")
+        return
+
+    # ---- Step 1: pre-filter ----
 
     # ---- Step 1: pre-filter ----
     needs_llm = []
