@@ -1,0 +1,52 @@
+{
+  "article_number": 29,
+  "article_title": "Processing under the authority of the controller or processor",
+  "checkability": "direct",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 0.0,
+  "group_count": 1,
+  "completed_groups": 1,
+  "groups": [
+    {
+      "article_number": 29,
+      "group_id": "29.1",
+      "principle": "Instruction-based processing by persons under authority",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.0,
+      "reason": "The supplied policy evidence defines data processors and mentions third-party agreements, but contains no explicit statements confirming that personnel and processors with data access are restricted to acting solely on the controller's instructions absent legal requirements.",
+      "gap": "The supplied policy evidence defines data processors and mentions third-party agreements, but contains no explicit statements confirming that personnel and processors with data access are restricted to acting solely on the controller's instructions absent legal requirements.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "29.1.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence defines data processors and mentions third-party agreements, but contains no explicit statements confirming that personnel and processors with data access are restricted to acting solely on the controller's instructions absent legal requirements.",
+          "evidence": [],
+          "confidence": 0.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0451,
+        "llm_time": 1.9784,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 99.6635
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 29,
+    "execution_mode": "global_group_queue"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "article_number": 20,
+  "article_title": "Right to data portability",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.9563,
+  "group_count": 4,
+  "completed_groups": 4,
+  "groups": [
+    {
+      "article_number": 20,
+      "group_id": "20.2",
+      "principle": "Direct transmission between controllers",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy provides for the Right to Data Portability by allowing data subjects to request their data in a structured, machine-readable format (CSV/JSON), but it does not address or offer the right to have personal data transmitted directly from one controller to another.",
+      "gap": "The policy provides for the Right to Data Portability by allowing data subjects to request their data in a structured, machine-readable format (CSV/JSON), but it does not address or offer the right to have personal data transmitted directly from one controller to another.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "20.2.1",
+          "status": "NOT_MET",
+          "reason": "The policy provides for the Right to Data Portability by allowing data subjects to request their data in a structured, machine-readable format (CSV/JSON), but it does not address or offer the right to have personal data transmitted directly from one controller to another.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request their data in a structured, machine-readable format (CSV/JSON). Available for data provided by consent or contract only."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.2603,
+        "llm_time": 1.3178,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 20,
+      "group_id": "20.1",
+      "principle": "Right to receive and transmit data in portable format",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.875,
+      "reason": "The policy explicitly commits to providing data in a structured, machine-readable format (CSV/JSON) for data provided by consent or contract. The policy provides for the right to data portability in a structured, machine-readable format, but does not explicitly mention the right or commitment to transmit those data to another controller without hindrance.",
+      "gap": "The policy provides for the right to data portability in a structured, machine-readable format, but does not explicitly mention the right or commitment to transmit those data to another controller without hindrance.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "20.1.1",
+          "status": "MET",
+          "reason": "The policy explicitly commits to providing data in a structured, machine-readable format (CSV/JSON) for data provided by consent or contract.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request their data in a structured, machine-readable format (CSV/JSON). Available for data provided by consent or contract only."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "20.1.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy provides for the right to data portability in a structured, machine-readable format, but does not explicitly mention the right or commitment to transmit those data to another controller without hindrance.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request their data in a structured, machine-readable format (CSV/JSON). Available for data provided by consent or contract only."
+            }
+          ],
+          "confidence": 0.8
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0397,
+        "llm_time": 1.8517,
+        "validation_time": 0.0009,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 20,
+      "group_id": "20.4",
+      "principle": "Portability right does not adversely affect others' rights",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy mentions the right to data portability under Article 20, but fails to acknowledge or state that portability exports may be limited to protect the rights and freedoms of third parties.",
+      "gap": "The policy mentions the right to data portability under Article 20, but fails to acknowledge or state that portability exports may be limited to protect the rights and freedoms of third parties.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "20.4.1",
+          "status": "NOT_MET",
+          "reason": "The policy mentions the right to data portability under Article 20, but fails to acknowledge or state that portability exports may be limited to protect the rights and freedoms of third parties.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0517,
+        "llm_time": 1.367,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 20,
+      "group_id": "20.3",
+      "principle": "Scope limitation relative to erasure and public-task processing",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 0.95,
+      "reason": "The policy limits data portability to 'data provided by consent or contract only', but it does not explicitly note that portability does not apply to processing necessary for the performance of a public-interest task or official authority.",
+      "gap": "The policy limits data portability to 'data provided by consent or contract only', but it does not explicitly note that portability does not apply to processing necessary for the performance of a public-interest task or official authority.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "20.3.1",
+          "status": "NOT_MET",
+          "reason": "The policy limits data portability to 'data provided by consent or contract only', but it does not explicitly note that portability does not apply to processing necessary for the performance of a public-interest task or official authority.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Available for data provided by consent or contract only."
+            }
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0772,
+        "llm_time": 1.7532,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 20.7668
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 20,
+    "execution_mode": "global_group_queue"
+  }
+}

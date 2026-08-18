@@ -1,0 +1,186 @@
+{
+  "article_number": 22,
+  "article_title": "Automated individual decision-making, including profiling",
+  "checkability": "direct",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 0.9875,
+  "group_count": 4,
+  "completed_groups": 4,
+  "groups": [
+    {
+      "article_number": 22,
+      "group_id": "22.1",
+      "principle": "Right not to be subject to solely automated decisions with significant effect",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The provided company policy evidence lists several data subject rights under Section 6 (such as access, rectification, erasure, portability, and objection), but does not mention the right not to be subject to solely automated decision-making including profiling as required by Article 22.",
+      "gap": "The provided company policy evidence lists several data subject rights under Section 6 (such as access, rectification, erasure, portability, and objection), but does not mention the right not to be subject to solely automated decision-making including profiling as required by Article 22.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "22.1.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided company policy evidence lists several data subject rights under Section 6 (such as access, rectification, erasure, portability, and objection), but does not mention the right not to be subject to solely automated decision-making including profiling as required by Article 22.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0821,
+        "llm_time": 1.4958,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 22,
+      "group_id": "22.2",
+      "principle": "Exceptions permitting solely automated decision-making",
+      "condition_logic": "ANY",
+      "status": "NOT_APPLICABLE",
+      "confidence": 0.95,
+      "reason": "The applicability conditions state that this applies only where the controller engages in solely automated decision-making with legal or similarly significant effects. The provided policy evidence contains no mentions or provisions regarding solely automated decision-making. The applicability conditions state that this applies only where the controller engages in solely automated decision-making with legal or similarly significant effects. The provided policy evidence contains no mentions or provisions regarding solely automated decision-making. The applicability conditions state that this applies only where the controller engages in solely automated decision-making with legal or similarly significant effects. The provided policy evidence contains no mentions or provisions regarding solely automated decision-making.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "22.2.a",
+          "status": "NOT_APPLICABLE",
+          "reason": "The applicability conditions state that this applies only where the controller engages in solely automated decision-making with legal or similarly significant effects. The provided policy evidence contains no mentions or provisions regarding solely automated decision-making.",
+          "evidence": [],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "22.2.b",
+          "status": "NOT_APPLICABLE",
+          "reason": "The applicability conditions state that this applies only where the controller engages in solely automated decision-making with legal or similarly significant effects. The provided policy evidence contains no mentions or provisions regarding solely automated decision-making.",
+          "evidence": [],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "22.2.c",
+          "status": "NOT_APPLICABLE",
+          "reason": "The applicability conditions state that this applies only where the controller engages in solely automated decision-making with legal or similarly significant effects. The provided policy evidence contains no mentions or provisions regarding solely automated decision-making.",
+          "evidence": [],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1306,
+        "llm_time": 1.7156,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 22,
+      "group_id": "22.3",
+      "principle": "Safeguards for contract- and consent-based automated decisions",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The provided policy evidence contains no mention of automated decision-making safeguards or the right to obtain human intervention. The provided policy evidence contains no mention of automated decision-making safeguards or the right to express one's point of view. The provided policy evidence contains no mention of automated decision-making safeguards or the right to contest the decision.",
+      "gap": "The provided policy evidence contains no mention of automated decision-making safeguards or the right to obtain human intervention. The provided policy evidence contains no mention of automated decision-making safeguards or the right to express one's point of view. The provided policy evidence contains no mention of automated decision-making safeguards or the right to contest the decision.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "22.3.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mention of automated decision-making safeguards or the right to obtain human intervention.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "22.3.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mention of automated decision-making safeguards or the right to express one's point of view.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "22.3.3",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mention of automated decision-making safeguards or the right to contest the decision.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.2108,
+        "llm_time": 1.8145,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 22,
+      "group_id": "22.4",
+      "principle": "Restriction on automated decisions using special category data",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy evidence does not indicate that the controller engages in automated decision-making relying on special categories of personal data, making the applicability condition unmet. The policy evidence does not indicate that the controller engages in automated decision-making relying on special categories of personal data, making the applicability condition unmet.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "22.4.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy evidence does not indicate that the controller engages in automated decision-making relying on special categories of personal data, making the applicability condition unmet.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "22.4.2",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy evidence does not indicate that the controller engages in automated decision-making relying on special categories of personal data, making the applicability condition unmet.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0522,
+        "llm_time": 1.4796,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 31.6626
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 22,
+    "execution_mode": "global_group_queue"
+  }
+}

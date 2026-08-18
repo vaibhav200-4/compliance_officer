@@ -1,0 +1,236 @@
+{
+  "article_number": 21,
+  "article_title": "Right to object",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.875,
+  "group_count": 5,
+  "completed_groups": 5,
+  "groups": [
+    {
+      "article_number": 21,
+      "group_id": "21.5",
+      "principle": "Automated means of objecting in information society services",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 0.95,
+      "reason": "The policy requires data subjects to submit all rights requests, including the Right to Object, manually via email to privacy@acme.io, and states that requests submitted through other channels are not guaranteed, failing to provide automated technical means for objecting.",
+      "gap": "The policy requires data subjects to submit all rights requests, including the Right to Object, manually via email to privacy@acme.io, and states that requests submitted through other channels are not guaranteed, failing to provide automated technical means for objecting.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "21.5.1",
+          "status": "NOT_MET",
+          "reason": "The policy requires data subjects to submit all rights requests, including the Right to Object, manually via email to privacy@acme.io, and states that requests submitted through other channels are not guaranteed, failing to provide automated technical means for objecting.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Requests must be submitted to privacy@acme.io and will be acknowledged within 3 business days."
+            },
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:6",
+              "quote": "Important: Acme does not guarantee response to requests submitted through channels other than privacy@acme.io."
+            }
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1775,
+        "llm_time": 2.2578,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 21,
+      "group_id": "21.4",
+      "principle": "Prominent disclosure of the right to object",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 0.9,
+      "reason": "The policy mentions the right to object under Section 6 (Data Subject Rights), but does not commit to explicitly bringing this right to the attention of the data subject at the latest at the time of the first communication. The policy includes the right to object as a bullet point under general data subject rights in Section 6, but does not provide evidence that it is presented clearly and separately from other information as required by Article 21(4).",
+      "gap": "The policy mentions the right to object under Section 6 (Data Subject Rights), but does not commit to explicitly bringing this right to the attention of the data subject at the latest at the time of the first communication. The policy includes the right to object as a bullet point under general data subject rights in Section 6, but does not provide evidence that it is presented clearly and separately from other information as required by Article 21(4).",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "21.4.1",
+          "status": "NOT_MET",
+          "reason": "The policy mentions the right to object under Section 6 (Data Subject Rights), but does not commit to explicitly bringing this right to the attention of the data subject at the latest at the time of the first communication.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "## 6. Data Subject Rights\n\nUnder GDPR, data subjects have the following rights. Requests must be submitted to privacy@acme.io and will be acknowledged..."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "21.4.2",
+          "status": "NOT_MET",
+          "reason": "The policy includes the right to object as a bullet point under general data subject rights in Section 6, but does not provide evidence that it is presented clearly and separately from other information as required by Article 21(4).",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "## 6. Data Subject Rights\n\nUnder GDPR, data subjects have the following rights. Requests must be submitted to privacy@acme.io and will be acknowledged..."
+            }
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1062,
+        "llm_time": 3.0216,
+        "validation_time": 0.001,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 21,
+      "group_id": "21.6",
+      "principle": "Objection to research and statistical processing",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy evidence discusses the right to object to processing based on legitimate interests or direct marketing, but does not contain any provisions regarding the right to object to processing for scientific/historical research or statistical purposes under Article 89(1) or the public-interest task exception.",
+      "gap": "The policy evidence discusses the right to object to processing based on legitimate interests or direct marketing, but does not contain any provisions regarding the right to object to processing for scientific/historical research or statistical purposes under Article 89(1) or the public-interest task exception.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "21.6.1",
+          "status": "NOT_MET",
+          "reason": "The policy evidence discusses the right to object to processing based on legitimate interests or direct marketing, but does not contain any provisions regarding the right to object to processing for scientific/historical research or statistical purposes under Article 89(1) or the public-interest task exception.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0034,
+        "llm_time": 1.4326,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 21,
+      "group_id": "21.1",
+      "principle": "General right to object to processing based on public interest/legitimate interest grounds",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 0.85,
+      "reason": "Policy confirms right to object but does not explicitly state that processing must cease unless compelling overriding grounds or legal claims apply. No evidence of required cessation mechanism.",
+      "gap": "Policy confirms right to object but does not explicitly state that processing must cease unless compelling overriding grounds or legal claims apply. No evidence of required cessation mechanism.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "21.1.1",
+          "status": "NOT_MET",
+          "reason": "Policy confirms right to object but does not explicitly state that processing must cease unless compelling overriding grounds or legal claims apply. No evidence of required cessation mechanism.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may object to processing based on legitimate interests or for direct marketing at any time."
+            },
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:6",
+              "quote": "Data subjects may object to processing based on legitimate interests or for direct marketing at any time."
+            }
+          ],
+          "confidence": 0.85
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0528,
+        "llm_time": 12.6303,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 21,
+      "group_id": "21.2-3",
+      "principle": "Absolute right to object to direct marketing",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.675,
+      "reason": "Policy explicitly states data subjects may object to direct marketing processing at any time. Policy does not specify that processing must stop entirely upon objection. Only mentions cessation upon consent withdrawal.",
+      "gap": "Policy does not specify that processing must stop entirely upon objection. Only mentions cessation upon consent withdrawal.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "21.2.1",
+          "status": "MET",
+          "reason": "Policy explicitly states data subjects may object to direct marketing processing at any time.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may object to processing based on legitimate interests or for direct marketing at any time."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "21.3.1",
+          "status": "NOT_MET",
+          "reason": "Policy does not specify that processing must stop entirely upon objection. Only mentions cessation upon consent withdrawal.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may object to processing based on legitimate interests or for direct marketing at any time."
+            }
+          ],
+          "confidence": 0.4
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0527,
+        "llm_time": 25.4582,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 46.7158
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 21,
+    "execution_mode": "global_group_queue"
+  }
+}

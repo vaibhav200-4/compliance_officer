@@ -1,0 +1,206 @@
+{
+  "article_number": 17,
+  "article_title": "Right to erasure ('right to be forgotten')",
+  "checkability": "direct",
+  "status": "PARTIALLY_MET",
+  "confidence": 0.9628,
+  "group_count": 3,
+  "completed_groups": 3,
+  "groups": [
+    {
+      "article_number": 17,
+      "group_id": "17.2",
+      "principle": "Informing other controllers of erasure requests for public data",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy mentions the general Right to Erasure under Art. 17 ('Data subjects may request deletion of their data. We will action this within 30 days...'), but contains no text addressing the specific requirement to take reasonable steps to inform other controllers processing public data about erasure requests for links, copies, or replications.",
+      "gap": "The policy mentions the general Right to Erasure under Art. 17 ('Data subjects may request deletion of their data. We will action this within 30 days...'), but contains no text addressing the specific requirement to take reasonable steps to inform other controllers processing public data about erasure requests for links, copies, or replications.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "17.2.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions the general Right to Erasure under Art. 17 ('Data subjects may request deletion of their data. We will action this within 30 days...'), but contains no text addressing the specific requirement to take reasonable steps to inform other controllers processing public data about erasure requests for links, copies, or replications.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0252,
+        "llm_time": 1.308,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 17,
+      "group_id": "17.1",
+      "principle": "Grounds for erasure",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 0.9083,
+      "reason": "The policy explicitly commits to retaining personal data only as long as necessary for the purpose for which it was collected. The policy notes that users may withdraw consent, and processing ceases upon withdrawal, but it does not explicitly commit to the erasure of data upon consent withdrawal where no other legal ground exists. The policy mentions the right to object under Article 21, but does not explicitly commit to the erasure of data following a valid objection. The policy does not address or commit to the erasure of personal data that has been unlawfully processed. The policy explicitly allows for data erasure requests unless retention is required by law. The policy does not contain any references to data collected in relation to information society services offered to children under Article 8(1).",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "17.1.a",
+          "status": "MET",
+          "reason": "The policy explicitly commits to retaining personal data only as long as necessary for the purpose for which it was collected.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:4",
+              "quote": "Personal data is retained only as long as necessary for the purpose for which it was collected"
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "17.1.b",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy notes that users may withdraw consent, and processing ceases upon withdrawal, but it does not explicitly commit to the erasure of data upon consent withdrawal where no other legal ground exists.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:2",
+              "quote": "Users may withdraw consent at any time by contacting privacy@acme.io. Upon withdrawal, processing ceases within 5 business days."
+            }
+          ],
+          "confidence": 0.85
+        },
+        {
+          "obligation_id": "17.1.c",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy mentions the right to object under Article 21, but does not explicitly commit to the erasure of data following a valid objection.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may object to processing based on legitimate interests or for direct marketing at any time."
+            }
+          ],
+          "confidence": 0.8
+        },
+        {
+          "obligation_id": "17.1.d",
+          "status": "NOT_MET",
+          "reason": "The policy does not address or commit to the erasure of personal data that has been unlawfully processed.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "17.1.e",
+          "status": "MET",
+          "reason": "The policy explicitly allows for data erasure requests unless retention is required by law.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "We will action this within 30 days unless retention is required by law."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "17.1.f",
+          "status": "NOT_MET",
+          "reason": "The policy does not contain any references to data collected in relation to information society services offered to children under Article 8(1).",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0477,
+        "llm_time": 2.8448,
+        "validation_time": 0.0013,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 17,
+      "group_id": "17.3",
+      "principle": "Exceptions to the right to erasure",
+      "condition_logic": "ANY",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.98,
+      "reason": "The policy does not reference a freedom-of-expression exception to erasure. The policy references retention required by law regarding the right to erasure, but does not cover public-interest or official tasks. The policy does not reference a public health exception to erasure. The policy does not reference an archiving, research, or statistical purposes exception to erasure. The policy does not reference a legal-claims exception to erasure.",
+      "gap": "The policy does not reference a freedom-of-expression exception to erasure. The policy references retention required by law regarding the right to erasure, but does not cover public-interest or official tasks. The policy does not reference a public health exception to erasure. The policy does not reference an archiving, research, or statistical purposes exception to erasure. The policy does not reference a legal-claims exception to erasure.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "17.3.a",
+          "status": "NOT_MET",
+          "reason": "The policy does not reference a freedom-of-expression exception to erasure.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "17.3.b",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy references retention required by law regarding the right to erasure, but does not cover public-interest or official tasks.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "We will action this within 30 days unless retention is required by law."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "17.3.c",
+          "status": "NOT_MET",
+          "reason": "The policy does not reference a public health exception to erasure.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "17.3.d",
+          "status": "NOT_MET",
+          "reason": "The policy does not reference an archiving, research, or statistical purposes exception to erasure.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "17.3.e",
+          "status": "NOT_MET",
+          "reason": "The policy does not reference a legal-claims exception to erasure.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0708,
+        "llm_time": 1.9905,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 15.3369
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 17,
+    "execution_mode": "global_group_queue"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "article_number": 47,
+  "article_title": "Binding corporate rules",
+  "checkability": "direct",
+  "status": "PARTIALLY_MET",
+  "confidence": 0.9536,
+  "group_count": 2,
+  "completed_groups": 2,
+  "groups": [
+    {
+      "article_number": 47,
+      "group_id": "47.1",
+      "principle": "Baseline conditions for approved BCRs",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The company policy contains no mention of Binding Corporate Rules (BCRs) or intra-group international transfers governed by BCRs. Therefore, this sub-obligation does not apply. The company policy contains no mention of Binding Corporate Rules (BCRs) or intra-group international transfers governed by BCRs. Therefore, this sub-obligation does not apply.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "47.1.a",
+          "status": "NOT_APPLICABLE",
+          "reason": "The company policy contains no mention of Binding Corporate Rules (BCRs) or intra-group international transfers governed by BCRs. Therefore, this sub-obligation does not apply.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "47.1.b",
+          "status": "NOT_APPLICABLE",
+          "reason": "The company policy contains no mention of Binding Corporate Rules (BCRs) or intra-group international transfers governed by BCRs. Therefore, this sub-obligation does not apply.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 0.9943,
+        "llm_time": 1.5705,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 47,
+      "group_id": "47.2",
+      "principle": "Mandatory BCR content",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9071,
+      "reason": "The provided policy evidence does not contain details regarding the group structure and the contact details of each member of the group of undertakings. The policy outlines data subject rights (Access, Rectification, Erasure, Data Portability, Object) and a designated contact channel, but does not explicitly confirm binding corporate rules' legal effect or apply general data protection principles in the context of BCRs. The provided policy evidence contains no mention of an EU-established controller or processor accepting liability for breaches of binding corporate rules by non-EU members. The provided evidence does not describe how binding corporate rules are communicated to data subjects beyond standard Articles 13 and 14 notices. While the DPO role is mentioned, the evidence lacks comprehensive details covering compliance monitoring tasks, complaint procedures, verification mechanisms, change reporting, supervisory authority cooperation, and reporting of conflicting foreign legal requirements specific to BCRs. The policy explicitly commits to mandatory data protection training for employees with access to personal data upon joining and annually thereafter. The provided company policy evidence does not describe specific data transfers, categories of personal data, processing types/purposes, affected data subjects, or destination countries in the context of Binding Corporate Rules.",
+      "gap": "The provided policy evidence does not contain details regarding the group structure and the contact details of each member of the group of undertakings. The policy outlines data subject rights (Access, Rectification, Erasure, Data Portability, Object) and a designated contact channel, but does not explicitly confirm binding corporate rules' legal effect or apply general data protection principles in the context of BCRs. The provided policy evidence contains no mention of an EU-established controller or processor accepting liability for breaches of binding corporate rules by non-EU members. The provided evidence does not describe how binding corporate rules are communicated to data subjects beyond standard Articles 13 and 14 notices. While the DPO role is mentioned, the evidence lacks comprehensive details covering compliance monitoring tasks, complaint procedures, verification mechanisms, change reporting, supervisory authority cooperation, and reporting of conflicting foreign legal requirements specific to BCRs. The provided company policy evidence does not describe specific data transfers, categories of personal data, processing types/purposes, affected data subjects, or destination countries in the context of Binding Corporate Rules.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "47.2.a",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence does not contain details regarding the group structure and the contact details of each member of the group of undertakings.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "47.2.def",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy outlines data subject rights (Access, Rectification, Erasure, Data Portability, Object) and a designated contact channel, but does not explicitly confirm binding corporate rules' legal effect or apply general data protection principles in the context of BCRs.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "## 6. Data Subject Rights\n\nUnder GDPR, data subjects have the following rights. Requests must be submitted to privacy@acme.io and will be acknowledged..."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "47.2.f",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mention of an EU-established controller or processor accepting liability for breaches of binding corporate rules by non-EU members.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "47.2.g",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided evidence does not describe how binding corporate rules are communicated to data subjects beyond standard Articles 13 and 14 notices.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "47.2.hijklm",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "While the DPO role is mentioned, the evidence lacks comprehensive details covering compliance monitoring tasks, complaint procedures, verification mechanisms, change reporting, supervisory authority cooperation, and reporting of conflicting foreign legal requirements specific to BCRs.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "**Analytics Cookies:** Used to understand usage patterns. Requires consent.\n\n**Marketing Cookies:** Used for targeted advertising. Requires explicit c..."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "47.2.n",
+          "status": "MET",
+          "reason": "The policy explicitly commits to mandatory data protection training for employees with access to personal data upon joining and annually thereafter.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "**Analytics Cookies:** Used to understand usage patterns. Requires consent.\n\n**Marketing Cookies:** Used for targeted advertising. Requires explicit c..."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "47.2.b",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided company policy evidence does not describe specific data transfers, categories of personal data, processing types/purposes, affected data subjects, or destination countries in the context of Binding Corporate Rules.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0756,
+        "llm_time": 3.146,
+        "validation_time": 0.0017,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 185.4255
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 47,
+    "execution_mode": "global_group_queue"
+  }
+}

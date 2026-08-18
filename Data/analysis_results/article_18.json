@@ -1,0 +1,160 @@
+{
+  "article_number": 18,
+  "article_title": "Right to restriction of processing",
+  "checkability": "direct",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 1.0,
+  "group_count": 3,
+  "completed_groups": 3,
+  "groups": [
+    {
+      "article_number": 18,
+      "group_id": "18.3",
+      "principle": "Notification before lifting restriction",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The supplied policy evidence makes no mention of the right to restriction of processing under Article 18 or any commitment to inform data subjects before lifting such a restriction.",
+      "gap": "The supplied policy evidence makes no mention of the right to restriction of processing under Article 18 or any commitment to inform data subjects before lifting such a restriction.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "18.3.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied policy evidence makes no mention of the right to restriction of processing under Article 18 or any commitment to inform data subjects before lifting such a restriction.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0109,
+        "llm_time": 1.3105,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 18,
+      "group_id": "18.2",
+      "principle": "Permitted processing during restriction",
+      "condition_logic": "ANY",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy evidence does not mention restrictions under Article 18 or the exceptions regarding processing restricted data based on consent. The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing for legal claims. The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing to protect the rights of another person. The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing for important public interest reasons.",
+      "gap": "The policy evidence does not mention restrictions under Article 18 or the exceptions regarding processing restricted data based on consent. The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing for legal claims. The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing to protect the rights of another person. The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing for important public interest reasons.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "18.2.a",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy evidence does not mention restrictions under Article 18 or the exceptions regarding processing restricted data based on consent.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "18.2.b",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing for legal claims.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "18.2.c",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing to protect the rights of another person.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "18.2.d",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy evidence does not mention restrictions under Article 18 or exceptions permitting processing for important public interest reasons.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.103,
+        "llm_time": 2.2096,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 18,
+      "group_id": "18.1",
+      "principle": "Grounds for restriction of processing",
+      "condition_logic": "ANY",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy mentions the right to rectification (Art. 16) and other rights, but contains no mention or commitment regarding restricting processing while contested data accuracy is being verified under Article 18(1)(a). The policy contains no provisions regarding restricting the use of unlawfully processed data instead of erasure when the data subject opposes erasure. The policy contains no provisions regarding restricting rather than deleting data that is no longer needed by the controller but is required by the data subject for legal claims. While the policy mentions the Right to Object (Art. 21), it does not contain any commitment or reference to restricting processing while an Article 21(1) objection is pending assessment.",
+      "gap": "The policy mentions the right to rectification (Art. 16) and other rights, but contains no mention or commitment regarding restricting processing while contested data accuracy is being verified under Article 18(1)(a). The policy contains no provisions regarding restricting the use of unlawfully processed data instead of erasure when the data subject opposes erasure. The policy contains no provisions regarding restricting rather than deleting data that is no longer needed by the controller but is required by the data subject for legal claims. While the policy mentions the Right to Object (Art. 21), it does not contain any commitment or reference to restricting processing while an Article 21(1) objection is pending assessment.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "18.1.a",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions the right to rectification (Art. 16) and other rights, but contains no mention or commitment regarding restricting processing while contested data accuracy is being verified under Article 18(1)(a).",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "18.1.b",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy contains no provisions regarding restricting the use of unlawfully processed data instead of erasure when the data subject opposes erasure.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "18.1.c",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy contains no provisions regarding restricting rather than deleting data that is no longer needed by the controller but is required by the data subject for legal claims.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "18.1.d",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "While the policy mentions the Right to Object (Art. 21), it does not contain any commitment or reference to restricting processing while an Article 21(1) objection is pending assessment.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.1109,
+        "llm_time": 2.7439,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 17.4666
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 18,
+    "execution_mode": "global_group_queue"
+  }
+}

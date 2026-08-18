@@ -1,0 +1,59 @@
+{
+  "article_number": 56,
+  "article_title": "Competence of the lead supervisory authority",
+  "checkability": "direct",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 0.9,
+  "group_count": 1,
+  "completed_groups": 1,
+  "groups": [
+    {
+      "article_number": 56,
+      "group_id": "56.1",
+      "principle": "Identification of the lead supervisory authority for cross-border processing",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.9,
+      "reason": "The policy mentions that the DPO acts as the primary contact for supervisory authorities, but it does not specifically identify a lead supervisory authority tied to the company's main or single EU establishment for cross-border processing. The provided policy does not state that an identified lead supervisory authority serves as the sole point of contact specifically for cross-border processing issues.",
+      "gap": "The policy mentions that the DPO acts as the primary contact for supervisory authorities, but it does not specifically identify a lead supervisory authority tied to the company's main or single EU establishment for cross-border processing. The provided policy does not state that an identified lead supervisory authority serves as the sole point of contact specifically for cross-border processing issues.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "56.1.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions that the DPO acts as the primary contact for supervisory authorities, but it does not specifically identify a lead supervisory authority tied to the company's main or single EU establishment for cross-border processing.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "56.1.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy does not state that an identified lead supervisory authority serves as the sole point of contact specifically for cross-border processing issues.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0188,
+        "llm_time": 1.5331,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 188.6344
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 56,
+    "execution_mode": "global_group_queue"
+  }
+}

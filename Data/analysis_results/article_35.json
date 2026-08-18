@@ -1,0 +1,266 @@
+{
+  "article_number": 35,
+  "article_title": "Data protection impact assessment",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.9531,
+  "group_count": 4,
+  "completed_groups": 4,
+  "groups": [
+    {
+      "article_number": 35,
+      "group_id": "35.2",
+      "principle": "Seeking DPO advice during a DPIA",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.9,
+      "reason": "The policy mentions that a DPO has been appointed and that a Privacy Impact Assessment (PIA) is conducted for high-risk activities, but it does not contain any policy requirement or confirmation stating that the controller must seek the advice of the DPO when carrying out such an assessment.",
+      "gap": "The policy mentions that a DPO has been appointed and that a Privacy Impact Assessment (PIA) is conducted for high-risk activities, but it does not contain any policy requirement or confirmation stating that the controller must seek the advice of the DPO when carrying out such an assessment.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "35.2.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions that a DPO has been appointed and that a Privacy Impact Assessment (PIA) is conducted for high-risk activities, but it does not contain any policy requirement or confirmation stating that the controller must seek the advice of the DPO when carrying out such an assessment.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "## 11. Privacy by Design and Default\n\nAcme embeds privacy considerations into the design of all new products, features, and processes. A Privacy Impac..."
+            },
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "**Analytics Cookies:** Used to understand usage patterns. Requires consent.\n\n**Marketing Cookies:** Used for targeted advertising. Requires explicit c..."
+            }
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0888,
+        "llm_time": 1.819,
+        "validation_time": 0.0009,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 35,
+      "group_id": "35.1-3",
+      "principle": "Requirement to carry out a DPIA",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 0.9125,
+      "reason": "The policy explicitly requires a Privacy Impact Assessment (PIA) to be conducted for any new processing activity that may pose a high risk to individuals. The policy generally states that a Privacy Impact Assessment is conducted for high-risk processing activities, but does not explicitly mention systematic and extensive automated evaluation or profiling with legal or significant effects. The policy provides a general statement regarding high-risk processing assessments, but does not specifically mention large-scale processing of special categories of data or criminal conviction data. The policy mentions general high-risk assessments, but lacks specific text regarding the systematic monitoring of publicly accessible areas on a large scale.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "35.1.1",
+          "status": "MET",
+          "reason": "The policy explicitly requires a Privacy Impact Assessment (PIA) to be conducted for any new processing activity that may pose a high risk to individuals.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "35.3.a",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy generally states that a Privacy Impact Assessment is conducted for high-risk processing activities, but does not explicitly mention systematic and extensive automated evaluation or profiling with legal or significant effects.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "35.3.b",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy provides a general statement regarding high-risk processing assessments, but does not specifically mention large-scale processing of special categories of data or criminal conviction data.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "35.3.c",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions general high-risk assessments, but lacks specific text regarding the systematic monitoring of publicly accessible areas on a large scale.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0552,
+        "llm_time": 2.7748,
+        "validation_time": 0.0008,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 35,
+      "group_id": "35.7",
+      "principle": "Required content of a DPIA",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy mentions that a Privacy Impact Assessment (PIA) is conducted, but it does not specify that it includes a systematic description of processing operations and purposes including legitimate interests. The policy does not contain any evidence confirming that the PIA includes an assessment of the necessity and proportionality of the processing operations. The policy references high risk to individuals regarding the PIA trigger, but does not detail a comprehensive risk assessment of risks to rights and freedoms of data subjects. The policy outlines general data security measures, but does not state that the PIA includes the specific measures and safeguards envisaged to address identified risks.",
+      "gap": "The policy mentions that a Privacy Impact Assessment (PIA) is conducted, but it does not specify that it includes a systematic description of processing operations and purposes including legitimate interests. The policy does not contain any evidence confirming that the PIA includes an assessment of the necessity and proportionality of the processing operations. The policy references high risk to individuals regarding the PIA trigger, but does not detail a comprehensive risk assessment of risks to rights and freedoms of data subjects. The policy outlines general data security measures, but does not state that the PIA includes the specific measures and safeguards envisaged to address identified risks.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "35.7.a",
+          "status": "NOT_MET",
+          "reason": "The policy mentions that a Privacy Impact Assessment (PIA) is conducted, but it does not specify that it includes a systematic description of processing operations and purposes including legitimate interests.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "35.7.b",
+          "status": "NOT_MET",
+          "reason": "The policy does not contain any evidence confirming that the PIA includes an assessment of the necessity and proportionality of the processing operations.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "35.7.c",
+          "status": "NOT_MET",
+          "reason": "The policy references high risk to individuals regarding the PIA trigger, but does not detail a comprehensive risk assessment of risks to rights and freedoms of data subjects.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "35.7.d",
+          "status": "NOT_MET",
+          "reason": "The policy outlines general data security measures, but does not state that the PIA includes the specific measures and safeguards envisaged to address identified risks.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0058,
+        "llm_time": 2.685,
+        "validation_time": 0.0013,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 35,
+      "group_id": "35.9-11",
+      "principle": "Stakeholder input, exemption, and ongoing review of DPIAs",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy mentions conducting a Privacy Impact Assessment (PIA) for high-risk processing activities, but does not indicate that the views of data subjects or their representatives are sought during this process. The policy contains no mention of exemptions from DPIAs based on prior general legislative impact assessments for processing pursuant to Article 6(1)(c) or (e). The policy requires a PIA for high-risk activities, but contains no commitment or requirement to review the PIA when the risk represented by processing operations changes.",
+      "gap": "The policy mentions conducting a Privacy Impact Assessment (PIA) for high-risk processing activities, but does not indicate that the views of data subjects or their representatives are sought during this process. The policy contains no mention of exemptions from DPIAs based on prior general legislative impact assessments for processing pursuant to Article 6(1)(c) or (e). The policy requires a PIA for high-risk activities, but contains no commitment or requirement to review the PIA when the risk represented by processing operations changes.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "35.9.1",
+          "status": "NOT_MET",
+          "reason": "The policy mentions conducting a Privacy Impact Assessment (PIA) for high-risk processing activities, but does not indicate that the views of data subjects or their representatives are sought during this process.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "35.10.1",
+          "status": "NOT_MET",
+          "reason": "The policy contains no mention of exemptions from DPIAs based on prior general legislative impact assessments for processing pursuant to Article 6(1)(c) or (e).",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "35.11.1",
+          "status": "NOT_MET",
+          "reason": "The policy requires a PIA for high-risk activities, but contains no commitment or requirement to review the PIA when the risk represented by processing operations changes.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:10",
+              "quote": "A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.3021,
+        "llm_time": 2.2959,
+        "validation_time": 0.0009,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 123.482
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 35,
+    "execution_mode": "global_group_queue"
+  }
+}

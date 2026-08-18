@@ -1,0 +1,59 @@
+{
+  "article_number": 79,
+  "article_title": "Right to an effective judicial remedy against a controller or processor",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 1.0,
+  "group_count": 1,
+  "completed_groups": 1,
+  "groups": [
+    {
+      "article_number": 79,
+      "group_id": "79.1",
+      "principle": "Disclosure of the right to a judicial remedy and applicable venue",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The company policy does not mention the right of data subjects to an effective judicial remedy against the controller or processor where their GDPR rights have been infringed. The company policy contains no information regarding the jurisdiction or venue where judicial proceedings may be brought (courts of the Member State of establishment or habitual residence).",
+      "gap": "The company policy does not mention the right of data subjects to an effective judicial remedy against the controller or processor where their GDPR rights have been infringed. The company policy contains no information regarding the jurisdiction or venue where judicial proceedings may be brought (courts of the Member State of establishment or habitual residence).",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "79.1.1",
+          "status": "NOT_MET",
+          "reason": "The company policy does not mention the right of data subjects to an effective judicial remedy against the controller or processor where their GDPR rights have been infringed.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "79.1.2",
+          "status": "NOT_MET",
+          "reason": "The company policy contains no information regarding the jurisdiction or venue where judicial proceedings may be brought (courts of the Member State of establishment or habitual residence).",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0338,
+        "llm_time": 1.4721,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 188.6275
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 79,
+    "execution_mode": "global_group_queue"
+  }
+}

@@ -1,0 +1,730 @@
+{
+  "pages": [
+    {
+      "index": 0,
+      "markdown": "# ACME TECHNOLOGIES PVT. LTD.\n\nData Protection & Privacy Policy\n\nVersion 2.1 | Effective Date: January 1, 2025 | Classification: Internal\n\n|  **Document Owner** | Data Protection Officer (DPO)  |\n| --- | --- |\n|  **Review Cycle** | Annual or upon regulatory change  |\n|  **Applies To** | All employees, contractors, vendors  |\n|  **Regulation Basis** | GDPR (EU) 2016/679, IT Act 2000  |\n|  **Last Reviewed** | December 15, 2024  |\n\n## 1. Purpose and Scope\n\nThis Data Protection and Privacy Policy ('Policy') establishes the framework under which Acme Technologies Pvt. Ltd. ('Acme', 'we', 'us') collects, processes, stores, and protects personal data. It applies to all personal data processed by Acme in connection with its products, services, and internal operations.\n\nThis Policy applies to all employees, contractors, interns, and third-party vendors who access or process personal data on behalf of Acme. Non-compliance may result in disciplinary action.\n\n## 2. Key Definitions\n\n**Personal Data:** Any information relating to an identified or identifiable natural person ('data subject').\n\n**Processing:** Any operation performed on personal data, including collection, storage, use, disclosure, or deletion.\n\n**Data Controller:** Acme Technologies Pvt. Ltd., which determines the purposes and means of processing personal data.\n\n**Data Processor:** A third party that processes personal data on behalf of Acme under a written agreement.\n\n**Data Subject:** The individual whose personal data is being processed.\n\n**Consent:** Freely given, specific, informed, and unambiguous indication of agreement to processing.\n\n## 3. Lawful Basis for Processing\n\nAcme processes personal data only where a lawful basis exists under Article 6 of GDPR. The applicable bases are:",
+      "images": [],
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 141,
+          "top_left_y": 147,
+          "bottom_right_x": 577,
+          "bottom_right_y": 174,
+          "content": "# ACME TECHNOLOGIES PVT. LTD.",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 262,
+          "top_left_y": 176,
+          "bottom_right_x": 457,
+          "bottom_right_y": 193,
+          "content": "Data Protection & Privacy Policy",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 192,
+          "top_left_y": 192,
+          "bottom_right_x": 527,
+          "bottom_right_y": 206,
+          "content": "Version 2.1 | Effective Date: January 1, 2025 | Classification: Internal",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 66,
+          "top_left_y": 247,
+          "bottom_right_x": 646,
+          "bottom_right_y": 382,
+          "content": "|  **Document Owner** | Data Protection Officer (DPO)  |\n| --- | --- |\n|  **Review Cycle** | Annual or upon regulatory change  |\n|  **Applies To** | All employees, contractors, vendors  |\n|  **Regulation Basis** | GDPR (EU) 2016/679, IT Act 2000  |\n|  **Last Reviewed** | December 15, 2024  |",
+          "confidence_scores": null,
+          "type": "table",
+          "table_id": null
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 432,
+          "bottom_right_x": 255,
+          "bottom_right_y": 452,
+          "content": "## 1. Purpose and Scope",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 465,
+          "bottom_right_x": 646,
+          "bottom_right_y": 517,
+          "content": "This Data Protection and Privacy Policy ('Policy') establishes the framework under which Acme Technologies Pvt. Ltd. ('Acme', 'we', 'us') collects, processes, stores, and protects personal data. It applies to all personal data processed by Acme in connection with its products, services, and internal operations.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 528,
+          "bottom_right_x": 646,
+          "bottom_right_y": 561,
+          "content": "This Policy applies to all employees, contractors, interns, and third-party vendors who access or process personal data on behalf of Acme. Non-compliance may result in disciplinary action.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 585,
+          "bottom_right_x": 220,
+          "bottom_right_y": 605,
+          "content": "## 2. Key Definitions",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 617,
+          "bottom_right_x": 635,
+          "bottom_right_y": 634,
+          "content": "**Personal Data:** Any information relating to an identified or identifiable natural person ('data subject').",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 640,
+          "bottom_right_x": 642,
+          "bottom_right_y": 674,
+          "content": "**Processing:** Any operation performed on personal data, including collection, storage, use, disclosure, or deletion.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 680,
+          "bottom_right_x": 597,
+          "bottom_right_y": 714,
+          "content": "**Data Controller:** Acme Technologies Pvt. Ltd., which determines the purposes and means of processing personal data.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 720,
+          "bottom_right_x": 601,
+          "bottom_right_y": 754,
+          "content": "**Data Processor:** A third party that processes personal data on behalf of Acme under a written agreement.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 760,
+          "bottom_right_x": 475,
+          "bottom_right_y": 776,
+          "content": "**Data Subject:** The individual whose personal data is being processed.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 783,
+          "bottom_right_x": 630,
+          "bottom_right_y": 799,
+          "content": "**Consent:** Freely given, specific, informed, and unambiguous indication of agreement to processing.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 840,
+          "bottom_right_x": 323,
+          "bottom_right_y": 861,
+          "content": "## 3. Lawful Basis for Processing",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 872,
+          "bottom_right_x": 646,
+          "bottom_right_y": 906,
+          "content": "Acme processes personal data only where a lawful basis exists under Article 6 of GDPR. The applicable bases are:",
+          "confidence_scores": null,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "markdown": "- Consent — where the data subject has given clear, documented consent.\n- Contractual necessity — where processing is required to fulfil a contract with the data subject.\n- Legal obligation — where processing is required to comply with applicable law.\n- Legitimate interests — where Acme has a legitimate interest that is not overridden by the rights of the data subject.\n\n### 3.1 Consent Management\n\nWhere consent is the lawful basis, it must be obtained prior to processing. Consent records are maintained in our CRM system. Users may withdraw consent at any time by contacting privacy@acme.io. Upon withdrawal, processing ceases within 5 business days.\n\n## 4. Data We Collect\n\nAcme collects the following categories of personal data depending on the nature of the relationship:\n\n|  Category | Examples  |\n| --- | --- |\n|  Identity Data | Name, username, employee ID, date of birth  |\n|  Contact Data | Email address, phone number, mailing address  |\n|  Usage Data | Product usage logs, IP addresses, device identifiers  |\n|  Financial Data | Billing details, payment method (processed by third-party gateway)  |\n|  Employment Data | HR records, performance data, payroll information (employees only)  |\n\n## 5. Data Retention\n\nPersonal data is retained only as long as necessary for the purpose for which it was collected, or as required by applicable law. Our retention schedule is as follows:\n\n|  Data Type | Retention Period | Basis  |\n| --- | --- | --- |\n|  Customer account data | Duration of contract + 3 years | Legal obligation  |\n|  Marketing consent records | Until consent withdrawn + 1 year | Consent  |\n|  Employee records | 7 years post-employment | Legal obligation  |\n|  Application logs / usage data | 90 days | Legitimate interest  |\n|  Financial/billing records | 7 years | Legal obligation  |\n\nNote: Automated deletion processes run on the 1st of each month. Manual review is conducted annually.",
+      "images": [],
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 92,
+          "top_left_y": 84,
+          "bottom_right_x": 644,
+          "bottom_right_y": 181,
+          "content": "- Consent — where the data subject has given clear, documented consent.\n- Contractual necessity — where processing is required to fulfil a contract with the data subject.\n- Legal obligation — where processing is required to comply with applicable law.\n- Legitimate interests — where Acme has a legitimate interest that is not overridden by the rights of the data subject.",
+          "confidence_scores": null,
+          "type": "list"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 200,
+          "bottom_right_x": 238,
+          "bottom_right_y": 216,
+          "content": "### 3.1 Consent Management",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 225,
+          "bottom_right_x": 646,
+          "bottom_right_y": 277,
+          "content": "Where consent is the lawful basis, it must be obtained prior to processing. Consent records are maintained in our CRM system. Users may withdraw consent at any time by contacting privacy@acme.io. Upon withdrawal, processing ceases within 5 business days.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 302,
+          "bottom_right_x": 224,
+          "bottom_right_y": 320,
+          "content": "## 4. Data We Collect",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 334,
+          "bottom_right_x": 607,
+          "bottom_right_y": 351,
+          "content": "Acme collects the following categories of personal data depending on the nature of the relationship:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 67,
+          "top_left_y": 359,
+          "bottom_right_x": 652,
+          "bottom_right_y": 520,
+          "content": "|  Category | Examples  |\n| --- | --- |\n|  Identity Data | Name, username, employee ID, date of birth  |\n|  Contact Data | Email address, phone number, mailing address  |\n|  Usage Data | Product usage logs, IP addresses, device identifiers  |\n|  Financial Data | Billing details, payment method (processed by third-party gateway)  |\n|  Employment Data | HR records, performance data, payroll information (employees only)  |",
+          "confidence_scores": null,
+          "type": "table",
+          "table_id": null
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 556,
+          "bottom_right_x": 216,
+          "bottom_right_y": 574,
+          "content": "## 5. Data Retention",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 589,
+          "bottom_right_x": 646,
+          "bottom_right_y": 624,
+          "content": "Personal data is retained only as long as necessary for the purpose for which it was collected, or as required by applicable law. Our retention schedule is as follows:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 67,
+          "top_left_y": 631,
+          "bottom_right_x": 652,
+          "bottom_right_y": 794,
+          "content": "|  Data Type | Retention Period | Basis  |\n| --- | --- | --- |\n|  Customer account data | Duration of contract + 3 years | Legal obligation  |\n|  Marketing consent records | Until consent withdrawn + 1 year | Consent  |\n|  Employee records | 7 years post-employment | Legal obligation  |\n|  Application logs / usage data | 90 days | Legitimate interest  |\n|  Financial/billing records | 7 years | Legal obligation  |",
+          "confidence_scores": null,
+          "type": "table",
+          "table_id": null
+        },
+        {
+          "top_left_x": 86,
+          "top_left_y": 802,
+          "bottom_right_x": 594,
+          "bottom_right_y": 816,
+          "content": "Note: Automated deletion processes run on the 1st of each month. Manual review is conducted annually.",
+          "confidence_scores": null,
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "markdown": "## 6. Data Subject Rights\n\nUnder GDPR, data subjects have the following rights. Requests must be submitted to privacy@acme.io and will be acknowledged within 3 business days.\n\n### Right of Access (Art. 15)\n\nData subjects may request a copy of their personal data held by Acme. We will respond within 30 days.\n\n### Right to Rectification (Art. 16)\n\nData subjects may request correction of inaccurate or incomplete data. Corrections are applied within 10 business days.\n\n### Right to Erasure (Art. 17)\n\nData subjects may request deletion of their data. We will action this within 30 days unless retention is required by law.\n\n### Right to Data Portability (Art. 20)\n\nData subjects may request their data in a structured, machine-readable format (CSV/JSON). Available for data provided by consent or contract only.\n\n### Right to Object (Art. 21)\n\nData subjects may object to processing based on legitimate interests or for direct marketing at any time.\n\nImportant: Acme does not guarantee response to requests submitted through channels other than privacy@acme.io.\n\n## 7. Data Security Measures\n\nAcme implements appropriate technical and organisational measures to protect personal data against unauthorised access, loss, destruction, or disclosure:\n\n- Encryption of data at rest (AES-256) and in transit (TLS 1.2+)\n- Role-based access controls (RBAC) with quarterly access reviews\n- Multi-factor authentication (MFA) required for all systems handling personal data\n- Annual penetration testing and vulnerability assessments\n- Employee security awareness training conducted bi-annually\n- Data Loss Prevention (DLP) tools deployed on all endpoints\n\n## 8. Data Breach Response\n\nIn the event of a personal data breach, Acme will follow its Incident Response Procedure. The IT Security team must be notified immediately upon discovery of a suspected breach.\n\n### 8.1 Internal Escalation",
+      "images": [],
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 72,
+          "top_left_y": 85,
+          "bottom_right_x": 255,
+          "bottom_right_y": 105,
+          "content": "## 6. Data Subject Rights",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 117,
+          "bottom_right_x": 645,
+          "bottom_right_y": 152,
+          "content": "Under GDPR, data subjects have the following rights. Requests must be submitted to privacy@acme.io and will be acknowledged within 3 business days.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 167,
+          "bottom_right_x": 231,
+          "bottom_right_y": 184,
+          "content": "### Right of Access (Art. 15)",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 194,
+          "bottom_right_x": 627,
+          "bottom_right_y": 211,
+          "content": "Data subjects may request a copy of their personal data held by Acme. We will respond within 30 days.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 227,
+          "bottom_right_x": 265,
+          "bottom_right_y": 245,
+          "content": "### Right to Rectification (Art. 16)",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 253,
+          "bottom_right_x": 645,
+          "bottom_right_y": 286,
+          "content": "Data subjects may request correction of inaccurate or incomplete data. Corrections are applied within 10 business days.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 305,
+          "bottom_right_x": 234,
+          "bottom_right_y": 320,
+          "content": "### Right to Erasure (Art. 17)",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 329,
+          "bottom_right_x": 645,
+          "bottom_right_y": 364,
+          "content": "Data subjects may request deletion of their data. We will action this within 30 days unless retention is required by law.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 380,
+          "bottom_right_x": 282,
+          "bottom_right_y": 397,
+          "content": "### Right to Data Portability (Art. 20)",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 408,
+          "bottom_right_x": 645,
+          "bottom_right_y": 441,
+          "content": "Data subjects may request their data in a structured, machine-readable format (CSV/JSON). Available for data provided by consent or contract only.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 459,
+          "bottom_right_x": 226,
+          "bottom_right_y": 476,
+          "content": "### Right to Object (Art. 21)",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 484,
+          "bottom_right_x": 630,
+          "bottom_right_y": 500,
+          "content": "Data subjects may object to processing based on legitimate interests or for direct marketing at any time.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 86,
+          "top_left_y": 510,
+          "bottom_right_x": 561,
+          "bottom_right_y": 540,
+          "content": "Important: Acme does not guarantee response to requests submitted through channels other than privacy@acme.io.",
+          "confidence_scores": null,
+          "type": "aside_text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 565,
+          "bottom_right_x": 286,
+          "bottom_right_y": 584,
+          "content": "## 7. Data Security Measures",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 597,
+          "bottom_right_x": 645,
+          "bottom_right_y": 632,
+          "content": "Acme implements appropriate technical and organisational measures to protect personal data against unauthorised access, loss, destruction, or disclosure:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 91,
+          "top_left_y": 640,
+          "bottom_right_x": 533,
+          "bottom_right_y": 765,
+          "content": "- Encryption of data at rest (AES-256) and in transit (TLS 1.2+)\n- Role-based access controls (RBAC) with quarterly access reviews\n- Multi-factor authentication (MFA) required for all systems handling personal data\n- Annual penetration testing and vulnerability assessments\n- Employee security awareness training conducted bi-annually\n- Data Loss Prevention (DLP) tools deployed on all endpoints",
+          "confidence_scores": null,
+          "type": "list"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 791,
+          "bottom_right_x": 280,
+          "bottom_right_y": 810,
+          "content": "## 8. Data Breach Response",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 71,
+          "top_left_y": 822,
+          "bottom_right_x": 645,
+          "bottom_right_y": 858,
+          "content": "In the event of a personal data breach, Acme will follow its Incident Response Procedure. The IT Security team must be notified immediately upon discovery of a suspected breach.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 72,
+          "top_left_y": 874,
+          "bottom_right_x": 217,
+          "bottom_right_y": 890,
+          "content": "### 8.1 Internal Escalation",
+          "confidence_scores": null,
+          "type": "title"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "markdown": "Incidents are escalated as follows: IT Security Team → DPO → CISO → Executive Committee. A breach log is maintained by the DPO with details of each incident, actions taken, and outcomes.\n\n## 8.2 Regulatory Notification\n\nThe DPO will assess each breach for its severity and regulatory notification requirements. Notifications to relevant authorities will be made as required by applicable law. Affected individuals will be informed where the breach is deemed high risk to their rights.\n\n## 9. Third-Party Data Processors\n\nAcme engages third-party processors to support its services. All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data. Key processors include:\n\n|  Processor | Purpose | Location | DPA Signed  |\n| --- | --- | --- | --- |\n|  AWS | Cloud infrastructure | US / EU | Yes  |\n|  Stripe | Payment processing | US | Yes  |\n|  Mailchimp | Email marketing | US | Yes  |\n|  Intercom | Customer support chat | US | Yes  |\n|  Google Workspace | Internal collaboration | US / EU | Yes  |\n\n## 10. International Data Transfers\n\nSome of our processors are located outside the European Economic Area (EEA). Where data is transferred internationally, Acme relies on the following safeguards:\n\n- Standard Contractual Clauses (SCCs) approved by the European Commission\n- Adequacy decisions where applicable\n- Binding Corporate Rules (BCRs) where relevant",
+      "images": [],
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 73,
+          "top_left_y": 82,
+          "bottom_right_x": 646,
+          "bottom_right_y": 116,
+          "content": "Incidents are escalated as follows: IT Security Team → DPO → CISO → Executive Committee. A breach log is maintained by the DPO with details of each incident, actions taken, and outcomes.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 73,
+          "top_left_y": 132,
+          "bottom_right_x": 246,
+          "bottom_right_y": 150,
+          "content": "## 8.2 Regulatory Notification",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 73,
+          "top_left_y": 158,
+          "bottom_right_x": 646,
+          "bottom_right_y": 211,
+          "content": "The DPO will assess each breach for its severity and regulatory notification requirements. Notifications to relevant authorities will be made as required by applicable law. Affected individuals will be informed where the breach is deemed high risk to their rights.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 73,
+          "top_left_y": 234,
+          "bottom_right_x": 325,
+          "bottom_right_y": 257,
+          "content": "## 9. Third-Party Data Processors",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 73,
+          "top_left_y": 269,
+          "bottom_right_x": 646,
+          "bottom_right_y": 304,
+          "content": "Acme engages third-party processors to support its services. All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data. Key processors include:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 66,
+          "top_left_y": 311,
+          "bottom_right_x": 646,
+          "bottom_right_y": 471,
+          "content": "|  Processor | Purpose | Location | DPA Signed  |\n| --- | --- | --- | --- |\n|  AWS | Cloud infrastructure | US / EU | Yes  |\n|  Stripe | Payment processing | US | Yes  |\n|  Mailchimp | Email marketing | US | Yes  |\n|  Intercom | Customer support chat | US | Yes  |\n|  Google Workspace | Internal collaboration | US / EU | Yes  |",
+          "confidence_scores": null,
+          "type": "table",
+          "table_id": null
+        },
+        {
+          "top_left_x": 73,
+          "top_left_y": 494,
+          "bottom_right_x": 332,
+          "bottom_right_y": 515,
+          "content": "## 10. International Data Transfers",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 73,
+          "top_left_y": 528,
+          "bottom_right_x": 646,
+          "bottom_right_y": 562,
+          "content": "Some of our processors are located outside the European Economic Area (EEA). Where data is transferred internationally, Acme relies on the following safeguards:",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 92,
+          "top_left_y": 571,
+          "bottom_right_x": 525,
+          "bottom_right_y": 631,
+          "content": "- Standard Contractual Clauses (SCCs) approved by the European Commission\n- Adequacy decisions where applicable\n- Binding Corporate Rules (BCRs) where relevant",
+          "confidence_scores": null,
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "markdown": "## 11. Privacy by Design and Default\n\nAcme embeds privacy considerations into the design of all new products, features, and processes. A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals.\n\nBy default, Acme applies the most privacy-protective settings to its products. Additional data collection requires explicit opt-in from users.\n\n## 12. Cookie Policy\n\nAcme uses cookies and similar tracking technologies on its websites and applications. A cookie banner is displayed to all new visitors to obtain consent prior to non-essential cookie use. Users can manage cookie preferences via the Cookie Settings panel accessible from the footer of our website.\n\n**Essential Cookies:** Required for the website to function. No consent needed.\n\n**Analytics Cookies:** Used to understand usage patterns. Requires consent.\n\n**Marketing Cookies:** Used for targeted advertising. Requires explicit consent.\n\n## 13. Data Protection Officer\n\nAcme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR. The DPO is responsible for overseeing this Policy, advising on data protection obligations, and acting as the primary contact for supervisory authorities.\n\n**DPO Contact:** Rajiv Mehta | dpo@acme.io | +91-98765-43210\n\n## 14. Training and Awareness\n\nAll employees with access to personal data are required to complete mandatory data protection training upon joining and annually thereafter. Training records are maintained by HR and reviewed by the DPO.\n\n## 15. Policy Review and Updates\n\nThis Policy is reviewed annually by the DPO and updated as necessary to reflect changes in law, regulation, or Acme's processing activities. Material changes will be communicated to all employees and, where required, to data subjects.\n\n|  Approved By | Role | Date | Signature  |\n| --- | --- | --- | --- |\n|  Ananya Sharma | CEO | Dec 20, 2024 | _____  |\n|  Rajiv Mehta | DPO | Dec 20, 2024 | _____  |\n|  Karan Joshi | CISO | Dec 20, 2024 | _____  |",
+      "images": [],
+      "dimensions": {
+        "dpi": 87,
+        "height": 1018,
+        "width": 720
+      },
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 74,
+          "top_left_y": 85,
+          "bottom_right_x": 350,
+          "bottom_right_y": 106,
+          "content": "## 11. Privacy by Design and Default",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 117,
+          "bottom_right_x": 651,
+          "bottom_right_y": 169,
+          "content": "Acme embeds privacy considerations into the design of all new products, features, and processes. A Privacy Impact Assessment (PIA) is conducted for any new processing activity that may pose a high risk to individuals.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 178,
+          "bottom_right_x": 651,
+          "bottom_right_y": 213,
+          "content": "By default, Acme applies the most privacy-protective settings to its products. Additional data collection requires explicit opt-in from users.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 237,
+          "bottom_right_x": 217,
+          "bottom_right_y": 259,
+          "content": "## 12. Cookie Policy",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 271,
+          "bottom_right_x": 651,
+          "bottom_right_y": 322,
+          "content": "Acme uses cookies and similar tracking technologies on its websites and applications. A cookie banner is displayed to all new visitors to obtain consent prior to non-essential cookie use. Users can manage cookie preferences via the Cookie Settings panel accessible from the footer of our website.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 93,
+          "top_left_y": 331,
+          "bottom_right_x": 512,
+          "bottom_right_y": 349,
+          "content": "**Essential Cookies:** Required for the website to function. No consent needed.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 93,
+          "top_left_y": 354,
+          "bottom_right_x": 502,
+          "bottom_right_y": 370,
+          "content": "**Analytics Cookies:** Used to understand usage patterns. Requires consent.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 93,
+          "top_left_y": 375,
+          "bottom_right_x": 512,
+          "bottom_right_y": 392,
+          "content": "**Marketing Cookies:** Used for targeted advertising. Requires explicit consent.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 416,
+          "bottom_right_x": 290,
+          "bottom_right_y": 436,
+          "content": "## 13. Data Protection Officer",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 448,
+          "bottom_right_x": 651,
+          "bottom_right_y": 501,
+          "content": "Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR. The DPO is responsible for overseeing this Policy, advising on data protection obligations, and acting as the primary contact for supervisory authorities.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 511,
+          "bottom_right_x": 414,
+          "bottom_right_y": 526,
+          "content": "**DPO Contact:** Rajiv Mehta | dpo@acme.io | +91-98765-43210",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 550,
+          "bottom_right_x": 301,
+          "bottom_right_y": 572,
+          "content": "## 14. Training and Awareness",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 583,
+          "bottom_right_x": 651,
+          "bottom_right_y": 618,
+          "content": "All employees with access to personal data are required to complete mandatory data protection training upon joining and annually thereafter. Training records are maintained by HR and reviewed by the DPO.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 642,
+          "bottom_right_x": 325,
+          "bottom_right_y": 662,
+          "content": "## 15. Policy Review and Updates",
+          "confidence_scores": null,
+          "type": "title"
+        },
+        {
+          "top_left_x": 74,
+          "top_left_y": 675,
+          "bottom_right_x": 651,
+          "bottom_right_y": 728,
+          "content": "This Policy is reviewed annually by the DPO and updated as necessary to reflect changes in law, regulation, or Acme's processing activities. Material changes will be communicated to all employees and, where required, to data subjects.",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 67,
+          "top_left_y": 786,
+          "bottom_right_x": 650,
+          "bottom_right_y": 904,
+          "content": "|  Approved By | Role | Date | Signature  |\n| --- | --- | --- | --- |\n|  Ananya Sharma | CEO | Dec 20, 2024 | _____  |\n|  Rajiv Mehta | DPO | Dec 20, 2024 | _____  |\n|  Karan Joshi | CISO | Dec 20, 2024 | _____  |",
+          "confidence_scores": null,
+          "type": "table",
+          "table_id": null
+        }
+      ]
+    }
+  ],
+  "model": "mistral-ocr-latest",
+  "usage_info": {
+    "pages_processed": 5,
+    "doc_size_bytes": 12327
+  },
+  "document_annotation": null
+}

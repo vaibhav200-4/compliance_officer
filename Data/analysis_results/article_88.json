@@ -1,0 +1,66 @@
+{
+  "article_number": 88,
+  "article_title": "Processing in the context of employment",
+  "checkability": "direct",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 1.0,
+  "group_count": 1,
+  "completed_groups": 1,
+  "groups": [
+    {
+      "article_number": 88,
+      "group_id": "88.2",
+      "principle": "Safeguards for employee data processing",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The provided policy evidence contains no specific information regarding employment-context rules, employee privacy notices, or safeguards for employee human dignity and transparency under Article 88. The provided policy evidence contains no mentions of intra-group transfers of employee personal data or specific safeguards related to them. The provided policy evidence does not discuss workplace monitoring systems or any associated safeguards and transparency measures.",
+      "gap": "The provided policy evidence contains no specific information regarding employment-context rules, employee privacy notices, or safeguards for employee human dignity and transparency under Article 88. The provided policy evidence contains no mentions of intra-group transfers of employee personal data or specific safeguards related to them. The provided policy evidence does not discuss workplace monitoring systems or any associated safeguards and transparency measures.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "88.2.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no specific information regarding employment-context rules, employee privacy notices, or safeguards for employee human dignity and transparency under Article 88.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "88.2.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence contains no mentions of intra-group transfers of employee personal data or specific safeguards related to them.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "88.2.3",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy evidence does not discuss workplace monitoring systems or any associated safeguards and transparency measures.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0548,
+        "llm_time": 2.0973,
+        "validation_time": 0.0009,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 192.925
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 88,
+    "execution_mode": "global_group_queue"
+  }
+}

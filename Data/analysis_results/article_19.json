@@ -1,0 +1,59 @@
+{
+  "article_number": 19,
+  "article_title": "Notification obligation regarding rectification or erasure of personal data or restriction of processing",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 1.0,
+  "group_count": 1,
+  "completed_groups": 1,
+  "groups": [
+    {
+      "article_number": 19,
+      "group_id": "19.1",
+      "principle": "Notifying recipients of rectification, erasure, or restriction",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The policy makes no mention of communicating rectifications, erasures, or restrictions of personal data to recipients to whom the data have been disclosed. The policy does not contain any commitment to inform the data subject about those recipients upon request.",
+      "gap": "The policy makes no mention of communicating rectifications, erasures, or restrictions of personal data to recipients to whom the data have been disclosed. The policy does not contain any commitment to inform the data subject about those recipients upon request.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "19.1.1",
+          "status": "NOT_MET",
+          "reason": "The policy makes no mention of communicating rectifications, erasures, or restrictions of personal data to recipients to whom the data have been disclosed.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "19.1.2",
+          "status": "NOT_MET",
+          "reason": "The policy does not contain any commitment to inform the data subject about those recipients upon request.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 0.9826,
+        "llm_time": 1.5609,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 17.7931
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 19,
+    "execution_mode": "global_group_queue"
+  }
+}

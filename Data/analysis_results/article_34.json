@@ -1,0 +1,149 @@
+{
+  "article_number": 34,
+  "article_title": "Communication of a personal data breach to the data subject",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.875,
+  "group_count": 3,
+  "completed_groups": 3,
+  "groups": [
+    {
+      "article_number": 34,
+      "group_id": "34.3",
+      "principle": "Exemptions from data subject breach communication",
+      "condition_logic": "ANY",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.9,
+      "reason": "The policy mentions encryption of data at rest and in transit under general security measures, but does not address exemptions from notifying data subjects of a breach when protective measures render the data unintelligible. The policy does not describe subsequent measures taken to ensure that a high risk to rights and freedoms is no longer likely to materialise in the context of exempting data subject notifications. The policy does not address disproportionate effort exemptions or the use of an equally effective public communication in place of individual notices.",
+      "gap": "The policy mentions encryption of data at rest and in transit under general security measures, but does not address exemptions from notifying data subjects of a breach when protective measures render the data unintelligible. The policy does not describe subsequent measures taken to ensure that a high risk to rights and freedoms is no longer likely to materialise in the context of exempting data subject notifications. The policy does not address disproportionate effort exemptions or the use of an equally effective public communication in place of individual notices.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "34.3.a",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy mentions encryption of data at rest and in transit under general security measures, but does not address exemptions from notifying data subjects of a breach when protective measures render the data unintelligible.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "34.3.b",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy does not describe subsequent measures taken to ensure that a high risk to rights and freedoms is no longer likely to materialise in the context of exempting data subject notifications.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "34.3.c",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy does not address disproportionate effort exemptions or the use of an equally effective public communication in place of individual notices.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 0.9925,
+        "llm_time": 1.8482,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 34,
+      "group_id": "34.4",
+      "principle": "Supervisory authority power to require communication",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The company policy does not acknowledge that the supervisory authority may require individual breach notification or determine exemptions when individual notice was not given.",
+      "gap": "The company policy does not acknowledge that the supervisory authority may require individual breach notification or determine exemptions when individual notice was not given.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "34.4.1",
+          "status": "NOT_MET",
+          "reason": "The company policy does not acknowledge that the supervisory authority may require individual breach notification or determine exemptions when individual notice was not given.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0492,
+        "llm_time": 1.3408,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 34,
+      "group_id": "34.1-2",
+      "principle": "Timely, clear communication of high-risk breaches to data subjects",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.725,
+      "reason": "Policy states that affected individuals will be informed if a breach is deemed high risk, indicating commitment to communication without undue delay through the DPO's assessment process. Policy does not specify that communications include contact details, likely consequences, or mitigation measures as required by Article 34(2)(1).",
+      "gap": "Policy does not specify that communications include contact details, likely consequences, or mitigation measures as required by Article 34(2)(1).",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "34.1.1",
+          "status": "MET",
+          "reason": "Policy states that affected individuals will be informed if a breach is deemed high risk, indicating commitment to communication without undue delay through the DPO's assessment process.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:8",
+              "quote": "Affected individuals will be informed where the breach is deemed high risk to their rights."
+            }
+          ],
+          "confidence": 0.85
+        },
+        {
+          "obligation_id": "34.2.1",
+          "status": "NOT_MET",
+          "reason": "Policy does not specify that communications include contact details, likely consequences, or mitigation measures as required by Article 34(2)(1).",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:8",
+              "quote": "Affected individuals will be informed where the breach is deemed high risk to their rights."
+            }
+          ],
+          "confidence": 0.6
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.02,
+        "llm_time": 22.3292,
+        "validation_time": 0.0012,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 135.8521
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 34,
+    "execution_mode": "global_group_queue"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "article_number": 37,
+  "article_title": "Designation of the data protection officer",
+  "checkability": "direct",
+  "status": "PARTIALLY_MET",
+  "confidence": 0.9396,
+  "group_count": 4,
+  "completed_groups": 4,
+  "groups": [
+    {
+      "article_number": 37,
+      "group_id": "37.1",
+      "principle": "Mandatory DPO designation triggers",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 0.9333,
+      "reason": "Acme Technologies Pvt. Ltd. is a private entity (Data Controller: Acme Technologies Pvt. Ltd.), not a public authority or body, rendering this sub-obligation not applicable. The policy confirms that Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR. The policy confirms that Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "37.1.a",
+          "status": "NOT_APPLICABLE",
+          "reason": "Acme Technologies Pvt. Ltd. is a private entity (Data Controller: Acme Technologies Pvt. Ltd.), not a public authority or body, rendering this sub-obligation not applicable.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:1",
+              "quote": "Data Controller: Acme Technologies Pvt. Ltd., which determines the purposes and means of processing personal data."
+            }
+          ],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "37.1.b",
+          "status": "MET",
+          "reason": "The policy confirms that Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "37.1.c",
+          "status": "MET",
+          "reason": "The policy confirms that Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR."
+            }
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 0.9984,
+        "llm_time": 2.332,
+        "validation_time": 0.0186,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 37,
+      "group_id": "37.2-4",
+      "principle": "Flexible DPO designation arrangements",
+      "condition_logic": "SINGLE",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The applicability condition requires that the controller is part of a group of undertakings, a public authority sharing a DPO, or voluntarily/legally designating a DPO outside mandatory triggers. The policy indicates Acme appointed a DPO as required under Article 37 of GDPR (mandatory designation), and does not mention a group of undertakings, public body sharing arrangements, or voluntary/external association designations.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "37.2-4.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The applicability condition requires that the controller is part of a group of undertakings, a public authority sharing a DPO, or voluntarily/legally designating a DPO outside mandatory triggers. The policy indicates Acme appointed a DPO as required under Article 37 of GDPR (mandatory designation), and does not mention a group of undertakings, public body sharing arrangements, or voluntary/external association designations.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "Acme has appointed a Data Protection Officer (DPO) as required under Article 37 of GDPR."
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.8908,
+        "llm_time": 2.7436,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 37,
+      "group_id": "37.5-6",
+      "principle": "DPO qualifications and engagement basis",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy confirms the appointment of a DPO under Article 37, but does not provide details confirming that the DPO was selected based on professional qualities, expert knowledge of data protection law, and ability to fulfil tasks. The policy states that a DPO has been appointed, but does not specify whether the DPO is an internal staff member or engaged via a service contract.",
+      "gap": "The policy confirms the appointment of a DPO under Article 37, but does not provide details confirming that the DPO was selected based on professional qualities, expert knowledge of data protection law, and ability to fulfil tasks. The policy states that a DPO has been appointed, but does not specify whether the DPO is an internal staff member or engaged via a service contract.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "37.5.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy confirms the appointment of a DPO under Article 37, but does not provide details confirming that the DPO was selected based on professional qualities, expert knowledge of data protection law, and ability to fulfil tasks.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "37.6.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy states that a DPO has been appointed, but does not specify whether the DPO is an internal staff member or engaged via a service contract.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0997,
+        "llm_time": 1.6796,
+        "validation_time": 0.0005,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 37,
+      "group_id": "37.7",
+      "principle": "Publication and communication of DPO contact details",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.825,
+      "reason": "The policy explicitly lists the DPO's contact details (email and phone number) in the 'DPO Contact' section. The policy states the DPO is the 'primary contact for supervisory authorities,' implying communication of details, but does not explicitly state that the contact details are formally communicated to the authority.",
+      "gap": "The policy states the DPO is the 'primary contact for supervisory authorities,' implying communication of details, but does not explicitly state that the contact details are formally communicated to the authority.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "37.7.1",
+          "status": "MET",
+          "reason": "The policy explicitly lists the DPO's contact details (email and phone number) in the 'DPO Contact' section.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "DPO Contact: Rajiv Mehta | dpo@acme.io | +91-98765-43210"
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "37.7.2",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy states the DPO is the 'primary contact for supervisory authorities,' implying communication of details, but does not explicitly state that the contact details are formally communicated to the authority.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:11",
+              "quote": "The DPO is responsible for... acting as the primary contact for supervisory authorities."
+            }
+          ],
+          "confidence": 0.7
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.4209,
+        "llm_time": 30.1476,
+        "validation_time": 0.001,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 166.8792
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 37,
+    "execution_mode": "global_group_queue"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "article_number": 89,
+  "article_title": "Safeguards and derogations relating to processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes",
+  "checkability": "direct",
+  "status": "NOT_APPLICABLE",
+  "confidence": 1.0,
+  "group_count": 3,
+  "completed_groups": 3,
+  "groups": [
+    {
+      "article_number": 89,
+      "group_id": "89.2",
+      "principle": "Derogations from certain rights for research and statistical purposes",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The company policy does not mention or rely on research or statistical purposes, nor does it address derogations from data subject rights under Article 89(2). Therefore, the applicability condition is not met.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "89.2.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The company policy does not mention or rely on research or statistical purposes, nor does it address derogations from data subject rights under Article 89(2). Therefore, the applicability condition is not met.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0214,
+        "llm_time": 1.6164,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 89,
+      "group_id": "89.1",
+      "principle": "Appropriate safeguards for archiving, research, and statistical processing",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The policy evidence does not indicate that the company processes personal data for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes, making the applicability condition unfulfilled. The policy evidence does not indicate that the company processes personal data for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes, making the applicability condition unfulfilled. The policy evidence does not indicate that the company processes personal data for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes, making the applicability condition unfulfilled.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "89.1.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy evidence does not indicate that the company processes personal data for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes, making the applicability condition unfulfilled.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "89.1.2",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy evidence does not indicate that the company processes personal data for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes, making the applicability condition unfulfilled.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "89.1.3",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy evidence does not indicate that the company processes personal data for archiving purposes in the public interest, scientific or historical research purposes, or statistical purposes, making the applicability condition unfulfilled.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0066,
+        "llm_time": 1.7253,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 89,
+      "group_id": "89.3",
+      "principle": "Derogations from certain rights for public-interest archiving purposes",
+      "condition_logic": "ALL",
+      "status": "NOT_APPLICABLE",
+      "confidence": 1.0,
+      "reason": "The company policy evidence does not indicate that the company relies on a public-interest-archiving derogation from data subject rights under applicable Union or Member State law. Therefore, the applicability condition is not met.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "89.3.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The company policy evidence does not indicate that the company relies on a public-interest-archiving derogation from data subject rights under applicable Union or Member State law. Therefore, the applicability condition is not met.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 0.9728,
+        "llm_time": 1.6162,
+        "validation_time": 0.0003,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 193.4545
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 89,
+    "execution_mode": "global_group_queue"
+  }
+}

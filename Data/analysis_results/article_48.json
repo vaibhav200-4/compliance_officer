@@ -1,0 +1,52 @@
+{
+  "article_number": 48,
+  "article_title": "Transfers or disclosures not authorised by Union law",
+  "checkability": "direct",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "confidence": 1.0,
+  "group_count": 1,
+  "completed_groups": 1,
+  "groups": [
+    {
+      "article_number": 48,
+      "group_id": "48.1",
+      "principle": "Foreign judgment/order recognition limited to international agreements",
+      "condition_logic": "SINGLE",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy evidence contains provisions regarding international data transfers and processors (Section 10), but does not contain any statements or procedures regarding compliance with foreign court judgments, administrative decisions, or demands for data transfer/disclosure based on international agreements (such as MLATs).",
+      "gap": "The policy evidence contains provisions regarding international data transfers and processors (Section 10), but does not contain any statements or procedures regarding compliance with foreign court judgments, administrative decisions, or demands for data transfer/disclosure based on international agreements (such as MLATs).",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "48.1.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy evidence contains provisions regarding international data transfers and processors (Section 10), but does not contain any statements or procedures regarding compliance with foreign court judgments, administrative decisions, or demands for data transfer/disclosure based on international agreements (such as MLATs).",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0155,
+        "llm_time": 1.4762,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 186.1802
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 48,
+    "execution_mode": "global_group_queue"
+  }
+}

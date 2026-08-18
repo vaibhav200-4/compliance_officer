@@ -1,0 +1,352 @@
+{
+  "article_number": 28,
+  "article_title": "Processor",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.8779,
+  "group_count": 6,
+  "completed_groups": 6,
+  "groups": [
+    {
+      "article_number": 28,
+      "group_id": "28.1",
+      "principle": "Use of processors offering sufficient guarantees",
+      "condition_logic": "SINGLE",
+      "status": "MET",
+      "confidence": 0.92,
+      "reason": "The policy requires all processors to sign a Data Processing Agreement (DPA) before handling personal data, ensuring they commit to GDPR compliance. International processors use approved safeguards (SCCs, adequacy decisions, BCRs), demonstrating sufficient guarantees.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "28.1.1",
+          "status": "MET",
+          "reason": "The policy requires all processors to sign a Data Processing Agreement (DPA) before handling personal data, ensuring they commit to GDPR compliance. International processors use approved safeguards (SCCs, adequacy decisions, BCRs), demonstrating sufficient guarantees.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:9",
+              "quote": "All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data."
+            },
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:9",
+              "quote": "Some of our processors are located outside the European Economic Area (EEA). Where data is transferred internationally, Acme relies on the following safeguards: Standard Contractual Clauses (SCCs) approved by the European Commission, Adequacy decisions where applicable, Binding Corporate Rules (BCRs) where relevant."
+            }
+          ],
+          "confidence": 0.92
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0169,
+        "llm_time": 17.8508,
+        "validation_time": 0.0019,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 28,
+      "group_id": "28.4",
+      "principle": "Flow-down of obligations to sub-processors and processor liability",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The policy evidence mentions that Acme engages third-party processors and requires them to sign a DPA, but does not contain provisions confirming that the *same* data protection obligations are flowed down to sub-processors engaged by those processors. The supplied company policy evidence contains no statements regarding the initial processor's full liability to the controller for a sub-processor's failure to fulfill its obligations.",
+      "gap": "The policy evidence mentions that Acme engages third-party processors and requires them to sign a DPA, but does not contain provisions confirming that the *same* data protection obligations are flowed down to sub-processors engaged by those processors. The supplied company policy evidence contains no statements regarding the initial processor's full liability to the controller for a sub-processor's failure to fulfill its obligations.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "28.4.1",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The policy evidence mentions that Acme engages third-party processors and requires them to sign a DPA, but does not contain provisions confirming that the *same* data protection obligations are flowed down to sub-processors engaged by those processors.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "28.4.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The supplied company policy evidence contains no statements regarding the initial processor's full liability to the controller for a sub-processor's failure to fulfill its obligations.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.3839,
+        "llm_time": 2.1765,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 28,
+      "group_id": "28.5-8",
+      "principle": "Certification and standard contractual clauses as compliance tools",
+      "condition_logic": "ANY",
+      "status": "MET",
+      "confidence": 1.0,
+      "reason": "The policy does not reference processor certification or code-of-conduct adherence as evidence of sufficient guarantees, and the applicability condition specifies this applies only where the entity relies on codes of conduct or certification for their arrangement. The policy explicitly indicates that for international data transfers involving processors, Acme relies on Standard Contractual Clauses (SCCs) approved by the European Commission.",
+      "gap": null,
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "28.5.1",
+          "status": "NOT_APPLICABLE",
+          "reason": "The policy does not reference processor certification or code-of-conduct adherence as evidence of sufficient guarantees, and the applicability condition specifies this applies only where the entity relies on codes of conduct or certification for their arrangement.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "28.6.1",
+          "status": "MET",
+          "reason": "The policy explicitly indicates that for international data transfers involving processors, Acme relies on Standard Contractual Clauses (SCCs) approved by the European Commission.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:9",
+              "quote": "Standard Contractual Clauses (SCCs) approved by the European Commission"
+            }
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0751,
+        "llm_time": 1.7488,
+        "validation_time": 0.0004,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 28,
+      "group_id": "28.9-10",
+      "principle": "Written form of processor contracts and processor liability as controller",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 1.0,
+      "reason": "The policy confirms that all third-party processors are required to sign a Data Processing Agreement (DPA) and defines a data processor as processing personal data on behalf of Acme under a written agreement. The provided policy evidence does not contain any acknowledgment or statement regarding a processor being considered a controller if it infringes the regulation by determining the purposes and means of processing.",
+      "gap": "The provided policy evidence does not contain any acknowledgment or statement regarding a processor being considered a controller if it infringes the regulation by determining the purposes and means of processing.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "28.9.1",
+          "status": "MET",
+          "reason": "The policy confirms that all third-party processors are required to sign a Data Processing Agreement (DPA) and defines a data processor as processing personal data on behalf of Acme under a written agreement.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:8",
+              "quote": "All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data."
+            },
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:1",
+              "quote": "Data Processor: A third party that processes personal data on behalf of Acme under a written agreement."
+            }
+          ],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "28.10.1",
+          "status": "NOT_MET",
+          "reason": "The provided policy evidence does not contain any acknowledgment or statement regarding a processor being considered a controller if it infringes the regulation by determining the purposes and means of processing.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 0.9878,
+        "llm_time": 2.0591,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...lfWQ"
+      }
+    },
+    {
+      "article_number": 28,
+      "group_id": "28.2",
+      "principle": "Sub-processor engagement authorization",
+      "condition_logic": "ALL",
+      "status": "NOT_MET",
+      "confidence": 0.835,
+      "reason": "Policy requires DPAs for processors but does not explicitly state prior written authorization from the controller is required before engaging sub-processors. Policy does not mention notification of sub-processor changes to the controller or opportunity to object under general authorisation.",
+      "gap": "Policy requires DPAs for processors but does not explicitly state prior written authorization from the controller is required before engaging sub-processors. Policy does not mention notification of sub-processor changes to the controller or opportunity to object under general authorisation.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "28.2.1",
+          "status": "NOT_MET",
+          "reason": "Policy requires DPAs for processors but does not explicitly state prior written authorization from the controller is required before engaging sub-processors.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:8",
+              "quote": "All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data."
+            }
+          ],
+          "confidence": 0.85
+        },
+        {
+          "obligation_id": "28.2.2",
+          "status": "NOT_MET",
+          "reason": "Policy does not mention notification of sub-processor changes to the controller or opportunity to object under general authorisation.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:8",
+              "quote": "All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data."
+            }
+          ],
+          "confidence": 0.82
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0877,
+        "llm_time": 31.2389,
+        "validation_time": 0.0011,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 1,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    },
+    {
+      "article_number": 28,
+      "group_id": "28.3",
+      "principle": "Mandatory processor contract terms",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 0.5125,
+      "reason": "The DPA existence is mentioned, but no explicit confirmation that processors act only on documented instructions. DPA signing is noted, but no explicit mention of confidentiality obligations for personnel. Acme's security measures are described, but no explicit requirement for processors to implement Article 32. No mention of sub-processor engagement conditions in the provided evidence. Data subject rights processes are described for Acme, but no processor assistance requirement is stated. Security measures and breach response are described for Acme, but no processor assistance obligation is specified. No mention of data deletion/return policies at the end of processing. No reference to audit support or compliance information provision by processors.",
+      "gap": "The DPA existence is mentioned, but no explicit confirmation that processors act only on documented instructions. DPA signing is noted, but no explicit mention of confidentiality obligations for personnel. Acme's security measures are described, but no explicit requirement for processors to implement Article 32. No mention of sub-processor engagement conditions in the provided evidence. Data subject rights processes are described for Acme, but no processor assistance requirement is stated. Security measures and breach response are described for Acme, but no processor assistance obligation is specified. No mention of data deletion/return policies at the end of processing. No reference to audit support or compliance information provision by processors.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "28.3.a",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The DPA existence is mentioned, but no explicit confirmation that processors act only on documented instructions.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:9",
+              "quote": "All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data."
+            }
+          ],
+          "confidence": 0.5
+        },
+        {
+          "obligation_id": "28.3.b",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "DPA signing is noted, but no explicit mention of confidentiality obligations for personnel.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:9",
+              "quote": "All processors are required to sign a Data Processing Agreement (DPA) prior to receiving any personal data."
+            }
+          ],
+          "confidence": 0.4
+        },
+        {
+          "obligation_id": "28.3.c",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "Acme's security measures are described, but no explicit requirement for processors to implement Article 32.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:6",
+              "quote": "Acme implements appropriate technical and organisational measures..."
+            }
+          ],
+          "confidence": 0.6
+        },
+        {
+          "obligation_id": "28.3.d",
+          "status": "NOT_MET",
+          "reason": "No mention of sub-processor engagement conditions in the provided evidence.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "28.3.e",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "Data subject rights processes are described for Acme, but no processor assistance requirement is stated.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request..."
+            }
+          ],
+          "confidence": 0.5
+        },
+        {
+          "obligation_id": "28.3.f",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "Security measures and breach response are described for Acme, but no processor assistance obligation is specified.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:6",
+              "quote": "Acme implements appropriate technical and organisational measures..."
+            }
+          ],
+          "confidence": 0.5
+        },
+        {
+          "obligation_id": "28.3.g",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "No mention of data deletion/return policies at the end of processing.",
+          "evidence": [],
+          "confidence": 0.3
+        },
+        {
+          "obligation_id": "28.3.h",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "No reference to audit support or compliance information provision by processors.",
+          "evidence": [],
+          "confidence": 0.4
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.071,
+        "llm_time": 66.0557,
+        "validation_time": 0.0096,
+        "backoff_time": 0.0,
+        "attempts": 2,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "openrouter",
+        "endpoint_key": "...3904"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 136.6301
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 28,
+    "execution_mode": "global_group_queue"
+  }
+}

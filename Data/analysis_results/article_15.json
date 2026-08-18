@@ -1,0 +1,267 @@
+{
+  "article_number": 15,
+  "article_title": "Right of access by the data subject",
+  "checkability": "direct",
+  "status": "NOT_MET",
+  "confidence": 0.9576,
+  "group_count": 5,
+  "completed_groups": 5,
+  "groups": [
+    {
+      "article_number": 15,
+      "group_id": "15.1.gh",
+      "principle": "Source of data and automated decision-making disclosure in access responses",
+      "condition_logic": "ALL",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "confidence": 1.0,
+      "reason": "The company policy mentions the Right of Access under Article 15 generally but contains no provisions regarding the disclosure of the source of personal data when it was not collected directly from the data subject. The company policy mentions the Right of Access under Article 15 generally but contains no provisions regarding automated decision-making, profiling, or disclosing the logic, significance, and consequences of such processing.",
+      "gap": "The company policy mentions the Right of Access under Article 15 generally but contains no provisions regarding the disclosure of the source of personal data when it was not collected directly from the data subject. The company policy mentions the Right of Access under Article 15 generally but contains no provisions regarding automated decision-making, profiling, or disclosing the logic, significance, and consequences of such processing.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "15.1.g",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The company policy mentions the Right of Access under Article 15 generally but contains no provisions regarding the disclosure of the source of personal data when it was not collected directly from the data subject.",
+          "evidence": [],
+          "confidence": 1.0
+        },
+        {
+          "obligation_id": "15.1.h",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The company policy mentions the Right of Access under Article 15 generally but contains no provisions regarding automated decision-making, profiling, or disclosing the logic, significance, and consequences of such processing.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.6314,
+        "llm_time": 1.7165,
+        "validation_time": 0.0008,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 15,
+      "group_id": "15.2",
+      "principle": "Information on international transfer safeguards",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 0.95,
+      "reason": "Although the policy mentions international transfers and safeguards in Section 10, it fails to state that access requests under Article 15 will disclose these applicable Article 46 safeguards to the data subject.",
+      "gap": "Although the policy mentions international transfers and safeguards in Section 10, it fails to state that access requests under Article 15 will disclose these applicable Article 46 safeguards to the data subject.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "15.2.1",
+          "status": "NOT_MET",
+          "reason": "Although the policy mentions international transfers and safeguards in Section 10, it fails to state that access requests under Article 15 will disclose these applicable Article 46 safeguards to the data subject.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "## 6. Data Subject Rights\n\nUnder GDPR, data subjects have the following rights. Requests must be submitted to privacy@acme.io and will be acknowledged..."
+            }
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.8327,
+        "llm_time": 2.0995,
+        "validation_time": 0.0007,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 15,
+      "group_id": "15.3",
+      "principle": "Provision of a copy of personal data",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9167,
+      "reason": "The policy explicitly commits to providing data subjects with a copy of their personal data held by the company upon request under the Right of Access. The provided policy text does not mention whether any fees may be charged for further copies requested by the data subject. The provided policy text states that requests must be submitted to privacy@acme.io (an electronic channel), but does not explicitly specify that the response will be provided in a commonly used electronic form unless requested otherwise by the data subject.",
+      "gap": "The provided policy text does not mention whether any fees may be charged for further copies requested by the data subject. The provided policy text states that requests must be submitted to privacy@acme.io (an electronic channel), but does not explicitly specify that the response will be provided in a commonly used electronic form unless requested otherwise by the data subject.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "15.3.1",
+          "status": "MET",
+          "reason": "The policy explicitly commits to providing data subjects with a copy of their personal data held by the company upon request under the Right of Access.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request a copy of their personal data held by Acme."
+            }
+          ],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "15.3.2",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy text does not mention whether any fees may be charged for further copies requested by the data subject.",
+          "evidence": [],
+          "confidence": 0.9
+        },
+        {
+          "obligation_id": "15.3.3",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "reason": "The provided policy text states that requests must be submitted to privacy@acme.io (an electronic channel), but does not explicitly specify that the response will be provided in a commonly used electronic form unless requested otherwise by the data subject.",
+          "evidence": [],
+          "confidence": 0.9
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.8396,
+        "llm_time": 2.2506,
+        "validation_time": 0.0006,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 15,
+      "group_id": "15.1.a-f",
+      "principle": "Confirmation of processing and core access information",
+      "condition_logic": "ALL",
+      "status": "PARTIALLY_MET",
+      "confidence": 0.9214,
+      "reason": "The policy states that data subjects may request a copy of their personal data held by Acme, but it does not explicitly mention the requirement to confirm whether personal data is being processed. The policy evidence for the Right of Access does not mention that access responses include the purposes of processing. The policy evidence does not state that an access response includes the categories of personal data concerned. The policy evidence does not mention disclosing recipients or categories of recipients, including those in third countries, as part of an access response. The policy evidence does not state that an access response includes the storage period or criteria for determining it. The policy details separate rights for rectification, erasure, and objection, but does not state that an access response specifically informs the person of all these rights (rectification, erasure, restriction, and objection). The policy evidence does not state that an access response informs the data subject of the right to lodge a complaint with a supervisory authority.",
+      "gap": "The policy states that data subjects may request a copy of their personal data held by Acme, but it does not explicitly mention the requirement to confirm whether personal data is being processed. The policy evidence for the Right of Access does not mention that access responses include the purposes of processing. The policy evidence does not state that an access response includes the categories of personal data concerned. The policy evidence does not mention disclosing recipients or categories of recipients, including those in third countries, as part of an access response. The policy evidence does not state that an access response includes the storage period or criteria for determining it. The policy details separate rights for rectification, erasure, and objection, but does not state that an access response specifically informs the person of all these rights (rectification, erasure, restriction, and objection). The policy evidence does not state that an access response informs the data subject of the right to lodge a complaint with a supervisory authority.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "15.1.a-f.1",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy states that data subjects may request a copy of their personal data held by Acme, but it does not explicitly mention the requirement to confirm whether personal data is being processed.",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request a copy of their personal data held by Acme."
+            }
+          ],
+          "confidence": 0.85
+        },
+        {
+          "obligation_id": "15.1.a-f.2",
+          "status": "NOT_MET",
+          "reason": "The policy evidence for the Right of Access does not mention that access responses include the purposes of processing.",
+          "evidence": [],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "15.1.a-f.3",
+          "status": "NOT_MET",
+          "reason": "The policy evidence does not state that an access response includes the categories of personal data concerned.",
+          "evidence": [],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "15.1.a-f.4",
+          "status": "NOT_MET",
+          "reason": "The policy evidence does not mention disclosing recipients or categories of recipients, including those in third countries, as part of an access response.",
+          "evidence": [],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "15.1.a-f.5",
+          "status": "NOT_MET",
+          "reason": "The policy evidence does not state that an access response includes the storage period or criteria for determining it.",
+          "evidence": [],
+          "confidence": 0.95
+        },
+        {
+          "obligation_id": "15.1.a-f.6",
+          "status": "PARTIALLY_MET",
+          "reason": "The policy details separate rights for rectification, erasure, and objection, but does not state that an access response specifically informs the person of all these rights (rectification, erasure, restriction, and objection).",
+          "evidence": [
+            {
+              "chunk_id": "8de9f0eb-54b8-4182-9213-89e12ca25fbe:5",
+              "quote": "Data subjects may request correction of inaccurate or incomplete data."
+            }
+          ],
+          "confidence": 0.85
+        },
+        {
+          "obligation_id": "15.1.a-f.7",
+          "status": "NOT_MET",
+          "reason": "The policy evidence does not state that an access response informs the data subject of the right to lodge a complaint with a supervisory authority.",
+          "evidence": [],
+          "confidence": 0.95
+        }
+      ],
+      "performance": {
+        "retrieval_time": 2.6983,
+        "llm_time": 3.2715,
+        "validation_time": 0.001,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    },
+    {
+      "article_number": 15,
+      "group_id": "15.4",
+      "principle": "Copy right does not adversely affect others' rights",
+      "condition_logic": "SINGLE",
+      "status": "NOT_MET",
+      "confidence": 1.0,
+      "reason": "The company policy mentions the Right of Access (Art. 15) and states that data subjects may request a copy of their personal data, but it does not contain any acknowledgment or provision that copy provision may be limited or redacted to protect the rights and freedoms of third parties.",
+      "gap": "The company policy mentions the Right of Access (Art. 15) and states that data subjects may request a copy of their personal data, but it does not contain any acknowledgment or provision that copy provision may be limited or redacted to protect the rights and freedoms of third parties.",
+      "evidence_count": 5,
+      "sub_obligations": [
+        {
+          "obligation_id": "15.4.1",
+          "status": "NOT_MET",
+          "reason": "The company policy mentions the Right of Access (Art. 15) and states that data subjects may request a copy of their personal data, but it does not contain any acknowledgment or provision that copy provision may be limited or redacted to protect the rights and freedoms of third parties.",
+          "evidence": [],
+          "confidence": 1.0
+        }
+      ],
+      "performance": {
+        "retrieval_time": 1.0637,
+        "llm_time": 1.3857,
+        "validation_time": 0.0002,
+        "backoff_time": 0.0,
+        "attempts": 1,
+        "count_429": 0,
+        "count_5xx": 0,
+        "count_malformed_json": 0,
+        "count_validation_failures": 0,
+        "provider": "gemini",
+        "endpoint_key": "...Mgkw"
+      }
+    }
+  ],
+  "performance": {
+    "wall_clock_time": 12.4019
+  },
+  "orchestration": {
+    "worker_managed": true,
+    "article_number": 15,
+    "execution_mode": "global_group_queue"
+  }
+}
