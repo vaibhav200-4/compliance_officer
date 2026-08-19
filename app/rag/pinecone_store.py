@@ -1,1 +1,0 @@
-"""Pinecone vector store integration."""

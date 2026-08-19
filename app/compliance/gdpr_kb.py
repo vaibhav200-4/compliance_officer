@@ -6,158 +6,55 @@ from pathlib import Path
 from typing import Any
 
 
-# ---------------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------------
-
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-DEFAULT_GDPR_PATH = (
+DEFAULT_KB_PATH = (
     PROJECT_ROOT
-    / "data"
-    / "gdpr_articles.json"
+    / "Data"
+    / "new_json_gdpr.json"
 )
 
 
-# ---------------------------------------------------------------------------
-# Data Models
-# ---------------------------------------------------------------------------
-
 @dataclass(frozen=True)
 class SubObligation:
-    """
-    Represents one atomic GDPR compliance requirement.
-    """
-
     id: str
     parent_group_id: str
-    condition_logic: str
+    article_number: int
     legal_text: str
     plain_summary: str
-    applicability_condition: str | None
     evidence_prompt: str
+    applicability_condition: str | None = None
 
-    @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> "SubObligation":
-        """
-        Create a SubObligation from a JSON dictionary.
-        """
 
-        required_fields = [
-            "id",
-            "parent_group_id",
-            "condition_logic",
-            "legal_text",
-            "plain_summary",
-            "evidence_prompt",
-        ]
-
-        missing = [
-            field
-            for field in required_fields
-            if field not in data
-        ]
-
-        if missing:
-            raise ValueError(
-                f"Sub-obligation is missing required fields: {missing}"
-            )
-
-        return cls(
-            id=str(data["id"]),
-            parent_group_id=str(data["parent_group_id"]),
-            condition_logic=str(data["condition_logic"]),
-            legal_text=str(data["legal_text"]),
-            plain_summary=str(data["plain_summary"]),
-            applicability_condition=(
-                str(data["applicability_condition"])
-                if data.get("applicability_condition") is not None
-                else None
-            ),
-            evidence_prompt=str(data["evidence_prompt"]),
-        )
+@dataclass(frozen=True)
+class RequirementGroup:
+    article_number: int
+    group_id: str
+    condition_logic: str
+    principle: str
+    requirement_summary: str
+    applicability_condition: str | None
+    keywords: tuple[str, ...]
+    expected_evidence: tuple[str, ...]
+    assessment_rules: dict[str, str]
+    obligations: tuple[SubObligation, ...]
 
 
 @dataclass(frozen=True)
 class GDPRArticle:
-    """
-    Represents one GDPR article and its decomposed obligations.
-    """
-
     article_number: int
     article_name: str
     checkability: str
     contextual_reason: str | None
-    sub_obligations: tuple[SubObligation, ...]
+    requirement_groups: tuple[RequirementGroup, ...]
+    source: dict[str, Any]
 
-    @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> "GDPRArticle":
-        """
-        Create a GDPRArticle from a JSON dictionary.
-        """
-
-        required_fields = [
-            "article_number",
-            "article_name",
-            "checkability",
-            "sub_obligations",
-        ]
-
-        missing = [
-            field
-            for field in required_fields
-            if field not in data
-        ]
-
-        if missing:
-            raise ValueError(
-                f"Article is missing required fields: {missing}"
-            )
-
-        sub_obligations = tuple(
-            SubObligation.from_dict(item)
-            for item in data["sub_obligations"]
-        )
-
-        return cls(
-            article_number=int(data["article_number"]),
-            article_name=str(data["article_name"]),
-            checkability=str(data["checkability"]),
-            contextual_reason=(
-                str(data["contextual_reason"])
-                if data.get("contextual_reason") is not None
-                else None
-            ),
-            sub_obligations=sub_obligations,
-        )
-
-
-# ---------------------------------------------------------------------------
-# GDPR Knowledge Base
-# ---------------------------------------------------------------------------
 
 class GDPRKnowledgeBase:
-    """
-    Loads and provides access to the pre-decomposed GDPR knowledge base.
-
-    Responsibilities:
-        - Load GDPR JSON
-        - Validate article structure
-        - Store articles in memory
-        - Retrieve articles
-        - Retrieve sub-obligations
-        - Provide simple search helpers
-
-    This class does NOT:
-        - Generate embeddings
-        - Call Pinecone
-        - Call an LLM
-        - Judge compliance
-    """
 
     def __init__(
         self,
-        json_path: str | Path = DEFAULT_GDPR_PATH,
+        json_path: str | Path = DEFAULT_KB_PATH,
     ) -> None:
 
         self.json_path = Path(json_path)
@@ -165,349 +62,382 @@ class GDPRKnowledgeBase:
         if not self.json_path.is_absolute():
             self.json_path = PROJECT_ROOT / self.json_path
 
-        self._articles: dict[int, GDPRArticle] = {}
-
-        self._load()
-
-    # -----------------------------------------------------------------------
-    # Loading
-    # -----------------------------------------------------------------------
-
-    def _load(self) -> None:
-        """
-        Load and parse the GDPR JSON file.
-        """
-
         if not self.json_path.exists():
             raise FileNotFoundError(
-                f"GDPR knowledge base not found: {self.json_path}"
+                f"GDPR knowledge base not found:\n"
+                f"{self.json_path}"
             )
 
-        try:
-            with self.json_path.open(
-                "r",
-                encoding="utf-8",
-            ) as file:
-                raw_data = json.load(file)
+        self._raw_data = self._load_json()
 
-        except json.JSONDecodeError as exc:
-            raise ValueError(
-                f"Invalid JSON in GDPR knowledge base: "
-                f"{self.json_path}"
-            ) from exc
+        self._articles: dict[int, GDPRArticle] = {}
 
-        article_data = self._normalize_root(raw_data)
+        self._parse()
 
-        for item in article_data:
-            article = GDPRArticle.from_dict(item)
-
-            if article.article_number in self._articles:
-                raise ValueError(
-                    f"Duplicate GDPR article found: "
-                    f"{article.article_number}"
-                )
-
-            self._articles[article.article_number] = article
-
-    # -----------------------------------------------------------------------
-    # Root normalization
-    # -----------------------------------------------------------------------
-
-    @staticmethod
-    def _normalize_root(
-        raw_data: Any,
-    ) -> list[dict[str, Any]]:
-        """
-        Normalize supported JSON structures.
-
-        Supported:
-
-        1. List of articles:
-           [
-               {...},
-               {...}
-           ]
-
-        2. Object containing articles:
-           {
-               "articles": [
-                   {...},
-                   {...}
-               ]
-           }
-
-        3. A single article:
-           {
-               "article_number": 5,
-               ...
-           }
-        """
-
-        if isinstance(raw_data, list):
-            return raw_data
-
-        if isinstance(raw_data, dict):
-
-            if "articles" in raw_data:
-                articles = raw_data["articles"]
-
-                if not isinstance(articles, list):
-                    raise ValueError(
-                        "'articles' must contain a list"
-                    )
-
-                return articles
-
-            if "article_number" in raw_data:
-                return [raw_data]
-
-        raise ValueError(
-            "Unsupported GDPR knowledge base format. "
-            "Expected a list of articles, an object containing "
-            "'articles', or a single article object."
+        print(
+            f"GDPR Knowledge Base loaded: "
+            f"{len(self._articles)} articles"
         )
 
-    # -----------------------------------------------------------------------
-    # Article Access
-    # -----------------------------------------------------------------------
+    # ============================================================
+    # LOAD JSON
+    # ============================================================
+
+    def _load_json(self) -> list[dict[str, Any]]:
+
+        with self.json_path.open(
+            "r",
+            encoding="utf-8",
+        ) as f:
+
+            data = json.load(f)
+
+        # Expected format:
+        #
+        # [
+        #   {...},
+        #   {...}
+        # ]
+
+        if isinstance(data, list):
+            return data
+
+        # Also support:
+        #
+        # {
+        #   "articles": [...]
+        # }
+
+        if isinstance(data, dict):
+
+            if isinstance(
+                data.get("articles"),
+                list,
+            ):
+                return data["articles"]
+
+        raise ValueError(
+            "Unsupported GDPR JSON structure. "
+            "Expected a list of article objects or "
+            "{'articles': [...]}."
+        )
+
+    # ============================================================
+    # PARSE
+    # ============================================================
+
+    def _parse(self) -> None:
+
+        for index, item in enumerate(
+            self._raw_data
+        ):
+
+            if not isinstance(item, dict):
+                continue
+
+            article_data = item.get("article")
+
+            # This prevents the KeyError you encountered.
+            if not isinstance(
+                article_data,
+                dict,
+            ):
+                print(
+                    f"WARNING: Skipping JSON item "
+                    f"{index}: missing 'article'."
+                )
+                continue
+
+            number_text = str(
+                article_data.get(
+                    "number",
+                    "",
+                )
+            )
+
+            article_number = self._extract_article_number(
+                number_text
+            )
+
+            if article_number is None:
+                print(
+                    f"WARNING: Could not parse article "
+                    f"number from: {number_text}"
+                )
+                continue
+
+            groups = self._parse_groups(
+                article_number,
+                item.get(
+                    "requirement_groups",
+                    [],
+                ),
+            )
+
+            article = GDPRArticle(
+                article_number=article_number,
+                article_name=str(
+                    article_data.get(
+                        "title",
+                        "",
+                    )
+                ),
+                checkability=str(
+                    article_data.get(
+                        "checkability",
+                        "direct",
+                    )
+                ),
+                contextual_reason=article_data.get(
+                    "contextual_reason"
+                ),
+                requirement_groups=tuple(groups),
+                source=item.get(
+                    "source",
+                    {},
+                ),
+            )
+
+            self._articles[
+                article_number
+            ] = article
+
+    # ============================================================
+    # PARSE GROUPS
+    # ============================================================
+
+    def _parse_groups(
+        self,
+        article_number: int,
+        raw_groups: Any,
+    ) -> list[RequirementGroup]:
+
+        if not isinstance(
+            raw_groups,
+            list,
+        ):
+            return []
+
+        groups = []
+
+        for raw_group in raw_groups:
+
+            if not isinstance(
+                raw_group,
+                dict,
+            ):
+                continue
+
+            group_id = str(
+                raw_group.get(
+                    "group_id",
+                    "",
+                )
+            )
+
+            obligations = []
+
+            raw_obligations = raw_group.get(
+                "sub_obligations",
+                [],
+            )
+
+            if isinstance(
+                raw_obligations,
+                list,
+            ):
+
+                for raw_obligation in raw_obligations:
+
+                    if not isinstance(
+                        raw_obligation,
+                        dict,
+                    ):
+                        continue
+
+                    obligation = SubObligation(
+                        id=str(
+                            raw_obligation.get(
+                                "id",
+                                "",
+                            )
+                        ),
+                        parent_group_id=group_id,
+                        article_number=article_number,
+                        legal_text=str(
+                            raw_obligation.get(
+                                "legal_text",
+                                "",
+                            )
+                        ),
+                        plain_summary=str(
+                            raw_obligation.get(
+                                "plain_summary",
+                                "",
+                            )
+                        ),
+                        evidence_prompt=str(
+                            raw_obligation.get(
+                                "evidence_prompt",
+                                "",
+                            )
+                        ),
+                        applicability_condition=raw_group.get(
+                            "applicability_condition"
+                        ),
+                    )
+
+                    obligations.append(
+                        obligation
+                    )
+
+            group = RequirementGroup(
+                article_number=article_number,
+                group_id=group_id,
+                condition_logic=str(
+                    raw_group.get(
+                        "condition_logic",
+                        "SINGLE",
+                    )
+                ),
+                principle=str(
+                    raw_group.get(
+                        "principle",
+                        "",
+                    )
+                ),
+                requirement_summary=str(
+                    raw_group.get(
+                        "requirement_summary",
+                        "",
+                    )
+                ),
+                applicability_condition=raw_group.get(
+                    "applicability_condition"
+                ),
+                keywords=tuple(
+                    raw_group.get(
+                        "keywords",
+                        [],
+                    )
+                    or []
+                ),
+                expected_evidence=tuple(
+                    raw_group.get(
+                        "expected_evidence",
+                        [],
+                    )
+                    or []
+                ),
+                assessment_rules=dict(
+                    raw_group.get(
+                        "assessment_rules",
+                        {},
+                    )
+                    or {}
+                ),
+                obligations=tuple(
+                    obligations
+                ),
+            )
+
+            groups.append(group)
+
+        return groups
+
+    # ============================================================
+    # ARTICLE NUMBER
+    # ============================================================
+
+    @staticmethod
+    def _extract_article_number(
+        value: str,
+    ) -> int | None:
+
+        # "Article 5" -> 5
+
+        parts = value.strip().split()
+
+        if len(parts) < 2:
+            return None
+
+        try:
+            return int(parts[-1])
+        except ValueError:
+            return None
+
+    # ============================================================
+    # PUBLIC API
+    # ============================================================
 
     def get_article(
         self,
         article_number: int,
-    ) -> GDPRArticle | None:
-        """
-        Return a GDPR article by article number.
-
-        Example:
-            article = kb.get_article(5)
-        """
-
-        return self._articles.get(int(article_number))
-
-    def require_article(
-        self,
-        article_number: int,
     ) -> GDPRArticle:
-        """
-        Return an article or raise an explicit error.
-        """
 
-        article = self.get_article(article_number)
-
-        if article is None:
+        if article_number not in self._articles:
             raise KeyError(
-                f"GDPR Article {article_number} not found "
-                f"in knowledge base."
+                f"Article {article_number} "
+                f"not found in GDPR knowledge base."
             )
 
-        return article
-
-    def get_all_articles(self) -> list[GDPRArticle]:
-        """
-        Return all loaded GDPR articles ordered by article number.
-        """
-
-        return [
-            self._articles[number]
-            for number in sorted(self._articles)
+        return self._articles[
+            article_number
         ]
 
-    # -----------------------------------------------------------------------
-    # Sub-obligation Access
-    # -----------------------------------------------------------------------
+    def get_all_articles(
+        self,
+    ) -> list[GDPRArticle]:
+
+        return list(
+            self._articles.values()
+        )
 
     def get_sub_obligations(
         self,
         article_number: int,
     ) -> list[SubObligation]:
-        """
-        Return all sub-obligations for an article.
 
-        Example:
-            obligations = kb.get_sub_obligations(5)
-        """
+        article = self.get_article(
+            article_number
+        )
 
-        article = self.require_article(article_number)
+        result = []
 
-        return list(article.sub_obligations)
-
-    def get_sub_obligation(
-        self,
-        obligation_id: str,
-    ) -> SubObligation | None:
-        """
-        Find a specific sub-obligation across the entire knowledge base.
-
-        Example:
-            obligation = kb.get_sub_obligation("5.1.e.1")
-        """
-
-        for article in self._articles.values():
-
-            for obligation in article.sub_obligations:
-
-                if obligation.id == obligation_id:
-                    return obligation
-
-        return None
-
-    def require_sub_obligation(
-        self,
-        obligation_id: str,
-    ) -> SubObligation:
-        """
-        Return a sub-obligation or raise an explicit error.
-        """
-
-        obligation = self.get_sub_obligation(obligation_id)
-
-        if obligation is None:
-            raise KeyError(
-                f"GDPR sub-obligation '{obligation_id}' "
-                f"not found in knowledge base."
+        for group in article.requirement_groups:
+            result.extend(
+                group.obligations
             )
 
-        return obligation
+        return result
 
-    # -----------------------------------------------------------------------
-    # Group Access
-    # -----------------------------------------------------------------------
-
-    def get_group_obligations(
+    def get_groups(
         self,
         article_number: int,
-        parent_group_id: str,
-    ) -> list[SubObligation]:
-        """
-        Return all obligations belonging to a parent group.
+    ) -> list[RequirementGroup]:
 
-        Example:
+        return list(
+            self.get_article(
+                article_number
+            ).requirement_groups
+        )
 
-            kb.get_group_obligations(5, "5.1")
-        """
-
-        obligations = self.get_sub_obligations(article_number)
-
-        return [
-            obligation
-            for obligation in obligations
-            if obligation.parent_group_id == parent_group_id
-        ]
-
-    # -----------------------------------------------------------------------
-    # Applicability Helpers
-    # -----------------------------------------------------------------------
-
-    def get_conditional_obligations(
-        self,
-        article_number: int,
-    ) -> list[SubObligation]:
-        """
-        Return obligations having an applicability condition.
-        """
-
-        obligations = self.get_sub_obligations(article_number)
-
-        return [
-            obligation
-            for obligation in obligations
-            if obligation.applicability_condition is not None
-        ]
-
-    def get_unconditional_obligations(
-        self,
-        article_number: int,
-    ) -> list[SubObligation]:
-        """
-        Return obligations without an applicability condition.
-        """
-
-        obligations = self.get_sub_obligations(article_number)
-
-        return [
-            obligation
-            for obligation in obligations
-            if obligation.applicability_condition is None
-        ]
-
-    # -----------------------------------------------------------------------
-    # Search
-    # -----------------------------------------------------------------------
-
-    def search_obligations(
-        self,
-        keyword: str,
-    ) -> list[SubObligation]:
-        """
-        Simple keyword search across obligation text.
-
-        This is NOT semantic search.
-
-        It is only a helper for debugging/testing the knowledge base.
-        """
-
-        keyword = keyword.lower().strip()
-
-        if not keyword:
-            return []
-
-        results: list[SubObligation] = []
-
-        for article in self._articles.values():
-
-            for obligation in article.sub_obligations:
-
-                searchable_text = " ".join(
-                    [
-                        obligation.id,
-                        obligation.legal_text,
-                        obligation.plain_summary,
-                        obligation.evidence_prompt,
-                    ]
-                ).lower()
-
-                if keyword in searchable_text:
-                    results.append(obligation)
-
-        return results
-
-    # -----------------------------------------------------------------------
-    # Statistics
-    # -----------------------------------------------------------------------
-
-    @property
     def article_count(self) -> int:
-        """Number of loaded GDPR articles."""
-
         return len(self._articles)
 
-    @property
-    def obligation_count(self) -> int:
-        """Total number of loaded sub-obligations."""
+    def group_count(self) -> int:
 
         return sum(
-            len(article.sub_obligations)
+            len(
+                article.requirement_groups
+            )
             for article in self._articles.values()
         )
 
-    # -----------------------------------------------------------------------
-    # Debugging
-    # -----------------------------------------------------------------------
+    def obligation_count(self) -> int:
 
-    def summary(self) -> dict[str, int]:
-        """
-        Return basic knowledge-base statistics.
-        """
-
-        return {
-            "articles": self.article_count,
-            "sub_obligations": self.obligation_count,
-            "conditional_obligations": sum(
-                len(self.get_conditional_obligations(article_number))
-                for article_number in self._articles
-            ),
-            "unconditional_obligations": sum(
-                len(self.get_unconditional_obligations(article_number))
-                for article_number in self._articles
-            ),
-        }
+        return sum(
+            len(group.obligations)
+            for article in self._articles.values()
+            for group in article.requirement_groups
+        )

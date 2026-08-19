@@ -13,7 +13,6 @@ logger = get_logger()
 
 COMPANY_POLICY_NAMESPACE = "company-policy"
 
-
 class PineconeManager:
     """Store documents in Pinecone using the shared application Embedder."""
 
@@ -94,8 +93,15 @@ class PineconeManager:
         *,
         namespace: str = COMPANY_POLICY_NAMESPACE,
         top_k: int = 1,
+        filter: dict | None = None,
     ):
-        """Search only the company-policy namespace."""
+        """Search only the company-policy namespace.
+
+        `filter` is an optional Pinecone metadata filter (e.g.
+        {"document_id": {"$eq": "..."}}) used to scope results to a
+        single ingested document/policy when multiple policies share
+        the same namespace.
+        """
         if namespace != COMPANY_POLICY_NAMESPACE:
             raise ValueError("Company-policy search must use namespace 'company-policy'.")
         vector = self.embedder.embed_query(query)
@@ -104,4 +110,35 @@ class PineconeManager:
             top_k=top_k,
             namespace=namespace,
             include_metadata=True,
+            filter=filter,
+        )
+
+    def similarity_search_by_vector(
+        self,
+        vector: list[float],
+        *,
+        namespace: str = COMPANY_POLICY_NAMESPACE,
+        top_k: int = 5,
+        filter: dict | None = None,
+    ):
+        """Search only the company-policy namespace using a supplied vector.
+
+        `filter` optionally scopes the query to a single document_id.
+        """
+        if namespace != COMPANY_POLICY_NAMESPACE:
+            raise ValueError("Company-policy search must use namespace 'company-policy'.")
+        if not vector:
+            raise ValueError("Search vector must not be empty.")
+        if top_k <= 0:
+            raise ValueError("top_k must be greater than 0.")
+
+        logger.info(
+            f"Performing vector-based similarity search in namespace '{namespace}'."
+        )
+        return self.index.query(
+            vector=vector,
+            top_k=top_k,
+            namespace=namespace,
+            include_metadata=True,
+            filter=filter,
         )
